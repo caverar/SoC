@@ -7,7 +7,7 @@ module TFT_SPI(
 	output wire		   RS,
 	output wire		   SPI_CS,
 	output wire		   RST 
-  	//output wire        bussy,
+	//output wire      bussy,
 	);
 	//Parametros
 	parameter InitDataSize=104;
@@ -18,7 +18,7 @@ module TFT_SPI(
 	parameter delayUnit=InitFrequency/1000;
 	//parameter delayUnit=1;
 	parameter delayTime=160*delayUnit;
-	
+		
 	//Registros y Cables
 	reg  [15:0] data1; //
 	wire [24:0] InitRegPointer;
@@ -29,7 +29,7 @@ module TFT_SPI(
 	wire		SPI_WorkClock;
 	wire		InitReg_RS;
 
-	reg [3:0] countp;
+	reg  [4:0]  countp;
 	initial begin countp=0; end
 	//Inicializacion
 	//Instancias
@@ -46,39 +46,40 @@ module TFT_SPI(
 		.OutputCLK(SPI_WorkClock)
 	);
 
-
-
 	//	Registro de Inicializacion
 	InitializationRegister #(.InitFrequency(InitFrequency), .delayUnit(delayUnit)) initializationRegister(
-    	.pointer(InitRegPointer),
-    	.OutData(InitData),
+		.pointer(InitRegPointer),
+		.OutData(InitData),
 		.RS(InitReg_RS),
 		.CS(SPI_CS),
-		.CLK(MasterCLK)
-		
-    );
-	//	Contador de Instrucciones de Iniciliazacion
+		.CLK(MasterCLK)			
+	);
+		//	Contador de Instrucciones de Iniciliazacion
 	Counter #(.Begin(0), .bitsNumber(25), .End(InitDataSize+delayTime), .mode(0)) counter(
 		.clk(dataClk),
 		.count(InitRegPointer)
 	);
 	//	SPI
 	SPI spi (
-    	.data(OutputData),
+		.data(OutputData),
 		.SPI_CLK(SPI_CLK),
-    	.SPI_MOSI(SPI_MOSI),		
+		.SPI_MOSI(SPI_MOSI),		
 		.dataClk(dataClk)
 		//.reset(RST)
 	);
 
 	//Asignacion Secuencial	
-	
-	always@(posedge dataClk)begin
-		countp=countp+1;
-		if(countp<8) begin
+		
+	always@(posedge dataClk) begin			
+		if(countp<11) begin
 			data1=data;
-		end else begin
+			countp=countp+1;
+		end else if(countp<22) begin
+			countp=countp+1;
 			data1=16'h0000;
+		end else begin
+			countp=1;
+			data1=data;
 		end
 	end 
 	//Asignacion Combinacional

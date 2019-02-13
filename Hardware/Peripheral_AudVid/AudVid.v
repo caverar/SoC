@@ -38,7 +38,7 @@ module AudVid(
 
     reg [383:0]  TilesPositionsRegister [4:0];
     initial begin
-        SD_InputAddress       = 16'h0008;
+        SD_InputAddress       = 16'h0002;
         TilesRead_XAddress    = 0;
         TilesRead_YAddress    = 0;
         TilesRead_TileAddress = 0;
@@ -75,9 +75,8 @@ module AudVid(
 
     I2S i2s(
         .MasterCLK(MasterCLK),
-        .I2SCLK(I2SCLK),
-        .Reset(Reset),    
-        .I2S_DATA(I2S_DATA),
+        .I2SCLK(I2SCLK),   
+        .I2S_DATA(DAC_I2S_DATA),
         .I2S_CLK(DAC_I2S_CLK),
         .I2S_WS(DAC_I2S_WS) 
 
@@ -87,31 +86,31 @@ module AudVid(
 
     //Lectura de SD
     
-    always@(posedge SD_InputDataClock) begin
-        if(SD_EnableDataRead) begin
-        //Lectura de Tiles
-            if(SDReadCount<512 && {TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}<8192) begin
+    // always@(posedge SD_InputDataClock) begin
+    //     if(SD_EnableDataRead) begin
+    //     //Lectura de Tiles
+    //         if(SDReadCount<512 && {TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}<8192) begin
                 
-                SD_InputAddress<=16'h0008;
-                TilesRegister[{TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}]<=SD_InputData;
-                TilesRead_XAddress<=TilesRead_XAddress+1;
-                TilesRead_YAddress<=TilesRead_YAddress+1;
-                TilesRead_TileAddress<=TilesRead_TileAddress+1;
-                SDReadCount<=SDReadCount+1;
-            end else if(SDReadCount<1024 && {TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}<8192) begin
+    //             SD_InputAddress<=16'h0008;
+    //             TilesRegister[{TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}]<=SD_InputData;
+    //             TilesRead_XAddress<=TilesRead_XAddress+1;
+    //             TilesRead_YAddress<=TilesRead_YAddress+1;
+    //             TilesRead_TileAddress<=TilesRead_TileAddress+1;
+    //             SDReadCount<=SDReadCount+1;
+    //         end else if(SDReadCount<1024 && {TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}<8192) begin
                 
-                SD_InputAddress<=16'h000A;
-                TilesRegister[{TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}]<=SD_InputData;
-                TilesRead_XAddress<=TilesRead_XAddress+1;
-                TilesRead_YAddress<=TilesRead_YAddress+1;
-                TilesRead_TileAddress<=TilesRead_TileAddress+1;
-                SDReadCount<=SDReadCount+1; 
-        //Lectura de Audio    
-            end else begin
+    //             SD_InputAddress<=16'h000A;
+    //             TilesRegister[{TilesRead_TileAddress,TilesRead_YAddress,TilesRead_XAddress}]<=SD_InputData;
+    //             TilesRead_XAddress<=TilesRead_XAddress+1;
+    //             TilesRead_YAddress<=TilesRead_YAddress+1;
+    //             TilesRead_TileAddress<=TilesRead_TileAddress+1;
+    //             SDReadCount<=SDReadCount+1; 
+    //     //Lectura de Audio    
+    //         end else begin
                 
-            end
-        end 
-    end
+    //         end
+    //     end 
+    // end
 
     //Escritura en pantalla
 

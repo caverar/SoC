@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Wed Feb 13 00:37:25 2019
+| Date             : Wed Feb 13 17:31:46 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.213        |
+| Total On-Chip Power (W)  | 0.214        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.141        |
+| Dynamic (W)              | 0.142        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.9         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        5 |       --- |             --- |
-| Slice Logic    |     0.002 |      498 |       --- |             --- |
-|   LUT as Logic |     0.002 |      226 |     20800 |            1.09 |
-|   Register     |    <0.001 |      156 |     41600 |            0.38 |
-|   CARRY4       |    <0.001 |       10 |      8150 |            0.12 |
-|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
+| Slice Logic    |     0.002 |      505 |       --- |             --- |
+|   LUT as Logic |     0.002 |      223 |     20800 |            1.07 |
+|   Register     |    <0.001 |      166 |     41600 |            0.40 |
+|   CARRY4       |    <0.001 |       15 |      8150 |            0.18 |
 |   F7/F8 Muxes  |    <0.001 |        7 |     32600 |            0.02 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       34 |       --- |             --- |
-| Signals        |     0.002 |      360 |       --- |             --- |
+| Signals        |     0.002 |      373 |       --- |             --- |
 | MMCM           |     0.128 |        1 |         5 |           20.00 |
-| I/O            |     0.008 |       16 |       106 |           15.09 |
+| I/O            |     0.009 |       16 |       106 |           15.09 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.213 |          |           |                 |
+| Total          |     0.214 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,8 +74,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.005 |      0.010 |
-| Vccaux    |       1.800 |     0.084 |       0.071 |      0.013 |
+| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
+| Vccaux    |       1.800 |     0.084 |       0.072 |      0.013 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -145,9 +145,10 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| top                          |     0.141 |
+| top                          |     0.142 |
 |   AudVid                     |     0.005 |
 |     i2s                      |    <0.001 |
+|       squaregenerator        |    <0.001 |
 |     sd_spi                   |     0.002 |
 |       spi                    |    <0.001 |
 |       spiCount               |    <0.001 |

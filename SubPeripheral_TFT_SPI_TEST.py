@@ -127,7 +127,8 @@ class SOC(Module):
             o_SPI_CLK    = self.TFT_CLK,
             o_SPI_CS     = self.TFT_CS,
             o_RS         = self.TFT_RS,
-            o_RST        = self.TFT_RST 
+            o_RST        = self.TFT_RST,
+            o_OutputData = self.Leds
         )
         
         self.comb +=leds.eq(self.Leds)

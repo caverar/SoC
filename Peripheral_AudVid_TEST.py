@@ -176,8 +176,8 @@ class SOC(Module):
         self.specials +=Instance("AudVid",
 
             i_Reset                  = self.Reset,
-            i_MasterCLK              = self.MasterCLK,
-            i_I2SCLK                 = self.I2SCLK,            
+            i_MasterCLK              = self.MasterCLK,  ## MasterCLK
+            i_I2SCLK                 = self.I2SCLK,     ## I2SCLK           
             o_TFT_SPI_CLK            = self.TFT_SPI_CLK,
             o_TFT_SPI_CS             = self.TFT_SPI_CS,
             o_TFT_SPI_MOSI           = self.TFT_SPI_MOSI,

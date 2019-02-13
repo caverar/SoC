@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 13 00:36:52 2019
+| Date         : Wed Feb 13 17:31:11 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_control_sets -verbose -file top_control_sets.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    30 |
-| Unused register locations in slices containing registers |   136 |
+| Number of unique control sets                            |    29 |
+| Unused register locations in slices containing registers |   132 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,9 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |           13 |
+|      2 |           11 |
 |      4 |            1 |
+|      6 |            1 |
 |      8 |            1 |
 |     10 |            4 |
 |     12 |            2 |
@@ -49,12 +50,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              92 |           21 |
+| No           | No                    | No                     |              90 |           22 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             114 |           15 |
-| Yes          | No                    | No                     |              54 |           13 |
+| No           | Yes                   | No                     |             160 |           22 |
+| Yes          | No                    | No                     |              32 |           10 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              52 |           14 |
+| Yes          | Yes                   | No                     |              50 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -64,36 +65,35 @@ Table of Contents
 +-------------------------------------------+-----------------------------------+------------------------------------------------------+------------------+----------------+
 |                Clock Signal               |           Enable Signal           |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count |
 +-------------------------------------------+-----------------------------------+------------------------------------------------------+------------------+----------------+
-|  AudVid/sd_spi/SD_EnableDataRead          |                                   |                                                      |                1 |              2 |
-| ~ClockManager/DAC_I2S_CLK                 | AudVid/i2s/I2S_WS_i_1_n_0         | AudVid/i2s/I2S_WS0_inferred__0/i__n_0                |                1 |              2 |
-|  AudVid/sd_spi/spi/CLK_BUFG               | AudVid/sd_spi/SPI_CS_i_2_n_0      | AudVid/sd_spi/SPI_CS3_out                            |                1 |              2 |
 |  MasterCLK_BUFG                           |                                   | AudVid/tft_spi/counter/CS_reg                        |                1 |              2 |
+|  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[2]_i_1_n_0 |                                                      |                1 |              2 |
 |  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[4]_i_1_n_0 |                                                      |                1 |              2 |
-| ~AudVid/sd_spi/spi/CLK_BUFG               |                                   |                                                      |                1 |              2 |
-|  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[1]_i_1_n_0 |                                                      |                1 |              2 |
 |  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[5]_i_1_n_0 |                                                      |                1 |              2 |
 |  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[7]_i_1_n_0 |                                                      |                1 |              2 |
-|  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[6]_i_1_n_0 |                                                      |                1 |              2 |
 |  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[0]_i_1_n_0 |                                                      |                1 |              2 |
-|  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[2]_i_1_n_0 |                                                      |                1 |              2 |
+|  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[6]_i_1_n_0 |                                                      |                1 |              2 |
+|  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[1]_i_1_n_0 |                                                      |                1 |              2 |
 |  AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[3]_i_1_n_0 |                                                      |                1 |              2 |
-|  AudVid/sd_spi/spi/CLK_BUFG               |                                   |                                                      |                2 |              4 |
+|  AudVid/sd_spi/spi/CLK                    |                                   |                                                      |                1 |              2 |
+|  AudVid/sd_spi/spi/CLK                    | AudVid/sd_spi/SPI_CS_i_2_n_0      | AudVid/sd_spi/SPI_CS3_out                            |                1 |              2 |
+|  tft_spi/dataClk                          |                                   |                                                      |                2 |              4 |
+| ~AudVid/i2s/Data_reg[0]_0                 |                                   |                                                      |                2 |              6 |
 |  MasterCLK_BUFG                           |                                   | AudVid/sd_spi/spiWorkClock/clear                     |                1 |              8 |
-|  MasterCLK_BUFG                           |                                   | AudVid/tft_spi/spiWorkClock/counter[4]_i_1__0_n_0    |                1 |             10 |
-| ~ClockManager/DAC_I2S_CLK                 |                                   |                                                      |                1 |             10 |
+|  tft_spi/dataClk                          |                                   | AudVid/tft_spi/countp[4]_i_1_n_0                     |                1 |             10 |
 | ~AudVid/tft_spi/spiWorkClock/count_reg[0] |                                   |                                                      |                2 |             10 |
 |  ClockManager/Clk_wiz/clk_out1            |                                   |                                                      |                2 |             10 |
-|  tft_spi/dataClk                          |                                   |                                                      |                2 |             12 |
-|  AudVid/sd_spi/spi/CLK_BUFG               | AudVid/sd_spi/spi/E[0]            | Reset_IBUF                                           |                4 |             12 |
-| ~AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[0]_i_1_n_0 |                                                      |                2 |             16 |
+|  MasterCLK_BUFG                           |                                   | AudVid/tft_spi/spiWorkClock/counter[4]_i_1__0_n_0    |                1 |             10 |
+|  AudVid/sd_spi/spi/CLK                    | AudVid/sd_spi/spi/E[0]            | Reset_IBUF                                           |                3 |             12 |
+| ~ClockManager/DAC_I2S_CLK                 |                                   |                                                      |                2 |             12 |
 |  MasterCLK_BUFG                           |                                   | AudVid/sd_spi/spiInitClock/counter[7]_i_1_n_0        |                3 |             16 |
-|  AudVid/sd_spi/spi/CLK_BUFG               | AudVid/sd_spi/OutputData0_in      | AudVid/sd_spi/SPI_CS3_out                            |                6 |             16 |
-|  AudVid/sd_spi/spi/CLK_BUFG               | AudVid/sd_spi/sel                 | AudVid/sd_spi/UtilCount[9]_i_1_n_0                   |                2 |             20 |
+|  AudVid/sd_spi/spi/CLK                    | AudVid/sd_spi/OutputData0_in      | AudVid/sd_spi/SPI_CS3_out                            |                4 |             16 |
+| ~AudVid/sd_spi/spiWorkClock/CLK           | AudVid/sd_spi/spi/Data[0]_i_1_n_0 |                                                      |                2 |             16 |
+|  AudVid/sd_spi/spi/CLK                    | AudVid/sd_spi/sel                 | AudVid/sd_spi/UtilCount[9]_i_1_n_0                   |                3 |             20 |
 | ~AudVid/sd_spi/spiWorkClock/CLK           |                                   |                                                      |                3 |             20 |
-| ~AudVid/sd_spi/spi/CLK_BUFG               | AudVid/sd_spi/E[0]                |                                                      |                3 |             22 |
-|  MasterCLK_BUFG                           |                                   |                                                      |                7 |             22 |
+|  MasterCLK_BUFG                           |                                   |                                                      |                8 |             26 |
 |  MasterCLK_BUFG                           |                                   | AudVid/tft_spi/spiInitRegClock/counter[0]_i_1__2_n_0 |                4 |             28 |
-|  tft_spi/dataClk                          |                                   | AudVid/tft_spi/counter/count[24]_i_1_n_0             |                5 |             50 |
+|  MasterCLK_BUFG                           |                                   | AudVid/i2s/squaregenerator/count[0]_i_1__6_n_0       |                5 |             36 |
+|  tft_spi/dataClk                          |                                   | AudVid/tft_spi/counter/count[24]_i_1_n_0             |                6 |             50 |
 +-------------------------------------------+-----------------------------------+------------------------------------------------------+------------------+----------------+
 
 

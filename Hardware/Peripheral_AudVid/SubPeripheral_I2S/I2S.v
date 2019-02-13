@@ -1,7 +1,6 @@
 module I2S(
     input  wire         MasterCLK,
     input  wire         I2SCLK,
-    input  wire         Reset,
     input  wire [31:0]  InputData,
     output wire         SyncCLK,
     output wire         I2S_DATA,

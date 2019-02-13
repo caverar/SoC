@@ -20,15 +20,15 @@ module SPI (
 
     always@(negedge SPI_CLK)begin
         if(count == 15) begin
-            dataClk=1;
-            reset=1;
+            dataClk<=1;
+            reset<=1;
         end else if(count == 7) begin
-            dataClk=0;       
-            reset=(reseted) ? 1:0;
+            dataClk<=0;       
+            reset<=(reseted) ? 1:0;
         end else if(count == 14) begin
-            reseted=1;        
+            reseted<=1;        
         end 
-        count=count+1;
+        count<=count+1;
                    
         
     end
