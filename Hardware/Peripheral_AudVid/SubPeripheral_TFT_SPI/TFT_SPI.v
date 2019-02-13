@@ -4,17 +4,16 @@ module TFT_SPI(
 	output wire [15:0] OutputData,
 	output wire        SPI_MOSI,
 	output wire        SPI_CLK,
-	output wire		   	 RS,
-	output wire		     SPI_CS,
-	output wire		     RST,
-	output wire		     DataClock  
+	output wire		   RS,
+	output wire		   SPI_CS,
+	output wire		   RST 
   	//output wire        bussy,
 	);
 	//Parametros
 	parameter InitDataSize=104;
 	parameter InitFrequency=10000;
 	parameter InitFrequencyBits=26;
-	parameter WorkFrequency=500; //5000000
+	parameter WorkFrequency=5000000;
 	parameter WorkFrequencyBits=24;	
 	parameter delayUnit=InitFrequency/1000;
 	//parameter delayUnit=1;
@@ -68,8 +67,8 @@ module TFT_SPI(
     	.data(OutputData),
 		.SPI_CLK(SPI_CLK),
     	.SPI_MOSI(SPI_MOSI),		
-		.dataClk(dataClk),
-		.reset(RST)
+		.dataClk(dataClk)
+		//.reset(RST)
 	);
 
 	//Asignacion Secuencial	
@@ -92,8 +91,6 @@ module TFT_SPI(
 	assign SPI_CLK = (InitRegPointer<InitDataSize+delayTime) ? SPI_InitRegClock : SPI_WorkClock;
 	//	Gestion de pin RS
 	assign RS = (InitRegPointer<InitDataSize+delayTime) ? InitReg_RS : 1;
-
-	assign DataClock=dataClk;
 
 endmodule
   

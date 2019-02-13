@@ -1,0 +1,832 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue Feb 12 23:49:44 2019
+# Process ID: 16954
+# Current directory: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build
+# Command line: vivado -mode batch -source top.tcl
+# Log file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.log
+# Journal file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.jou
+#-----------------------------------------------------------
+source top.tcl
+# create_project -force -name top -part xc7a35tcpg236-1
+# set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:]
+# add_files {top.v}
+# set_property library work [get_files {top.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncer.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncer.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncer.v:]
+# read_xdc top.xdc
+# synth_design -top top -part xc7a35tcpg236-1
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16983 
+WARNING: [Synth 8-2507] parameter declaration becomes local in FrequencyGenerator with formal parameter declaration list [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:6]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1261.156 ; gain = 77.262 ; free physical = 806 ; free virtual = 4290
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ClockManager' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:193]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:67]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 55.125000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 78.125000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz' (4#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'ClockManager' (5#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:193]
+INFO: [Synth 8-6157] synthesizing module 'AudVid' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:2]
+INFO: [Synth 8-6157] synthesizing module 'SD_SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+	Parameter frequency bound to: 400000 - type: integer 
+	Parameter bitsNumber bound to: 8 - type: integer 
+	Parameter limit bound to: 250 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator' (6#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator__parameterized0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+	Parameter frequency bound to: 12500000 - type: integer 
+	Parameter bitsNumber bound to: 5 - type: integer 
+	Parameter limit bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized0' (6#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FullSPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FullSPI' (7#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:1]
+WARNING: [Synth 8-350] instance 'spiCount' of module 'FullSPI' requires 8 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:65]
+WARNING: [Synth 8-350] instance 'spiUtilCount' of module 'FullSPI' requires 8 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:72]
+WARNING: [Synth 8-6014] Unused sequential element VideoCount_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'SD_SPI' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:1]
+INFO: [Synth 8-6157] synthesizing module 'TFT_SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
+	Parameter InitDataSize bound to: 104 - type: integer 
+	Parameter InitFrequency bound to: 10000 - type: integer 
+	Parameter InitFrequencyBits bound to: 26 - type: integer 
+	Parameter WorkFrequency bound to: 5000000 - type: integer 
+	Parameter WorkFrequencyBits bound to: 24 - type: integer 
+	Parameter delayUnit bound to: 10 - type: integer 
+	Parameter delayTime bound to: 1600 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator__parameterized1' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+	Parameter frequency bound to: 10000 - type: integer 
+	Parameter bitsNumber bound to: 26 - type: integer 
+	Parameter limit bound to: 10000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized1' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator__parameterized2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+	Parameter frequency bound to: 5000000 - type: integer 
+	Parameter bitsNumber bound to: 24 - type: integer 
+	Parameter limit bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized2' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'InitializationRegister' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
+	Parameter InitFrequency bound to: 10000 - type: integer 
+	Parameter delayUnit bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'InitializationRegister' (9#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Counter' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:2]
+	Parameter Begin bound to: 0 - type: integer 
+	Parameter bitsNumber bound to: 25 - type: integer 
+	Parameter End bound to: 1704 - type: integer 
+	Parameter mode bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:2]
+WARNING: [Synth 8-350] instance 'counter' of module 'Counter' requires 3 connections, but only 2 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:61]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (11#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'TFT_SPI' (12#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
+WARNING: [Synth 8-350] instance 'tft_spi' of module 'TFT_SPI' requires 8 connections, but only 7 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:64]
+WARNING: [Synth 8-6014] Unused sequential element TilesRegister_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element TilesRead_XAddress_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:82]
+WARNING: [Synth 8-6014] Unused sequential element TilesRead_YAddress_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:82]
+WARNING: [Synth 8-6014] Unused sequential element TilesRead_TileAddress_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:82]
+WARNING: [Synth 8-3848] Net TFT_RST in module/entity AudVid does not have driver. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:12]
+WARNING: [Synth 8-3848] Net DAC_I2S_DATA in module/entity AudVid does not have driver. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:20]
+WARNING: [Synth 8-3848] Net DAC_I2S_CLK in module/entity AudVid does not have driver. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:21]
+WARNING: [Synth 8-3848] Net DAC_I2S_WS in module/entity AudVid does not have driver. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'AudVid' (13#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:2]
+WARNING: [Synth 8-350] instance 'AudVid' of module 'AudVid' requires 20 connections, but only 17 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'top' (14#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
+WARNING: [Synth 8-3331] design AudVid has unconnected port TFT_RST
+WARNING: [Synth 8-3331] design AudVid has unconnected port DAC_I2S_DATA
+WARNING: [Synth 8-3331] design AudVid has unconnected port DAC_I2S_CLK
+WARNING: [Synth 8-3331] design AudVid has unconnected port DAC_I2S_WS
+WARNING: [Synth 8-3331] design AudVid has unconnected port I2SCLK
+WARNING: [Synth 8-3331] design AudVid has unconnected port Address[3]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Address[2]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Address[1]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Address[0]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[31]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[30]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[29]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[28]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[27]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[26]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[25]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[24]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[23]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[22]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[21]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[20]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[19]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[18]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[17]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[16]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[15]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[14]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[13]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[12]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[11]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[10]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[9]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[8]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[7]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[6]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[5]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[4]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[3]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[2]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[1]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Data[0]
+WARNING: [Synth 8-3331] design AudVid has unconnected port Enable
+WARNING: [Synth 8-3331] design top has unconnected port user_led
+WARNING: [Synth 8-3331] design top has unconnected port user_led_1
+WARNING: [Synth 8-3331] design top has unconnected port user_led_2
+WARNING: [Synth 8-3331] design top has unconnected port user_led_3
+WARNING: [Synth 8-3331] design top has unconnected port user_led_4
+WARNING: [Synth 8-3331] design top has unconnected port user_led_5
+WARNING: [Synth 8-3331] design top has unconnected port user_led_6
+WARNING: [Synth 8-3331] design top has unconnected port user_led_7
+WARNING: [Synth 8-3331] design top has unconnected port user_led_8
+WARNING: [Synth 8-3331] design top has unconnected port user_led_9
+WARNING: [Synth 8-3331] design top has unconnected port user_led_10
+WARNING: [Synth 8-3331] design top has unconnected port user_led_11
+WARNING: [Synth 8-3331] design top has unconnected port user_led_12
+WARNING: [Synth 8-3331] design top has unconnected port user_led_13
+WARNING: [Synth 8-3331] design top has unconnected port user_led_14
+WARNING: [Synth 8-3331] design top has unconnected port user_led_15
+WARNING: [Synth 8-3331] design top has unconnected port user_sw
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_1
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_2
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_3
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_4
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_5
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_6
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_7
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_8
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_9
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_10
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_11
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_12
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_13
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_14
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_15
+WARNING: [Synth 8-3331] design top has unconnected port user_btn
+WARNING: [Synth 8-3331] design top has unconnected port user_btn_1
+WARNING: [Synth 8-3331] design top has unconnected port user_btn_2
+WARNING: [Synth 8-3331] design top has unconnected port user_btn_3
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.406 ; gain = 112.512 ; free physical = 821 ; free virtual = 4304
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin spiCount:SPI_MISO to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:65]
+WARNING: [Synth 8-3295] tying undriven pin spiUtilCount:SPI_MISO to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:72]
+WARNING: [Synth 8-3295] tying undriven pin counter:reset to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:61]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.406 ; gain = 112.512 ; free physical = 823 ; free virtual = 4307
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.406 ; gain = 112.512 ; free physical = 823 ; free virtual = 4307
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:160]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:162]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:162]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1622.711 ; gain = 0.000 ; free physical = 560 ; free virtual = 4057
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 644 ; free virtual = 4137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 644 ; free virtual = 4137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 645 ; free virtual = 4139
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "OutputData" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "OutputData" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_in" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Data" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 636 ; free virtual = 4130
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 4     
++---Registers : 
+	               25 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input     25 Bit        Muxes := 1     
+	 105 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
+	  29 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  36 Input      3 Bit        Muxes := 1     
+	  34 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	  33 Input      1 Bit        Muxes := 1     
+	  34 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ClockManager 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module FrequencyGenerator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module FrequencyGenerator__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module FullSPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module SD_SPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  29 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  36 Input      3 Bit        Muxes := 1     
+	  34 Input      2 Bit        Muxes := 1     
+	  33 Input      1 Bit        Muxes := 1     
+	  34 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module FrequencyGenerator__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module FrequencyGenerator__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module InitializationRegister 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 4     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	 105 Input     17 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module TFT_SPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module AudVid 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "OutputData" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "OutputData" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element ClockManager/counter_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:205]
+WARNING: [Synth 8-6014] Unused sequential element ClockManager/I2SCLK_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:207]
+WARNING: [Synth 8-6014] Unused sequential element AudVid/sd_spi/spiCount/Data_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:35]
+WARNING: [Synth 8-6014] Unused sequential element AudVid/sd_spi/spiCount/InputData_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:24]
+WARNING: [Synth 8-6014] Unused sequential element AudVid/sd_spi/spiCount/DataClk_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:23]
+WARNING: [Synth 8-6014] Unused sequential element AudVid/sd_spi/spiUtilCount/Data_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:35]
+WARNING: [Synth 8-6014] Unused sequential element AudVid/sd_spi/spiUtilCount/InputData_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:24]
+WARNING: [Synth 8-6014] Unused sequential element AudVid/sd_spi/spiUtilCount/DataClk_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:23]
+INFO: [Synth 8-5546] ROM "AudVid/sd_spi/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "AudVid/sd_spi/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "AudVid/sd_spi/count" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design top has unconnected port DAC_I2S_DATA
+WARNING: [Synth 8-3331] design top has unconnected port DAC_I2S_CLK
+WARNING: [Synth 8-3331] design top has unconnected port DAC_I2S_WS
+WARNING: [Synth 8-3331] design top has unconnected port TFT_RST
+WARNING: [Synth 8-3331] design top has unconnected port user_led
+WARNING: [Synth 8-3331] design top has unconnected port user_led_1
+WARNING: [Synth 8-3331] design top has unconnected port user_led_2
+WARNING: [Synth 8-3331] design top has unconnected port user_led_3
+WARNING: [Synth 8-3331] design top has unconnected port user_led_4
+WARNING: [Synth 8-3331] design top has unconnected port user_led_5
+WARNING: [Synth 8-3331] design top has unconnected port user_led_6
+WARNING: [Synth 8-3331] design top has unconnected port user_led_7
+WARNING: [Synth 8-3331] design top has unconnected port user_led_8
+WARNING: [Synth 8-3331] design top has unconnected port user_led_9
+WARNING: [Synth 8-3331] design top has unconnected port user_led_10
+WARNING: [Synth 8-3331] design top has unconnected port user_led_11
+WARNING: [Synth 8-3331] design top has unconnected port user_led_12
+WARNING: [Synth 8-3331] design top has unconnected port user_led_13
+WARNING: [Synth 8-3331] design top has unconnected port user_led_14
+WARNING: [Synth 8-3331] design top has unconnected port user_led_15
+WARNING: [Synth 8-3331] design top has unconnected port user_sw
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_1
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[7]' (FDRE) to 'AudVid/SD_InputAddress_reg[15]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[15]' (FDRE) to 'AudVid/SD_InputAddress_reg[6]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[6]' (FDRE) to 'AudVid/SD_InputAddress_reg[14]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[14]' (FDRE) to 'AudVid/SD_InputAddress_reg[5]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[5]' (FDRE) to 'AudVid/SD_InputAddress_reg[13]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[13]' (FDRE) to 'AudVid/SD_InputAddress_reg[4]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[4]' (FDRE) to 'AudVid/SD_InputAddress_reg[12]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[12]' (FDRE) to 'AudVid/SD_InputAddress_reg[11]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\AudVid/SD_InputAddress_reg[3] )
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[11]' (FDRE) to 'AudVid/SD_InputAddress_reg[2]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[2]' (FDRE) to 'AudVid/SD_InputAddress_reg[10]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[10]' (FDRE) to 'AudVid/SD_InputAddress_reg[9]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[9]' (FDRE) to 'AudVid/SD_InputAddress_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[0]' (FDRE) to 'AudVid/SD_InputAddress_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AudVid/SD_InputAddress_reg[8] )
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[7]' (FD) to 'AudVid/sd_spi/Address_reg[15]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[15]' (FD) to 'AudVid/sd_spi/Address_reg[14]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[6]' (FD) to 'AudVid/sd_spi/Address_reg[14]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[14]' (FD) to 'AudVid/sd_spi/Address_reg[13]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[5]' (FD) to 'AudVid/sd_spi/Address_reg[13]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[13]' (FD) to 'AudVid/sd_spi/Address_reg[12]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[4]' (FD) to 'AudVid/sd_spi/Address_reg[12]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[12]' (FD) to 'AudVid/sd_spi/Address_reg[11]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[11]' (FD) to 'AudVid/sd_spi/Address_reg[10]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[2]' (FD) to 'AudVid/sd_spi/Address_reg[10]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[10]' (FD) to 'AudVid/sd_spi/Address_reg[9]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[9]' (FD) to 'AudVid/sd_spi/Address_reg[8]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[0]' (FD) to 'AudVid/sd_spi/Address_reg[8]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[15]' (FD) to 'AudVid/tft_spi/data1_reg[14]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[14]' (FD) to 'AudVid/tft_spi/data1_reg[13]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[13]' (FD) to 'AudVid/tft_spi/data1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[12]' (FD) to 'AudVid/tft_spi/data1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[11]' (FD) to 'AudVid/tft_spi/data1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[10]' (FD) to 'AudVid/tft_spi/data1_reg[9]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[9]' (FD) to 'AudVid/tft_spi/data1_reg[8]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[8]' (FD) to 'AudVid/tft_spi/data1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[7]' (FD) to 'AudVid/tft_spi/data1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[6]' (FD) to 'AudVid/tft_spi/data1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[5]' (FD) to 'AudVid/tft_spi/data1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[4]' (FD) to 'AudVid/tft_spi/data1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[3]' (FD) to 'AudVid/tft_spi/data1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[2]' (FD) to 'AudVid/tft_spi/data1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'AudVid/tft_spi/data1_reg[1]' (FD) to 'AudVid/tft_spi/data1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\AudVid/sd_spi/Address_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AudVid/sd_spi/Address_reg[8] )
+WARNING: [Synth 8-3332] Sequential element (AudVid/SD_InputAddress_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (AudVid/SD_InputAddress_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (AudVid/sd_spi/Address_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (AudVid/sd_spi/Address_reg[3]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:46 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 615 ; free virtual = 4115
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 464 ; free virtual = 3987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 464 ; free virtual = 3987
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:02 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net TFT_RS_OBUF with 1st driver pin 'i_233/O' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:22]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net TFT_RS_OBUF with 2nd driver pin 'AudVid/tft_spi/spi/reset_reg/Q' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:24]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:02 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:01:03 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:01:03 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     4|
+|2     |CARRY4     |    10|
+|3     |LUT1       |    14|
+|4     |LUT2       |    51|
+|5     |LUT3       |    34|
+|6     |LUT4       |    33|
+|7     |LUT5       |    43|
+|8     |LUT6       |   111|
+|9     |MMCME2_ADV |     1|
+|10    |MUXF7      |     6|
+|11    |MUXF8      |     1|
+|12    |FDRE       |   145|
+|13    |FDSE       |     2|
+|14    |IBUF       |     3|
+|15    |OBUF       |     9|
+|16    |OBUFT      |     4|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-----------------------------+-----------------------------------+------+
+|      |Instance                     |Module                             |Cells |
++------+-----------------------------+-----------------------------------+------+
+|1     |top                          |                                   |   471|
+|2     |  AudVid                     |AudVid                             |   449|
+|3     |    sd_spi                   |SD_SPI                             |   191|
+|4     |      spi                    |FullSPI                            |    46|
+|5     |      spiCount               |FullSPI_0                          |     9|
+|6     |      spiInitClock           |FrequencyGenerator                 |    23|
+|7     |      spiUtilCount           |FullSPI_1                          |     9|
+|8     |      spiWorkClock           |FrequencyGenerator__parameterized0 |    11|
+|9     |    tft_spi                  |TFT_SPI                            |   234|
+|10    |      counter                |Counter                            |   121|
+|11    |      initializationRegister |InitializationRegister             |    47|
+|12    |      spi                    |SPI                                |    17|
+|13    |      spiInitRegClock        |FrequencyGenerator__parameterized1 |    25|
+|14    |      spiWorkClock           |FrequencyGenerator__parameterized2 |    14|
+|15    |  ClockManager               |ClockManager                       |     4|
+|16    |    Clk_wiz                  |clk_wiz                            |     4|
++------+-----------------------------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:01:03 . Memory (MB): peak = 1622.711 ; gain = 438.816 ; free physical = 463 ; free virtual = 3986
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 52 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 1622.711 ; gain = 112.512 ; free physical = 516 ; free virtual = 4039
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:01:03 . Memory (MB): peak = 1622.719 ; gain = 438.816 ; free physical = 526 ; free virtual = 4048
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:160]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:162]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:162]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:164]
+Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+111 Infos, 144 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:01:05 . Memory (MB): peak = 1622.719 ; gain = 438.938 ; free physical = 507 ; free virtual = 4030
+# report_timing_summary -file top_timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1995.918 ; gain = 373.199 ; free physical = 212 ; free virtual = 3726
+# report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
+report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1995.918 ; gain = 0.000 ; free physical = 213 ; free virtual = 3726
+# report_utilization -file top_utilization_synth.rpt
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1995.918 ; gain = 0.000 ; free physical = 212 ; free virtual = 3726
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net AudVid/tft_spi/spi/TFT_RS_OBUF has multiple drivers: AudVid/tft_spi/initializationRegister/TFT_RS_OBUF_inst_i_1/O, and AudVid/tft_spi/spi/reset_reg/Q.
+INFO: [Project 1-461] DRC finished with 1 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2046.934 ; gain = 51.016 ; free physical = 210 ; free virtual = 3721
+INFO: [Common 17-83] Releasing license: Implementation
+5 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+    while executing
+"opt_design"
+    (file "top.tcl" line 36)
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 12 23:51:26 2019...

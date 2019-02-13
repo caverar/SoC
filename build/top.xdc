@@ -95,35 +95,62 @@ set_property IOSTANDARD LVCMOS33 [get_ports user_sw_14]
 set_property LOC R2 [get_ports user_sw_15]
 set_property IOSTANDARD LVCMOS33 [get_ports user_sw_15]
  ## user_btn:0
-set_property LOC U18 [get_ports user_btn]
+set_property LOC T18 [get_ports user_btn]
 set_property IOSTANDARD LVCMOS33 [get_ports user_btn]
  ## user_btn:1
-set_property LOC T18 [get_ports user_btn_1]
+set_property LOC W19 [get_ports user_btn_1]
 set_property IOSTANDARD LVCMOS33 [get_ports user_btn_1]
  ## user_btn:2
-set_property LOC W19 [get_ports user_btn_2]
+set_property LOC T17 [get_ports user_btn_2]
 set_property IOSTANDARD LVCMOS33 [get_ports user_btn_2]
  ## user_btn:3
-set_property LOC T17 [get_ports user_btn_3]
+set_property LOC U17 [get_ports user_btn_3]
 set_property IOSTANDARD LVCMOS33 [get_ports user_btn_3]
- ## user_btn:4
-set_property LOC U17 [get_ports user_btn_4]
-set_property IOSTANDARD LVCMOS33 [get_ports user_btn_4]
- ## TFT_CLK:0
-set_property LOC H1 [get_ports TFT_CLK]
-set_property IOSTANDARD LVCMOS33 [get_ports TFT_CLK]
- ## TFT_MOSI:0
-set_property LOC G2 [get_ports TFT_MOSI]
-set_property IOSTANDARD LVCMOS33 [get_ports TFT_MOSI]
+ ## Reset:0
+set_property LOC U18 [get_ports Reset]
+set_property IOSTANDARD LVCMOS33 [get_ports Reset]
+ ## DAC_I2S_DATA:0
+set_property LOC A16 [get_ports DAC_I2S_DATA]
+set_property IOSTANDARD LVCMOS33 [get_ports DAC_I2S_DATA]
+ ## DAC_I2S_CLK:0
+set_property LOC B15 [get_ports DAC_I2S_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports DAC_I2S_CLK]
+ ## DAC_I2S_WS:0
+set_property LOC A14 [get_ports DAC_I2S_WS]
+set_property IOSTANDARD LVCMOS33 [get_ports DAC_I2S_WS]
+ ## SD_SPI_CLK:0
+set_property LOC N17 [get_ports SD_SPI_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CLK]
+ ## SD_SPI_MOSI:0
+set_property LOC M18 [get_ports SD_SPI_MOSI]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MOSI]
+ ## SD_SPI_MISO:0
+set_property LOC K17 [get_ports SD_SPI_MISO]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MISO]
+ ## SD_SPI_CS:0
+set_property LOC P18 [get_ports SD_SPI_CS]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CS]
+ ## SD_SPI_COUNT_DEBUG:0
+set_property LOC L17 [get_ports SD_SPI_COUNT_DEBUG]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_COUNT_DEBUG]
+ ## SD_SPI_UTILCOUNT_DEBUG:0
+set_property LOC M19 [get_ports SD_SPI_UTILCOUNT_DEBUG]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_UTILCOUNT_DEBUG]
+ ## TFT_SPI_CLK:0
+set_property LOC H1 [get_ports TFT_SPI_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports TFT_SPI_CLK]
+ ## TFT_SPI_MOSI:0
+set_property LOC G2 [get_ports TFT_SPI_MOSI]
+set_property IOSTANDARD LVCMOS33 [get_ports TFT_SPI_MOSI]
  ## TFT_RS:0
 set_property LOC J2 [get_ports TFT_RS]
 set_property IOSTANDARD LVCMOS33 [get_ports TFT_RS]
  ## TFT_RST:0
 set_property LOC L2 [get_ports TFT_RST]
 set_property IOSTANDARD LVCMOS33 [get_ports TFT_RST]
- ## TFT_CS:0
-set_property LOC J1 [get_ports TFT_CS]
-set_property IOSTANDARD LVCMOS33 [get_ports TFT_CS]
+ ## TFT_SPI_CS:0
+set_property LOC J1 [get_ports TFT_SPI_CS]
+set_property IOSTANDARD LVCMOS33 [get_ports TFT_SPI_CS]
  ## clk100:0
 set_property LOC W5 [get_ports clk100]
 set_property IOSTANDARD LVCMOS33 [get_ports clk100]

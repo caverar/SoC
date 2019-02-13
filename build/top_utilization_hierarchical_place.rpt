@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Tue Feb 12 20:58:52 2019
+| Date         : Wed Feb 13 00:36:52 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -18,19 +18,32 @@ Table of Contents
 1. Utilization by Hierarchy
 ---------------------------
 
-+----------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-|          Instance          |               Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
-+----------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                        |                              (top) |        129 |        129 |       0 |    0 |  95 |      0 |      0 |            0 |
-|   (top)                    |                              (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   TFT_SPI                  |                            TFT_SPI |        129 |        129 |       0 |    0 |  95 |      0 |      0 |            0 |
-|     (TFT_SPI)              |                            TFT_SPI |          3 |          3 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     counter                |                            Counter |         74 |         74 |       0 |    0 |  26 |      0 |      0 |            0 |
-|     initializationRegister |             InitializationRegister |         33 |         33 |       0 |    0 |   8 |      0 |      0 |            0 |
-|     spi                    |                                SPI |          5 |          5 |       0 |    0 |   7 |      0 |      0 |            0 |
-|     spiInitRegClock        |                 FrequencyGenerator |          6 |          6 |       0 |    0 |  15 |      0 |      0 |            0 |
-|     spiWorkClock           | FrequencyGenerator__parameterized0 |          8 |          8 |       0 |    0 |  19 |      0 |      0 |            0 |
-+----------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
++------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|           Instance           |               Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| top                          |                              (top) |        226 |        226 |       0 |    0 | 156 |      0 |      0 |            0 |
+|   (top)                      |                              (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   AudVid                     |                             AudVid |        224 |        224 |       0 |    0 | 151 |      0 |      0 |            0 |
+|     (AudVid)                 |                             AudVid |          8 |          8 |       0 |    0 |  12 |      0 |      0 |            0 |
+|     i2s                      |                                I2S |          5 |          5 |       0 |    0 |   6 |      0 |      0 |            0 |
+|     sd_spi                   |                             SD_SPI |         99 |         99 |       0 |    0 |  68 |      0 |      0 |            0 |
+|       (sd_spi)               |                             SD_SPI |         53 |         53 |       0 |    0 |  28 |      0 |      0 |            0 |
+|       spi                    |                            FullSPI |         23 |         23 |       0 |    0 |  20 |      0 |      0 |            0 |
+|       spiCount               |                          FullSPI_0 |          4 |          4 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       spiInitClock           |                 FrequencyGenerator |         10 |         10 |       0 |    0 |   9 |      0 |      0 |            0 |
+|       spiUtilCount           |                          FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       spiWorkClock           | FrequencyGenerator__parameterized0 |          4 |          4 |       0 |    0 |   5 |      0 |      0 |            0 |
+|     tft_spi                  |                            TFT_SPI |        112 |        112 |       0 |    0 |  65 |      0 |      0 |            0 |
+|       (tft_spi)              |                            TFT_SPI |          3 |          3 |       0 |    0 |   5 |      0 |      0 |            0 |
+|       counter                |                            Counter |         62 |         62 |       0 |    0 |  26 |      0 |      0 |            0 |
+|       initializationRegister |             InitializationRegister |         32 |         32 |       0 |    0 |   8 |      0 |      0 |            0 |
+|       spi                    |                                SPI |          3 |          3 |       0 |    0 |   5 |      0 |      0 |            0 |
+|       spiInitRegClock        | FrequencyGenerator__parameterized1 |          6 |          6 |       0 |    0 |  15 |      0 |      0 |            0 |
+|       spiWorkClock           | FrequencyGenerator__parameterized2 |          6 |          6 |       0 |    0 |   6 |      0 |      0 |            0 |
+|   ClockManager               |                       ClockManager |          2 |          2 |       0 |    0 |   5 |      0 |      0 |            0 |
+|     (ClockManager)           |                       ClockManager |          2 |          2 |       0 |    0 |   5 |      0 |      0 |            0 |
+|     Clk_wiz                  |                            clk_wiz |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
++------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
 
 
