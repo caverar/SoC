@@ -1,0 +1,36 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
+| Date         : Tue Feb 12 20:58:52 2019
+| Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
+| Design       : top
+| Device       : 7a35tcpg236-1
+| Design State : Fully Placed
+-----------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|          Instance          |               Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++----------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| top                        |                              (top) |        129 |        129 |       0 |    0 |  95 |      0 |      0 |            0 |
+|   (top)                    |                              (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   TFT_SPI                  |                            TFT_SPI |        129 |        129 |       0 |    0 |  95 |      0 |      0 |            0 |
+|     (TFT_SPI)              |                            TFT_SPI |          3 |          3 |       0 |    0 |  20 |      0 |      0 |            0 |
+|     counter                |                            Counter |         74 |         74 |       0 |    0 |  26 |      0 |      0 |            0 |
+|     initializationRegister |             InitializationRegister |         33 |         33 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     spi                    |                                SPI |          5 |          5 |       0 |    0 |   7 |      0 |      0 |            0 |
+|     spiInitRegClock        |                 FrequencyGenerator |          6 |          6 |       0 |    0 |  15 |      0 |      0 |            0 |
+|     spiWorkClock           | FrequencyGenerator__parameterized0 |          8 |          8 |       0 |    0 |  19 |      0 |      0 |            0 |
++----------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

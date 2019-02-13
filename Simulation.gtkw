@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Sun Feb  3 18:09:18 2019
+[*]
+[dumpfile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/SoC.vcd"
+[dumpfile_mtime] "Sun Feb  3 01:44:01 2019"
+[dumpfile_size] 19014459
+[savefile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Simulation.gtkw"
+[timestart] 1829700000
+[size] 1283 713
+[pos] -1 -1
+*-27.000000 2181190000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SD_SPI_TB.
+[treeopen] SD_SPI_TB.uut.
+[sst_width] 223
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 193
+@28
+SD_SPI_TB.uut.SPI_MISO
+SD_SPI_TB.uut.SPI_MOSI
+@22
+SD_SPI_TB.uut.InputData[7:0]
+@28
+SD_SPI_TB.uut.DataClock
+SD_SPI_TB.uut.InputDataClock
+SD_SPI_TB.uut.SPI_CLK
+SD_SPI_TB.uut.SPI_CS
+SD_SPI_TB.uut.SPI_Enable
+@24
+SD_SPI_TB.uut.count[10:0]
+@29
+SD_SPI_TB.uut.EnableVideoRead
+[pattern_trace] 1
+[pattern_trace] 0
