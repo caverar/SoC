@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 13 20:30:21 2019
+| Date         : Wed Feb 13 20:44:08 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_clock_utilization -file top_clock_utilization.rpt
 | Design       : top
@@ -66,7 +66,7 @@ Table of Contents
 | Source Id | Global Id | Driver Type/Pin     | Constraint | Site            | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock       | Driver Pin                                  | Net                                     |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------+---------------------------------------------+-----------------------------------------+
 | src0      | g0        | IBUF/O              | IOB_X1Y26  | IOB_X1Y26       | X1Y0         |           2 |               0 |              10.000 | clk100             | ClockManager/Clk_wiz/clkin1_ibufg/O         | ClockManager/Clk_wiz/clk_in1_clk_wiz_0  |
-| src1      | g1        | FDRE/Q              | None       | SLICE_X60Y93    | X1Y1         |           1 |               1 |                     |                    | AudVid/tft_spi/spi/dataClk_reg/Q            | AudVid/tft_spi/spi/dataClk_reg_0        |
+| src1      | g1        | FDRE/Q              | None       | SLICE_X63Y92    | X1Y1         |           1 |               1 |                     |                    | AudVid/tft_spi/spi/dataClk_reg/Q            | AudVid/tft_spi/spi/dataClk_reg_0        |
 | src2      | g2        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |              70.862 | clk_out1_clk_wiz_0 | ClockManager/Clk_wiz/mmcm_adv_inst/CLKOUT0  | ClockManager/Clk_wiz/clk_out1_clk_wiz_0 |
 | src2      | g3        | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |              50.000 | clkfbout_clk_wiz_0 | ClockManager/Clk_wiz/mmcm_adv_inst/CLKFBOUT | ClockManager/Clk_wiz/clkfbout_clk_wiz_0 |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------+---------------------------------------------+-----------------------------------------+
@@ -80,9 +80,9 @@ Table of Contents
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+--------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                      | Net                      |
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+--------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X2Y29/AFF  | X0Y0         |          26 |               1 |              |       | AudVid/sd_spi/spi/DataClk_reg/Q | AudVid/sd_spi/spi/CLK    - Static -
-| 1        | FDRE/Q          | None       | SLICE_X1Y128/AFF | X0Y2         |           6 |               0 |              |       | ClockManager/I2SCLK_reg/Q       | ClockManager/DAC_I2S_CLK - Static -
-| 2        | FDRE/Q          | None       | SLICE_X1Y131/AFF | X0Y2         |           3 |               2 |              |       | AudVid/i2s/I2S_WS_reg/Q         | AudVid/i2s/Data_reg[0]_0 - Static -
+| 0        | FDRE/Q          | None       | SLICE_X3Y27/AFF  | X0Y0         |          26 |               1 |              |       | AudVid/sd_spi/spi/DataClk_reg/Q | AudVid/sd_spi/spi/CLK    - Static -
+| 1        | FDRE/Q          | None       | SLICE_X1Y127/AFF | X0Y2         |           6 |               0 |              |       | ClockManager/I2SCLK_reg/Q       | ClockManager/DAC_I2S_CLK - Static -
+| 2        | FDRE/Q          | None       | SLICE_X0Y128/AFF | X0Y2         |           3 |               2 |              |       | AudVid/i2s/I2S_WS_reg/Q         | AudVid/i2s/Data_reg[0]_0 - Static -
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+--------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -97,11 +97,11 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   40 |  1200 |   17 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   40 |  1200 |   20 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   61 |  1500 |   16 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
-| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   34 |  1800 |    4 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   61 |  1500 |   26 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   34 |  1800 |   18 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |   950 |    0 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts

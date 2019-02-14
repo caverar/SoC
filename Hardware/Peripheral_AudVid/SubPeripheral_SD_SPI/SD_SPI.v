@@ -40,7 +40,7 @@ module SD_SPI(
     end
     //Instancias
     wire Buffered_MasterCLK;
-    IBUF inputBuffer(
+    BUF inputBuffer(
         .O (Buffered_MasterCLK),
         .I (MasterCLK)
     );

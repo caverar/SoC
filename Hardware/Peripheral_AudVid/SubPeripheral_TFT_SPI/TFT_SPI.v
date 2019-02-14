@@ -34,7 +34,7 @@ module TFT_SPI(
 	//Inicializacion
 	//Instancias
 	wire Buffered_MasterCLK;
-	IBUF inputBuffer(
+	BUF inputBuffer(
         .O (Buffered_MasterCLK),
         .I (MasterCLK)
     );

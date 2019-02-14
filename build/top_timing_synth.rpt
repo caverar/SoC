@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 13 20:30:11 2019
+| Date         : Wed Feb 13 20:43:57 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -140,7 +140,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.686        0.000                      0                  108        0.131        0.000                      0                  108        3.000        0.000                       0                    76  
+      5.686        0.000                      0                  108        0.127        0.000                      0                  108        3.000        0.000                       0                    74  
 
 
 All user specified timing constraints are met.
@@ -165,7 +165,7 @@ clk100                {0.000 5.000}      10.000          100.000
 
 Clock                     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk100                      5.686        0.000                      0                  104        0.131        0.000                      0                  104        3.000        0.000                       0                    67  
+clk100                      5.686        0.000                      0                  104        0.127        0.000                      0                  104        3.000        0.000                       0                    65  
   clk_out1_clk_wiz_0       69.059        0.000                      0                    4        0.142        0.000                      0                    4       34.931        0.000                       0                     6  
   clkfbout_clk_wiz_0                                                                                                                                                   47.845        0.000                       0                     3  
 
@@ -199,7 +199,7 @@ From Clock:  clk100
   To Clock:  clk100
 
 Setup :            0  Failing Endpoints,  Worst Slack        5.686ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.131ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.127ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
@@ -271,7 +271,7 @@ Slack (MET) :             5.686ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.131ns  (arrival time - required time)
+Slack (MET) :             0.127ns  (arrival time - required time)
   Source:                 AudVid/tft_spi/spiInitRegClock/counter_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            AudVid/tft_spi/spiInitRegClock/counter_reg[0]/D
@@ -279,12 +279,12 @@ Slack (MET) :             0.131ns  (arrival time - required time)
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.381ns  (logic 0.256ns (67.158%)  route 0.125ns (32.842%))
+  Data Path Delay:        0.398ns  (logic 0.273ns (68.560%)  route 0.125ns (31.440%))
   Logic Levels:           2  (CARRY4=1 LUT1=1)
   Clock Path Skew:        0.145ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.249ns
-    Source Clock Delay      (SCD):    0.620ns
-    Clock Pessimism Removal (CPR):    0.484ns
+    Destination Clock Delay (DCD):    1.276ns
+    Source Clock Delay      (SCD):    0.639ns
+    Clock Pessimism Removal (CPR):    0.492ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -294,18 +294,18 @@ Slack (MET) :             0.131ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  ClockManager/Clk_wiz/clkin1_ibufg/O
                          net (fo=2, unplaced)         0.114     0.340    ClockManager/Clk_wiz/clk_in1_clk_wiz_0
                          BUFG (Prop_bufg_I_O)         0.026     0.366 r  ClockManager/Clk_wiz/CLK_BUFG/O
-                         net (fo=22, unplaced)        0.114     0.480    AudVid_n_1
-                         BUFG (Prop_bufg_I_O)         0.026     0.506 r  address_reg[6]_i_2/O
-                         net (fo=29, unplaced)        0.114     0.620    AudVid/tft_spi/spiInitRegClock/clk100
+                         net (fo=22, unplaced)        0.114     0.480    AudVid/tft_spi/CLK
+                         LUT1 (Prop_lut1_I0_O)        0.045     0.525 r  AudVid/tft_spi/inputBuffer/O
+                         net (fo=29, unplaced)        0.114     0.639    AudVid/tft_spi/spiInitRegClock/CLK
                          FDRE                                         r  AudVid/tft_spi/spiInitRegClock/counter_reg[0]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.141     0.761 f  AudVid/tft_spi/spiInitRegClock/counter_reg[0]/Q
-                         net (fo=1, unplaced)         0.125     0.887    AudVid/tft_spi/spiInitRegClock/counter_reg_n_0_[0]
-                         LUT1 (Prop_lut1_I0_O)        0.045     0.932 r  AudVid/tft_spi/spiInitRegClock/counter[0]_i_4/O
-                         net (fo=1, unplaced)         0.000     0.932    AudVid/tft_spi/spiInitRegClock/counter[0]_i_4_n_0
+                         FDRE (Prop_fdre_C_Q)         0.158     0.797 f  AudVid/tft_spi/spiInitRegClock/counter_reg[0]/Q
+                         net (fo=1, unplaced)         0.125     0.923    AudVid/tft_spi/spiInitRegClock/counter_reg_n_0_[0]
+                         LUT1 (Prop_lut1_I0_O)        0.045     0.968 r  AudVid/tft_spi/spiInitRegClock/counter[0]_i_4/O
+                         net (fo=1, unplaced)         0.000     0.968    AudVid/tft_spi/spiInitRegClock/counter[0]_i_4_n_0
                          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.070     1.002 r  AudVid/tft_spi/spiInitRegClock/counter_reg[0]_i_2/O[0]
-                         net (fo=1, unplaced)         0.000     1.002    AudVid/tft_spi/spiInitRegClock/counter_reg[0]_i_2_n_7
+                                                      0.070     1.038 r  AudVid/tft_spi/spiInitRegClock/counter_reg[0]_i_2/O[0]
+                         net (fo=1, unplaced)         0.000     1.038    AudVid/tft_spi/spiInitRegClock/counter_reg[0]_i_2_n_7
                          FDRE                                         r  AudVid/tft_spi/spiInitRegClock/counter_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
@@ -315,17 +315,17 @@ Slack (MET) :             0.131ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  ClockManager/Clk_wiz/clkin1_ibufg/O
                          net (fo=2, unplaced)         0.259     0.673    ClockManager/Clk_wiz/clk_in1_clk_wiz_0
                          BUFG (Prop_bufg_I_O)         0.029     0.702 r  ClockManager/Clk_wiz/CLK_BUFG/O
-                         net (fo=22, unplaced)        0.259     0.961    AudVid_n_1
-                         BUFG (Prop_bufg_I_O)         0.029     0.990 r  address_reg[6]_i_2/O
-                         net (fo=29, unplaced)        0.259     1.249    AudVid/tft_spi/spiInitRegClock/clk100
+                         net (fo=22, unplaced)        0.259     0.961    AudVid/tft_spi/CLK
+                         LUT1 (Prop_lut1_I0_O)        0.056     1.017 r  AudVid/tft_spi/inputBuffer/O
+                         net (fo=29, unplaced)        0.259     1.276    AudVid/tft_spi/spiInitRegClock/CLK
                          FDRE                                         r  AudVid/tft_spi/spiInitRegClock/counter_reg[0]/C
-                         clock pessimism             -0.484     0.765    
-                         FDRE (Hold_fdre_C_D)         0.105     0.870    AudVid/tft_spi/spiInitRegClock/counter_reg[0]
+                         clock pessimism             -0.492     0.784    
+                         FDRE (Hold_fdre_C_D)         0.126     0.910    AudVid/tft_spi/spiInitRegClock/counter_reg[0]
   -------------------------------------------------------------------
-                         required time                         -0.870    
-                         arrival time                           1.002    
+                         required time                         -0.910    
+                         arrival time                           1.038    
   -------------------------------------------------------------------
-                         slack                                  0.131    
+                         slack                                  0.127    
 
 
 
@@ -339,7 +339,7 @@ Period(ns):         10.000
 Sources:            { clk100 }
 
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     BUFG/I             n/a            2.155         10.000      7.845                address_reg[6]_i_2/I
+Min Period        n/a     BUFG/I             n/a            2.155         10.000      7.845                ClockManager/Clk_wiz/CLK_BUFG/I
 Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000               ClockManager/Clk_wiz/mmcm_adv_inst/CLKIN1
 Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                ClockManager/Clk_wiz/mmcm_adv_inst/CLKIN1
 High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                ClockManager/Clk_wiz/mmcm_adv_inst/CLKIN1

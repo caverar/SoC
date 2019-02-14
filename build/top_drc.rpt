@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 13 20:30:52 2019
+| Date         : Wed Feb 13 20:44:39 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_drc -file top_drc.rpt
 | Design       : top
@@ -50,7 +50,7 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net AudVid/sd_spi/spiWorkClock/CLK is a gated clock net sourced by a combinational pin AudVid/sd_spi/spiWorkClock/count[2]_i_2/O, cell AudVid/sd_spi/spiWorkClock/count[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net AudVid/sd_spi/spiWorkClock/count_reg[0] is a gated clock net sourced by a combinational pin AudVid/sd_spi/spiWorkClock/count[2]_i_2/O, cell AudVid/sd_spi/spiWorkClock/count[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
