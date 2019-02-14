@@ -14,6 +14,7 @@ module SD_SPI(
     );
 
 
+
     wire        SPI_InitClock;
     wire        SPI_WorkClock;
     wire        DataClock;
@@ -38,16 +39,21 @@ module SD_SPI(
         EnableDataRead=0;
     end
     //Instancias
+    wire Buffered_MasterCLK;
+    IBUF inputBuffer(
+        .O (Buffered_MasterCLK),
+        .I (MasterCLK)
+    );
 
     //	Reloj SPI de Inicializacion -400Khz 
 	FrequencyGenerator #(.frequency(400000), .bitsNumber(8)) spiInitClock(
-		.InputCLK(MasterCLK),
+		.InputCLK(Buffered_MasterCLK),
 		.OutputCLK(SPI_InitClock)
 	);
 
 	//	Reloj SPI de Trabajo-12.5Mhz 
 	FrequencyGenerator #(.frequency(12500000), .bitsNumber(5)) spiWorkClock(
-		.InputCLK(MasterCLK),
+		.InputCLK(Buffered_MasterCLK),
 		.OutputCLK(SPI_WorkClock)
 	);
 

@@ -33,16 +33,21 @@ module TFT_SPI(
 	initial begin countp=0; end
 	//Inicializacion
 	//Instancias
+	wire Buffered_MasterCLK;
+	IBUF inputBuffer(
+        .O (Buffered_MasterCLK),
+        .I (MasterCLK)
+    );
 
 	//	Reloj SPI de Inicializacion
 	FrequencyGenerator #(.frequency(InitFrequency), .bitsNumber(InitFrequencyBits)) spiInitRegClock(
-		.InputCLK(MasterCLK),
+		.InputCLK(Buffered_MasterCLK),
 		.OutputCLK(SPI_InitRegClock)
 	);
 
 	//	Reloj SPI de Trabajo
 	FrequencyGenerator #(.frequency(WorkFrequency), .bitsNumber(WorkFrequencyBits)) spiWorkClock(
-		.InputCLK(MasterCLK),
+		.InputCLK(Buffered_MasterCLK),
 		.OutputCLK(SPI_WorkClock)
 	);
 
@@ -52,7 +57,7 @@ module TFT_SPI(
 		.OutData(InitData),
 		.RS(InitReg_RS),
 		.CS(SPI_CS),
-		.CLK(MasterCLK)			
+		.CLK(Buffered_MasterCLK)			
 	);
 		//	Contador de Instrucciones de Iniciliazacion
 	Counter #(.Begin(0), .bitsNumber(25), .End(InitDataSize+delayTime), .mode(0)) counter(
