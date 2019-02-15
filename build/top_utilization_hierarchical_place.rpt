@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 13 20:44:06 2019
+| Date         : Thu Feb 14 22:23:02 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -21,16 +21,17 @@ Table of Contents
 +------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 |           Instance           |               Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                          |                              (top) |        222 |        222 |       0 |    0 | 166 |      0 |      0 |            0 |
+| top                          |                              (top) |        234 |        234 |       0 |    0 | 184 |      0 |      0 |            0 |
 |   (top)                      |                              (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   AudVid                     |                             AudVid |        220 |        220 |       0 |    0 | 161 |      0 |      0 |            0 |
+|   AudVid                     |                             AudVid |        232 |        232 |       0 |    0 | 179 |      0 |      0 |            0 |
+|     (AudVid)                 |                             AudVid |          8 |          8 |       0 |    0 |  14 |      0 |      0 |            0 |
 |     i2s                      |                                I2S |         14 |         14 |       0 |    0 |  29 |      0 |      0 |            0 |
 |       (i2s)                  |                                I2S |          7 |          7 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       squaregenerator        |                    SquareGenerator |          7 |          7 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     sd_spi                   |                             SD_SPI |         93 |         93 |       0 |    0 |  66 |      0 |      0 |            0 |
-|       (sd_spi)               |                             SD_SPI |         48 |         48 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       spi                    |                            FullSPI |         22 |         22 |       0 |    0 |  20 |      0 |      0 |            0 |
-|       spiCount               |                          FullSPI_0 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     sd_spi                   |                             SD_SPI |         97 |         97 |       0 |    0 |  70 |      0 |      0 |            0 |
+|       (sd_spi)               |                             SD_SPI |         52 |         52 |       0 |    0 |  30 |      0 |      0 |            0 |
+|       spi                    |                            FullSPI |         23 |         23 |       0 |    0 |  20 |      0 |      0 |            0 |
+|       spiCount               |                          FullSPI_0 |          4 |          4 |       0 |    0 |   3 |      0 |      0 |            0 |
 |       spiInitClock           |                 FrequencyGenerator |          9 |          9 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       spiUtilCount           |                          FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
 |       spiWorkClock           | FrequencyGenerator__parameterized0 |          4 |          4 |       0 |    0 |   5 |      0 |      0 |            0 |

@@ -10,7 +10,7 @@ module SD_SPI(
     output wire [7:0]  InputData,           //Datos que llegan de la SD
     output reg         EnableDataRead,      
     output wire        InputDataClock,      
-    input       [15:0] InputAddress
+    input       [23:0] InputAddress
     );
 
 
@@ -24,7 +24,7 @@ module SD_SPI(
     reg  [7:0]  OutputData;
     wire        SPI_InputCLK;
     reg  [9:0]  VideoCount;
-    reg  [15:0] Address;
+    reg  [23:0] Address;
     
     
     
@@ -228,7 +228,7 @@ module SD_SPI(
         //  CMD17-2
         end else if(count==25) begin
             count<=26;
-            OutputData<=8'h00;
+            OutputData<=Address[23:16];
         //  CMD17-3
         end else if(count==26) begin 
             count<=27;

@@ -6,8 +6,9 @@ module TFT_SPI(
 	output wire        SPI_CLK,
 	output wire		   RS,
 	output wire		   SPI_CS,
-	output wire		   RST 
-	//output wire      bussy,
+	output wire		   RST, 
+	output wire        DataClock
+
 	);
 	//Parametros
 	parameter InitDataSize=104;
@@ -97,6 +98,8 @@ module TFT_SPI(
 	assign SPI_CLK = (InitRegPointer<InitDataSize+delayTime) ? SPI_InitRegClock : SPI_WorkClock;
 	//	Gestion de pin RS
 	assign RS = (InitRegPointer<InitDataSize+delayTime) ? InitReg_RS : 1;
+	assign DataClock=dataClk;
+
 
 endmodule
   

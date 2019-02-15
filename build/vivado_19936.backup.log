@@ -2,8 +2,8 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Wed Feb 13 20:28:36 2019
-# Process ID: 12566
+# Start of session at: Thu Feb 14 22:11:10 2019
+# Process ID: 19936
 # Current directory: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build
 # Command line: vivado -mode batch -source top.tcl
 # Log file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.log
@@ -12,48 +12,48 @@
 source top.tcl
 # create_project -force -name top -part xc7a35tcpg236-1
 # set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:]
+# add_files {top.v}
+# set_property library work [get_files {top.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncerTester.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncer.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncer.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ButtonDebouncer.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:]
-# add_files {top.v}
-# set_property library work [get_files {top.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:]
 # read_xdc top.xdc
 # synth_design -top top -part xc7a35tcpg236-1
 Command: synth_design -top top -part xc7a35tcpg236-1
@@ -61,10 +61,10 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12589 
+INFO: Helper process launched with PID 19967 
 WARNING: [Synth 8-2507] parameter declaration becomes local in FrequencyGenerator with formal parameter declaration list [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:6]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1261.152 ; gain = 77.262 ; free physical = 1131 ; free virtual = 4527
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1261.156 ; gain = 77.262 ; free physical = 821 ; free virtual = 5870
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
 INFO: [Synth 8-6157] synthesizing module 'ClockManager' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:198]
@@ -131,23 +131,26 @@ INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (3#1) [/home/camilo/P
 INFO: [Synth 8-6155] done synthesizing module 'clk_wiz' (4#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:67]
 INFO: [Synth 8-6155] done synthesizing module 'ClockManager' (5#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/ClockManager.v:198]
 INFO: [Synth 8-6157] synthesizing module 'AudVid' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:2]
+	Parameter tileAdress1 bound to: 24'b000000000000000000010100 
 INFO: [Synth 8-6157] synthesizing module 'SD_SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BUF' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:569]
+INFO: [Synth 8-6155] done synthesizing module 'BUF' (6#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:569]
 INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
 	Parameter frequency bound to: 400000 - type: integer 
 	Parameter bitsNumber bound to: 8 - type: integer 
 	Parameter limit bound to: 250 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator' (6#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator' (7#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator__parameterized0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
 	Parameter frequency bound to: 12500000 - type: integer 
 	Parameter bitsNumber bound to: 5 - type: integer 
 	Parameter limit bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized0' (6#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized0' (7#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'FullSPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'FullSPI' (7#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FullSPI' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:1]
 WARNING: [Synth 8-350] instance 'spiCount' of module 'FullSPI' requires 8 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:71]
 WARNING: [Synth 8-350] instance 'spiUtilCount' of module 'FullSPI' requires 8 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:78]
 WARNING: [Synth 8-6014] Unused sequential element VideoCount_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:96]
-INFO: [Synth 8-6155] done synthesizing module 'SD_SPI' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SD_SPI' (9#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:1]
 INFO: [Synth 8-6157] synthesizing module 'TFT_SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
 	Parameter InitDataSize bound to: 104 - type: integer 
 	Parameter InitFrequency bound to: 10000 - type: integer 
@@ -160,38 +163,42 @@ INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator__parameterized1' [/
 	Parameter frequency bound to: 10000 - type: integer 
 	Parameter bitsNumber bound to: 26 - type: integer 
 	Parameter limit bound to: 10000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized1' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized1' (9#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator__parameterized2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
 	Parameter frequency bound to: 5000000 - type: integer 
 	Parameter bitsNumber bound to: 24 - type: integer 
 	Parameter limit bound to: 20 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized2' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized2' (9#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/FrequencyGenerator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'InitializationRegister' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
 	Parameter InitFrequency bound to: 10000 - type: integer 
 	Parameter delayUnit bound to: 10 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'InitializationRegister' (9#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'InitializationRegister' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
 INFO: [Synth 8-6157] synthesizing module 'Counter' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:2]
 	Parameter Begin bound to: 0 - type: integer 
 	Parameter bitsNumber bound to: 25 - type: integer 
 	Parameter End bound to: 1704 - type: integer 
 	Parameter mode bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:2]
-WARNING: [Synth 8-350] instance 'counter' of module 'Counter' requires 3 connections, but only 2 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (11#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/utilities/Counter.v:2]
+WARNING: [Synth 8-350] instance 'counter' of module 'Counter' requires 3 connections, but only 2 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:64]
 INFO: [Synth 8-6157] synthesizing module 'SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'SPI' (11#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:1]
-WARNING: [Synth 8-350] instance 'spi' of module 'SPI' requires 5 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (12#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:1]
+WARNING: [Synth 8-350] instance 'spi' of module 'SPI' requires 5 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:69]
 WARNING: [Synth 8-3848] Net RST in module/entity TFT_SPI does not have driver. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'TFT_SPI' (12#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
-WARNING: [Synth 8-350] instance 'tft_spi' of module 'TFT_SPI' requires 8 connections, but only 7 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'TFT_SPI' (13#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
+WARNING: [Synth 8-350] instance 'tft_spi' of module 'TFT_SPI' requires 9 connections, but only 8 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:65]
 INFO: [Synth 8-6157] synthesizing module 'I2S' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:1]
 INFO: [Synth 8-6157] synthesizing module 'SquareGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'SquareGenerator' (13#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'I2S' (14#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:1]
-WARNING: [Synth 8-350] instance 'i2s' of module 'I2S' requires 7 connections, but only 5 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'SquareGenerator' (14#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'I2S' (15#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:1]
+WARNING: [Synth 8-350] instance 'i2s' of module 'I2S' requires 7 connections, but only 5 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:77]
+WARNING: [Synth 8-6014] Unused sequential element TilesRegister_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element TilesRead_XAddress_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:93]
+WARNING: [Synth 8-6014] Unused sequential element TilesRead_YAddress_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:93]
+WARNING: [Synth 8-6014] Unused sequential element TilesRead_TileAddress_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:93]
 WARNING: [Synth 8-3848] Net TFT_RST in module/entity AudVid does not have driver. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'AudVid' (15#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'AudVid' (16#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:2]
 WARNING: [Synth 8-350] instance 'AudVid' of module 'AudVid' requires 20 connections, but only 17 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:115]
-INFO: [Synth 8-6155] done synthesizing module 'top' (16#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top' (17#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
 WARNING: [Synth 8-3331] design I2S has unconnected port InputData[31]
 WARNING: [Synth 8-3331] design I2S has unconnected port InputData[30]
 WARNING: [Synth 8-3331] design I2S has unconnected port InputData[29]
@@ -294,7 +301,7 @@ WARNING: [Synth 8-3331] design top has unconnected port user_sw_11
 WARNING: [Synth 8-3331] design top has unconnected port user_sw_12
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.402 ; gain = 112.512 ; free physical = 1155 ; free virtual = 4542
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.406 ; gain = 112.512 ; free physical = 836 ; free virtual = 5884
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -305,15 +312,15 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 WARNING: [Synth 8-3295] tying undriven pin spiCount:SPI_MISO to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:71]
 WARNING: [Synth 8-3295] tying undriven pin spiUtilCount:SPI_MISO to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:78]
-WARNING: [Synth 8-3295] tying undriven pin counter:reset to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:63]
+WARNING: [Synth 8-3295] tying undriven pin counter:reset to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:64]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.402 ; gain = 112.512 ; free physical = 1155 ; free virtual = 4542
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.406 ; gain = 112.512 ; free physical = 836 ; free virtual = 5885
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.402 ; gain = 112.512 ; free physical = 1155 ; free virtual = 4542
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.406 ; gain = 112.512 ; free physical = 836 ; free virtual = 5885
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -337,24 +344,25 @@ INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 2 instances were transformed.
+  BUF => LUT1: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1622.707 ; gain = 0.000 ; free physical = 902 ; free virtual = 4290
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1623.727 ; gain = 0.000 ; free physical = 585 ; free virtual = 5633
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 984 ; free virtual = 4371
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 666 ; free virtual = 5715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 984 ; free virtual = 4371
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 666 ; free virtual = 5715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 983 ; free virtual = 4371
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 666 ; free virtual = 5715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
@@ -365,7 +373,7 @@ INFO: [Synth 8-5546] ROM "p_0_in" won't be mapped to RAM because it is too spars
 INFO: [Synth 8-5546] ROM "Data" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Data" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 975 ; free virtual = 4363
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 658 ; free virtual = 5707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -379,6 +387,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     25 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 4     
@@ -389,7 +398,9 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 2     
 	               25 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 8     
 	                6 Bit    Registers := 1     
@@ -401,6 +412,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 1     
 	   2 Input     25 Bit        Muxes := 1     
+	   4 Input     24 Bit        Muxes := 1     
 	 105 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 3     
 	  29 Input      8 Bit        Muxes := 1     
@@ -408,6 +420,7 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 1     
 	  36 Input      3 Bit        Muxes := 1     
 	  34 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 18    
 	  33 Input      1 Bit        Muxes := 1     
 	  34 Input      1 Bit        Muxes := 1     
@@ -458,7 +471,7 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
@@ -538,6 +551,16 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
+Module AudVid 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -569,22 +592,47 @@ WARNING: [Synth 8-6014] Unused sequential element AudVid/tft_spi/spi/reset_reg w
 INFO: [Synth 8-5546] ROM "AudVid/sd_spi/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "AudVid/sd_spi/count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "AudVid/sd_spi/count" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[7]' (FD) to 'AudVid/sd_spi/Address_reg[15]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[15]' (FD) to 'AudVid/sd_spi/Address_reg[14]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[6]' (FD) to 'AudVid/sd_spi/Address_reg[14]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[14]' (FD) to 'AudVid/sd_spi/Address_reg[13]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[5]' (FD) to 'AudVid/sd_spi/Address_reg[13]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[13]' (FD) to 'AudVid/sd_spi/Address_reg[12]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[4]' (FD) to 'AudVid/sd_spi/Address_reg[12]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[12]' (FD) to 'AudVid/sd_spi/Address_reg[11]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[3]' (FD) to 'AudVid/sd_spi/Address_reg[11]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[11]' (FD) to 'AudVid/sd_spi/Address_reg[10]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[2]' (FD) to 'AudVid/sd_spi/Address_reg[10]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[10]' (FD) to 'AudVid/sd_spi/Address_reg[9]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\AudVid/sd_spi/Address_reg[1] )
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[9]' (FD) to 'AudVid/sd_spi/Address_reg[8]'
-INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[0]' (FD) to 'AudVid/sd_spi/Address_reg[8]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AudVid/sd_spi/Address_reg[8] )
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[7]' (FDRE) to 'AudVid/SD_InputAddress_reg[15]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[15]' (FDRE) to 'AudVid/SD_InputAddress_reg[23]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[23]' (FDRE) to 'AudVid/SD_InputAddress_reg[6]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[6]' (FDRE) to 'AudVid/SD_InputAddress_reg[14]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[14]' (FDRE) to 'AudVid/SD_InputAddress_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[22]' (FDRE) to 'AudVid/SD_InputAddress_reg[5]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[5]' (FDRE) to 'AudVid/SD_InputAddress_reg[13]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[13]' (FDRE) to 'AudVid/SD_InputAddress_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[21]' (FDRE) to 'AudVid/SD_InputAddress_reg[12]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[12]' (FDRE) to 'AudVid/SD_InputAddress_reg[20]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[4]' (FDRE) to 'AudVid/SD_InputAddress_reg[2]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[20]' (FDRE) to 'AudVid/SD_InputAddress_reg[11]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[11]' (FDRE) to 'AudVid/SD_InputAddress_reg[19]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[19]' (FDRE) to 'AudVid/SD_InputAddress_reg[10]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[10]' (FDRE) to 'AudVid/SD_InputAddress_reg[18]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[18]' (FDRE) to 'AudVid/SD_InputAddress_reg[9]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[9]' (FDRE) to 'AudVid/SD_InputAddress_reg[17]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[17]' (FDRE) to 'AudVid/SD_InputAddress_reg[8]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[8]' (FDRE) to 'AudVid/SD_InputAddress_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/SD_InputAddress_reg[0]' (FDRE) to 'AudVid/SD_InputAddress_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AudVid/SD_InputAddress_reg[16] )
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[7]' (FD) to 'AudVid/sd_spi/Address_reg[23]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[15]' (FD) to 'AudVid/sd_spi/Address_reg[23]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[23]' (FD) to 'AudVid/sd_spi/Address_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[6]' (FD) to 'AudVid/sd_spi/Address_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[14]' (FD) to 'AudVid/sd_spi/Address_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[22]' (FD) to 'AudVid/sd_spi/Address_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[5]' (FD) to 'AudVid/sd_spi/Address_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[13]' (FD) to 'AudVid/sd_spi/Address_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[21]' (FD) to 'AudVid/sd_spi/Address_reg[20]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[12]' (FD) to 'AudVid/sd_spi/Address_reg[20]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[4]' (FD) to 'AudVid/sd_spi/Address_reg[2]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[20]' (FD) to 'AudVid/sd_spi/Address_reg[19]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[11]' (FD) to 'AudVid/sd_spi/Address_reg[19]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[19]' (FD) to 'AudVid/sd_spi/Address_reg[18]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[10]' (FD) to 'AudVid/sd_spi/Address_reg[18]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[18]' (FD) to 'AudVid/sd_spi/Address_reg[17]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[9]' (FD) to 'AudVid/sd_spi/Address_reg[17]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[17]' (FD) to 'AudVid/sd_spi/Address_reg[16]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[8]' (FD) to 'AudVid/sd_spi/Address_reg[16]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[0]' (FD) to 'AudVid/sd_spi/Address_reg[16]'
 INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[31]' (FDRE) to 'AudVid/i2s/squaregenerator/data_reg[12]'
 INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[30]' (FDRE) to 'AudVid/i2s/squaregenerator/data_reg[29]'
 INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[29]' (FDRE) to 'AudVid/i2s/squaregenerator/data_reg[14]'
@@ -647,27 +695,17 @@ INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[18]' (FD_1) to 'AudVi
 INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[17]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[16]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[14]' (FD_1) to 'AudVid/i2s/Data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[11]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[10]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[9]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[8]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[7]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[6]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[5]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[4]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[3]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[2]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[1]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AudVid/sd_spi/Address_reg[16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AudVid/i2s/Data_reg[13] )
-WARNING: [Synth 8-3332] Sequential element (AudVid/sd_spi/EnableDataRead_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (AudVid/sd_spi/Address_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (AudVid/sd_spi/Address_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (AudVid/SD_InputAddress_reg[16]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (AudVid/sd_spi/Address_reg[16]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (AudVid/tft_spi/spi/reseted_reg) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (AudVid/i2s/squaregenerator/data_reg[13]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (AudVid/i2s/squaregenerator/data_reg[0]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (AudVid/i2s/Data_reg[13]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 958 ; free virtual = 4348
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 639 ; free virtual = 5690
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -679,13 +717,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:59 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 835 ; free virtual = 4224
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:59 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 512 ; free virtual = 5565
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:59 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 833 ; free virtual = 4223
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:59 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 510 ; free virtual = 5564
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -697,7 +735,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:59 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 509 ; free virtual = 5563
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -721,7 +759,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 510 ; free virtual = 5563
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -734,7 +772,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 510 ; free virtual = 5563
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -746,25 +784,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 509 ; free virtual = 5563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 509 ; free virtual = 5563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 509 ; free virtual = 5563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 509 ; free virtual = 5563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -780,34 +818,35 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |BUFG       |    10|
-|2     |CARRY4     |    15|
-|3     |LUT1       |    16|
-|4     |LUT2       |    53|
-|5     |LUT3       |    39|
-|6     |LUT4       |    27|
-|7     |LUT5       |    40|
-|8     |LUT6       |   107|
-|9     |MMCME2_ADV |     1|
-|10    |MUXF7      |     6|
-|11    |MUXF8      |     1|
-|12    |FDRE       |   163|
-|13    |FDSE       |     2|
-|14    |IBUF       |     5|
-|15    |OBUF       |    12|
-|16    |OBUFT      |     1|
+|1     |BUF        |     2|
+|2     |BUFG       |     8|
+|3     |CARRY4     |    15|
+|4     |LUT1       |    18|
+|5     |LUT2       |    58|
+|6     |LUT3       |    41|
+|7     |LUT4       |    33|
+|8     |LUT5       |    41|
+|9     |LUT6       |   115|
+|10    |MMCME2_ADV |     1|
+|11    |MUXF7      |     6|
+|12    |MUXF8      |     1|
+|13    |FDRE       |   180|
+|14    |FDSE       |     3|
+|15    |IBUF       |     3|
+|16    |OBUF       |    12|
+|17    |OBUFT      |     1|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+-----------------------------+-----------------------------------+------+
 |      |Instance                     |Module                             |Cells |
 +------+-----------------------------+-----------------------------------+------+
-|1     |top                          |                                   |   498|
-|2     |  AudVid                     |AudVid                             |   467|
+|1     |top                          |                                   |   538|
+|2     |  AudVid                     |AudVid                             |   508|
 |3     |    i2s                      |I2S                                |    52|
 |4     |      squaregenerator        |SquareGenerator                    |    34|
-|5     |    sd_spi                   |SD_SPI                             |   185|
-|6     |      spi                    |FullSPI                            |    45|
+|5     |    sd_spi                   |SD_SPI                             |   200|
+|6     |      spi                    |FullSPI                            |    47|
 |7     |      spiCount               |FullSPI_0                          |     9|
 |8     |      spiInitClock           |FrequencyGenerator                 |    23|
 |9     |      spiUtilCount           |FullSPI_1                          |     9|
@@ -822,19 +861,15 @@ Report Instance Areas:
 |18    |    Clk_wiz                  |clk_wiz                            |     5|
 +------+-----------------------------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.707 ; gain = 438.816 ; free physical = 832 ; free virtual = 4222
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.727 ; gain = 439.832 ; free physical = 509 ; free virtual = 5563
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 51 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1622.707 ; gain = 112.512 ; free physical = 886 ; free virtual = 4276
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:00 . Memory (MB): peak = 1622.715 ; gain = 438.816 ; free physical = 887 ; free virtual = 4276
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1623.727 ; gain = 112.512 ; free physical = 563 ; free virtual = 5617
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:01 . Memory (MB): peak = 1623.734 ; gain = 439.832 ; free physical = 574 ; free virtual = 5628
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. AudVid/sd_spi/inputBuffer 
-Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
-WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. AudVid/tft_spi/inputBuffer 
-Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
 WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:160]
 WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:162]
@@ -846,22 +881,23 @@ WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -
 Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 2 instances were transformed.
+  BUF => LUT1: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-160 Infos, 144 Warnings, 0 Critical Warnings and 0 Errors encountered.
+178 Infos, 145 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 1622.715 ; gain = 438.938 ; free physical = 875 ; free virtual = 4265
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1623.734 ; gain = 439.953 ; free physical = 556 ; free virtual = 5608
 # report_timing_summary -file top_timing_synth.rpt
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
-report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1995.914 ; gain = 373.199 ; free physical = 569 ; free virtual = 3963
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1995.934 ; gain = 372.199 ; free physical = 252 ; free virtual = 5305
 # report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
-report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1995.914 ; gain = 0.000 ; free physical = 569 ; free virtual = 3963
+report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1995.934 ; gain = 0.000 ; free physical = 252 ; free virtual = 5305
 # report_utilization -file top_utilization_synth.rpt
-report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1995.914 ; gain = 0.000 ; free physical = 569 ; free virtual = 3962
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1995.934 ; gain = 0.000 ; free physical = 252 ; free virtual = 5304
 # opt_design
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -873,74 +909,75 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2044.930 ; gain = 49.016 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2046.949 ; gain = 51.016 ; free physical = 249 ; free virtual = 5298
 
 Starting Cache Timing Information Task
-Ending Cache Timing Information Task | Checksum: 22673d1c1
+Ending Cache Timing Information Task | Checksum: 1f332b20e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 249 ; free virtual = 5298
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 14 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1b4aaa7f9
+Phase 1 Retarget | Checksum: 20aea0936
 
-Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1b4aaa7f9
+Phase 2 Constant propagation | Checksum: 20aea0936
 
-Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: f044fe38
+Phase 3 Sweep | Checksum: 276ad8a10
 
-Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-INFO: [Opt 31-274] Optimized connectivity to 1 cascaded buffer cells
-Phase 4 BUFG optimization | Checksum: 1a9cafba9
+INFO: [Opt 31-194] Inserted BUFG AudVid/sd_spi/spi/CLK_BUFG_inst to drive 42 load(s) on clock net DataClk
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 22dbbf95d
 
-Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
-INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 6 cells.
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 4 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 1a045149c
+Phase 5 Shift Register Optimization | Checksum: 1b165bd8d
 
-Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: bd94056c
+Phase 6 Post Processing Netlist | Checksum: 1453b5d28
 
-Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
-Ending Logic Optimization Task | Checksum: e6832dee
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
+Ending Logic Optimization Task | Checksum: 18ae096bb
 
-Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: e6832dee
+Ending Power Optimization Task | Checksum: 18ae096bb
 
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: e6832dee
+Ending Final Cleanup Task | Checksum: 18ae096bb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 563 ; free virtual = 3957
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 251 ; free virtual = 5300
 INFO: [Common 17-83] Releasing license: Implementation
-16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
 # place_design
 Command: place_design
@@ -960,21 +997,21 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 561 ; free virtual = 3955
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: aab4edf1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 249 ; free virtual = 5298
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: cec25f93
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 561 ; free virtual = 3955
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 249 ; free virtual = 5298
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 562 ; free virtual = 3955
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 250 ; free virtual = 5299
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Place 30-568] A LUT 'AudVid/tft_spi/spiWorkClock/TFT_SPI_CLK_OBUF_inst_i_1' is driving clock pin of 5 registers. This could lead to large hold time violations. First few involved registers are:
+	AudVid/tft_spi/spi/dataClk_reg {FDRE}
+	AudVid/tft_spi/spi/count_reg[3] {FDRE}
 	AudVid/tft_spi/spi/count_reg[1] {FDRE}
 	AudVid/tft_spi/spi/count_reg[2] {FDRE}
-	AudVid/tft_spi/spi/count_reg[3] {FDRE}
-	AudVid/tft_spi/spi/dataClk_reg {FDRE}
 	AudVid/tft_spi/spi/count_reg[0] {FDRE}
 WARNING: [Place 30-568] A LUT 'AudVid/sd_spi/spiWorkClock/count[2]_i_2' is driving clock pin of 26 registers. This could lead to large hold time violations. First few involved registers are:
 	AudVid/sd_spi/spiUtilCount/count_reg[0] {FDRE}
@@ -982,35 +1019,35 @@ WARNING: [Place 30-568] A LUT 'AudVid/sd_spi/spiWorkClock/count[2]_i_2' is drivi
 	AudVid/sd_spi/spiUtilCount/count_reg[2] {FDRE}
 	AudVid/sd_spi/spiCount/count_reg[0] {FDRE}
 	AudVid/sd_spi/spiCount/count_reg[1] {FDRE}
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: ef007c1e
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: ac4b6a5f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 561 ; free virtual = 3955
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 250 ; free virtual = 5298
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1731fdea7
+Phase 1.3 Build Placer Netlist Model | Checksum: 13d897bf5
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 560 ; free virtual = 3953
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 248 ; free virtual = 5297
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1731fdea7
+Phase 1.4 Constrain Clocks/Macros | Checksum: 13d897bf5
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 560 ; free virtual = 3953
-Phase 1 Placer Initialization | Checksum: 1731fdea7
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 248 ; free virtual = 5297
+Phase 1 Placer Initialization | Checksum: 13d897bf5
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2044.930 ; gain = 0.000 ; free physical = 560 ; free virtual = 3954
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2046.949 ; gain = 0.000 ; free physical = 248 ; free virtual = 5297
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 117e1be35
+Phase 2.1 Floorplanning | Checksum: 12f22808c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 558 ; free virtual = 3952
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 246 ; free virtual = 5295
 
 Phase 2.2 Physical Synthesis In Placer
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2084.949 ; gain = 0.000 ; free physical = 555 ; free virtual = 3949
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2086.969 ; gain = 0.000 ; free physical = 241 ; free virtual = 5290
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -1024,52 +1061,52 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2 Physical Synthesis In Placer | Checksum: 1bfd0931a
+Phase 2.2 Physical Synthesis In Placer | Checksum: 116dfc566
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 555 ; free virtual = 3949
-Phase 2 Global Placement | Checksum: 163272e60
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 241 ; free virtual = 5290
+Phase 2 Global Placement | Checksum: e405ec28
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 242 ; free virtual = 5291
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 163272e60
+Phase 3.1 Commit Multi Column Macros | Checksum: e405ec28
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 242 ; free virtual = 5291
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 16ff83f16
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: d93a73b5
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 242 ; free virtual = 5290
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 16905a245
+Phase 3.3 Area Swap Optimization | Checksum: bce93f53
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 241 ; free virtual = 5290
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 16905a245
+Phase 3.4 Pipeline Register Optimization | Checksum: bce93f53
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 241 ; free virtual = 5290
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 185cab14b
+Phase 3.5 Small Shape Detail Placement | Checksum: 12af65006
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3947
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 241 ; free virtual = 5290
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 216c94206
+Phase 3.6 Re-assign LUT pins | Checksum: 161fa5764
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 553 ; free virtual = 3947
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 241 ; free virtual = 5290
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 216c94206
+Phase 3.7 Pipeline Register Optimization | Checksum: 161fa5764
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 553 ; free virtual = 3947
-Phase 3 Detail Placement | Checksum: 216c94206
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 241 ; free virtual = 5290
+Phase 3 Detail Placement | Checksum: 161fa5764
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 553 ; free virtual = 3947
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 241 ; free virtual = 5290
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -1077,53 +1114,53 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1d0800456
+Post Placement Optimization Initialization | Checksum: 255b719e7
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1d0800456
+Phase 4.1.1.1 BUFG Insertion | Checksum: 255b719e7
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 553 ; free virtual = 3947
-INFO: [Place 30-746] Post Placement Timing Summary WNS=6.302. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1951feff6
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 240 ; free virtual = 5289
+INFO: [Place 30-746] Post Placement Timing Summary WNS=6.306. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 21144cb09
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 553 ; free virtual = 3947
-Phase 4.1 Post Commit Optimization | Checksum: 1951feff6
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 240 ; free virtual = 5289
+Phase 4.1 Post Commit Optimization | Checksum: 21144cb09
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 553 ; free virtual = 3947
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 240 ; free virtual = 5289
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1951feff6
+Phase 4.2 Post Placement Cleanup | Checksum: 21144cb09
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 240 ; free virtual = 5289
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1951feff6
+Phase 4.3 Placer Reporting | Checksum: 21144cb09
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 240 ; free virtual = 5289
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 155cc6545
+Phase 4.4 Final Placement Cleanup | Checksum: 1aba74baf
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 155cc6545
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 240 ; free virtual = 5289
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1aba74baf
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 554 ; free virtual = 3948
-Ending Placer Task | Checksum: f85564ae
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 240 ; free virtual = 5289
+Ending Placer Task | Checksum: 150577f48
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 558 ; free virtual = 3952
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 246 ; free virtual = 5295
 INFO: [Common 17-83] Releasing license: Implementation
 18 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2084.949 ; gain = 40.020 ; free physical = 558 ; free virtual = 3952
+place_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2086.969 ; gain = 40.020 ; free physical = 246 ; free virtual = 5295
 # report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
-report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2084.949 ; gain = 0.000 ; free physical = 561 ; free virtual = 3955
+report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2086.969 ; gain = 0.000 ; free physical = 246 ; free virtual = 5295
 # report_utilization -file top_utilization_place.rpt
-report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2084.949 ; gain = 0.000 ; free physical = 561 ; free virtual = 3955
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2086.969 ; gain = 0.000 ; free physical = 246 ; free virtual = 5295
 # report_io -file top_io.rpt
-report_io: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2084.949 ; gain = 0.000 ; free physical = 555 ; free virtual = 3948
+report_io: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2086.969 ; gain = 0.000 ; free physical = 241 ; free virtual = 5290
 # report_control_sets -verbose -file top_control_sets.rpt
-report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2084.949 ; gain = 0.000 ; free physical = 559 ; free virtual = 3953
+report_control_sets: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2086.969 ; gain = 0.000 ; free physical = 246 ; free virtual = 5295
 # report_clock_utilization -file top_clock_utilization.rpt
 # route_design
 Command: route_design
@@ -1137,107 +1174,105 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
-Checksum: PlaceDB: efbc4ad3 ConstDB: 0 ShapeSum: 89919db RouteDB: 0
+Checksum: PlaceDB: fee649ef ConstDB: 0 ShapeSum: 51713559 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 109f9d804
+Phase 1 Build RT Design | Checksum: df1aeb1b
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2119.605 ; gain = 34.656 ; free physical = 448 ; free virtual = 3841
-Post Restoration Checksum: NetGraph: 71ba4b16 NumContArr: 983f8cee Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2120.625 ; gain = 33.656 ; free physical = 133 ; free virtual = 5181
+Post Restoration Checksum: NetGraph: c8367838 NumContArr: 16e472e3 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 109f9d804
+Phase 2.1 Create Timer | Checksum: df1aeb1b
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2119.605 ; gain = 34.656 ; free physical = 447 ; free virtual = 3841
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2120.625 ; gain = 33.656 ; free physical = 134 ; free virtual = 5183
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 109f9d804
+Phase 2.2 Fix Topology Constraints | Checksum: df1aeb1b
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2119.605 ; gain = 34.656 ; free physical = 433 ; free virtual = 3826
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2120.625 ; gain = 33.656 ; free physical = 120 ; free virtual = 5168
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 109f9d804
+Phase 2.3 Pre Route Cleanup | Checksum: df1aeb1b
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2119.605 ; gain = 34.656 ; free physical = 433 ; free virtual = 3826
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2120.625 ; gain = 33.656 ; free physical = 120 ; free virtual = 5168
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 156f7a64a
+Phase 2.4 Update Timing | Checksum: 70d9299d
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 423 ; free virtual = 3817
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.249  | TNS=0.000  | WHS=-0.144 | THS=-0.978 |
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 109 ; free virtual = 5158
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.253  | TNS=0.000  | WHS=-0.095 | THS=-0.655 |
 
-Phase 2 Router Initialization | Checksum: 1afc10934
+Phase 2 Router Initialization | Checksum: 6675ba1c
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 423 ; free virtual = 3817
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 109 ; free virtual = 5158
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 12f5c84d2
+Phase 3 Initial Routing | Checksum: 63f91419
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 427 ; free virtual = 3820
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 111 ; free virtual = 5160
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 36
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.459  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.831  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1977f0b2e
+Phase 4.1 Global Iteration 0 | Checksum: 125514983
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5161
+Phase 4 Rip-up And Reroute | Checksum: 125514983
 
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.450  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.2 Global Iteration 1 | Checksum: 1364e07c
-
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
-Phase 4 Rip-up And Reroute | Checksum: 1364e07c
-
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5161
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 1364e07c
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 10f1dc235
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5161
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.923  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 10f1dc235
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5161
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1364e07c
+Phase 5.2 Clock Skew Optimization | Checksum: 10f1dc235
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
-Phase 5 Delay and Skew Optimization | Checksum: 1364e07c
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5161
+Phase 5 Delay and Skew Optimization | Checksum: 10f1dc235
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5161
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 3d07e73a
+Phase 6.1.1 Update Timing | Checksum: 16ebe405d
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.542  | TNS=0.000  | WHS=0.212  | THS=0.000  |
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.923  | TNS=0.000  | WHS=0.238  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: a8442916
+Phase 6.1 Hold Fix Iter | Checksum: 1aee83fb2
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
-Phase 6 Post Hold Fix | Checksum: a8442916
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5160
+Phase 6 Post Hold Fix | Checksum: 1aee83fb2
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3819
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5160
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0483935 %
-  Global Horizontal Routing Utilization  = 0.0542686 %
+  Global Vertical Routing Utilization    = 0.0565256 %
+  Global Horizontal Routing Utilization  = 0.0590838 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1246,38 +1281,38 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: d61814b1
+Phase 7 Route finalize | Checksum: 15cf71664
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 425 ; free virtual = 3818
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 112 ; free virtual = 5160
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: d61814b1
+Phase 8 Verifying routed nets | Checksum: 15cf71664
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 424 ; free virtual = 3818
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 111 ; free virtual = 5159
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 11c55fe44
+Phase 9 Depositing Routes | Checksum: 11a1ec03d
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 424 ; free virtual = 3818
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 111 ; free virtual = 5160
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=6.542  | TNS=0.000  | WHS=0.212  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.923  | TNS=0.000  | WHS=0.238  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 11c55fe44
+Phase 10 Post Router Timing | Checksum: 11a1ec03d
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 427 ; free virtual = 3820
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 111 ; free virtual = 5160
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 442 ; free virtual = 3836
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 129 ; free virtual = 5177
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 13 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.605 ; gain = 41.656 ; free physical = 442 ; free virtual = 3836
+route_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:25 . Memory (MB): peak = 2127.625 ; gain = 40.656 ; free physical = 129 ; free virtual = 5177
 # phys_opt_design
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -1334,7 +1369,9 @@ Table of Contents
 --------------------
  There are 3 register/latch pins with no clock driven by root clock pin: AudVid/i2s/I2S_WS_reg/Q (HIGH)
 
- There are 26 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/spi/DataClk_reg/Q (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/EnableDataRead_reg/Q (HIGH)
+
+ There are 41 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/spi/DataClk_reg/Q (HIGH)
 
  There are 26 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/spiInitClock/outputCLK_reg/Q (HIGH)
 
@@ -1361,7 +1398,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 191 pins that are not constrained for maximum delay. (HIGH)
+ There are 221 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -1420,7 +1457,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      6.546        0.000                      0                  109        0.216        0.000                      0                  109        3.000        0.000                       0                    75  
+      5.947        0.000                      0                  109        0.251        0.000                      0                  109        3.000        0.000                       0                    75  
 
 
 All user specified timing constraints are met.
@@ -1445,8 +1482,8 @@ clk100                {0.000 5.000}      10.000          100.000
 
 Clock                     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk100                      6.546        0.000                      0                  104        0.216        0.000                      0                  104        3.000        0.000                       0                    65  
-  clk_out1_clk_wiz_0       68.631        0.000                      0                    5        0.313        0.000                      0                    5       34.931        0.000                       0                     7  
+clk100                      5.947        0.000                      0                  104        0.251        0.000                      0                  104        3.000        0.000                       0                    65  
+  clk_out1_clk_wiz_0       68.248        0.000                      0                    5        0.286        0.000                      0                    5       34.931        0.000                       0                     7  
   clkfbout_clk_wiz_0                                                                                                                                                   47.845        0.000                       0                     3  
 
 
@@ -1474,7 +1511,7 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2126.605 ; gain = 0.000 ; free physical = 436 ; free virtual = 3831
+Write XDEF Complete: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2127.625 ; gain = 0.000 ; free physical = 127 ; free virtual = 5177
 INFO: [Common 17-1381] The checkpoint '/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top_route.dcp' has been generated.
 # report_route_status -file top_route_status.rpt
 # report_drc -file top_drc.rpt
@@ -1510,7 +1547,7 @@ WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Nei
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-WARNING: [DRC PDRC-153] Gated clock check: Net AudVid/sd_spi/spiWorkClock/CLK is a gated clock net sourced by a combinational pin AudVid/sd_spi/spiWorkClock/count[2]_i_2/O, cell AudVid/sd_spi/spiWorkClock/count[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net AudVid/sd_spi/spiWorkClock/count_reg[0] is a gated clock net sourced by a combinational pin AudVid/sd_spi/spiWorkClock/count[2]_i_2/O, cell AudVid/sd_spi/spiWorkClock/count[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net AudVid/tft_spi/spiWorkClock/count_reg[0] is a gated clock net sourced by a combinational pin AudVid/tft_spi/spiWorkClock/TFT_SPI_CLK_OBUF_inst_i_1/O, cell AudVid/tft_spi/spiWorkClock/TFT_SPI_CLK_OBUF_inst_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT AudVid/sd_spi/spiWorkClock/count[2]_i_2 is driving clock pin of 26 cells. This could lead to large hold time violations. First few involved cells are:
     AudVid/sd_spi/spi/DataClk_reg {FDRE}
@@ -1540,10 +1577,9 @@ Creating bitstream...
 Writing bitstream ./top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Feb 13 20:31:15 2019. For additional details about this file, please refer to the WebTalk help file at /home/camilo/Programas/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-9 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+8 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2466.598 ; gain = 275.633 ; free physical = 426 ; free virtual = 3811
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2466.305 ; gain = 277.633 ; free physical = 426 ; free virtual = 5164
 # quit
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 13 20:31:15 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 14 22:13:52 2019...

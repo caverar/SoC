@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 13 20:43:57 2019
+| Date         : Thu Feb 14 22:22:53 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,16 +21,17 @@ Table of Contents
 +------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 |           Instance           |               Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                          |                              (top) |        225 |        225 |       0 |    0 | 165 |      0 |      0 |            0 |
-|   (top)                      |                              (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   AudVid                     |                             AudVid |        223 |        223 |       0 |    0 | 161 |      0 |      0 |            0 |
+| top                          |                              (top) |        238 |        238 |       0 |    0 | 183 |      0 |      0 |            0 |
+|   (top)                      |                              (top) |          1 |          1 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   AudVid                     |                             AudVid |        235 |        235 |       0 |    0 | 179 |      0 |      0 |            0 |
+|     (AudVid)                 |                             AudVid |          8 |          8 |       0 |    0 |  14 |      0 |      0 |            0 |
 |     i2s                      |                                I2S |         15 |         15 |       0 |    0 |  29 |      0 |      0 |            0 |
 |       (i2s)                  |                                I2S |          7 |          7 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       squaregenerator        |                    SquareGenerator |          8 |          8 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     sd_spi                   |                             SD_SPI |         94 |         94 |       0 |    0 |  66 |      0 |      0 |            0 |
-|       (sd_spi)               |                             SD_SPI |         49 |         49 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       spi                    |                            FullSPI |         22 |         22 |       0 |    0 |  20 |      0 |      0 |            0 |
-|       spiCount               |                          FullSPI_0 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     sd_spi                   |                             SD_SPI |         98 |         98 |       0 |    0 |  70 |      0 |      0 |            0 |
+|       (sd_spi)               |                             SD_SPI |         53 |         53 |       0 |    0 |  30 |      0 |      0 |            0 |
+|       spi                    |                            FullSPI |         23 |         23 |       0 |    0 |  20 |      0 |      0 |            0 |
+|       spiCount               |                          FullSPI_0 |          4 |          4 |       0 |    0 |   3 |      0 |      0 |            0 |
 |       spiInitClock           |                 FrequencyGenerator |          9 |          9 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       spiUtilCount           |                          FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
 |       spiWorkClock           | FrequencyGenerator__parameterized0 |          4 |          4 |       0 |    0 |   5 |      0 |      0 |            0 |
