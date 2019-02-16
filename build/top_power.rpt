@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Fri Feb 15 18:14:50 2019
+| Date             : Fri Feb 15 22:34:48 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.214        |
+| Total On-Chip Power (W)  | 0.215        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.142        |
+| Dynamic (W)              | 0.143        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.9         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        5 |       --- |             --- |
-| Slice Logic    |     0.002 |      549 |       --- |             --- |
-|   LUT as Logic |     0.002 |      231 |     20800 |            1.11 |
-|   Register     |    <0.001 |      192 |     41600 |            0.46 |
-|   CARRY4       |    <0.001 |       19 |      8150 |            0.23 |
-|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
+| Slice Logic    |     0.002 |      529 |       --- |             --- |
+|   LUT as Logic |     0.002 |      230 |     20800 |            1.11 |
+|   Register     |    <0.001 |      177 |     41600 |            0.43 |
+|   CARRY4       |    <0.001 |       15 |      8150 |            0.18 |
+|   BUFG         |    <0.001 |        3 |        32 |            9.38 |
 |   F7/F8 Muxes  |    <0.001 |        7 |     32600 |            0.02 |
-|   Others       |     0.000 |       36 |       --- |             --- |
-| Signals        |     0.002 |      407 |       --- |             --- |
+|   Others       |     0.000 |       33 |       --- |             --- |
+| Signals        |     0.002 |      396 |       --- |             --- |
 | MMCM           |     0.128 |        1 |         5 |           20.00 |
 | I/O            |     0.009 |       16 |       106 |           15.09 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.214 |          |           |                 |
+| Total          |     0.215 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.006 |      0.010 |
+| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
 | Vccaux    |       1.800 |     0.084 |       0.072 |      0.013 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,8 +145,8 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| top                          |     0.142 |
-|   AudVid                     |     0.005 |
+| top                          |     0.143 |
+|   AudVid                     |     0.006 |
 |     i2s                      |    <0.001 |
 |       squaregenerator        |    <0.001 |
 |     sd_spi                   |     0.002 |
@@ -155,11 +155,10 @@ Table of Contents
 |       spiInitClock           |    <0.001 |
 |       spiUtilCount           |    <0.001 |
 |       spiWorkClock           |    <0.001 |
-|     tft_spi                  |     0.003 |
+|     tft_spi                  |     0.002 |
 |       counter                |    <0.001 |
 |       initializationRegister |    <0.001 |
 |       spi                    |    <0.001 |
-|       spiInitRegClock        |    <0.001 |
 |       spiWorkClock           |    <0.001 |
 |   ClockManager               |     0.129 |
 |     Clk_wiz                  |     0.128 |

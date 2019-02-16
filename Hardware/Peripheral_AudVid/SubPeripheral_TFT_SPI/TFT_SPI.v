@@ -12,11 +12,10 @@ module TFT_SPI(
 	);
 	//Parametros
 	parameter InitDataSize=104;
-	parameter InitFrequency=10000;
-	parameter InitFrequencyBits=26;
-	parameter WorkFrequency=5000000;
+
+	parameter WorkFrequency=6250000;
 	parameter WorkFrequencyBits=24;	
-	parameter delayUnit=InitFrequency/1000;
+	parameter delayUnit=WorkFrequency/1000;
 	//parameter delayUnit=1;
 	parameter delayTime=160*delayUnit;
 		
@@ -40,20 +39,16 @@ module TFT_SPI(
         .I (MasterCLK)
     );
 
-	//	Reloj SPI de Inicializacion
-	FrequencyGenerator #(.frequency(InitFrequency), .bitsNumber(InitFrequencyBits)) spiInitRegClock(
-		.InputCLK(Buffered_MasterCLK),
-		.OutputCLK(SPI_InitRegClock)
-	);
 
-	//	Reloj SPI de Trabajo
+
+	//	Reloj SPI 
 	FrequencyGenerator #(.frequency(WorkFrequency), .bitsNumber(WorkFrequencyBits)) spiWorkClock(
 		.InputCLK(Buffered_MasterCLK),
 		.OutputCLK(SPI_WorkClock)
 	);
 
 	//	Registro de Inicializacion
-	InitializationRegister #(.InitFrequency(InitFrequency), .delayUnit(delayUnit)) initializationRegister(
+	InitializationRegister #(.InitFrequency(WorkFrequency), .delayUnit(delayUnit)) initializationRegister(
 		.pointer(InitRegPointer),
 		.OutData(InitData),
 		.RS(InitReg_RS),
@@ -71,7 +66,6 @@ module TFT_SPI(
 		.SPI_CLK(SPI_CLK),
 		.SPI_MOSI(SPI_MOSI),		
 		.dataClk(dataClk)
-		//.reset(RST)
 	);
 
 	//Asignacion Secuencial	
@@ -90,14 +84,14 @@ module TFT_SPI(
 	end 
 	//Asignacion Combinacional
 
-	//	Seleccion de reloj datos
-	//assign selectedClock = (InitRegPointer<InitDataSize) ? InitRegClock : WorkClock;
+
 	//	Seleccion de datos
 	assign OutputData = (InitRegPointer<InitDataSize+delayTime) ? InitData : data1;
 	//	Seleccion de reloj SPI
-	assign SPI_CLK = (InitRegPointer<InitDataSize+delayTime) ? SPI_InitRegClock : SPI_WorkClock;
+	assign SPI_CLK=SPI_WorkClock;
 	//	Gestion de pin RS
 	assign RS = (InitRegPointer<InitDataSize+delayTime) ? InitReg_RS : 1;
+	assign RST=1'b1;
 	assign DataClock=dataClk;
 
 

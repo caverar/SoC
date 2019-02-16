@@ -2,7 +2,6 @@ module SPI (
     input  wire [15:0] data,
 	input  wire        SPI_CLK,
     output wire        SPI_MOSI,
-
     output reg         dataClk,
     output reg         reset
 	);

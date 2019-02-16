@@ -90,7 +90,6 @@ module AudVid(
 		.data(TFT_Data),
         .DataClock(TFT_DataClock), 
 		.MasterCLK(MasterCLK),
-		//.Reset(Reset),
 		.SPI_MOSI(TFT_SPI_MOSI),
 		.SPI_CLK(TFT_SPI_CLK),
 		.RS(TFT_RS),
