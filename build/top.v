@@ -72,6 +72,8 @@ wire SD_SPI_CLK_1;
 wire SD_SPI_CS_1;
 wire SD_SPI_COUNT_DEBUG_1;
 wire SD_SPI_UTILCOUNT_DEBUG_1;
+reg [4:0] TilesPositionData = 5'd0;
+reg [8:0] TilesPositionAddress = 9'd0;
 wire sys_clk;
 wire sys_rst;
 wire por_clk;
@@ -117,6 +119,8 @@ AudVid AudVid(
 	.MasterCLK(MasterCLK),
 	.Reset(Reset_1),
 	.SD_SPI_MISO(SD_SPI_MISO_1),
+	.TilesPositionAddress(TilesPositionAddress),
+	.TilesPositionData(TilesPositionData),
 	.DAC_I2S_CLK(DAC_I2S_CLK_1),
 	.DAC_I2S_DATA(DAC_I2S_DATA_1),
 	.DAC_I2S_WS(DAC_I2S_WS_1),

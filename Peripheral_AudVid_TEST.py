@@ -6,6 +6,7 @@
 from migen import *
 from migen.build.generic_platform import *
 from migen.build.xilinx import XilinxPlatform
+from litex.soc.interconnect.csr import *
 
 
 #-----------------------------------------------------------------------
@@ -121,6 +122,7 @@ TFT_SPI_CS             = platform.request("TFT_SPI_CS"             , 0)
 # Adicion de modulos en verilog
 #   AudVid
 platform.add_source("Hardware/Peripheral_AudVid/AudVid.v")
+platform.add_source("Hardware/Peripheral_AudVid/ColorDecoder.v")
 #	I2S
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v")
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v")
@@ -140,7 +142,7 @@ platform.add_source("utilities/ButtonDebouncerTester.v")
 
 
 # Modulo Principal
-class SOC(Module):
+class SOC(Module,AutoCSR):
     def __init__(self):
 
         self.SystemClock            = Signal()
@@ -165,8 +167,11 @@ class SOC(Module):
         self.SD_SPI_COUNT_DEBUG     = Signal() 
         self.SD_SPI_UTILCOUNT_DEBUG = Signal()
 
+        self.TilesPositionData      = Signal(5)
+        self.TilesPositionAddress   = Signal(9)
 
 
+        
         self.specials +=Instance("ClockManager",
             i_InputCLK  = self.SystemClock,
             o_MasterCLK = self.MasterCLK,
@@ -176,8 +181,10 @@ class SOC(Module):
         self.specials +=Instance("AudVid",
 
             i_Reset                  = self.Reset,
-            i_MasterCLK              = self.MasterCLK,  ## MasterCLK
-            i_I2SCLK                 = self.I2SCLK,     ## I2SCLK           
+            i_MasterCLK              = self.MasterCLK,  
+            i_I2SCLK                 = self.I2SCLK,                 
+            i_TilesPositionData      = self.TilesPositionData,      ## [4:0]
+            i_TilesPositionAddress   = self.TilesPositionAddress,   ## [8:0]    
             o_TFT_SPI_CLK            = self.TFT_SPI_CLK,
             o_TFT_SPI_CS             = self.TFT_SPI_CS,
             o_TFT_SPI_MOSI           = self.TFT_SPI_MOSI,

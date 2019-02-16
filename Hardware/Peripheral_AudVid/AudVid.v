@@ -2,10 +2,9 @@
 module AudVid(
     input  wire        Reset,
     input  wire        MasterCLK,
-    input  wire        I2SCLK,
-    input  wire [3:0]  Address,
-    input  wire [31:0] Data,
-    input  wire        Enable,
+    input  wire        I2SCLK,    
+    input  wire [4:0]  TilesPositionData,
+    input  wire [8:0]  TilesPositionAddress,
     output wire        TFT_SPI_CLK,
     output wire        TFT_SPI_CS,    
     output wire        TFT_SPI_MOSI,
@@ -27,50 +26,72 @@ module AudVid(
     wire         SD_EnableDataRead;
     wire         SD_InputDataClock;
     reg  [23:0]  SD_InputAddress;
-    reg  [15:0]  TFT_Data;
+    wire [15:0]  TFT_Data;
     wire         TFT_DataClock;
 
-    reg [8191:0] TilesRegister [3:0];
-    reg [3:0]    TilesRead_XAddress1;
-    reg [3:0]    TilesRead_YAddress1;
-    reg [4:0]    TilesRead_TileAddress1;
-    reg [3:0]    TilesRead_XAddress2;
-    reg [3:0]    TilesRead_YAddress2;
-    reg [4:0]    TilesRead_TileAddress2;
-    reg [14:0]   SDReadCount;
+    reg  [8191:0] TilesRegister [3:0];
+    reg  [3:0]    TilesRead_XAddress1;
+    reg  [3:0]    TilesRead_YAddress1;
+    reg  [4:0]    TilesRead_TileAddress1;
+    reg  [3:0]    TilesRead_XAddress2;
+    reg  [3:0]    TilesRead_YAddress2;
+    reg  [4:0]    TilesRead_TileAddress2;
+    reg  [14:0]   SDReadCount;
+    reg  [4:0]    AddressOperationLUT [4:0];
 
-    reg [383:0]  TilesPositionsRegister [4:0];
-    reg [4:0]    ReadOperationLUT [4:0];
+
+    reg  [3:0]    TilesWrite_XAddress;
+    reg  [3:0]    TilesWrite_YAddress;
+    wire [4:0]    TilesWrite_TileAddress;
+    reg  [3:0]    TilesWrite_XPosition;
+    reg  [3:0]    TilesWrite_YPosition;
+    reg  [8:0]    TilesWrite_TilePosition;
+    reg  [3:0]    TFT_DataEncoded;
+
+    reg  [319:0]  TilesPositionsRegister [4:0];
+    
     
     localparam Tile1Address=24'h000014;
     localparam Tile2Address=24'h000016;
     localparam Track1BeginAddress=24'h000018;
     localparam Track2BeginAddress=24'h000100;
     initial begin
-        SD_InputAddress        = 24'h000140;
-        TilesRead_XAddress1    = 0;
-        TilesRead_YAddress1    = 0;
-        TilesRead_TileAddress1 = 0;
-        TilesRead_XAddress2    = 1;
-        TilesRead_YAddress2    = 0;
-        TilesRead_TileAddress2 = 0;
-        SDReadCount            = 0;
-        TFT_Data               = 16'hFFFF;
-        ReadOperationLUT[0]    = 1;
-        ReadOperationLUT[1]    = 2; 
-        ReadOperationLUT[2]    = 3; 
-        ReadOperationLUT[3]    = 4; 
-        ReadOperationLUT[4]    = 5; 
-        ReadOperationLUT[5]    = 6; 
-        ReadOperationLUT[6]    = 7; 
-        ReadOperationLUT[7]    = 8; 
-        ReadOperationLUT[8]    = 9; 
-        ReadOperationLUT[9]    = 10; 
-        ReadOperationLUT[10]   = 0; 
-        ReadOperationLUT[11]   = 0; 
-        ReadOperationLUT[12]   = 0;  
+        TilesPositionsRegister[0] = 0;
+        TilesPositionsRegister[1] = 1;
+        SD_InputAddress           = 24'h000140;
+        TilesWrite_XAddress       = 0;
+        TilesWrite_YAddress       = 0;
+        //TilesWrite_TileAddress    = 0;
+        TilesWrite_XPosition      = 0;
+        TilesWrite_YPosition      = 0;
+        TilesWrite_TilePosition   = 0;
+        TilesRead_XAddress1       = 0;
+        TilesRead_YAddress1       = 0;
+        TilesRead_TileAddress1    = 0;
+        TilesRead_XAddress2       = 1;
+        TilesRead_YAddress2       = 0;
+        TilesRead_TileAddress2    = 0;
+        SDReadCount               = 0;
+        //TFT_Data                  = 16'hFFFF;
+        AddressOperationLUT[0]    = 1;
+        AddressOperationLUT[1]    = 2; 
+        AddressOperationLUT[2]    = 3; 
+        AddressOperationLUT[3]    = 4; 
+        AddressOperationLUT[4]    = 5; 
+        AddressOperationLUT[5]    = 6; 
+        AddressOperationLUT[6]    = 7; 
+        AddressOperationLUT[7]    = 8; 
+        AddressOperationLUT[8]    = 9; 
+        AddressOperationLUT[9]    = 10; 
+        AddressOperationLUT[10]   = 0; 
+        AddressOperationLUT[11]   = 0; 
+        AddressOperationLUT[12]   = 0;  
     end
     //Instancias
+    ColorDecoder colorDecoder(
+        .Input(TFT_DataEncoded),
+        .Output(TFT_Data)
+    );
     SD_SPI sd_spi(
         .MasterCLK(MasterCLK),
         .Reset(Reset),
@@ -125,16 +146,16 @@ module AudVid(
                 TilesRegister[{TilesRead_TileAddress2,TilesRead_YAddress2,TilesRead_XAddress2}+1]<=SD_InputData[3:0];
                 
                 //X1
-                TilesRead_XAddress1<=ReadOperationLUT[TilesRead_XAddress1+1];
+                TilesRead_XAddress1<=AddressOperationLUT[TilesRead_XAddress1+1];
                 //X2
-                TilesRead_XAddress2<=ReadOperationLUT[TilesRead_XAddress2+1];
+                TilesRead_XAddress2<=AddressOperationLUT[TilesRead_XAddress2+1];
                 //Y1
                 if(TilesRead_XAddress1==9 || TilesRead_XAddress1==10)begin
-                    TilesRead_YAddress1<=ReadOperationLUT[TilesRead_YAddress1]; 
+                    TilesRead_YAddress1<=AddressOperationLUT[TilesRead_YAddress1]; 
                 end
                 //Y2
                 if(TilesRead_XAddress2==9 || TilesRead_XAddress2==10)begin
-                    TilesRead_YAddress2<=ReadOperationLUT[TilesRead_YAddress2]; 
+                    TilesRead_YAddress2<=AddressOperationLUT[TilesRead_YAddress2]; 
                 end 
 
                 //Tile1
@@ -155,16 +176,16 @@ module AudVid(
                 TilesRegister[{TilesRead_TileAddress2,TilesRead_YAddress2,TilesRead_XAddress2}+1]<=SD_InputData[3:0];
                 
                 //X1
-                TilesRead_XAddress1<=ReadOperationLUT[TilesRead_XAddress1+1];
+                TilesRead_XAddress1<=AddressOperationLUT[TilesRead_XAddress1+1];
                 //X2
-                TilesRead_XAddress2<=ReadOperationLUT[TilesRead_XAddress2+1];
+                TilesRead_XAddress2<=AddressOperationLUT[TilesRead_XAddress2+1];
                 //Y1
                 if(TilesRead_XAddress1==9 || TilesRead_XAddress1==10)begin
-                    TilesRead_YAddress1<=ReadOperationLUT[TilesRead_YAddress1]; 
+                    TilesRead_YAddress1<=AddressOperationLUT[TilesRead_YAddress1]; 
                 end
                 //Y2
                 if(TilesRead_XAddress2==9 || TilesRead_XAddress2==10)begin
-                    TilesRead_YAddress2<=ReadOperationLUT[TilesRead_YAddress2]; 
+                    TilesRead_YAddress2<=AddressOperationLUT[TilesRead_YAddress2]; 
                 end 
 
                 //Tile1
@@ -186,6 +207,47 @@ module AudVid(
     end
 
     //Escritura en pantalla
+
+    always@(posedge TFT_DataClock) begin
+        //TFT_DataEncoded
+        //TilesWrite_XAddress       
+        //TilesWrite_YAddress       
+        //TilesWrite_TileAddress
+
+        TFT_DataEncoded<=TilesRegister[{TilesWrite_TileAddress,TilesWrite_YAddress,TilesWrite_XAddress}];
+        TilesWrite_XAddress<=AddressOperationLUT[TilesWrite_XAddress];
+
+        if(TilesWrite_XPosition<219)begin
+            TilesWrite_XPosition<=TilesWrite_XPosition+1;
+        end else begin
+            TilesWrite_XPosition<=0;
+            TilesWrite_YAddress<=AddressOperationLUT[TilesWrite_YAddress];
+
+            if(TilesWrite_YPosition<175)begin
+                TilesWrite_YPosition<=TilesWrite_YPosition+1;
+            end else begin
+                TilesWrite_YPosition<=0;
+            end
+        end
+
+        if(TilesWrite_XAddress==10 || TilesWrite_YAddress==10)begin
+            if(TilesWrite_XAddress==10 || !TilesWrite_YAddress==10)begin
+                if(TilesWrite_XPosition==119)begin
+                    TilesWrite_TilePosition<=TilesWrite_TilePosition-19;   
+                end else begin
+                    TilesWrite_TilePosition<=TilesWrite_TilePosition+1;    
+                end
+            end else begin
+                if(TilesWrite_TilePosition==319)begin
+                    TilesWrite_TilePosition<=0;
+                end else begin
+                    TilesWrite_TilePosition<=TilesWrite_TilePosition+1;  
+                end    
+            end
+        end
+
+    end
+    assign TilesWrite_TileAddress=TilesPositionsRegister[TilesWrite_TilePosition];
 
 endmodule
 

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Fri Feb 15 22:34:07 2019
-| Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
+| Date         : Sat Feb 16 12:42:11 2019
+| Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
 | Device       : 7a35tcpg236-1
@@ -21,24 +21,24 @@ Table of Contents
 +------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 |           Instance           |               Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                          |                              (top) |        236 |        236 |       0 |    0 | 176 |      0 |      0 |            0 |
+| top                          |                              (top) |        281 |        281 |       0 |    0 | 207 |      0 |      0 |            0 |
 |   (top)                      |                              (top) |          1 |          1 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   AudVid                     |                             AudVid |        233 |        233 |       0 |    0 | 172 |      0 |      0 |            0 |
-|     (AudVid)                 |                             AudVid |          4 |          4 |       0 |    0 |  20 |      0 |      0 |            0 |
+|   AudVid                     |                             AudVid |        278 |        278 |       0 |    0 | 203 |      0 |      0 |            0 |
+|     (AudVid)                 |                             AudVid |          8 |          8 |       0 |    0 |  36 |      0 |      0 |            0 |
 |     i2s                      |                                I2S |         15 |         15 |       0 |    0 |  29 |      0 |      0 |            0 |
 |       (i2s)                  |                                I2S |          7 |          7 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       squaregenerator        |                    SquareGenerator |          8 |          8 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     sd_spi                   |                             SD_SPI |         99 |         99 |       0 |    0 |  72 |      0 |      0 |            0 |
-|       (sd_spi)               |                             SD_SPI |         54 |         54 |       0 |    0 |  32 |      0 |      0 |            0 |
-|       spi                    |                            FullSPI |         23 |         23 |       0 |    0 |  20 |      0 |      0 |            0 |
+|     sd_spi                   |                             SD_SPI |        109 |        109 |       0 |    0 |  72 |      0 |      0 |            0 |
+|       (sd_spi)               |                             SD_SPI |         60 |         60 |       0 |    0 |  32 |      0 |      0 |            0 |
+|       spi                    |                            FullSPI |         27 |         27 |       0 |    0 |  20 |      0 |      0 |            0 |
 |       spiCount               |                          FullSPI_0 |          4 |          4 |       0 |    0 |   3 |      0 |      0 |            0 |
 |       spiInitClock           |                 FrequencyGenerator |          9 |          9 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       spiUtilCount           |                          FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
 |       spiWorkClock           | FrequencyGenerator__parameterized0 |          4 |          4 |       0 |    0 |   5 |      0 |      0 |            0 |
-|     tft_spi                  |                            TFT_SPI |        115 |        115 |       0 |    0 |  51 |      0 |      0 |            0 |
-|       (tft_spi)              |                            TFT_SPI |          6 |          6 |       0 |    0 |   6 |      0 |      0 |            0 |
-|       counter                |                            Counter |         70 |         70 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       initializationRegister |             InitializationRegister |         32 |         32 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     tft_spi                  |                            TFT_SPI |        146 |        146 |       0 |    0 |  66 |      0 |      0 |            0 |
+|       (tft_spi)              |                            TFT_SPI |         22 |         22 |       0 |    0 |  21 |      0 |      0 |            0 |
+|       counter                |                            Counter |         80 |         80 |       0 |    0 |  26 |      0 |      0 |            0 |
+|       initializationRegister |             InitializationRegister |         37 |         37 |       0 |    0 |   8 |      0 |      0 |            0 |
 |       spi                    |                                SPI |          3 |          3 |       0 |    0 |   5 |      0 |      0 |            0 |
 |       spiWorkClock           | FrequencyGenerator__parameterized1 |          4 |          4 |       0 |    0 |   6 |      0 |      0 |            0 |
 |   ClockManager               |                       ClockManager |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
