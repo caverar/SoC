@@ -28,18 +28,7 @@ module I2S(
         .CLK(MasterCLK), ////////////////
         .data(SquareData)
     );
-    //	Reloj de Pruebas 
-	// FrequencyGenerator #(.frequency(12500000), .bitsNumber(8)) TestClock(
-	// 	.InputCLK(MasterCLK),
-	// 	.OutputCLK(I2S_CLK)
-	// );
-
-    //	Reloj Real 
-	// I2SClockGenerator i2sClockGenerator(
-	// 	.InputCLK(MasterCLK),
-	// 	.OutputCLK(I2S_CLK)
-	// );
-
+ 
 
 
     //Logica Secuencial

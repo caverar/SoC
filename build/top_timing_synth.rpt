@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Thu Feb 14 22:22:53 2019
+| Date         : Fri Feb 15 18:14:09 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -54,9 +54,9 @@ Table of Contents
 --------------------
  There are 3 register/latch pins with no clock driven by root clock pin: AudVid/i2s/I2S_WS_reg/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/EnableDataRead_reg/Q (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/EnableDataRead_reg/Q (HIGH)
 
- There are 41 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/spi/DataClk_reg/Q (HIGH)
+ There are 47 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/spi/DataClk_reg/Q (HIGH)
 
  There are 26 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/spiInitClock/outputCLK_reg/Q (HIGH)
 
@@ -83,7 +83,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 221 pins that are not constrained for maximum delay. (HIGH)
+ There are 235 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
