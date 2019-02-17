@@ -149,6 +149,7 @@ class SOC(Module,AutoCSR):
         self.MasterCLK              = Signal()
         self.Reset                  = Signal()
         self.I2SCLK                 = Signal()
+        self.TFT_WorkCLK            = Signal()
         
         self.DAC_I2S_CLK            = Signal()
         self.DAC_I2S_DATA           = Signal()
@@ -176,7 +177,7 @@ class SOC(Module,AutoCSR):
             i_InputCLK  = self.SystemClock,
             o_MasterCLK = self.MasterCLK,
             o_I2SCLK    = self.I2SCLK,
-            ##o_TFTCLK    = self.TFTCLK
+            o_TFTCLK    = self.TFT_WorkCLK,
             ##o_SDCLK     = self.SDCLK 
         )
 
@@ -187,6 +188,7 @@ class SOC(Module,AutoCSR):
             i_I2SCLK                 = self.I2SCLK,                 
             i_TilesPositionData      = self.TilesPositionData,      ## [4:0]
             i_TilesPositionAddress   = self.TilesPositionAddress,   ## [8:0]    
+            i_TFT_WorkCLK            = self.TFT_WorkCLK,
             o_TFT_SPI_CLK            = self.TFT_SPI_CLK,
             o_TFT_SPI_CS             = self.TFT_SPI_CS,
             o_TFT_SPI_MOSI           = self.TFT_SPI_MOSI,

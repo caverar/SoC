@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Feb 16 20:58:55 2019
+| Date         : Sat Feb 16 21:37:29 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -file top_utilization_place.rpt
 | Design       : top
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs              |  241 |     0 |     20800 |  1.16 |
-|   LUT as Logic          |  241 |     0 |     20800 |  1.16 |
+| Slice LUTs              |  235 |     0 |     20800 |  1.13 |
+|   LUT as Logic          |  235 |     0 |     20800 |  1.13 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  192 |     0 |     41600 |  0.46 |
-|   Register as Flip Flop |  192 |     0 |     41600 |  0.46 |
+| Slice Registers         |  194 |     0 |     41600 |  0.47 |
+|   Register as Flip Flop |  194 |     0 |     41600 |  0.47 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    6 |     0 |     16300 |  0.04 |
-| F8 Muxes                |    0 |     0 |      8150 |  0.00 |
+| F8 Muxes                |    1 |     0 |      8150 |  0.01 |
 +-------------------------+------+-------+-----------+-------+
 
 
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 190   |          Yes |       Reset |            - |
+| 192   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,20 +67,20 @@ Table of Contents
 +-------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
-| Slice                                     |   99 |     0 |      8150 |  1.21 |
-|   SLICEL                                  |   72 |     0 |           |       |
-|   SLICEM                                  |   27 |     0 |           |       |
-| LUT as Logic                              |  241 |     0 |     20800 |  1.16 |
+| Slice                                     |   97 |     0 |      8150 |  1.19 |
+|   SLICEL                                  |   71 |     0 |           |       |
+|   SLICEM                                  |   26 |     0 |           |       |
+| LUT as Logic                              |  235 |     0 |     20800 |  1.13 |
 |   using O5 output only                    |    0 |       |           |       |
-|   using O6 output only                    |  190 |       |           |       |
-|   using O5 and O6                         |   51 |       |           |       |
+|   using O6 output only                    |  169 |       |           |       |
+|   using O5 and O6                         |   66 |       |           |       |
 | LUT as Memory                             |    0 |     0 |      9600 |  0.00 |
 |   LUT as Distributed RAM                  |    0 |     0 |           |       |
 |   LUT as Shift Register                   |    0 |     0 |           |       |
-| LUT Flip Flop Pairs                       |   89 |     0 |     20800 |  0.43 |
-|   fully used LUT-FF pairs                 |   23 |       |           |       |
-|   LUT-FF pairs with one unused LUT output |   61 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  |   63 |       |           |       |
+| LUT Flip Flop Pairs                       |   73 |     0 |     20800 |  0.35 |
+|   fully used LUT-FF pairs                 |   33 |       |           |       |
+|   LUT-FF pairs with one unused LUT output |   35 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  |   36 |       |           |       |
 | Unique Control Sets                       |   32 |       |           |       |
 +-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
@@ -147,7 +147,7 @@ Table of Contents
 | MMCME2_ADV |    2 |     0 |         5 | 40.00 |
 | PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
 | BUFMRCE    |    0 |     0 |        10 |  0.00 |
-| BUFHCE     |    2 |     0 |        72 |  2.78 |
+| BUFHCE     |    3 |     0 |        72 |  4.17 |
 | BUFR       |    0 |     0 |        20 |  0.00 |
 +------------+------+-------+-----------+-------+
 
@@ -176,22 +176,23 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  190 |        Flop & Latch |
-| LUT6       |  137 |                 LUT |
+| FDRE       |  192 |        Flop & Latch |
+| LUT6       |  116 |                 LUT |
+| LUT2       |   57 |                 LUT |
 | LUT5       |   41 |                 LUT |
-| LUT3       |   41 |                 LUT |
-| LUT4       |   30 |                 LUT |
-| LUT2       |   28 |                 LUT |
-| LUT1       |   15 |                 LUT |
+| LUT3       |   40 |                 LUT |
+| LUT4       |   33 |                 LUT |
 | CARRY4     |   15 |          CarryLogic |
+| LUT1       |   14 |                 LUT |
 | OBUF       |   13 |                  IO |
 | MUXF7      |    6 |               MuxFx |
-| BUFG       |    6 |               Clock |
+| BUFG       |    5 |               Clock |
 | IBUF       |    3 |                  IO |
+| BUFH       |    3 |               Clock |
+| BUFGCTRL   |    3 |               Clock |
 | MMCME2_ADV |    2 |               Clock |
 | FDSE       |    2 |        Flop & Latch |
-| BUFH       |    2 |               Clock |
-| BUFGCTRL   |    2 |               Clock |
+| MUXF8      |    1 |               MuxFx |
 +------------+------+---------------------+
 
 

@@ -212,23 +212,23 @@ module InitializationRegister#(parameter InitFrequency=100, parameter delayUnit=
     
     always@(posedge CLK)begin
         if(pointer<11) begin
-            address=pointer;
-            CS=0;
+            address<=pointer;
+            CS<=0;
         end else if(pointer>=(40*delayUnit)+11 && pointer< ((40*delayUnit)+21) ) begin  
-            address=pointer-(40*delayUnit);              
-            CS=0;
+            address<=pointer-(40*delayUnit);              
+            CS<=0;
         end else if(pointer>=(60*delayUnit)+21 && pointer< ((60*delayUnit)+23) ) begin  
-            address=pointer-(60*delayUnit);              
-            CS=0; 
+            address<=pointer-(60*delayUnit);              
+            CS<=0; 
         end else if(pointer>=(110*delayUnit)+23 && pointer< ((110*delayUnit)+87) ) begin  
-            address=pointer-(110*delayUnit);              
-            CS=0;
+            address<=pointer-(110*delayUnit);              
+            CS<=0;
         end else if(pointer>=(160*delayUnit)+87) begin  
-            address=pointer-(160*delayUnit);              
-            CS=0;    
+            address<=pointer-(160*delayUnit);              
+            CS<=0;    
         end else begin
-            CS=1;
-            address=0;
+            CS<=1;
+            address<=0;
         end
     end
     //Asignaciones Combinacionales

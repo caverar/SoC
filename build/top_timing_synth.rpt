@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Feb 16 20:58:46 2019
+| Date         : Sat Feb 16 21:37:20 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -64,8 +64,6 @@ Table of Contents
 
  There are 32 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/spi/dataClk_reg/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/spiWorkClock/outputCLK_reg/Q (HIGH)
-
  There are 6 register/latch pins with no clock driven by root clock pin: ClockManager/Reloj2/I2SCLK_reg/Q (HIGH)
 
 
@@ -81,7 +79,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 235 pins that are not constrained for maximum delay. (HIGH)
+ There are 230 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -95,11 +93,11 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 12 ports with no output delay specified. (HIGH)
+ There are 11 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
- There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+ There is 1 port with no output delay but with a timing clock defined on it or propagating through it (LOW)
 
 
 7. checking multiple_clock
@@ -140,7 +138,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.641        0.000                      0                  111        0.007        0.000                      0                  111        3.000        0.000                       0                   104  
+      5.641        0.000                      0                  105        0.007        0.000                      0                  105        3.000        0.000                       0                   103  
 
 
 All user specified timing constraints are met.
@@ -171,9 +169,9 @@ Clock                                 WNS(ns)      TNS(ns)  TNS Failing Endpoint
 -----                                 -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 clk100                                                                                                                                                                              3.000        0.000                       0                     2  
   I2S_CLK_reloj2_clk_wiz_0_0           68.271        0.000                      0                   12        0.007        0.000                      0                   12       34.931        0.000                       0                    15  
-  MasterClocK_reloj1_clk_wiz_0_0        5.641        0.000                      0                   83        0.007        0.000                      0                   83        4.500        0.000                       0                    59  
+  MasterClocK_reloj1_clk_wiz_0_0        5.641        0.000                      0                   72        0.007        0.000                      0                   72        4.500        0.000                       0                    53  
   SD_Clock_reloj1_clk_wiz_0_0          77.442        0.000                      0                    8        0.007        0.000                      0                    8       39.500        0.000                       0                    11  
-  TFT_Clock_reloj1_clk_wiz_0_0        157.428        0.000                      0                    8        0.007        0.000                      0                    8       53.360        0.000                       0                    11  
+  TFT_Clock_reloj1_clk_wiz_0_0        157.428        0.000                      0                   13        0.007        0.000                      0                   13       53.360        0.000                       0                    16  
   clkfbout_reloj1_clk_wiz_0_0                                                                                                                                                       7.845        0.000                       0                     3  
   clkfbout_reloj2_clk_wiz_0_0                                                                                                                                                      47.845        0.000                       0                     3  
 
@@ -220,10 +218,10 @@ Period(ns):         10.000
 Sources:            { clk100 }
 
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751                ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKIN1
-Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000               ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKIN1
-Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKIN1
-High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKIN1
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751                ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000               ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/CLKIN1
 
 
 
@@ -431,8 +429,8 @@ Slack (MET) :             5.641ns  (required time - arrival time)
                          net (fo=1, unplaced)         0.419     0.352    AudVid/i2s/squaregenerator/data[15]_i_4_n_0
                          LUT5 (Prop_lut5_I2_O)        0.124     0.476 f  AudVid/i2s/squaregenerator/data[15]_i_2/O
                          net (fo=3, unplaced)         0.467     0.943    AudVid/i2s/squaregenerator/data[15]_i_2_n_0
-                         LUT1 (Prop_lut1_I0_O)        0.124     1.067 r  AudVid/i2s/squaregenerator/count[0]_i_1__5/O
-                         net (fo=18, unplaced)        0.833     1.900    AudVid/i2s/squaregenerator/count[0]_i_1__5_n_0
+                         LUT1 (Prop_lut1_I0_O)        0.124     1.067 r  AudVid/i2s/squaregenerator/count[0]_i_1__6/O
+                         net (fo=18, unplaced)        0.833     1.900    AudVid/i2s/squaregenerator/count[0]_i_1__6_n_0
                          FDRE                                         r  AudVid/i2s/squaregenerator/count_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
@@ -682,7 +680,7 @@ Period(ns):         80.000
 Sources:            { ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT1 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     BUFH/I              n/a            2.155         80.000      77.845               ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf_en1/I
+Min Period        n/a     BUFGCTRL/I0         n/a            2.155         80.000      77.845               ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf1/I0
 Max Period        n/a     MMCME2_ADV/CLKOUT1  n/a            213.360       80.000      133.360              ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT1
 Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.000      39.500               ClockManager/Reloj1/MainClockWizard/inst/seq_reg2_reg[0]/C
 High Pulse Width  Slow    FDRE/C              n/a            0.500         40.000      39.500               ClockManager/Reloj1/MainClockWizard/inst/seq_reg2_reg[0]/C
@@ -836,7 +834,7 @@ Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actua
 Min Period        n/a     BUFGCTRL/I0         n/a            2.155         160.000     157.845              ClockManager/Reloj1/MainClockWizard/inst/clkout3_buf1/I0
 Max Period        n/a     MMCME2_ADV/CLKOUT2  n/a            213.360       160.000     53.360               ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT2
 Low Pulse Width   Slow    FDRE/C              n/a            0.500         80.000      79.500               ClockManager/Reloj1/MainClockWizard/inst/seq_reg3_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         80.000      79.500               ClockManager/Reloj1/MainClockWizard/inst/seq_reg3_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         80.000      79.500               AudVid/tft_spi/spi/count_reg[0]/C
 
 
 

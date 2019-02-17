@@ -5,6 +5,7 @@ module AudVid(
     input  wire        I2SCLK,    
     input  wire [4:0]  TilesPositionData,
     input  wire [8:0]  TilesPositionAddress,
+    input  wire        TFT_WorkCLK,
     output wire        TFT_SPI_CLK,
     output wire        TFT_SPI_CS,    
     output wire        TFT_SPI_MOSI,
@@ -108,9 +109,10 @@ module AudVid(
     );
 
     TFT_SPI tft_spi(
-		.data(16'h7BEF), //TFT_Data
+		.data(16'hFEA0), //TFT_Data
         .DataClock(TFT_DataClock), 
 		.MasterCLK(MasterCLK),
+        .WorkCLK(TFT_WorkCLK),
 		.SPI_MOSI(TFT_SPI_MOSI),
 		.SPI_CLK(TFT_SPI_CLK),
 		.RS(TFT_RS),

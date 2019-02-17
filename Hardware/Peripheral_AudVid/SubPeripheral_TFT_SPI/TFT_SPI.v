@@ -1,6 +1,7 @@
 module TFT_SPI(
 	input  wire [15:0] data,
-	input  wire        MasterCLK,
+	input  wire        MasterCLK, 
+	input  wire        WorkCLK,   //6.25MHz
 	output wire [15:0] OutputData,
 	output wire        SPI_MOSI,
 	output wire        SPI_CLK,
@@ -42,10 +43,10 @@ module TFT_SPI(
 
 
 	//	Reloj SPI 
-	FrequencyGenerator #(.frequency(WorkFrequency), .bitsNumber(WorkFrequencyBits)) spiWorkClock(
-		.InputCLK(Buffered_MasterCLK),
-		.OutputCLK(SPI_WorkClock)
-	);
+	// FrequencyGenerator #(.frequency(WorkFrequency), .bitsNumber(WorkFrequencyBits)) spiWorkClock(
+	// 	.InputCLK(Buffered_MasterCLK),
+	// 	.OutputCLK(SPI_WorkClock)
+	// );
 
 	//	Registro de Inicializacion
 	InitializationRegister #(.InitFrequency(WorkFrequency), .delayUnit(delayUnit)) initializationRegister(
@@ -88,7 +89,7 @@ module TFT_SPI(
 	//	Seleccion de datos
 	assign OutputData = (InitRegPointer<InitDataSize+delayTime) ? InitData : data1;
 	//	Seleccion de reloj SPI
-	assign SPI_CLK=SPI_WorkClock;
+	assign SPI_CLK=WorkCLK;
 	//	Gestion de pin RS
 	assign RS = (InitRegPointer<InitDataSize+delayTime) ? InitReg_RS : 1;
 	assign RST=1'b1;
