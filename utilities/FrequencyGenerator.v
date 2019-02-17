@@ -1,10 +1,14 @@
-module FrequencyGenerator #(parameter frequency=100, parameter bitsNumber=20)(
+module FrequencyGenerator #(
+
+	parameter MasterFrequency=100000000,
+	parameter frequency=100, 
+	parameter bitsNumber=20)(
 	input   wire InputCLK,
 	output  wire OutputCLK
 	);
 	//Declaracion de registros
-	parameter limit=(100000000/frequency);     //Valor maximo del contador
-	reg [bitsNumber-1:0] counter;			   //Registro del contador
+	parameter limit=(MasterFrequency/frequency);    //Valor maximo del contador
+	reg [bitsNumber-1:0] counter;			   		//Registro del contador
 	reg outputCLK;
 	wire Buffered_OutputCLK;
 	//Valores iniciales

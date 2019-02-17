@@ -105,6 +105,7 @@ platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v")
 
 #	utilities
 platform.add_source("utilities/FrequencyGenerator.v")
+platform.add_source("utilities/ClockManager.v")
 platform.add_source("utilities/Counter.v")
 platform.add_source("utilities/ButtonDebouncer.v")
 platform.add_source("utilities/ButtonDebouncerTester.v")
@@ -115,6 +116,7 @@ class SOC(Module):
     def __init__(self):
         self.Leds                = Signal(16)
         self.SystemClock         = Signal()
+        self.MasterCLK           = Signal()
         self.SD_SPI_MOSI         = Signal()
         self.SD_SPI_MISO         = Signal()
         self.SD_SPI_CLK          = Signal()
@@ -123,9 +125,16 @@ class SOC(Module):
         self.SPI_COUNT_DEBUG     = Signal()
         self.SD_InputAddress     = Signal(16)
         self.SPI_UTILCOUNT_DEBUG = Signal()
+        self.SD_WorkCLK          = Signal()
 
+        self.specials +=Instance("ClockManager",
+            i_InputCLK  = self.SystemClock,
+            o_MasterCLK = self.MasterCLK,
+            o_SDCLK     = self.SD_WorkCLK 
+        )
         self.specials +=Instance("SD_SPI",
-            i_MasterCLK           = self.SystemClock,
+            i_MasterCLK           = self.MasterCLK,
+            i_WorkCLK             = self.SD_WorkCLK,
             i_Reset               = self.Reset,
             i_SPI_MISO            = self.SD_SPI_MISO,
             o_SPI_MOSI            = self.SD_SPI_MOSI,

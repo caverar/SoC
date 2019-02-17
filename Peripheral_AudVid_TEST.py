@@ -150,6 +150,7 @@ class SOC(Module,AutoCSR):
         self.Reset                  = Signal()
         self.I2SCLK                 = Signal()
         self.TFT_WorkCLK            = Signal()
+        self.SD_WorkCLK             = Signal()
         
         self.DAC_I2S_CLK            = Signal()
         self.DAC_I2S_DATA           = Signal()
@@ -178,7 +179,7 @@ class SOC(Module,AutoCSR):
             o_MasterCLK = self.MasterCLK,
             o_I2SCLK    = self.I2SCLK,
             o_TFTCLK    = self.TFT_WorkCLK,
-            ##o_SDCLK     = self.SDCLK 
+            o_SDCLK     = self.SD_WorkCLK 
         )
 
         self.specials +=Instance("AudVid",
@@ -194,6 +195,7 @@ class SOC(Module,AutoCSR):
             o_TFT_SPI_MOSI           = self.TFT_SPI_MOSI,
             o_TFT_RST                = self.TFT_RST,
             o_TFT_RS                 = self.TFT_RS,
+            i_SD_WorkCLK             = self.SD_WorkCLK,
             o_SD_SPI_CLK             = self.SD_SPI_CLK,
             o_SD_SPI_CS              = self.SD_SPI_CS,    
             o_SD_SPI_MOSI            = self.SD_SPI_MOSI,

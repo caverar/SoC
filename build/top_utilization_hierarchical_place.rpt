@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Feb 16 21:37:29 2019
+| Date         : Sat Feb 16 23:38:00 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -18,38 +18,36 @@ Table of Contents
 1. Utilization by Hierarchy
 ---------------------------
 
-+------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-|           Instance           |               Module               | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
-+------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                          |                              (top) |        235 |        235 |       0 |    0 | 194 |      0 |      0 |            0 |
-|   (top)                      |                              (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   AudVid                     |                             AudVid |        233 |        233 |       0 |    0 | 166 |      0 |      0 |            0 |
-|     (AudVid)                 |                             AudVid |          4 |          4 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     i2s                      |                                I2S |         14 |         14 |       0 |    0 |  29 |      0 |      0 |            0 |
-|       (i2s)                  |                                I2S |          7 |          7 |       0 |    0 |   9 |      0 |      0 |            0 |
-|       squaregenerator        |                    SquareGenerator |          7 |          7 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     sd_spi                   |                             SD_SPI |         98 |         98 |       0 |    0 |  72 |      0 |      0 |            0 |
-|       (sd_spi)               |                             SD_SPI |         53 |         53 |       0 |    0 |  32 |      0 |      0 |            0 |
-|       spi                    |                            FullSPI |         23 |         23 |       0 |    0 |  20 |      0 |      0 |            0 |
-|       spiCount               |                          FullSPI_0 |          4 |          4 |       0 |    0 |   3 |      0 |      0 |            0 |
-|       spiInitClock           |                 FrequencyGenerator |          9 |          9 |       0 |    0 |   9 |      0 |      0 |            0 |
-|       spiUtilCount           |                          FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
-|       spiWorkClock           | FrequencyGenerator__parameterized0 |          4 |          4 |       0 |    0 |   5 |      0 |      0 |            0 |
-|     tft_spi                  |                            TFT_SPI |        117 |        117 |       0 |    0 |  45 |      0 |      0 |            0 |
-|       (tft_spi)              |                            TFT_SPI |          5 |          5 |       0 |    0 |   6 |      0 |      0 |            0 |
-|       counter                |                            Counter |         75 |         75 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       initializationRegister |             InitializationRegister |         30 |         30 |       0 |    0 |   8 |      0 |      0 |            0 |
-|       spi                    |                                SPI |          7 |          7 |       0 |    0 |   5 |      0 |      0 |            0 |
-|   ClockManager               |                       ClockManager |          2 |          2 |       0 |    0 |  28 |      0 |      0 |            0 |
-|     (ClockManager)           |                       ClockManager |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|     Reloj1                   |                             reloj1 |          0 |          0 |       0 |    0 |  16 |      0 |      0 |            0 |
-|       MainClockWizard        |                 reloj1_clk_wiz_0_0 |          0 |          0 |       0 |    0 |  16 |      0 |      0 |            0 |
-|         inst                 |         reloj1_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |  16 |      0 |      0 |            0 |
-|     Reloj2                   |                             reloj2 |          2 |          2 |       0 |    0 |  12 |      0 |      0 |            0 |
-|       (Reloj2)               |                             reloj2 |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
-|       AudioClock             |                 reloj2_clk_wiz_0_0 |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
-|         inst                 |         reloj2_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
-+------------------------------+------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
++------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|           Instance           |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| top                          |                      (top) |        218 |        218 |       0 |    0 | 169 |      0 |      0 |            0 |
+|   (top)                      |                      (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   AudVid                     |                     AudVid |        216 |        216 |       0 |    0 | 133 |      0 |      0 |            0 |
+|     i2s                      |                        I2S |         14 |         14 |       0 |    0 |  29 |      0 |      0 |            0 |
+|       (i2s)                  |                        I2S |          7 |          7 |       0 |    0 |   9 |      0 |      0 |            0 |
+|       squaregenerator        |            SquareGenerator |          7 |          7 |       0 |    0 |  20 |      0 |      0 |            0 |
+|     sd_spi                   |                     SD_SPI |         86 |         86 |       0 |    0 |  59 |      0 |      0 |            0 |
+|       (sd_spi)               |                     SD_SPI |         47 |         47 |       0 |    0 |  26 |      0 |      0 |            0 |
+|       spi                    |                    FullSPI |         21 |         21 |       0 |    0 |  20 |      0 |      0 |            0 |
+|       spiCount               |                  FullSPI_0 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       spiInitClock           |         FrequencyGenerator |          8 |          8 |       0 |    0 |   7 |      0 |      0 |            0 |
+|       spiUtilCount           |                  FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     tft_spi                  |                    TFT_SPI |        116 |        116 |       0 |    0 |  45 |      0 |      0 |            0 |
+|       (tft_spi)              |                    TFT_SPI |          5 |          5 |       0 |    0 |   6 |      0 |      0 |            0 |
+|       counter                |                    Counter |         74 |         74 |       0 |    0 |  26 |      0 |      0 |            0 |
+|       initializationRegister |     InitializationRegister |         30 |         30 |       0 |    0 |   8 |      0 |      0 |            0 |
+|       spi                    |                        SPI |          7 |          7 |       0 |    0 |   5 |      0 |      0 |            0 |
+|   ClockManager               |               ClockManager |          2 |          2 |       0 |    0 |  36 |      0 |      0 |            0 |
+|     (ClockManager)           |               ClockManager |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|     Reloj1                   |                     reloj1 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
+|       MainClockWizard        |         reloj1_clk_wiz_0_0 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
+|         inst                 | reloj1_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
+|     Reloj2                   |                     reloj2 |          2 |          2 |       0 |    0 |  12 |      0 |      0 |            0 |
+|       (Reloj2)               |                     reloj2 |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
+|       AudioClock             |         reloj2_clk_wiz_0_0 |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
+|         inst                 | reloj2_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
++------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
 
 

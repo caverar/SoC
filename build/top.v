@@ -59,6 +59,7 @@ wire MasterCLK;
 wire Reset_1;
 wire I2SCLK;
 wire TFT_WorkCLK;
+wire SD_WorkCLK;
 wire DAC_I2S_CLK_1;
 wire DAC_I2S_DATA_1;
 wire DAC_I2S_WS_1;
@@ -113,6 +114,7 @@ ClockManager ClockManager(
 	.InputCLK(SystemClock),
 	.I2SCLK(I2SCLK),
 	.MasterCLK(MasterCLK),
+	.SDCLK(SD_WorkCLK),
 	.TFTCLK(TFT_WorkCLK)
 );
 
@@ -121,6 +123,7 @@ AudVid AudVid(
 	.MasterCLK(MasterCLK),
 	.Reset(Reset_1),
 	.SD_SPI_MISO(SD_SPI_MISO_1),
+	.SD_WorkCLK(SD_WorkCLK),
 	.TFT_WorkCLK(TFT_WorkCLK),
 	.TilesPositionAddress(TilesPositionAddress),
 	.TilesPositionData(TilesPositionData),

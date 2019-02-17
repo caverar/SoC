@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Sat Feb 16 21:38:02 2019
+| Date             : Sat Feb 16 23:38:35 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.309        |
+| Total On-Chip Power (W)  | 0.306        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.237        |
+| Dynamic (W)              | 0.233        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.5         |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        8 |       --- |             --- |
-| Slice Logic    |     0.002 |      557 |       --- |             --- |
-|   LUT as Logic |     0.002 |      235 |     20800 |            1.13 |
-|   Register     |    <0.001 |      194 |     41600 |            0.47 |
-|   CARRY4       |    <0.001 |       15 |      8150 |            0.18 |
-|   BUFG         |    <0.001 |        3 |        32 |            9.38 |
+| Clocks         |     0.002 |        9 |       --- |             --- |
+| Slice Logic    |     0.001 |      495 |       --- |             --- |
+|   LUT as Logic |     0.001 |      218 |     20800 |            1.05 |
+|   Register     |    <0.001 |      169 |     41600 |            0.41 |
+|   CARRY4       |    <0.001 |       11 |      8150 |            0.13 |
 |   F7/F8 Muxes  |    <0.001 |        7 |     32600 |            0.02 |
-|   Others       |     0.000 |       37 |       --- |             --- |
-| Signals        |     0.002 |      426 |       --- |             --- |
+|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
+|   Others       |     0.000 |       33 |       --- |             --- |
+| Signals        |     0.001 |      376 |       --- |             --- |
 | MMCM           |     0.224 |        2 |         5 |           40.00 |
-| I/O            |     0.008 |       16 |       106 |           15.09 |
+| I/O            |     0.005 |       16 |       106 |           15.09 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.309 |          |           |                 |
+| Total          |     0.306 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
+| Vccint    |       1.000 |     0.015 |       0.005 |      0.010 |
 | Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -132,6 +132,7 @@ Table of Contents
 +--------------------------------+-------------------------------------------------------------------------+-----------------+
 | I2S_CLK_reloj2_clk_wiz_0_0     | ClockManager/Reloj2/AudioClock/inst/I2S_CLK_reloj2_clk_wiz_0_0          |            70.9 |
 | MasterClocK_reloj1_clk_wiz_0_0 | ClockManager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0 |            10.0 |
+| SD_Clock_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0    |            80.0 |
 | TFT_Clock_reloj1_clk_wiz_0_0   | ClockManager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0   |           160.0 |
 | clk100                         | clk100                                                                  |            10.0 |
 | clkfbout_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/clkfbout_reloj1_clk_wiz_0_0    |            10.0 |
@@ -148,21 +149,20 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| top                          |     0.237 |
-|   AudVid                     |     0.005 |
-|     i2s                      |    <0.001 |
+| top                          |     0.233 |
+|   AudVid                     |     0.004 |
+|     i2s                      |     0.001 |
 |       squaregenerator        |    <0.001 |
-|     sd_spi                   |     0.002 |
+|     sd_spi                   |    <0.001 |
 |       spi                    |    <0.001 |
 |       spiCount               |    <0.001 |
 |       spiInitClock           |    <0.001 |
 |       spiUtilCount           |    <0.001 |
-|       spiWorkClock           |    <0.001 |
 |     tft_spi                  |     0.002 |
 |       counter                |    <0.001 |
 |       initializationRegister |    <0.001 |
 |       spi                    |    <0.001 |
-|   ClockManager               |     0.224 |
+|   ClockManager               |     0.225 |
 |     Reloj1                   |     0.096 |
 |       MainClockWizard        |     0.096 |
 |         inst                 |     0.096 |

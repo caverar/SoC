@@ -1,5 +1,6 @@
 module SD_SPI(
     input              MasterCLK,
+    input              WorkCLK,   // 12.5KHz
     input              Reset,
     input              SPI_MISO,
     output             SPI_MOSI,
@@ -45,17 +46,17 @@ module SD_SPI(
         .I (MasterCLK)
     );
 
-    //	Reloj SPI de Inicializacion -400Khz 
-	FrequencyGenerator #(.frequency(400000), .bitsNumber(8)) spiInitClock(
-		.InputCLK(Buffered_MasterCLK),
+    //	Reloj SPI de Inicializacion -350Khz 
+	FrequencyGenerator #(.MasterFrequency(12500000), .frequency(350000), .bitsNumber(6)) spiInitClock(
+		.InputCLK(WorkCLK),
 		.OutputCLK(SPI_InitClock)
 	);
 
-	//	Reloj SPI de Trabajo-12.5Mhz 
-	FrequencyGenerator #(.frequency(12500000), .bitsNumber(5)) spiWorkClock(
-		.InputCLK(Buffered_MasterCLK),
-		.OutputCLK(SPI_WorkClock)
-	);
+	// //	Reloj SPI de Trabajo-12.5Mhz 
+	// FrequencyGenerator #(.frequency(12500000), .bitsNumber(5)) spiWorkClock(
+	// 	.InputCLK(Buffered_MasterCLK),
+	// 	.OutputCLK(SPI_WorkClock)
+	// );
 
     // modulo SPI
     FullSPI spi(
@@ -284,6 +285,7 @@ module SD_SPI(
     //Logica Combinacional
 
     assign SPI_InputCLK=(count<24)? SPI_InitClock : SPI_WorkClock;
+    assign SPI_WorkClock=WorkCLK;
     assign InputDataClock=~DataClock;  
 
 
