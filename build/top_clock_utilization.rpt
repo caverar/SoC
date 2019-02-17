@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Feb 16 23:38:02 2019
+| Date         : Sun Feb 17 01:59:39 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_clock_utilization -file top_clock_utilization.rpt
 | Design       : top
@@ -59,16 +59,16 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------+------------------------------------------------------------+--------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                          | Driver Pin                                                 | Net                                                                            |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------+------------------------------------------------------------+--------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 1 |          32 |               0 |              |                                | count_reg[24]_i_3/O                                        | count_reg[24]_i_3_n_0                                                          |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 1 |          70 |               0 |              |                                | count_reg[24]_i_3/O                                        | TFT_DataClock                                                                  |
 | g1        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y17 | n/a          |                 2 |          28 |               0 |       10.000 | MasterClocK_reloj1_clk_wiz_0_0 | ClockManager/Reloj1/MainClockWizard/inst/clkout1_buf1/O    | ClockManager/Reloj1/MainClockWizard/inst/MasterCLK                             |
 | g2        | src1      | BUFH/O          | None       | BUFHCE_X0Y12   | X0Y1         |                 1 |           8 |               0 |       10.000 | MasterClocK_reloj1_clk_wiz_0_0 | ClockManager/Reloj1/MainClockWizard/inst/clkout1_buf_en1/O | ClockManager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0_en_clk |
 | g3        | src1      | BUFH/O          | None       | BUFHCE_X0Y13   | X0Y1         |                 1 |           8 |               0 |       80.000 | SD_Clock_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf_en1/O | ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk    |
-| g4        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y18 | n/a          |                 1 |           7 |               2 |       80.000 | SD_Clock_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf1/O    | ClockManager/Reloj1/MainClockWizard/inst/SDCLK                                 |
+| g4        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y18 | n/a          |                 1 |           7 |               2 |       80.000 | SD_Clock_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf1/O    | ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK                            |
 | g5        | src1      | BUFH/O          | None       | BUFHCE_X1Y12   | X1Y1         |                 1 |           8 |               0 |      160.000 | TFT_Clock_reloj1_clk_wiz_0_0   | ClockManager/Reloj1/MainClockWizard/inst/clkout3_buf_en1/O | ClockManager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0_en_clk   |
-| g6        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |           5 |               1 |      160.000 | TFT_Clock_reloj1_clk_wiz_0_0   | ClockManager/Reloj1/MainClockWizard/inst/clkout3_buf1/O    | ClockManager/Reloj1/MainClockWizard/inst/TFTCLK                                |
+| g6        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |           5 |               1 |      160.000 | TFT_Clock_reloj1_clk_wiz_0_0   | ClockManager/Reloj1/MainClockWizard/inst/clkout3_buf1/O    | ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK                           |
 | g7        | src2      | BUFH/O          | None       | BUFHCE_X0Y0    | X0Y0         |                 1 |           8 |               0 |       70.862 | I2S_CLK_reloj2_clk_wiz_0_0     | ClockManager/Reloj2/AudioClock/inst/clkout1_buf_en2/O      | ClockManager/Reloj2/AudioClock/inst/I2S_CLK_reloj2_clk_wiz_0_0_en_clk          |
 | g8        | src2      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y2  | n/a          |                 1 |           4 |               0 |       70.862 | I2S_CLK_reloj2_clk_wiz_0_0     | ClockManager/Reloj2/AudioClock/inst/clkout1_buf2/O         | ClockManager/Reloj2/AudioClock/inst/CLK                                        |
-| g9        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 1 |           6 |               1 |              |                                | ClockManager/Reloj2/I2S_Synchronizer/O                     | ClockManager/Reloj2/I2SCLK                                                     |
+| g9        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 1 |           6 |               1 |              |                                | ClockManager/Reloj2/I2S_Synchronizer/O                     | ClockManager/Reloj2/DAC_I2S_CLK                                                |
 | g10       | src1      | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/clkf_buf1/O       | ClockManager/Reloj1/MainClockWizard/inst/clkfbout_buf_reloj1_clk_wiz_0_0       |
 | g11       | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 1 |           1 |               0 |       50.000 | clkfbout_reloj2_clk_wiz_0_0    | ClockManager/Reloj2/AudioClock/inst/clkf_buf2/O            | ClockManager/Reloj2/AudioClock/inst/clkfbout_buf_reloj2_clk_wiz_0_0            |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------+------------------------------------------------------------+--------------------------------------------------------------------------------+
@@ -82,14 +82,14 @@ Table of Contents
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------+
 | Source Id | Global Id | Driver Type/Pin     | Constraint | Site            | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                   | Driver Pin                                                       | Net                                                                     |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------+
-| src0      | g0        | FDRE/Q              | None       | SLICE_X35Y46    | X0Y0         |           1 |               1 |                     |                                | AudVid/tft_spi/spi/dataClk_reg/Q                                 | AudVid/tft_spi/spi/dataClk_reg_0                                        |
+| src0      | g0        | FDRE/Q              | None       | SLICE_X47Y40    | X1Y0         |           1 |               1 |                     |                                | AudVid/tft_spi/spi/dataClk_reg/Q                                 | AudVid/tft_spi/spi/dataClk_reg_0                                        |
 | src1      | g1, g2    | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           2 |               0 |              10.000 | MasterClocK_reloj1_clk_wiz_0_0 | ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT0  | ClockManager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0 |
 | src1      | g3, g4    | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           2 |               0 |              80.000 | SD_Clock_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT1  | ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0    |
 | src1      | g5, g6    | MMCME2_ADV/CLKOUT2  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           2 |               0 |             160.000 | TFT_Clock_reloj1_clk_wiz_0_0   | ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT2  | ClockManager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0   |
 | src1      | g10       | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X1Y1 | X1Y1         |           1 |               0 |              10.000 | clkfbout_reloj1_clk_wiz_0_0    | ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKFBOUT | ClockManager/Reloj1/MainClockWizard/inst/clkfbout_reloj1_clk_wiz_0_0    |
 | src2      | g7, g8    | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           2 |               0 |              70.862 | I2S_CLK_reloj2_clk_wiz_0_0     | ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/CLKOUT0       | ClockManager/Reloj2/AudioClock/inst/I2S_CLK_reloj2_clk_wiz_0_0          |
 | src2      | g11       | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |              50.000 | clkfbout_reloj2_clk_wiz_0_0    | ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/CLKFBOUT      | ClockManager/Reloj2/AudioClock/inst/clkfbout_reloj2_clk_wiz_0_0         |
-| src3      | g9        | FDRE/Q              | None       | SLICE_X50Y46    | X1Y0         |           1 |               0 |                     |                                | ClockManager/Reloj2/I2SCLK_reg/Q                                 | ClockManager/Reloj2/I2SCLK_0                                            |
+| src3      | g9        | FDRE/Q              | None       | SLICE_X50Y46    | X1Y0         |           1 |               0 |                     |                                | ClockManager/Reloj2/I2SCLK_reg/Q                                 | ClockManager/Reloj2/I2SCLK                                              |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -98,12 +98,12 @@ Table of Contents
 4. Local Clock Details
 ----------------------
 
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+------------------------------------+
-| Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                      | Net                                |
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+------------------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X4Y31/AFF  | X0Y0         |          26 |               1 |              |       | AudVid/sd_spi/spi/DataClk_reg/Q | AudVid/sd_spi/spi/UtilCount_reg[9] - Static -
-| 1        | FDRE/Q          | None       | SLICE_X1Y133/AFF | X0Y2         |           3 |               2 |              |       | AudVid/i2s/I2S_WS_reg/Q         | AudVid/i2s/Data_reg[0]_0           - Static -
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+------------------------------------||
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+--------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                      | Net                      |
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+--------------------------||
+| 0        | FDRE/Q          | None       | SLICE_X7Y26/AFF  | X0Y0         |          26 |               1 |              |       | AudVid/sd_spi/spi/DataClk_reg/Q | AudVid/sd_spi/spi/CLK    - Static -
+| 1        | FDRE/Q          | None       | SLICE_X0Y137/AFF | X0Y2         |           3 |               2 |              |       | AudVid/i2s/I2S_WS_reg/Q         | AudVid/i2s/Data_reg[0]_0 - Static -
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+--------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
 *** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -117,11 +117,11 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   86 |  1200 |   20 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    4 |  1500 |    4 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   41 |  1200 |   13 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   86 |  1500 |   22 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   16 |  1200 |    8 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    8 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
-| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   29 |  1800 |   21 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   29 |  1800 |   18 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |   950 |    0 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
@@ -136,31 +136,31 @@ All Modules
 +----+----+----+
 | Y2 |  2 |  0 |
 | Y1 |  2 |  3 |
-| Y0 |  5 |  2 |
+| Y0 |  2 |  5 |
 +----+----+----+
 
 
 7. Device Cell Placement Summary for Global Clock g0
 ----------------------------------------------------
 
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                   |
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----------------------+
-| g0        | BUFG/O          | n/a               |       |             |               |          32 |        0 |              0 |        0 | count_reg[24]_i_3_n_0 |
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+-----------------------+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net           |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
+| g0        | BUFG/O          | n/a               |       |             |               |          70 |        0 |              0 |        0 | TFT_DataClock |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+----+
-|    | X0  | X1 |
-+----+-----+----+
-| Y2 |   0 |  0 |
-| Y1 |   0 |  0 |
-| Y0 |  32 |  0 |
-+----+-----+----+
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y2 |  0 |   0 |
+| Y1 |  0 |   0 |
+| Y0 |  0 |  70 |
++----+----+-----+
 
 
 8. Device Cell Placement Summary for Global Clock g1
@@ -182,7 +182,7 @@ All Modules
 +----+-----+----+
 | Y2 |  20 |  0 |
 | Y1 |   0 |  0 |
-| Y0 |   8 |  0 |
+| Y0 |   0 |  8 |
 +----+-----+----+
 
 
@@ -235,11 +235,11 @@ All Modules
 11. Device Cell Placement Summary for Global Clock g4
 -----------------------------------------------------
 
-+-----------+-----------------+-------------------+-----------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock                       | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                            |
-+-----------+-----------------+-------------------+-----------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------+
-| g4        | BUFGCTRL/O      | n/a               | SD_Clock_reloj1_clk_wiz_0_0 |      80.000 | {0.000 40.000} |           9 |        0 |              0 |        0 | ClockManager/Reloj1/MainClockWizard/inst/SDCLK |
-+-----------+-----------------+-------------------+-----------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------+
++-----------+-----------------+-------------------+-----------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                       | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                 |
++-----------+-----------------+-------------------+-----------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------+
+| g4        | BUFGCTRL/O      | n/a               | SD_Clock_reloj1_clk_wiz_0_0 |      80.000 | {0.000 40.000} |           9 |        0 |              0 |        0 | ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK |
++-----------+-----------------+-------------------+-----------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
@@ -281,11 +281,11 @@ All Modules
 13. Device Cell Placement Summary for Global Clock g6
 -----------------------------------------------------
 
-+-----------+-----------------+-------------------+------------------------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock                        | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                             |
-+-----------+-----------------+-------------------+------------------------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
-| g6        | BUFGCTRL/O      | n/a               | TFT_Clock_reloj1_clk_wiz_0_0 |     160.000 | {0.000 80.000} |           5 |        1 |              0 |        0 | ClockManager/Reloj1/MainClockWizard/inst/TFTCLK |
-+-----------+-----------------+-------------------+------------------------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
++-----------+-----------------+-------------------+------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                        | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                  |
++-----------+-----------------+-------------------+------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------------+
+| g6        | BUFGCTRL/O      | n/a               | TFT_Clock_reloj1_clk_wiz_0_0 |     160.000 | {0.000 80.000} |           5 |        1 |              0 |        0 | ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK |
++-----------+-----------------+-------------------+------------------------------+-------------+----------------+-------------+----------+----------------+----------+------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
@@ -297,7 +297,7 @@ All Modules
 +----+----+----+
 | Y2 |  0 |  0 |
 | Y1 |  0 |  1 |
-| Y0 |  5 |  0 |
+| Y0 |  0 |  5 |
 +----+----+----+
 
 
@@ -350,11 +350,11 @@ All Modules
 16. Device Cell Placement Summary for Global Clock g9
 -----------------------------------------------------
 
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+----------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                        |
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+----------------------------+
-| g9        | BUFG/O          | n/a               |       |             |               |           6 |        1 |              0 |        0 | ClockManager/Reloj2/I2SCLK |
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+----------------------------+
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                             |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------+
+| g9        | BUFG/O          | n/a               |       |             |               |           6 |        1 |              0 |        0 | ClockManager/Reloj2/DAC_I2S_CLK |
++-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
@@ -422,11 +422,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          32 |               0 | 32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | count_reg[24]_i_3_n_0                                                 |
-| g1        | n/a   | BUFGCTRL/O      | None       |           8 |               0 |  8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/MasterCLK                    |
 | g7        | n/a   | BUFH/O          | None       |           8 |               0 |  8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj2/AudioClock/inst/I2S_CLK_reloj2_clk_wiz_0_0_en_clk |
-| g4        | n/a   | BUFGCTRL/O      | None       |           7 |               2 |  7 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/SDCLK                        |
-| g6        | n/a   | BUFGCTRL/O      | None       |           5 |               0 |  5 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/TFTCLK                       |
+| g4        | n/a   | BUFGCTRL/O      | None       |           7 |               2 |  7 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -439,6 +436,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          70 |               0 | 69 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | TFT_DataClock                                                       |
+| g1        | n/a   | BUFGCTRL/O      | None       |           8 |               0 |  8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/MasterCLK                  |
+| g6        | n/a   | BUFGCTRL/O      | None       |           5 |               0 |  5 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK                |
 | g8        | n/a   | BUFGCTRL/O      | None       |           4 |               0 |  4 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj2/AudioClock/inst/CLK                             |
 | g11       | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | ClockManager/Reloj2/AudioClock/inst/clkfbout_buf_reloj2_clk_wiz_0_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------+
@@ -468,7 +468,7 @@ All Modules
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                          |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------+
 | g5        | n/a   | BUFH/O          | None       |           8 |               0 |  8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0_en_clk |
-| g6        | n/a   | BUFGCTRL/O      | None       |           0 |               1 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/TFTCLK                              |
+| g6        | n/a   | BUFGCTRL/O      | None       |           0 |               1 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK                         |
 | g10       | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/clkfbout_buf_reloj1_clk_wiz_0_0     |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -483,7 +483,7 @@ All Modules
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------+
 | g1        | n/a   | BUFGCTRL/O      | None       |          20 |               0 | 20 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj1/MainClockWizard/inst/MasterCLK |
-| g9        | n/a   | BUFG/O          | None       |           6 |               1 |  6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj2/I2SCLK                         |
+| g9        | n/a   | BUFG/O          | None       |           6 |               1 |  6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | ClockManager/Reloj2/DAC_I2S_CLK                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -514,18 +514,18 @@ set_property LOC IOB_X0Y127 [get_cells DAC_I2S_CLK_OBUF_inst]
 # Location of clock ports
 set_property LOC IOB_X1Y26 [get_ports clk100]
 
-# Clock net "count_reg[24]_i_3_n_0" driven by instance "count_reg[24]_i_3" located at site "BUFGCTRL_X0Y1"
+# Clock net "TFT_DataClock" driven by instance "count_reg[24]_i_3" located at site "BUFGCTRL_X0Y1"
 #startgroup
-create_pblock {CLKAG_count_reg[24]_i_3_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_count_reg[24]_i_3_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="count_reg[24]_i_3_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_count_reg[24]_i_3_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+create_pblock {CLKAG_TFT_DataClock}
+add_cells_to_pblock [get_pblocks  {CLKAG_TFT_DataClock}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="TFT_DataClock"}]]]
+resize_pblock [get_pblocks {CLKAG_TFT_DataClock}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
-# Clock net "ClockManager/Reloj2/I2SCLK" driven by instance "ClockManager/Reloj2/I2S_Synchronizer" located at site "BUFGCTRL_X0Y0"
+# Clock net "ClockManager/Reloj2/DAC_I2S_CLK" driven by instance "ClockManager/Reloj2/I2S_Synchronizer" located at site "BUFGCTRL_X0Y0"
 #startgroup
-create_pblock {CLKAG_ClockManager/Reloj2/I2SCLK}
-add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj2/I2SCLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=DAC_I2S_CLK_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager/Reloj2/I2SCLK"}]]]
-resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj2/I2SCLK}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+create_pblock {CLKAG_ClockManager/Reloj2/DAC_I2S_CLK}
+add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj2/DAC_I2S_CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=DAC_I2S_CLK_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager/Reloj2/DAC_I2S_CLK"}]]]
+resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj2/DAC_I2S_CLK}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "ClockManager/Reloj2/AudioClock/inst/I2S_CLK_reloj2_clk_wiz_0_0_en_clk" driven by instance "ClockManager/Reloj2/AudioClock/inst/clkout1_buf_en2" located at site "BUFHCE_X0Y0"
@@ -542,6 +542,13 @@ add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj2/AudioClock/inst/CLK
 resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj2/AudioClock/inst/CLK}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
+# Clock net "ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK" driven by instance "ClockManager/Reloj1/MainClockWizard/inst/clkout3_buf1" located at site "BUFGCTRL_X0Y16"
+#startgroup
+create_pblock {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK}
+add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=TFT_SPI_CLK_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK"}]]]
+resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFT_SPI_CLK}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
 # Clock net "ClockManager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0_en_clk" driven by instance "ClockManager/Reloj1/MainClockWizard/inst/clkout3_buf_en1" located at site "BUFHCE_X1Y12"
 #startgroup
 create_pblock {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0_en_clk}
@@ -549,11 +556,11 @@ add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj1/MainClockWizard/ins
 resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0_en_clk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
-# Clock net "ClockManager/Reloj1/MainClockWizard/inst/TFTCLK" driven by instance "ClockManager/Reloj1/MainClockWizard/inst/clkout3_buf1" located at site "BUFGCTRL_X0Y16"
+# Clock net "ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK" driven by instance "ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf1" located at site "BUFGCTRL_X0Y18"
 #startgroup
-create_pblock {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFTCLK}
-add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFTCLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=TFT_SPI_CLK_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager/Reloj1/MainClockWizard/inst/TFTCLK"}]]]
-resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFTCLK}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+create_pblock {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK}
+add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK"}]]]
+resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk" driven by instance "ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf_en1" located at site "BUFHCE_X0Y13"
@@ -561,13 +568,6 @@ resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/TFTCL
 create_pblock {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk}
 add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk"}]]]
 resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
-#endgroup
-
-# Clock net "ClockManager/Reloj1/MainClockWizard/inst/SDCLK" driven by instance "ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf1" located at site "BUFGCTRL_X0Y18"
-#startgroup
-create_pblock {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SDCLK}
-add_cells_to_pblock [get_pblocks  {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SDCLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="ClockManager/Reloj1/MainClockWizard/inst/SDCLK"}]]]
-resize_pblock [get_pblocks {CLKAG_ClockManager/Reloj1/MainClockWizard/inst/SDCLK}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "ClockManager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0_en_clk" driven by instance "ClockManager/Reloj1/MainClockWizard/inst/clkout1_buf_en1" located at site "BUFHCE_X0Y12"

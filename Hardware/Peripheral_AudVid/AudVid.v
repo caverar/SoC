@@ -31,8 +31,8 @@ module AudVid(
     wire [15:0] TFT_Data;
     wire        TFT_DataClock;
 
-    //reg  [3871:0] TilesRegister [3:0];
-    reg  [3:0]  TilesRegister [3871:0];
+    
+    reg  [3:0]  TilesRegister [3871:0]; //[3871:0]
     reg  [3:0]  TilesRead_XAddress1;
     reg  [3:0]  TilesRead_YAddress1;
     reg  [4:0]  TilesRead_TileAddress1;
@@ -60,12 +60,12 @@ module AudVid(
     localparam Track1BeginAddress=24'h000018;
     localparam Track2BeginAddress=24'h000100;
     initial begin
-        TilesPositionsRegister[0] = 0;
-        TilesPositionsRegister[1] = 1;
-        SD_InputAddress           = 24'h000002;
+        $readmemh("VideoData.mem",TilesRegister);
+        $readmemh("InitialPosition.mem",TilesPositionsRegister);        
+        
+        SD_InputAddress           = 24'h000014;
         TilesWrite_XAddress       = 0;
         TilesWrite_YAddress       = 0;
-        //TilesWrite_TileAddress    = 0;
         TilesWrite_XPosition      = 0;
         TilesWrite_YPosition      = 0;
         TilesWrite_TilePosition   = 0;
@@ -113,7 +113,7 @@ module AudVid(
     );
 
     TFT_SPI tft_spi(
-		.data(16'hFEA0), //TFT_Data
+		.data(TFT_Data), //TFT_Data
         .DataClock(TFT_DataClock), 
 		.MasterCLK(MasterCLK),
         .WorkCLK(TFT_WorkCLK),
@@ -217,8 +217,8 @@ module AudVid(
     always@(posedge TFT_DataClock) begin
 
         TFT_DataEncoded<=TilesRegister[TilesWrite_Address];
-        TilesWrite_XAddress<=AddressOperationLUT[TilesWrite_XAddress];
 
+        TilesWrite_XAddress<=AddressOperationLUT[TilesWrite_XAddress];
         if(TilesWrite_XPosition<219)begin
             TilesWrite_XPosition<=TilesWrite_XPosition+1;
         end else begin

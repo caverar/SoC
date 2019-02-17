@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Feb 16 23:37:51 2019
+| Date         : Sun Feb 17 01:59:25 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,23 +21,24 @@ Table of Contents
 +------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 |           Instance           |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                          |                      (top) |        221 |        221 |       0 |    0 | 169 |      0 |      0 |            0 |
+| top                          |                      (top) |        284 |        284 |       0 |    0 | 206 |      0 |      1 |            0 |
 |   (top)                      |                      (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   AudVid                     |                     AudVid |        219 |        219 |       0 |    0 | 133 |      0 |      0 |            0 |
+|   AudVid                     |                     AudVid |        282 |        282 |       0 |    0 | 170 |      0 |      1 |            0 |
+|     (AudVid)                 |                     AudVid |         38 |         38 |       0 |    0 |  22 |      0 |      1 |            0 |
 |     i2s                      |                        I2S |         15 |         15 |       0 |    0 |  29 |      0 |      0 |            0 |
 |       (i2s)                  |                        I2S |          7 |          7 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       squaregenerator        |            SquareGenerator |          8 |          8 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     sd_spi                   |                     SD_SPI |         86 |         86 |       0 |    0 |  59 |      0 |      0 |            0 |
+|     sd_spi                   |                     SD_SPI |         87 |         87 |       0 |    0 |  59 |      0 |      0 |            0 |
 |       (sd_spi)               |                     SD_SPI |         47 |         47 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       spi                    |                    FullSPI |         21 |         21 |       0 |    0 |  20 |      0 |      0 |            0 |
+|       spi                    |                    FullSPI |         22 |         22 |       0 |    0 |  20 |      0 |      0 |            0 |
 |       spiCount               |                  FullSPI_0 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
 |       spiInitClock           |         FrequencyGenerator |          8 |          8 |       0 |    0 |   7 |      0 |      0 |            0 |
 |       spiUtilCount           |                  FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
-|     tft_spi                  |                    TFT_SPI |        118 |        118 |       0 |    0 |  45 |      0 |      0 |            0 |
-|       (tft_spi)              |                    TFT_SPI |          6 |          6 |       0 |    0 |   6 |      0 |      0 |            0 |
-|       counter                |                    Counter |         75 |         75 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       initializationRegister |     InitializationRegister |         30 |         30 |       0 |    0 |   8 |      0 |      0 |            0 |
-|       spi                    |                        SPI |          7 |          7 |       0 |    0 |   5 |      0 |      0 |            0 |
+|     tft_spi                  |                    TFT_SPI |        142 |        142 |       0 |    0 |  60 |      0 |      0 |            0 |
+|       (tft_spi)              |                    TFT_SPI |         22 |         22 |       0 |    0 |  21 |      0 |      0 |            0 |
+|       counter                |                    Counter |         80 |         80 |       0 |    0 |  26 |      0 |      0 |            0 |
+|       initializationRegister |     InitializationRegister |         37 |         37 |       0 |    0 |   8 |      0 |      0 |            0 |
+|       spi                    |                        SPI |          3 |          3 |       0 |    0 |   5 |      0 |      0 |            0 |
 |   ClockManager               |               ClockManager |          2 |          2 |       0 |    0 |  36 |      0 |      0 |            0 |
 |     (ClockManager)           |               ClockManager |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
 |     Reloj1                   |                     reloj1 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |

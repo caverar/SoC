@@ -123,6 +123,8 @@ TFT_SPI_CS             = platform.request("TFT_SPI_CS"             , 0)
 #   AudVid
 platform.add_source("Hardware/Peripheral_AudVid/AudVid.v")
 platform.add_source("Hardware/Peripheral_AudVid/ColorDecoder.v")
+platform.add_source("Hardware/Peripheral_AudVid/VideoData.mem")
+platform.add_source("Hardware/Peripheral_AudVid/InitialPosition.mem")
 #	I2S
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v")
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v")
