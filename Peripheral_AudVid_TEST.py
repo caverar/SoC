@@ -175,7 +175,9 @@ class SOC(Module,AutoCSR):
         self.specials +=Instance("ClockManager",
             i_InputCLK  = self.SystemClock,
             o_MasterCLK = self.MasterCLK,
-            o_I2SCLK    = self.I2SCLK
+            o_I2SCLK    = self.I2SCLK,
+            ##o_TFTCLK    = self.TFTCLK
+            ##o_SDCLK     = self.SDCLK 
         )
 
         self.specials +=Instance("AudVid",

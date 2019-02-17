@@ -108,7 +108,7 @@ module AudVid(
     );
 
     TFT_SPI tft_spi(
-		.data(TFT_Data),
+		.data(16'h7BEF), //TFT_Data
         .DataClock(TFT_DataClock), 
 		.MasterCLK(MasterCLK),
 		.SPI_MOSI(TFT_SPI_MOSI),

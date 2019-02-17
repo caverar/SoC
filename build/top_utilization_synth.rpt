@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Feb 16 12:42:11 2019
+| Date         : Sat Feb 16 20:58:46 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -file top_utilization_synth.rpt
 | Design       : top
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  281 |     0 |     20800 |  1.35 |
-|   LUT as Logic          |  281 |     0 |     20800 |  1.35 |
+| Slice LUTs*             |  245 |     0 |     20800 |  1.18 |
+|   LUT as Logic          |  245 |     0 |     20800 |  1.18 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  207 |     0 |     41600 |  0.50 |
-|   Register as Flip Flop |  207 |     0 |     41600 |  0.50 |
+| Slice Registers         |  208 |     0 |     41600 |  0.50 |
+|   Register as Flip Flop |  208 |     0 |     41600 |  0.50 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |   11 |     0 |     16300 |  0.07 |
+| F7 Muxes                |    6 |     0 |     16300 |  0.04 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 205   |          Yes |       Reset |            - |
+| 206   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -117,12 +117,12 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    7 |     0 |        32 | 21.88 |
+| BUFGCTRL   |   11 |     0 |        32 | 34.38 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
-| MMCME2_ADV |    1 |     0 |         5 | 20.00 |
+| MMCME2_ADV |    2 |     0 |         5 | 40.00 |
 | PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
 | BUFMRCE    |    0 |     0 |        10 |  0.00 |
-| BUFHCE     |    0 |     0 |        72 |  0.00 |
+| BUFHCE     |    4 |     0 |        72 |  5.56 |
 | BUFR       |    0 |     0 |        20 |  0.00 |
 +------------+------+-------+-----------+-------+
 
@@ -151,20 +151,22 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  205 |        Flop & Latch |
-| LUT6       |  148 |                 LUT |
-| LUT2       |   51 |                 LUT |
-| LUT3       |   47 |                 LUT |
-| LUT5       |   44 |                 LUT |
-| LUT4       |   40 |                 LUT |
-| LUT1       |   20 |                 LUT |
+| FDRE       |  206 |        Flop & Latch |
+| LUT6       |  137 |                 LUT |
+| LUT5       |   41 |                 LUT |
+| LUT3       |   41 |                 LUT |
+| LUT4       |   30 |                 LUT |
+| LUT2       |   28 |                 LUT |
+| LUT1       |   19 |                 LUT |
 | CARRY4     |   15 |          CarryLogic |
 | OBUF       |   13 |                  IO |
-| MUXF7      |   11 |               MuxFx |
 | BUFG       |    7 |               Clock |
+| MUXF7      |    6 |               MuxFx |
+| BUFH       |    4 |               Clock |
+| BUFGCTRL   |    4 |               Clock |
 | IBUF       |    3 |                  IO |
+| MMCME2_ADV |    2 |               Clock |
 | FDSE       |    2 |        Flop & Latch |
-| MMCME2_ADV |    1 |               Clock |
 +------------+------+---------------------+
 
 

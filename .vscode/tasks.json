@@ -11,8 +11,9 @@
                 "-o",
                 "SoC.out",
 
-                //AUDVID
-                "Hardware/Peripheral_AudVid/AudVid.v",
+                // //AUDVID
+                // "Hardware/Peripheral_AudVid/AudVid.v",
+                // "Hardware/Peripheral_AudVid/ColorDecoder.v",
                 //SD_SPI Terminado
                 "Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI_TB.v",
                 "Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v",
@@ -25,11 +26,11 @@
 
                 
 
-                //TFT_SPI Terminado
-                "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI_TB.v",
-                "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v",
-                "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v",
-                "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v",
+                // //TFT_SPI Terminado
+                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI_TB.v",
+                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v",
+                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v",
+                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v",
                 
                 //"utilities/ClockManager.v",               
                 "utilities/Counter.v",
