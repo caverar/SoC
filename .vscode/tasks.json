@@ -40,6 +40,7 @@
                 "Hardware/utilities/FrequencyDivider.v",
                 "Hardware/utilities/simulationResources/BUF.v",
                 "Hardware/utilities/simulationResources/BUFG.v",
+                "Hardware/utilities/simulationResources/BUFGCE.v",
                 "Hardware/utilities/simulationResources/AudVid_ClockManager.v"             
 
                 
@@ -75,11 +76,38 @@
             "problemMatcher": []
         },
         {
-            "label": "Program",
+            "label": "Load SoC Design",
             "type": "shell",
             "command": "python3",
             "args": [
-                "load.py"
+                "loadSoC.py"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Load Test Design",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "loadTest.py"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "load Firmware",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "litex_term /dev/ttyUSB1 --kernel Firmware/firmware.bin"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile Firmware",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "all"
             ],
             "problemMatcher": []
         }

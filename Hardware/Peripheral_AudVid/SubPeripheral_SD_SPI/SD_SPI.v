@@ -16,8 +16,11 @@ module SD_SPI(
 
 
 
-    wire        SPI_InitClock;
-    wire        SPI_WorkClock;
+    wire        SPI_InitClock_posedge;
+    wire        SPI_InitClock_negedge;
+    wire        SPI_WorkClock_posedge;
+    wire        SPI_WorkClock_negedge;
+    
     wire        DataClock;
     reg  [5:0]  count;
     reg  [9:0]  UtilCount;
@@ -49,7 +52,8 @@ module SD_SPI(
     //	Reloj SPI de Inicializacion -350Khz 
 	FrequencyGenerator #(.MasterFrequency(12500000), .frequency(350000), .bitsNumber(6)) spiInitClock(
 		.InputCLK(WorkCLK),
-		.OutputCLK(SPI_InitClock)
+		.OutputCLK_posedge(SPI_InitClock_posedge),
+        .OutputCLK_negedge(SPI_InitClock_negedge)
 	);
 
 	// //	Reloj SPI de Trabajo-12.5Mhz 
@@ -65,23 +69,25 @@ module SD_SPI(
         .SPI_MOSI(SPI_MOSI),
         .SPI_MISO(SPI_MISO),
         .SPI_CLK(SPI_CLK),
-        .SPI_InputCLK(SPI_InputCLK),
+        .SPI_InputCLK_posedge(SPI_InputCLK_posedge),
+        .SPI_InputCLK_negedge(SPI_InputCLK_negedge),
+        .MasterCLK(MasterCLK),
         .DataClk(DataClock),
         .SPI_Enable(SPI_Enable)
     );
-    FullSPI spiCount(
-        .OutputData({2'b00,count[5:0]}),
-        .SPI_MOSI(SPI_COUNT_DEBUG),
-        .SPI_InputCLK(SPI_InputCLK),
-        .SPI_Enable(SPI_Enable)
-    );
+    // FullSPI spiCount(
+    //     .OutputData({2'b00,count[5:0]}),
+    //     .SPI_MOSI(SPI_COUNT_DEBUG),
+    //     .SPI_InputCLK(SPI_InputCLK),
+    //     .SPI_Enable(SPI_Enable)
+    // );
 
-    FullSPI spiUtilCount(
-        .OutputData(UtilCount[7:0]),
-        .SPI_MOSI(SPI_UTILCOUNT_DEBUG),
-        .SPI_InputCLK(SPI_InputCLK),
-        .SPI_Enable(SPI_Enable)
-    );
+    // FullSPI spiUtilCount(
+    //     .OutputData(UtilCount[7:0]),
+    //     .SPI_MOSI(SPI_UTILCOUNT_DEBUG),
+    //     .SPI_InputCLK(SPI_InputCLK),
+    //     .SPI_Enable(SPI_Enable)
+    // );
     //Logica Secuencial
     //  Proceso de Inicializacion
 
@@ -327,8 +333,10 @@ module SD_SPI(
     end
     //Logica Combinacional
 
-    assign SPI_InputCLK=(count<24)? SPI_InitClock : SPI_WorkClock;
-    assign SPI_WorkClock=WorkCLK;
+    assign SPI_InputCLK_posedge=(count<24)? SPI_InitClock_posedge : SPI_WorkClock_posedge;
+    assign SPI_InputCLK_negedge=(count<24)? SPI_InitClock_negedge : SPI_WorkClock_negedge;
+    assign SPI_WorkClock_posedge=WorkCLK;
+    assign SPI_WorkClock_negedge=~WorkCLK;
     assign InputDataClock=~DataClock;  
 
 

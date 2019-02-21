@@ -44,8 +44,13 @@ class AudVid(Module,AutoCSR):
 
        
     ##Valores Internos
-        self.TilesControlRegisterCSR = CSRStorage(14)   ##[13:5] Pisicion Tile [4:1] Tile
-        self.TilesControlRegister   = Signal(14)
+        self.TilesControlRegisterCSR  = CSRStorage(14)   ##[13:5] Pisicion Tile [4:1] Tile
+        self.TilesControlRegister     = Signal(14)
+ 
+        self.Track1ControlRegisterCSR = CSRStorage(5)
+        self.Track1ControlRegister    = Signal(5)
+        self.Track2ControlRegisterCSR = CSRStorage(5)
+        self.Track2ControlRegister    = Signal(5)
 
         
 
@@ -53,7 +58,9 @@ class AudVid(Module,AutoCSR):
 
             i_Reset                  = self.Reset,
             i_CLK                    = self.CLK,                   
-            i_TilesControlRegister   = self.TilesControlRegister,              
+            i_TilesControlRegister   = self.TilesControlRegister,
+            i_Track1ControlRegister  = self.Track1ControlRegister,
+            i_Track2ControlRegister  = self.Track2ControlRegister,             
             o_TFT_SPI_CLK            = self.TFT_SPI_CLK,
             o_TFT_SPI_CS             = self.TFT_SPI_CS,
             o_TFT_SPI_MOSI           = self.TFT_SPI_MOSI,
@@ -70,4 +77,6 @@ class AudVid(Module,AutoCSR):
             o_DAC_I2S_WS             = self.DAC_I2S_WS    
         )
         
-        self.comb += self.TilesControlRegister.eq(self.TilesControlRegisterCSR.storage)  
+        self.comb += self.TilesControlRegister.eq(self.TilesControlRegisterCSR.storage)
+        self.comb += self.Track1ControlRegister.eq(self.Track1ControlRegisterCSR.storage)
+        self.comb += self.Track2ControlRegister.eq(self.Track2ControlRegisterCSR.storage)  

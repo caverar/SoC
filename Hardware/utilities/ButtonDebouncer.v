@@ -13,7 +13,7 @@ module ButtonDebouncer (
 
 	FrequencyGenerator #(.frequency(50), .bitsNumber(21)) verificationCLk(
 		.InputCLK(clk),
-		.OutputCLK(VerificationClk)
+		.OutputCLK_posedge(VerificationClk)
 	);
 	
 	//Valores iniciales

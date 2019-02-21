@@ -1,10 +1,10 @@
 
 module AudVid(
     input  wire        Reset,
-    input  wire        CLK,     
-    input  wire        enable_DEBUG,   
-    input  wire [4:0]  TilesPositionData,
-    input  wire [13:0] TilesControlRegister,    
+    input  wire        CLK,   
+    input  wire [13:0] TilesControlRegister,
+    input  wire [4:0]  Track1ControlRegister,
+    input  wire [4:0]  Track2ControlRegister,    
     output wire        TFT_SPI_CLK,
     output wire        TFT_SPI_CS,    
     output wire        TFT_SPI_MOSI,
@@ -28,19 +28,23 @@ module AudVid(
     reg  [23:0] SD_InputAddress;
     wire [15:0] TFT_Data;
     wire        TFT_DataClock;
+    wire        DAC_DataClock;
+    wire [31:0] DAC_Data;
     wire        MasterCLK;      //100MHz
     wire        I2SCLK;         //41000Hz x32
     wire        TFT_WorkCLK;    //6.25Mhz
     wire        SD_WorkCLK;     //12.5MHz
 
     
-    reg  [3:0]  TilesRegister [3871:0]; 
-    reg  [3:0]  TilesRead_XAddress1;
-    reg  [3:0]  TilesRead_YAddress1;
-    reg  [4:0]  TilesRead_TileAddress1;
-    reg  [3:0]  TilesRead_XAddress2;
-    reg  [3:0]  TilesRead_YAddress2;
-    reg  [4:0]  TilesRead_TileAddress2;
+    reg  [3:0]  TilesRegister [3871:0];
+    reg  [15:0] Track1Register [1023:0];
+    reg  [15:0] Track2Register [1023:0]; 
+    // reg  [3:0]  TilesRead_XAddress1;
+    // reg  [3:0]  TilesRead_YAddress1;
+    // reg  [4:0]  TilesRead_TileAddress1;
+    // reg  [3:0]  TilesRead_XAddress2;
+    // reg  [3:0]  TilesRead_YAddress2;
+    // reg  [4:0]  TilesRead_TileAddress2;
     reg  [14:0] SDReadCount;
     reg  [4:0]  AddressOperationLUT [12:0];
 
@@ -56,13 +60,44 @@ module AudVid(
     reg         TilesWrite_Started;
 
     reg  [4:0]  TilesPositionsRegister [319:0];
+    reg  [23:0] WriteAudio_Track1BeginAddress;
+    reg  [23:0] WriteAudio_Track1EndAddress;
+    reg         WriteAudio_Track1EnablePlay;
+    reg         WriteAudio_Track1EnableLoop;
+    reg  [23:0] WriteAudio_Track2BeginAddress;
+    reg  [23:0] WriteAudio_Track2EndAddress;
+    reg         WriteAudio_Track2EnablePlay;
+    reg         WriteAudio_Track2EnableLoop;    
+
+    reg  [23:0] TracksAdressRegister [13:0];
     
-    
-    localparam Tile1Address=24'h000014;
-    localparam Tile2Address=24'h000016;
-    localparam Track1BeginAddress=24'h000018;
-    localparam Track2BeginAddress=24'h000100;
+
     initial begin
+
+        WriteAudio_Track1BeginAddress = 0;
+        WriteAudio_Track1EndAddress   = 0;
+        WriteAudio_Track1EnablePlay   = 0;
+        WriteAudio_Track1EnableLoop   = 0;
+        WriteAudio_Track2BeginAddress = 0;
+        WriteAudio_Track2EndAddress   = 0;
+        WriteAudio_Track1EnablePlay   = 0;
+        WriteAudio_Track1EnableLoop   = 0;
+        TracksAdressRegister[0]       = 24'h000028;  //Track1BeginAddress
+        TracksAdressRegister[1]       = 24'h000B56;  //Track1EndAddress
+        TracksAdressRegister[2]       = 24'h000B58;  //Track2BeginAddress
+        TracksAdressRegister[3]       = 24'h001B80;  //Track2EndAddress
+        TracksAdressRegister[4]       = 24'h001B82;  //Track3BeginAddress 
+        TracksAdressRegister[5]       = 24'h0024C0;  //Track3EndAddress
+        TracksAdressRegister[6]       = 24'h0024C2;  //Track4BeginAddress
+        TracksAdressRegister[7]       = 24'h00283C;  //Track4EndAddress
+        TracksAdressRegister[8]       = 24'h00283E;  //Track5BeginAddress
+        TracksAdressRegister[9]       = 24'h010C1C;  //Track5EndAddress
+        TracksAdressRegister[10]      = 24'h000C1E;  //Track6BeginAddress
+        TracksAdressRegister[11]      = 24'h02CADE;  //Track6EndAddress
+        TracksAdressRegister[12]      = 24'h02CAE0;  //Track7BeginAddress
+        TracksAdressRegister[13]      = 24'h040C9C;  //Track7EndAddress
+
+
         $readmemh("VideoData.mem",TilesRegister);
         $readmemb("InitialPosition.mem",TilesPositionsRegister); 
         
@@ -74,13 +109,16 @@ module AudVid(
         TilesWrite_YPosition      = 0;
         TilesWrite_TilePosition   = 0;
         TilesWrite_Started        = 0;
-        TilesRead_XAddress1       = 0;
-        TilesRead_YAddress1       = 0;
-        TilesRead_TileAddress1    = 0;
-        TilesRead_XAddress2       = 1;
-        TilesRead_YAddress2       = 0;
-        TilesRead_TileAddress2    = 0;
+        
+        // TilesRead_XAddress1       = 0;
+        // TilesRead_YAddress1       = 0;
+        // TilesRead_TileAddress1    = 0;
+        // TilesRead_XAddress2       = 1;
+        // TilesRead_YAddress2       = 0;
+        // TilesRead_TileAddress2    = 0;
+        
         SDReadCount               = 0;
+        
         AddressOperationLUT[0]    = 1;
         AddressOperationLUT[1]    = 2; 
         AddressOperationLUT[2]    = 3; 
@@ -141,16 +179,47 @@ module AudVid(
         .I2SCLK(I2SCLK),   
         .I2S_DATA(DAC_I2S_DATA),
         .I2S_CLK(DAC_I2S_CLK),
-        .I2S_WS(DAC_I2S_WS) 
-
-        //input  wire [31:0]  InputData,
-        //output wire         SyncCLK,
+        .I2S_WS(DAC_I2S_WS),
+        .SyncCLK(DAC_DataClock),
+        .InputData(DAC_Data)        
     );
 
     //Lectura de SD
     
-    
+    // always@(posedge SD_InputDataClock) begin
+    //     if(SD_EnableDataRead) begin
+    //         //Lectura 1 Track 1
+    //         if (SDReadCount<512) begin
 
+    //         //Lectura 1 Track 2 
+    //         end else if(SDReadCount<1024) begin
+
+    //         //Lectura 2 Track 1
+    //         end else if(SDReadCount<1536) begin
+
+    //         //Lectura 2 Track 2
+    //         end else begin
+
+    //         end
+
+    //         SDReadCount<=SDReadCount+1;
+    //     end
+    // end
+
+    //  Control de Audio
+    //Deteccion de cambio de registro
+    always@(posedge MasterCLK) begin
+        WriteAudio_Track1BeginAddress <= TracksAdressRegister[2*Track1ControlRegister[2:0]];
+        WriteAudio_Track1EndAddress   <= TracksAdressRegister[(2*Track1ControlRegister[2:0])-1];
+        WriteAudio_Track1EnablePlay   <= Track1ControlRegister[4];
+        WriteAudio_Track1EnableLoop   <= Track1ControlRegister[3];
+        
+        
+        WriteAudio_Track2BeginAddress <= TracksAdressRegister[2*Track2ControlRegister[2:0]];
+        WriteAudio_Track2EndAddress   <= TracksAdressRegister[(2*Track2ControlRegister[2:0])-1];
+        WriteAudio_Track2EnablePlay   <= Track2ControlRegister[4];
+        WriteAudio_Track2EnableLoop   <= Track2ControlRegister[3];
+    end
     //Escritura en pantalla
 
     always@(posedge TFT_DataClock) begin
@@ -174,13 +243,13 @@ module AudVid(
             if(TilesWrite_XAddress==10)begin
                 if(TilesWrite_YAddress==10)begin          
 
-                    if(TilesWrite_TilePosition<319)begin
+                    if(TilesWrite_TilePosition<319) begin
                         TilesWrite_TilePosition<=TilesWrite_TilePosition+1;   
                     end else begin                        
                         TilesWrite_TilePosition<=0;  
                     end
                 end else begin
-                    if(TilesWrite_XPosition<219)begin
+                    if(TilesWrite_XPosition<219) begin
                         TilesWrite_TilePosition<=TilesWrite_TilePosition+1;                         
                     end else begin
                         TilesWrite_TilePosition<=TilesWrite_TilePosition-19;                              

@@ -5,6 +5,8 @@ csr_base,uart,0xe0001800,,
 csr_base,uart_phy,0xe0001000,,
 csr_base,identifier_mem,0xe0002000,,
 csr_register,AudVid_WB_TilesControlRegisterCSR,0xe0004000,2,rw
+csr_register,AudVid_WB_Track1ControlRegisterCSR,0xe0004008,1,rw
+csr_register,AudVid_WB_Track2ControlRegisterCSR,0xe000400c,1,rw
 csr_register,ctrl_reset,0xe0000000,1,rw
 csr_register,ctrl_scratch,0xe0000004,4,rw
 csr_register,ctrl_bus_errors,0xe0000014,4,ro

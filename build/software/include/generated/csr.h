@@ -26,6 +26,24 @@ static inline void AudVid_WB_TilesControlRegisterCSR_write(unsigned short int va
 	csr_writel(value >> 8, 0xe0004000);
 	csr_writel(value, 0xe0004004);
 }
+#define CSR_AUDVID_WB_TRACK1CONTROLREGISTERCSR_ADDR 0xe0004008
+#define CSR_AUDVID_WB_TRACK1CONTROLREGISTERCSR_SIZE 1
+static inline unsigned char AudVid_WB_Track1ControlRegisterCSR_read(void) {
+	unsigned char r = csr_readl(0xe0004008);
+	return r;
+}
+static inline void AudVid_WB_Track1ControlRegisterCSR_write(unsigned char value) {
+	csr_writel(value, 0xe0004008);
+}
+#define CSR_AUDVID_WB_TRACK2CONTROLREGISTERCSR_ADDR 0xe000400c
+#define CSR_AUDVID_WB_TRACK2CONTROLREGISTERCSR_SIZE 1
+static inline unsigned char AudVid_WB_Track2ControlRegisterCSR_read(void) {
+	unsigned char r = csr_readl(0xe000400c);
+	return r;
+}
+static inline void AudVid_WB_Track2ControlRegisterCSR_write(unsigned char value) {
+	csr_writel(value, 0xe000400c);
+}
 
 /* ctrl */
 #define CSR_CTRL_BASE 0xe0000000
