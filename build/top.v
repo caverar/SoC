@@ -30,12 +30,7 @@ module top(
 	input user_sw_11,
 	input user_sw_12,
 	input user_sw_13,
-	input user_sw_14,
-	input user_sw_15,
 	input user_btn,
-	input user_btn_1,
-	input user_btn_2,
-	input user_btn_3,
 	input Reset,
 	output DAC_I2S_DATA,
 	output DAC_I2S_CLK,
@@ -55,11 +50,7 @@ module top(
 );
 
 wire SystemClock;
-wire MasterCLK;
 wire Reset_1;
-wire I2SCLK;
-wire TFT_WorkCLK;
-wire SD_WorkCLK;
 wire DAC_I2S_CLK_1;
 wire DAC_I2S_DATA_1;
 wire DAC_I2S_WS_1;
@@ -74,8 +65,9 @@ wire SD_SPI_CLK_1;
 wire SD_SPI_CS_1;
 wire SD_SPI_COUNT_DEBUG_1;
 wire SD_SPI_UTILCOUNT_DEBUG_1;
-reg [4:0] TilesPositionData = 5'd0;
-reg [8:0] TilesPositionAddress = 9'd0;
+wire [13:0] TilesControlRegister;
+wire enable_DEBUG;
+wire Buffered_SystemClock;
 wire sys_clk;
 wire sys_rst;
 wire por_clk;
@@ -86,6 +78,8 @@ reg dummy_s;
 initial dummy_s <= 1'd0;
 // synthesis translate_on
 
+assign enable_DEBUG = {user_btn};
+assign TilesControlRegister = {user_sw_13, user_sw_12, user_sw_11, user_sw_10, user_sw_9, user_sw_8, user_sw_7, user_sw_6, user_sw_5, user_sw_4, user_sw_3, user_sw_2, user_sw_1, user_sw};
 assign Reset_1 = Reset;
 assign SystemClock = sys_clk;
 assign TFT_SPI_MOSI = TFT_SPI_MOSI_1;
@@ -110,23 +104,17 @@ always @(posedge por_clk) begin
 	xilinxvivadotoolchain_int_rst <= 1'd0;
 end
 
-ClockManager ClockManager(
-	.InputCLK(SystemClock),
-	.I2SCLK(I2SCLK),
-	.MasterCLK(MasterCLK),
-	.SDCLK(SD_WorkCLK),
-	.TFTCLK(TFT_WorkCLK)
+IBUF IBUF(
+	.I(SystemClock),
+	.O(Buffered_SystemClock)
 );
 
 AudVid AudVid(
-	.I2SCLK(I2SCLK),
-	.MasterCLK(MasterCLK),
+	.CLK(SystemClock),
 	.Reset(Reset_1),
 	.SD_SPI_MISO(SD_SPI_MISO_1),
-	.SD_WorkCLK(SD_WorkCLK),
-	.TFT_WorkCLK(TFT_WorkCLK),
-	.TilesPositionAddress(TilesPositionAddress),
-	.TilesPositionData(TilesPositionData),
+	.TilesControlRegister(TilesControlRegister),
+	.enable_DEBUG(enable_DEBUG),
 	.DAC_I2S_CLK(DAC_I2S_CLK_1),
 	.DAC_I2S_DATA(DAC_I2S_DATA_1),
 	.DAC_I2S_WS(DAC_I2S_WS_1),

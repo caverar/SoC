@@ -184,7 +184,7 @@ module InitializationRegister#(parameter InitFrequency=100, parameter delayUnit=
         
         //ENTRY MODE
         Data[89]  = {1'b0,16'h0003};
-        Data[90]  = {1'b1,16'h1038}; //Ajuste de direccion de VGA
+        Data[90]  = {1'b1,16'h1018}; //Ajuste de direccion de VGA
 
         //HORIZONTAL_WINDOW_ADDR1
         Data[91]  = {1'b0,16'h0036};    

@@ -1,0 +1,1991 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue Feb 19 22:27:31 2019
+# Process ID: 7380
+# Current directory: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware
+# Command line: vivado -mode batch -source top.tcl
+# Log file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/vivado.log
+# Journal file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/vivado.jou
+#-----------------------------------------------------------
+source top.tcl
+# create_project -force -name top -part xc7a35tcpg236-1
+# set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/VideoData.mem}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/VideoData.mem}]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncerTester.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncerTester.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncerTester.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/ColorDecoder.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/ColorDecoder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/ColorDecoder.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:]
+# add_files {top.v}
+# set_property library work [get_files {top.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/InitialPosition.mem}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/InitialPosition.mem}]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:]
+# read_xdc top.xdc
+# synth_design -top top -part xc7a35tcpg236-1 -include_dirs {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config /home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl}
+Command: synth_design -top top -part xc7a35tcpg236-1 -include_dirs {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config /home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl}
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7404 
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:193]
+WARNING: [Synth 8-2507] parameter declaration becomes local in FrequencyGenerator with formal parameter declaration list [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:10]
+WARNING: [Synth 8-1652] attribute target identifier preserve_driver not found in this scope [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:653]
+WARNING: [Synth 8-1652] attribute target identifier preserve_signal not found in this scope [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:652]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1262.152 ; gain = 78.262 ; free physical = 278 ; free virtual = 5395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:2]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:485]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:485]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:486]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:486]
+INFO: [Synth 8-3876] $readmem data file 'mem.init' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1655]
+INFO: [Synth 8-3876] $readmem data file 'mem_2.init' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1691]
+INFO: [Synth 8-3876] $readmem data file 'mem_3.init' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1737]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1351]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1397]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1487]
+INFO: [Synth 8-6157] synthesizing module 'lm32_cpu' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:99]
+	Parameter eba_reset bound to: 0 - type: integer 
+	Parameter icache_associativity bound to: 1 - type: integer 
+	Parameter icache_sets bound to: 256 - type: integer 
+	Parameter icache_bytes_per_line bound to: 16 - type: integer 
+	Parameter icache_base_address bound to: 0 - type: integer 
+	Parameter icache_limit bound to: 2147483647 - type: integer 
+	Parameter dcache_associativity bound to: 1 - type: integer 
+	Parameter dcache_sets bound to: 256 - type: integer 
+	Parameter dcache_bytes_per_line bound to: 16 - type: integer 
+	Parameter dcache_base_address bound to: 0 - type: integer 
+	Parameter dcache_limit bound to: 2147483647 - type: integer 
+	Parameter watchpoints bound to: 0 - type: integer 
+	Parameter breakpoints bound to: 0 - type: integer 
+	Parameter interrupts bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_instruction_unit' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v:77]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+	Parameter eba_reset bound to: 0 - type: integer 
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_icache' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:86]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_set_width bound to: 8 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+	Parameter addr_set_lsb bound to: 4 - type: integer 
+	Parameter addr_set_msb bound to: 11 - type: integer 
+	Parameter addr_tag_lsb bound to: 12 - type: integer 
+	Parameter addr_tag_msb bound to: 31 - type: integer 
+	Parameter addr_tag_width bound to: 20 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_ram' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+	Parameter data_width bound to: 32 - type: integer 
+	Parameter address_width bound to: 10 - type: integer 
+	Parameter init_file bound to: NONE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'lm32_ram' (1#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+INFO: [Synth 8-6157] synthesizing module 'lm32_ram__parameterized0' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+	Parameter data_width bound to: 21 - type: integer 
+	Parameter address_width bound to: 8 - type: integer 
+	Parameter init_file bound to: NONE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'lm32_ram__parameterized0' (1#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:492]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:414]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_icache' (2#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:86]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+INFO: [Common 17-14] Message 'Synth 8-6104' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'lm32_instruction_unit' (3#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v:77]
+INFO: [Synth 8-6157] synthesizing module 'lm32_decoder' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v:113]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_decoder' (4#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v:113]
+INFO: [Synth 8-6157] synthesizing module 'lm32_load_store_unit' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v:69]
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_dcache' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:80]
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_set_width bound to: 8 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+	Parameter addr_set_lsb bound to: 4 - type: integer 
+	Parameter addr_set_msb bound to: 11 - type: integer 
+	Parameter addr_tag_lsb bound to: 12 - type: integer 
+	Parameter addr_tag_msb bound to: 31 - type: integer 
+	Parameter addr_tag_width bound to: 20 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:515]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:462]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_dcache' (5#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:80]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_load_store_unit' (6#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v:69]
+INFO: [Synth 8-6157] synthesizing module 'lm32_adder' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_addsub' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_addsub' (7#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_adder' (8#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_logic_op' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_logic_op' (9#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_shifter' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_shifter' (10#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_multiplier' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_multiplier' (11#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_mc_arithmetic' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:64]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_mc_arithmetic' (12#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:64]
+INFO: [Synth 8-6157] synthesizing module 'lm32_interrupt' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v:56]
+	Parameter interrupts bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lm32_interrupt' (13#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v:56]
+INFO: [Synth 8-226] default block is never used [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:1617]
+WARNING: [Synth 8-151] case item 3'b010 is unreachable [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:2292]
+WARNING: [Synth 8-6014] Unused sequential element x_result_sel_logic_x_reg was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:2699]
+WARNING: [Synth 8-6014] Unused sequential element eret_m_reg was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:2932]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_cpu' (14#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:99]
+WARNING: [Synth 8-350] instance 'lm32_cpu' of module 'lm32_cpu' requires 29 connections, but only 27 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1616]
+INFO: [Synth 8-6157] synthesizing module 'AudVid' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:2]
+	Parameter Tile1Address bound to: 24'b000000000000000000010100 
+	Parameter Tile2Address bound to: 24'b000000000000000000010110 
+	Parameter Track1BeginAddress bound to: 24'b000000000000000000011000 
+	Parameter Track2BeginAddress bound to: 24'b000000000000000100000000 
+INFO: [Synth 8-3876] $readmem data file 'VideoData.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:66]
+INFO: [Synth 8-3876] $readmem data file 'InitialPosition.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:67]
+INFO: [Synth 8-6157] synthesizing module 'AudVid_ClockManager' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:430]
+INFO: [Synth 8-6157] synthesizing module 'reloj2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:386]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (15#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6157] synthesizing module 'reloj2_clk_wiz_0_0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:368]
+INFO: [Synth 8-6157] synthesizing module 'reloj2_clk_wiz_0_0_clk_wiz' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:234]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:282]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:282]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 55.125000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 78.125000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (16#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (17#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+INFO: [Synth 8-6157] synthesizing module 'BUFH' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'BUFH' (18#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'reloj2_clk_wiz_0_0_clk_wiz' (19#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:234]
+INFO: [Synth 8-6155] done synthesizing module 'reloj2_clk_wiz_0_0' (20#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:368]
+INFO: [Synth 8-6155] done synthesizing module 'reloj2' (21#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:386]
+INFO: [Synth 8-6157] synthesizing module 'reloj1' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:203]
+INFO: [Synth 8-6157] synthesizing module 'reloj1_clk_wiz_0_0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:181]
+INFO: [Synth 8-6157] synthesizing module 'reloj1_clk_wiz_0_0_clk_wiz' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:1]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:50]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:50]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:53]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:53]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:56]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:56]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV__parameterized0' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 8.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 8.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 64 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 128 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV__parameterized0' (21#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6155] done synthesizing module 'reloj1_clk_wiz_0_0_clk_wiz' (22#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reloj1_clk_wiz_0_0' (23#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:181]
+INFO: [Synth 8-6155] done synthesizing module 'reloj1' (24#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:203]
+INFO: [Synth 8-6155] done synthesizing module 'AudVid_ClockManager' (25#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid_ClockManager.v:430]
+INFO: [Synth 8-6157] synthesizing module 'ColorDecoder' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/ColorDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ColorDecoder' (26#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/ColorDecoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SD_SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BUF' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:569]
+INFO: [Synth 8-6155] done synthesizing module 'BUF' (27#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:569]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+	Parameter MasterFrequency bound to: 12500000 - type: integer 
+	Parameter frequency bound to: 350000 - type: integer 
+	Parameter bitsNumber bound to: 6 - type: integer 
+	Parameter limit bound to: 35 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator' (28#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FullSPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FullSPI' (29#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:1]
+WARNING: [Synth 8-350] instance 'spiCount' of module 'FullSPI' requires 8 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:72]
+WARNING: [Synth 8-350] instance 'spiUtilCount' of module 'FullSPI' requires 8 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:79]
+WARNING: [Synth 8-6014] Unused sequential element VideoCount_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'SD_SPI' (30#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:1]
+INFO: [Synth 8-6157] synthesizing module 'TFT_SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
+	Parameter InitDataSize bound to: 104 - type: integer 
+	Parameter WorkFrequency bound to: 6250000 - type: integer 
+	Parameter WorkFrequencyBits bound to: 24 - type: integer 
+	Parameter delayUnit bound to: 6250 - type: integer 
+	Parameter delayTime bound to: 1000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'InitializationRegister' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
+	Parameter InitFrequency bound to: 6250000 - type: integer 
+	Parameter delayUnit bound to: 6250 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'InitializationRegister' (31#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Counter' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:2]
+	Parameter Begin bound to: 0 - type: integer 
+	Parameter bitsNumber bound to: 25 - type: integer 
+	Parameter End bound to: 1000104 - type: integer 
+	Parameter mode bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (32#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:2]
+WARNING: [Synth 8-350] instance 'counter' of module 'Counter' requires 3 connections, but only 2 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:60]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:1]
+WARNING: [Synth 8-350] instance 'spi' of module 'SPI' requires 5 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'TFT_SPI' (34#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
+WARNING: [Synth 8-350] instance 'tft_spi' of module 'TFT_SPI' requires 10 connections, but only 9 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:127]
+INFO: [Synth 8-6157] synthesizing module 'I2S' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SquareGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SquareGenerator' (35#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'I2S' (36#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v:1]
+WARNING: [Synth 8-350] instance 'i2s' of module 'I2S' requires 7 connections, but only 5 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:139]
+WARNING: [Synth 8-6014] Unused sequential element TilesWrite_YPosition_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:240]
+INFO: [Synth 8-6155] done synthesizing module 'AudVid' (37#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:2]
+WARNING: [Synth 8-350] instance 'AudVid' of module 'AudVid' requires 19 connections, but only 17 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1740]
+WARNING: [Synth 8-6014] Unused sequential element re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1348]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1393]
+WARNING: [Synth 8-6014] Unused sequential element timer0_load_re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1463]
+WARNING: [Synth 8-6014] Unused sequential element timer0_reload_re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1476]
+WARNING: [Synth 8-6014] Unused sequential element timer0_en_re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1480]
+WARNING: [Synth 8-6014] Unused sequential element timer0_eventmanager_re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1484]
+WARNING: [Synth 8-6014] Unused sequential element uart_eventmanager_re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1511]
+WARNING: [Synth 8-6014] Unused sequential element uart_phy_re_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1541]
+WARNING: [Synth 8-6014] Unused sequential element memdat_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1700]
+WARNING: [Synth 8-6014] Unused sequential element memdat_2_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1717]
+WARNING: [Synth 8-3936] Found unconnected internal register 'array_muxed0_reg' and it is trimmed from '30' to '29' bits. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:731]
+INFO: [Synth 8-6155] done synthesizing module 'top' (38#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:2]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[31]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[30]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[29]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[28]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[27]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[26]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[25]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[24]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[23]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[22]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[21]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[20]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[19]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[18]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[17]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[16]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[15]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[14]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[13]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[12]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[11]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[10]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[9]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[8]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[7]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[6]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[5]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[4]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[3]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[2]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[1]
+WARNING: [Synth 8-3331] design I2S has unconnected port InputData[0]
+WARNING: [Synth 8-3331] design AudVid has unconnected port enable_DEBUG
+WARNING: [Synth 8-3331] design AudVid has unconnected port TilesPositionData[4]
+WARNING: [Synth 8-3331] design AudVid has unconnected port TilesPositionData[3]
+WARNING: [Synth 8-3331] design AudVid has unconnected port TilesPositionData[2]
+WARNING: [Synth 8-3331] design AudVid has unconnected port TilesPositionData[1]
+WARNING: [Synth 8-3331] design AudVid has unconnected port TilesPositionData[0]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[31]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[30]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[29]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[28]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[27]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[26]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[25]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[24]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[23]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[22]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[21]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[20]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[19]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[18]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[17]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[16]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[15]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[14]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[13]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[12]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[11]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[10]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[9]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[8]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[7]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[6]
+WARNING: [Synth 8-3331] design lm32_shifter has unconnected port operand_1_x[5]
+WARNING: [Synth 8-3331] design lm32_ram__parameterized0 has unconnected port reset
+WARNING: [Synth 8-3331] design lm32_ram has unconnected port reset
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[31]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[30]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[29]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[28]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[27]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[26]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[25]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[24]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[23]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[22]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[21]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[20]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[19]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[18]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[17]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[16]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[15]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[14]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[13]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[12]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[1]
+WARNING: [Synth 8-3331] design lm32_dcache has unconnected port address_x[0]
+WARNING: [Synth 8-3331] design lm32_load_store_unit has unconnected port load_x
+WARNING: [Synth 8-3331] design lm32_load_store_unit has unconnected port store_x
+WARNING: [Synth 8-3331] design lm32_load_store_unit has unconnected port store_q_x
+WARNING: [Synth 8-3331] design lm32_load_store_unit has unconnected port d_rty_i
+WARNING: [Synth 8-3331] design lm32_icache has unconnected port address_a[31]
+WARNING: [Synth 8-3331] design lm32_icache has unconnected port address_a[30]
+WARNING: [Synth 8-3331] design lm32_icache has unconnected port address_a[29]
+WARNING: [Synth 8-3331] design lm32_icache has unconnected port address_a[28]
+WARNING: [Synth 8-3331] design lm32_icache has unconnected port address_a[27]
+WARNING: [Synth 8-3331] design lm32_icache has unconnected port address_a[26]
+WARNING: [Synth 8-3331] design lm32_icache has unconnected port address_a[25]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1320.402 ; gain = 136.512 ; free physical = 263 ; free virtual = 5389
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin spiCount:SPI_MISO to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:72]
+WARNING: [Synth 8-3295] tying undriven pin spiUtilCount:SPI_MISO to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v:79]
+WARNING: [Synth 8-3295] tying undriven pin counter:reset to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v:60]
+WARNING: [Synth 8-3295] tying undriven pin lm32_cpu:clk_i to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1616]
+WARNING: [Synth 8-3295] tying undriven pin AudVid:CLK to constant 0 [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1740]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1320.402 ; gain = 136.512 ; free physical = 272 ; free virtual = 5397
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1320.402 ; gain = 136.512 ; free physical = 272 ; free virtual = 5397
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:163]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:163]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  BUF => LUT1: 2 instances
+  BUFGCE => BUFGCTRL: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1642.723 ; gain = 0.000 ; free physical = 125 ; free virtual = 5173
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 1642.723 ; gain = 458.832 ; free physical = 205 ; free virtual = 5260
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 1642.723 ; gain = 458.832 ; free physical = 205 ; free virtual = 5261
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 1642.723 ; gain = 458.832 ; free physical = 207 ; free virtual = 5262
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lm32_icache'
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "flush_set" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lm32_dcache'
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "flush_set" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "d_adr_o" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_cycle_type" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "d_cti_o" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lm32_mc_arithmetic'
+INFO: [Synth 8-5544] ROM "result_x" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ie" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "im" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "eid_x" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "write_idx_m" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "write_idx_m" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "operand_w0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'count_reg' in module 'SD_SPI'
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "UtilCount" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SPI_CS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "TilesWrite_TilePosition" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AddressOperationLUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AddressOperationLUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element TFT_DataEncoded_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:108]
+WARNING: [Synth 8-6014] Unused sequential element TilesWrite_XAddress_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:233]
+WARNING: [Synth 8-6014] Unused sequential element TilesWrite_XAddress0_reg_rep was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:233]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:648]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:685]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_1_reg' and it is trimmed from '10' to '8' bits. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1705]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_3_reg' and it is trimmed from '10' to '8' bits. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1722]
+INFO: [Synth 8-5544] ROM "bus_wishbone_ack" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bus_wishbone_ack" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_phy_sink_ready" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_phy_sink_ready" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "uart_phy_source_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element memadr_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1649]
+INFO: [Synth 8-6430] The Block RAM mem_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-6430] The Block RAM mem_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'fsm1EE882C00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'fsm1180EB000'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                              000
+                 iSTATE1 |                               01 |                              010
+                 iSTATE0 |                               10 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lm32_mc_arithmetic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 | 0000000000000000000000000000000001 |                           000000
+                 iSTATE0 | 0000000000000000000000000000000010 |                           000001
+                  iSTATE | 0000000000000000000000000000000100 |                           000010
+                iSTATE33 | 0000000000000000000000000000001000 |                           000011
+                iSTATE28 | 0000000000000000000000000000010000 |                           000100
+                iSTATE26 | 0000000000000000000000000000100000 |                           000101
+                iSTATE24 | 0000000000000000000000000001000000 |                           000110
+                iSTATE21 | 0000000000000000000000000010000000 |                           000111
+                iSTATE27 | 0000000000000000000000000100000000 |                           001000
+                iSTATE25 | 0000000000000000000000001000000000 |                           001001
+                iSTATE22 | 0000000000000000000000010000000000 |                           001010
+                iSTATE19 | 0000000000000000000000100000000000 |                           001011
+                iSTATE16 | 0000000000000000000001000000000000 |                           001100
+                iSTATE15 | 0000000000000000000010000000000000 |                           001101
+                iSTATE14 | 0000000000000000000100000000000000 |                           001110
+                iSTATE11 | 0000000000000000001000000000000000 |                           001111
+                iSTATE23 | 0000000000000000010000000000000000 |                           010000
+                iSTATE20 | 0000000000000000100000000000000000 |                           010001
+                iSTATE18 | 0000000000000001000000000000000000 |                           010010
+                iSTATE17 | 0000000000000010000000000000000000 |                           010011
+                iSTATE12 | 0000000000000100000000000000000000 |                           010100
+                 iSTATE8 | 0000000000001000000000000000000000 |                           010101
+                 iSTATE6 | 0000000000010000000000000000000000 |                           010110
+                 iSTATE3 | 0000000000100000000000000000000000 |                           010111
+                 iSTATE9 | 0000000001000000000000000000000000 |                           011000
+                 iSTATE7 | 0000000010000000000000000000000000 |                           011001
+                 iSTATE4 | 0000000100000000000000000000000000 |                           011010
+                 iSTATE2 | 0000001000000000000000000000000000 |                           011011
+                iSTATE32 | 0000010000000000000000000000000000 |                           011100
+                iSTATE31 | 0000100000000000000000000000000000 |                           011101
+                iSTATE30 | 0001000000000000000000000000000000 |                           011110
+                iSTATE29 | 0010000000000000000000000000000000 |                           011111
+                iSTATE13 | 0100000000000000000000000000000000 |                           100000
+                iSTATE10 | 1000000000000000000000000000000000 |                           100001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'count_reg' using encoding 'one-hot' in module 'SD_SPI'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:50 . Memory (MB): peak = 1642.723 ; gain = 458.832 ; free physical = 191 ; free virtual = 5246
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 2     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 9     
+	   2 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 5     
++---Registers : 
+	               32 Bit    Registers := 35    
+	               30 Bit    Registers := 10    
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 25    
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 118   
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---RAMs : 
+	             128K Bit         RAMs := 1     
+	              32K Bit         RAMs := 3     
+	               5K Bit         RAMs := 2     
+	             1024 Bit         RAMs := 1     
+	              160 Bit         RAMs := 2     
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	  34 Input     34 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 56    
+	   8 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 3     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     30 Bit        Muxes := 12    
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	 105 Input     17 Bit        Muxes := 1     
+	  17 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	  34 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 11    
+	  34 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   3 Input      6 Bit        Muxes := 1     
+	  34 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   3 Input      5 Bit        Muxes := 1     
+	  14 Input      5 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   8 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 102   
+	   3 Input      1 Bit        Muxes := 11    
+	   5 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 7     
+	  34 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 8     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 7     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 28    
++---RAMs : 
+	             128K Bit         RAMs := 1     
+	              32K Bit         RAMs := 1     
+	              160 Bit         RAMs := 2     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 18    
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 42    
+	   3 Input      1 Bit        Muxes := 4     
+Module lm32_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+Module lm32_ram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	               5K Bit         RAMs := 1     
+Module lm32_icache 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 5     
+Module lm32_instruction_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               30 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module lm32_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+Module lm32_dcache 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+Module lm32_load_store_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   8 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module lm32_addsub 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module lm32_shifter 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module lm32_multiplier 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module lm32_mc_arithmetic 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 3     
+	   3 Input      6 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 5     
+Module lm32_interrupt 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module lm32_cpu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               30 Bit    Registers := 3     
+	               23 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 49    
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 19    
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 5     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+Module reloj2_clk_wiz_0_0_clk_wiz 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module reloj2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module reloj1_clk_wiz_0_0_clk_wiz 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+Module ColorDecoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input     16 Bit        Muxes := 1     
+Module FrequencyGenerator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module FullSPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module SD_SPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  34 Input     34 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	  34 Input     10 Bit        Muxes := 1     
+	  34 Input      8 Bit        Muxes := 1     
+	  34 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  34 Input      1 Bit        Muxes := 8     
+Module InitializationRegister 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 4     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	 105 Input     17 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SPI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module TFT_SPI 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SquareGenerator 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+Module I2S 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module AudVid 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	  14 Input      5 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "icache/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dcache/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'multiplier/muliplicand_reg[31:0]' into 'operand_0_x_reg[31:0]' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:102]
+INFO: [Synth 8-4471] merging register 'multiplier/multiplier_reg[31:0]' into 'operand_1_x_reg[31:0]' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:103]
+WARNING: [Synth 8-6014] Unused sequential element multiplier/multiplier_reg was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:103]
+WARNING: [Synth 8-6014] Unused sequential element multiplier/muliplicand_reg was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:102]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:115]
+WARNING: [Synth 8-6014] Unused sequential element multiplier/product_reg was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:104]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:115]
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:115]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:115]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:104]
+WARNING: [Synth 8-6014] Unused sequential element  was removed. 
+DSP Report: Generating DSP multiplier/product0, operation Mode is: A2*B2.
+DSP Report: register B is absorbed into DSP multiplier/product0.
+DSP Report: register A is absorbed into DSP multiplier/product0.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product0.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product0.
+DSP Report: Generating DSP multiplier/product_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register B is absorbed into DSP multiplier/product_reg.
+DSP Report: register A is absorbed into DSP multiplier/product_reg.
+DSP Report: register multiplier/product_reg is absorbed into DSP multiplier/product_reg.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product_reg.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product_reg.
+DSP Report: Generating DSP multiplier/product0, operation Mode is: A2*B2.
+DSP Report: register B is absorbed into DSP multiplier/product0.
+DSP Report: register A is absorbed into DSP multiplier/product0.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product0.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product0.
+DSP Report: Generating DSP multiplier/product_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register B is absorbed into DSP multiplier/product_reg.
+DSP Report: register A is absorbed into DSP multiplier/product_reg.
+DSP Report: register multiplier/product_reg is absorbed into DSP multiplier/product_reg.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product_reg.
+DSP Report: operator multiplier/product0 is absorbed into DSP multiplier/product_reg.
+INFO: [Synth 8-4471] merging register 'TilesWrite_XAddress0_reg[4:0]' into 'TilesWrite_XAddress0_reg[4:0]' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:233]
+WARNING: [Synth 8-6014] Unused sequential element sd_spi/spiCount/Data_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:35]
+WARNING: [Synth 8-6014] Unused sequential element sd_spi/spiCount/InputData_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:24]
+WARNING: [Synth 8-6014] Unused sequential element sd_spi/spiCount/DataClk_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:23]
+WARNING: [Synth 8-6014] Unused sequential element sd_spi/spiUtilCount/Data_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:35]
+WARNING: [Synth 8-6014] Unused sequential element sd_spi/spiUtilCount/InputData_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:24]
+WARNING: [Synth 8-6014] Unused sequential element sd_spi/spiUtilCount/DataClk_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v:23]
+WARNING: [Synth 8-6014] Unused sequential element tft_spi/spi/reset_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v:23]
+WARNING: [Synth 8-6014] Unused sequential element TilesWrite_XAddress0_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:233]
+WARNING: [Synth 8-3936] Found unconnected internal register 'TilesWrite_XAddress0_reg' and it is trimmed from '5' to '4' bits. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:233]
+INFO: [Synth 8-5546] ROM "sd_spi/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sd_spi/count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sd_spi/count" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element TFT_DataEncoded_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_AudVid/AudVid.v:108]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memadr_reg' and it is trimmed from '13' to '12' bits. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1649]
+WARNING: [Synth 8-6014] Unused sequential element memadr_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1649]
+INFO: [Synth 8-6430] The Block RAM instruction_unit/icache/memories[0].way_0_data_ram/mem_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-6430] The Block RAM instruction_unit/icache/memories[0].way_0_tag_ram/mem_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-6430] The Block RAM load_store_unit/dcache/memories[0].data_memories.way_0_data_ram/mem_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-6430] The Block RAM load_store_unit/dcache/memories[0].way_0_tag_ram/mem_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM instruction_unit/icache/memories[0].way_0_data_ram/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM instruction_unit/icache/memories[0].way_0_tag_ram/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM load_store_unit/dcache/memories[0].data_memories.way_0_data_ram/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM load_store_unit/dcache/memories[0].way_0_tag_ram/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_1_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_2_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[8]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[9]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[10]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[11]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[12]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[13]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[14]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[16]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[17]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[18]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[19]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[20]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[21]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[22]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[24]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[25]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[26]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[27]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[28]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[29]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[30]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[23]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'bus_wishbone_dat_r_reg[15]' (FDR) to 'bus_wishbone_dat_r_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bus_wishbone_dat_r_reg[31] )
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/w_result_sel_load_x_reg' (FDRE) to 'lm32_cpu/load_x_reg'
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/sign_extend_x_reg' (FDRE) to 'lm32_cpu/condition_x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/direction_x_reg' (FDRE) to 'lm32_cpu/logic_op_x_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (lm32_cpu/\instruction_unit/bus_error_f_reg )
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/condition_x_reg[0]' (FDRE) to 'lm32_cpu/size_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/condition_x_reg[1]' (FDRE) to 'lm32_cpu/size_x_reg[1]'
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/condition_x_reg[2]' (FDRE) to 'lm32_cpu/logic_op_x_reg[2]'
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/size_x_reg[0]' (FDRE) to 'lm32_cpu/logic_op_x_reg[0]'
+INFO: [Synth 8-3886] merging instance 'lm32_cpu/size_x_reg[1]' (FDRE) to 'lm32_cpu/logic_op_x_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (lm32_cpu/data_bus_error_seen_reg)
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[0]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[1]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[1]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[2]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[2]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[3]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[3]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[4]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[4]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[5]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[5]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[6]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[6]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[7]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[7]'
+INFO: [Synth 8-3886] merging instance 'AudVid/TilesWrite_TilePosition_reg_rep[8]' (FDRE) to 'AudVid/TilesWrite_TilePosition_reg[8]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[23]' (FD) to 'AudVid/sd_spi/Address_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[15]' (FD) to 'AudVid/sd_spi/Address_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[7]' (FD) to 'AudVid/sd_spi/Address_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[22]' (FD) to 'AudVid/sd_spi/Address_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[14]' (FD) to 'AudVid/sd_spi/Address_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[6]' (FD) to 'AudVid/sd_spi/Address_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[21]' (FD) to 'AudVid/sd_spi/Address_reg[20]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[13]' (FD) to 'AudVid/sd_spi/Address_reg[20]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[5]' (FD) to 'AudVid/sd_spi/Address_reg[20]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[20]' (FD) to 'AudVid/sd_spi/Address_reg[19]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[12]' (FD) to 'AudVid/sd_spi/Address_reg[19]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[4]' (FD) to 'AudVid/sd_spi/Address_reg[2]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[19]' (FD) to 'AudVid/sd_spi/Address_reg[18]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[11]' (FD) to 'AudVid/sd_spi/Address_reg[18]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[3]' (FD) to 'AudVid/sd_spi/Address_reg[18]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[18]' (FD) to 'AudVid/sd_spi/Address_reg[17]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[10]' (FD) to 'AudVid/sd_spi/Address_reg[17]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (AudVid/\sd_spi/Address_reg[2] )
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[17]' (FD) to 'AudVid/sd_spi/Address_reg[16]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[9]' (FD) to 'AudVid/sd_spi/Address_reg[16]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[1]' (FD) to 'AudVid/sd_spi/Address_reg[16]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[16]' (FD) to 'AudVid/sd_spi/Address_reg[8]'
+INFO: [Synth 8-3886] merging instance 'AudVid/sd_spi/Address_reg[8]' (FD) to 'AudVid/sd_spi/Address_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (AudVid/\sd_spi/Address_reg[0] )
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[31]' (FDRE) to 'AudVid/i2s/squaregenerator/data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[30]' (FDRE) to 'AudVid/i2s/squaregenerator/data_reg[29]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[29]' (FDRE) to 'AudVid/i2s/squaregenerator/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[28]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[27]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[26]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[26]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[25]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[25]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[24]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[24]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[23]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[23]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[22]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[22]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[21]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[21]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[20]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[20]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[19]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[19]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[18]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[18]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[17]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[17]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[16]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[16]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[14]' (FDRE) to 'AudVid/i2s/squaregenerator/data_reg[13]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (AudVid/\i2s/squaregenerator/data_reg[13] )
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[11]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[10]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[9]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[8]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[7]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[6]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[5]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[4]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[3]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[2]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/squaregenerator/data_reg[1]' (FDSE) to 'AudVid/i2s/squaregenerator/data_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (AudVid/\i2s/squaregenerator/data_reg[0] )
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[31]' (FD_1) to 'AudVid/i2s/Data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[30]' (FD_1) to 'AudVid/i2s/Data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[29]' (FD_1) to 'AudVid/i2s/Data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[28]' (FD_1) to 'AudVid/i2s/Data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[27]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[26]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[25]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[24]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[23]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'AudVid/i2s/Data_reg[22]' (FD_1) to 'AudVid/i2s/Data_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (AudVid/\i2s/Data_reg[13] )
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[31]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[27]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[26]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[25]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[24]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[23]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[22]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[21]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[20]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[19]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[18]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[17]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[16]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[1]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_adr_o_reg[0]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_cti_o_reg[2]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_cti_o_reg[1]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_cti_o_reg[0]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/i_lock_o_reg) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/bus_error_f_reg) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (instruction_unit/bus_error_d_reg) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/dcache/refill_address_reg[3]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/dcache/refill_address_reg[2]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/dcache/refill_address_reg[1]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/dcache/refill_address_reg[0]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[31]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[27]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[26]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[25]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[24]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[23]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[22]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[21]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[20]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[19]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[18]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[17]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[16]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[1]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_adr_o_reg[0]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_cti_o_reg[2]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_cti_o_reg[1]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_cti_o_reg[0]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (load_store_unit/d_lock_o_reg) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (data_bus_error_seen_reg) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (bus_error_x_reg) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[31]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[30]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[29]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[28]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[27]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[26]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[25]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[24]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[23]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[22]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[21]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[20]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[19]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[18]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[17]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[16]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[15]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[14]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[13]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[12]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[11]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[10]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[9]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[8]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[7]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[6]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[5]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[4]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[3]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (memop_pc_w_reg[2]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (data_bus_error_exception_m_reg) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[47]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[46]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[45]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[44]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[43]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[42]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[41]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[40]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[39]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[38]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[37]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[36]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[35]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[34]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[33]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[32]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[31]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[30]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[29]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[28]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[27]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[26]) is unused and will be removed from module lm32_cpu.
+WARNING: [Synth 8-3332] Sequential element (multiplier/product_reg[25]) is unused and will be removed from module lm32_cpu.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:38 . Memory (MB): peak = 1642.723 ; gain = 458.832 ; free physical = 221 ; free virtual = 5233
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+---------------------+---------------+----------------+
+|Module Name | RTL Object          | Depth x Width | Implemented As | 
++------------+---------------------+---------------+----------------+
+|AudVid      | TFT_DataEncoded_reg | 4096x4        | Block RAM      | 
+|top         | p_0_out             | 64x8          | LUT            | 
+|top         | memadr_reg          | 4096x32       | Block RAM      | 
+|AudVid      | TFT_DataEncoded_reg | 4096x4        | Block RAM      | 
+|top         | p_0_out             | 64x8          | LUT            | 
+|top         | memadr_reg          | 4096x32       | Block RAM      | 
++------------+---------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|lm32_ram:                 | mem_reg    | 1 K x 32(NO_CHANGE)    | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|lm32_ram__parameterized0: | mem_reg    | 256 x 21(NO_CHANGE)    | W |   | 256 x 21(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|lm32_ram:                 | mem_reg    | 1 K x 32(NO_CHANGE)    | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|lm32_ram__parameterized0: | mem_reg    | 256 x 21(NO_CHANGE)    | W |   | 256 x 21(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|top                       | mem_1_reg  | 1 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 1      | 
+|top                       | mem_2_reg  | 4 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 4      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+----------------------------+-----------+----------------------+-----------------------------+
+|Module Name | RTL Object                 | Inference | Size (Depth x Width) | Primitives                  | 
++------------+----------------------------+-----------+----------------------+-----------------------------+
+|lm32_cpu    | registers_reg              | Implied   | 32 x 32              | RAM32M x 12                 | 
+|AudVid      | TilesPositionsRegister_reg | Implied   | 512 x 5              | RAM64X1D x 10  RAM64M x 5   | 
+|top         | storage_1_reg              | Implied   | 16 x 8               | RAM32M x 2                  | 
+|top         | storage_2_reg              | Implied   | 16 x 8               | RAM32M x 2                  | 
++------------+----------------------------+-----------+----------------------+-----------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|lm32_cpu    | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|lm32_cpu    | (PCIN>>17)+A2*B2 | 16     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|lm32_cpu    | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|lm32_cpu    | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance lm32_cpu/i_0/instruction_unit/icache/memories[0].way_0_data_ram/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance lm32_cpu/i_1/instruction_unit/icache/memories[0].way_0_tag_ram/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance lm32_cpu/i_22/load_store_unit/dcache/memories[0].data_memories.way_0_data_ram/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance lm32_cpu/i_23/load_store_unit/dcache/memories[0].way_0_tag_ram/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance AudVid/i_40/TFT_DataEncoded_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_59/mem_1_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_61/mem_2_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_61/mem_2_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_61/mem_2_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_61/mem_2_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_66/memadr_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_66/memadr_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_66/memadr_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_66/memadr_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:55 . Memory (MB): peak = 1663.723 ; gain = 479.832 ; free physical = 114 ; free virtual = 5113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:27 ; elapsed = 00:01:56 . Memory (MB): peak = 1665.723 ; gain = 481.832 ; free physical = 110 ; free virtual = 5109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|lm32_ram:                 | mem_reg    | 1 K x 32(NO_CHANGE)    | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|lm32_ram__parameterized0: | mem_reg    | 256 x 21(NO_CHANGE)    | W |   | 256 x 21(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|lm32_ram:                 | mem_reg    | 1 K x 32(NO_CHANGE)    | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|lm32_ram__parameterized0: | mem_reg    | 256 x 21(NO_CHANGE)    | W |   | 256 x 21(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|top                       | mem_1_reg  | 1 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 1      | 
+|top                       | mem_2_reg  | 4 K x 32(WRITE_FIRST)  | W | R |                        |   |   | Port A           | 0      | 4      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++------------+----------------------------+-----------+----------------------+-----------------------------+
+|Module Name | RTL Object                 | Inference | Size (Depth x Width) | Primitives                  | 
++------------+----------------------------+-----------+----------------------+-----------------------------+
+|lm32_cpu    | registers_reg              | Implied   | 32 x 32              | RAM32M x 12                 | 
+|AudVid      | TilesPositionsRegister_reg | Implied   | 512 x 5              | RAM64X1D x 10  RAM64M x 5   | 
+|top         | storage_1_reg              | Implied   | 16 x 8               | RAM32M x 2                  | 
+|top         | storage_2_reg              | Implied   | 16 x 8               | RAM32M x 2                  | 
++------------+----------------------------+-----------+----------------------+-----------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance AudVid/TFT_DataEncoded_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:57 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 116 ; free virtual = 5110
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:58 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 119 ; free virtual = 5109
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:58 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 119 ; free virtual = 5109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-115] binding instance 'i_1_0' in module 'top' to reference 'lm32_cpu' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_1_0' in module 'lm32_cpu' to reference 'lm32_mc_arithmetic' which has no pins
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:29 ; elapsed = 00:01:58 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 119 ; free virtual = 5109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:58 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 119 ; free virtual = 5109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:58 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 119 ; free virtual = 5109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:58 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 118 ; free virtual = 5109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUF        |     1|
+|2     |BUFG       |     6|
+|3     |BUFGCE     |     4|
+|4     |BUFH       |     4|
+|5     |CARRY4     |    22|
+|6     |LUT1       |    16|
+|7     |LUT2       |    87|
+|8     |LUT3       |    52|
+|9     |LUT4       |    45|
+|10    |LUT5       |    52|
+|11    |LUT6       |   137|
+|12    |MMCME2_ADV |     2|
+|13    |MUXF7      |    15|
+|14    |MUXF8      |     4|
+|15    |RAM64M     |     5|
+|16    |RAM64X1D   |    10|
+|17    |RAMB18E1_1 |     1|
+|18    |FDRE       |   228|
+|19    |FDSE       |     1|
+|20    |IBUF       |     3|
+|21    |OBUF       |    14|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-----------------------------+---------------------------+------+
+|      |Instance                     |Module                     |Cells |
++------+-----------------------------+---------------------------+------+
+|1     |top                          |                           |   709|
+|2     |  AudVid                     |AudVid                     |   684|
+|3     |    audvid_clockmanager      |AudVid_ClockManager        |    53|
+|4     |      Reloj1                 |reloj1                     |    32|
+|5     |        MainClockWizard      |reloj1_clk_wiz_0_0         |    32|
+|6     |          inst               |reloj1_clk_wiz_0_0_clk_wiz |    32|
+|7     |      Reloj2                 |reloj2                     |    21|
+|8     |        AudioClock           |reloj2_clk_wiz_0_0         |    12|
+|9     |          inst               |reloj2_clk_wiz_0_0_clk_wiz |    12|
+|10    |    i2s                      |I2S                        |    52|
+|11    |      squaregenerator        |SquareGenerator            |    34|
+|12    |    sd_spi                   |SD_SPI                     |   206|
+|13    |      spi                    |FullSPI                    |    54|
+|14    |      spiCount               |FullSPI_0                  |    22|
+|15    |      spiInitClock           |FrequencyGenerator         |    19|
+|16    |      spiUtilCount           |FullSPI_1                  |    11|
+|17    |    tft_spi                  |TFT_SPI                    |   226|
+|18    |      counter                |Counter                    |   168|
+|19    |      initializationRegister |InitializationRegister     |    46|
+|20    |      spi                    |SPI                        |    11|
+|21    |  lm32_cpu                   |lm32_cpu                   |     4|
+|22    |    mc_arithmetic            |lm32_mc_arithmetic         |     4|
++------+-----------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:58 . Memory (MB): peak = 1688.473 ; gain = 504.582 ; free physical = 119 ; free virtual = 5109
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1797 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 1688.473 ; gain = 182.262 ; free physical = 187 ; free virtual = 5178
+Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1688.480 ; gain = 504.582 ; free physical = 199 ; free virtual = 5189
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:163]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:163]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc:165]
+Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 20 instances were transformed.
+  BUF => LUT1: 1 instances
+  BUFGCE => BUFGCTRL: 4 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 5 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+305 Infos, 376 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:02:01 . Memory (MB): peak = 1688.480 ; gain = 504.703 ; free physical = 196 ; free virtual = 5190
+# report_timing_summary -file top_timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 2010.664 ; gain = 322.184 ; free physical = 129 ; free virtual = 4906
+# report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
+report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2010.664 ; gain = 0.000 ; free physical = 128 ; free virtual = 4906
+# report_utilization -file top_utilization_synth.rpt
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2011.664 ; gain = 1.000 ; free physical = 128 ; free virtual = 4906
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2053.680 ; gain = 42.016 ; free physical = 123 ; free virtual = 4901
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 11740d3f6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4901
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1b5bde57b
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 112a2f3bc
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 4 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1df4f99f2
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 180f04922
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 1 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 12c11afb2
+
+Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 17b3649c0
+
+Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+Ending Logic Optimization Task | Checksum: 17096e316
+
+Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2053.680 ; gain = 0.000 ; free physical = 123 ; free virtual = 4902
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.000 | TNS=0.000 |
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout1_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout2_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/clkout1_buf2. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout3_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout1_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout2_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/clkout1_buf2. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout3_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout1_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout2_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/clkout1_buf2. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout3_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout1_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout2_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/clkout1_buf2. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+WARNING: [Power 33-230] Invalid input clock frequency for AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkout3_buf1. Out of range!
+Resolution: Please refer to Clocking Resources User Guide for valid input clock frequency.
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
+Ending PowerOpt Patch Enables Task | Checksum: 17096e316
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2265.891 ; gain = 0.000 ; free physical = 202 ; free virtual = 4900
+Ending Power Optimization Task | Checksum: 17096e316
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2265.891 ; gain = 212.211 ; free physical = 207 ; free virtual = 4906
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 17096e316
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2265.891 ; gain = 0.000 ; free physical = 207 ; free virtual = 4906
+INFO: [Common 17-83] Releasing license: Implementation
+21 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2265.891 ; gain = 254.227 ; free physical = 207 ; free virtual = 4906
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+ERROR: [DRC REQP-123] connects_CLKINSEL_VCC_connects_CLKIN1_ACTIVE: AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1: The MMCME2_ADV with CLKINSEL tied high requires the CLKIN1 pin to be active.
+ERROR: [DRC REQP-123] connects_CLKINSEL_VCC_connects_CLKIN1_ACTIVE: AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/mmcm_adv_inst2: The MMCME2_ADV with CLKINSEL tied high requires the CLKIN1 pin to be active.
+INFO: [Vivado_Tcl 4-198] DRC finished with 2 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+place_design failed
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+    while executing
+"place_design"
+    (file "top.tcl" line 79)
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 19 22:30:23 2019...

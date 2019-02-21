@@ -101,10 +101,10 @@ platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/Initializa
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v")
 
 #	utilities
-platform.add_source("utilities/FrequencyGenerator.v")
-platform.add_source("utilities/Counter.v")
-platform.add_source("utilities/ButtonDebouncer.v")
-platform.add_source("utilities/ButtonDebouncerTester.v")
+platform.add_source("Hardware/utilities/FrequencyGenerator.v")
+platform.add_source("Hardware/utilities/Counter.v")
+platform.add_source("Hardware/utilities/ButtonDebouncer.v")
+platform.add_source("Hardware/utilities/ButtonDebouncerTester.v")
 
 
 # Modulo Principal

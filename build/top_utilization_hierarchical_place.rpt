@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sun Feb 17 01:59:37 2019
+| Date         : Wed Feb 20 18:53:30 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -21,33 +21,31 @@ Table of Contents
 +------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 |           Instance           |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                          |                      (top) |        281 |        281 |       0 |    0 | 206 |      0 |      1 |            0 |
+| top                          |                      (top) |        354 |        314 |      40 |    0 | 225 |      0 |      1 |            0 |
 |   (top)                      |                      (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   AudVid                     |                     AudVid |        279 |        279 |       0 |    0 | 170 |      0 |      1 |            0 |
-|     (AudVid)                 |                     AudVid |         39 |         39 |       0 |    0 |  22 |      0 |      1 |            0 |
+|   AudVid                     |                     AudVid |        354 |        314 |      40 |    0 | 225 |      0 |      1 |            0 |
+|     (AudVid)                 |                     AudVid |        112 |         72 |      40 |    0 |  34 |      0 |      1 |            0 |
+|     audvid_clockmanager      |        AudVid_ClockManager |          2 |          2 |       0 |    0 |  36 |      0 |      0 |            0 |
+|       Reloj1                 |                     reloj1 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
+|         MainClockWizard      |         reloj1_clk_wiz_0_0 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
+|           inst               | reloj1_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
+|       Reloj2                 |                     reloj2 |          2 |          2 |       0 |    0 |  12 |      0 |      0 |            0 |
+|         (Reloj2)             |                     reloj2 |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
+|         AudioClock           |         reloj2_clk_wiz_0_0 |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
+|           inst               | reloj2_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
 |     i2s                      |                        I2S |         14 |         14 |       0 |    0 |  29 |      0 |      0 |            0 |
 |       (i2s)                  |                        I2S |          7 |          7 |       0 |    0 |   9 |      0 |      0 |            0 |
 |       squaregenerator        |            SquareGenerator |          7 |          7 |       0 |    0 |  20 |      0 |      0 |            0 |
-|     sd_spi                   |                     SD_SPI |         87 |         87 |       0 |    0 |  59 |      0 |      0 |            0 |
-|       (sd_spi)               |                     SD_SPI |         47 |         47 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       spi                    |                    FullSPI |         22 |         22 |       0 |    0 |  20 |      0 |      0 |            0 |
-|       spiCount               |                  FullSPI_0 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
-|       spiInitClock           |         FrequencyGenerator |          8 |          8 |       0 |    0 |   7 |      0 |      0 |            0 |
+|     sd_spi                   |                     SD_SPI |        101 |        101 |       0 |    0 |  87 |      0 |      0 |            0 |
+|       (sd_spi)               |                     SD_SPI |         41 |         41 |       0 |    0 |  54 |      0 |      0 |            0 |
+|       spi                    |                    FullSPI |         29 |         29 |       0 |    0 |  20 |      0 |      0 |            0 |
+|       spiCount               |                  FullSPI_0 |         17 |         17 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       spiInitClock           |         FrequencyGenerator |          9 |          9 |       0 |    0 |   7 |      0 |      0 |            0 |
 |       spiUtilCount           |                  FullSPI_1 |          5 |          5 |       0 |    0 |   3 |      0 |      0 |            0 |
-|     tft_spi                  |                    TFT_SPI |        139 |        139 |       0 |    0 |  60 |      0 |      0 |            0 |
-|       (tft_spi)              |                    TFT_SPI |         21 |         21 |       0 |    0 |  21 |      0 |      0 |            0 |
-|       counter                |                    Counter |         79 |         79 |       0 |    0 |  26 |      0 |      0 |            0 |
-|       initializationRegister |     InitializationRegister |         37 |         37 |       0 |    0 |   8 |      0 |      0 |            0 |
-|       spi                    |                        SPI |          3 |          3 |       0 |    0 |   5 |      0 |      0 |            0 |
-|   ClockManager               |               ClockManager |          2 |          2 |       0 |    0 |  36 |      0 |      0 |            0 |
-|     (ClockManager)           |               ClockManager |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|     Reloj1                   |                     reloj1 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
-|       MainClockWizard        |         reloj1_clk_wiz_0_0 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
-|         inst                 | reloj1_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
-|     Reloj2                   |                     reloj2 |          2 |          2 |       0 |    0 |  12 |      0 |      0 |            0 |
-|       (Reloj2)               |                     reloj2 |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
-|       AudioClock             |         reloj2_clk_wiz_0_0 |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
-|         inst                 | reloj2_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     tft_spi                  |                    TFT_SPI |        125 |        125 |       0 |    0 |  39 |      0 |      0 |            0 |
+|       counter                |                    Counter |         94 |         94 |       0 |    0 |  26 |      0 |      0 |            0 |
+|       initializationRegister |     InitializationRegister |         28 |         28 |       0 |    0 |   8 |      0 |      0 |            0 |
+|       spi                    |                        SPI |          4 |          4 |       0 |    0 |   5 |      0 |      0 |            0 |
 +------------------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
 

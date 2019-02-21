@@ -97,11 +97,11 @@ platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v")
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v")
 
 #	utilities
-platform.add_source("utilities/ClockManager.v")
-platform.add_source("utilities/FrequencyGenerator.v")
-platform.add_source("utilities/Counter.v")
-platform.add_source("utilities/ButtonDebouncer.v")
-platform.add_source("utilities/ButtonDebouncerTester.v")
+platform.add_source("Hardware/Peripheral_AudVid/AudVid_ClockManager.v")
+platform.add_source("Hardware/utilities/FrequencyGenerator.v")
+platform.add_source("Hardware/utilities/Counter.v")
+platform.add_source("Hardware/utilities/ButtonDebouncer.v")
+platform.add_source("Hardware/utilities/ButtonDebouncerTester.v")
 
 
 # Modulo Principal

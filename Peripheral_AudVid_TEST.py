@@ -92,8 +92,8 @@ platform = Platform()
 #Definicion de pines como variables
 
 leds                   = Cat(*[platform.request("user_led", i) for i in range(16) ])
-switches               = Cat(*[platform.request("user_sw" , i) for i in range(16)])
-buttons                = Cat(*[platform.request("user_btn", i) for i in range(4) ])
+switches               = Cat(*[platform.request("user_sw" , i) for i in range(14)])
+buttons                = Cat(*[platform.request("user_btn", i) for i in range(1) ])
 SystemClock            = ClockSignal()
 Reset                  = platform.request("Reset"                  , 0)
 DAC_I2S_DATA           = platform.request("DAC_I2S_DATA"           , 0)
@@ -125,6 +125,7 @@ platform.add_source("Hardware/Peripheral_AudVid/AudVid.v")
 platform.add_source("Hardware/Peripheral_AudVid/ColorDecoder.v")
 platform.add_source("Hardware/Peripheral_AudVid/VideoData.mem")
 platform.add_source("Hardware/Peripheral_AudVid/InitialPosition.mem")
+platform.add_source("Hardware/Peripheral_AudVid/AudVid_ClockManager.v")
 #	I2S
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v")
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v")
@@ -136,23 +137,19 @@ platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v")
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v")
 platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v")
 #	utilities
-platform.add_source("utilities/ClockManager.v")
-platform.add_source("utilities/FrequencyGenerator.v")
-platform.add_source("utilities/Counter.v")
-platform.add_source("utilities/ButtonDebouncer.v")
-platform.add_source("utilities/ButtonDebouncerTester.v")
+
+platform.add_source("Hardware/utilities/FrequencyGenerator.v")
+platform.add_source("Hardware/utilities/Counter.v")
+platform.add_source("Hardware/utilities/ButtonDebouncer.v")
+platform.add_source("Hardware/utilities/ButtonDebouncerTester.v")
 
 
 # Modulo Principal
 class SOC(Module,AutoCSR):
     def __init__(self):
 
-        self.SystemClock            = Signal()
-        self.MasterCLK              = Signal()
-        self.Reset                  = Signal()
-        self.I2SCLK                 = Signal()
-        self.TFT_WorkCLK            = Signal()
-        self.SD_WorkCLK             = Signal()
+        self.SystemClock            = Signal()        
+        self.Reset                  = Signal()        
         
         self.DAC_I2S_CLK            = Signal()
         self.DAC_I2S_DATA           = Signal()
@@ -170,34 +167,26 @@ class SOC(Module,AutoCSR):
         self.SD_SPI_CS              = Signal()
         self.SD_SPI_COUNT_DEBUG     = Signal() 
         self.SD_SPI_UTILCOUNT_DEBUG = Signal()
-
-        self.TilesPositionData      = Signal(5)
-        self.TilesPositionAddress   = Signal(9)
-
-
-        
-        self.specials +=Instance("ClockManager",
-            i_InputCLK  = self.SystemClock,
-            o_MasterCLK = self.MasterCLK,
-            o_I2SCLK    = self.I2SCLK,
-            o_TFTCLK    = self.TFT_WorkCLK,
-            o_SDCLK     = self.SD_WorkCLK 
+        self.TilesControlRegister   = Signal(14)
+        self.enable_DEBUG           = Signal()
+        self.Buffered_SystemClock   = Signal()     
+       
+        self.specials +=Instance("IBUF",        
+            i_I =self.SystemClock,
+            o_O =self.Buffered_SystemClock
         )
-
+        
         self.specials +=Instance("AudVid",
 
             i_Reset                  = self.Reset,
-            i_MasterCLK              = self.MasterCLK,  
-            i_I2SCLK                 = self.I2SCLK,                 
-            i_TilesPositionData      = self.TilesPositionData,      ## [4:0]
-            i_TilesPositionAddress   = self.TilesPositionAddress,   ## [8:0]    
-            i_TFT_WorkCLK            = self.TFT_WorkCLK,
+            i_CLK                    = self.SystemClock,         
+            i_TilesControlRegister   = self.TilesControlRegister,
+            i_enable_DEBUG           = self.enable_DEBUG,
             o_TFT_SPI_CLK            = self.TFT_SPI_CLK,
             o_TFT_SPI_CS             = self.TFT_SPI_CS,
             o_TFT_SPI_MOSI           = self.TFT_SPI_MOSI,
             o_TFT_RST                = self.TFT_RST,
-            o_TFT_RS                 = self.TFT_RS,
-            i_SD_WorkCLK             = self.SD_WorkCLK,
+            o_TFT_RS                 = self.TFT_RS,            
             o_SD_SPI_CLK             = self.SD_SPI_CLK,
             o_SD_SPI_CS              = self.SD_SPI_CS,    
             o_SD_SPI_MOSI            = self.SD_SPI_MOSI,
@@ -210,7 +199,8 @@ class SOC(Module,AutoCSR):
 
     
         )
-        
+        self.comb += self.enable_DEBUG.eq(buttons)
+        self.comb += self.TilesControlRegister.eq(switches)
         
         self.comb += self.Reset.eq(Reset)
 

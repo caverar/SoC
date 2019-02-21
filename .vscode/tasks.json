@@ -12,31 +12,35 @@
                 "SoC.out",
 
                 // //AUDVID
-                // "Hardware/Peripheral_AudVid/AudVid.v",
-                // "Hardware/Peripheral_AudVid/ColorDecoder.v",
+                "Hardware/Peripheral_AudVid/AudVid_TB.v",
+                "Hardware/Peripheral_AudVid/AudVid.v",
+                "Hardware/Peripheral_AudVid/ColorDecoder.v",
                 //SD_SPI Terminado
-                "Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI_TB.v",
+                //"Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI_TB.v",
                 "Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v",
                 "Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v",
                 
                 //I2S Terminado
-                // "Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S_TB.v",
-                // "Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v",
-                // "Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v",
+                //"Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S_TB.v",
+                "Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v",
+                "Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v",
 
                 
 
                 // //TFT_SPI Terminado
-                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI_TB.v",
-                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v",
-                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v",
-                // "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v",
+                //"Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI_TB.v",
+                "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v",
+                "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v",
+                "Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v",
                 
                 //"utilities/ClockManager.v",               
-                "utilities/Counter.v",
-                "utilities/FrequencyGenerator.v",
-                "utilities/ButtonDebouncer.v",
-                "utilities/FrequencyDivider.v"
+                "Hardware/utilities/Counter.v",
+                "Hardware/utilities/FrequencyGenerator.v",
+                "Hardware/utilities/ButtonDebouncer.v",
+                "Hardware/utilities/FrequencyDivider.v",
+                "Hardware/utilities/simulationResources/BUF.v",
+                "Hardware/utilities/simulationResources/BUFG.v",
+                "Hardware/utilities/simulationResources/AudVid_ClockManager.v"             
 
                 
             ],

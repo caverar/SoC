@@ -88,24 +88,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports user_sw_12]
  ## user_sw:13
 set_property LOC U1 [get_ports user_sw_13]
 set_property IOSTANDARD LVCMOS33 [get_ports user_sw_13]
- ## user_sw:14
-set_property LOC T1 [get_ports user_sw_14]
-set_property IOSTANDARD LVCMOS33 [get_ports user_sw_14]
- ## user_sw:15
-set_property LOC R2 [get_ports user_sw_15]
-set_property IOSTANDARD LVCMOS33 [get_ports user_sw_15]
  ## user_btn:0
 set_property LOC T18 [get_ports user_btn]
 set_property IOSTANDARD LVCMOS33 [get_ports user_btn]
- ## user_btn:1
-set_property LOC W19 [get_ports user_btn_1]
-set_property IOSTANDARD LVCMOS33 [get_ports user_btn_1]
- ## user_btn:2
-set_property LOC T17 [get_ports user_btn_2]
-set_property IOSTANDARD LVCMOS33 [get_ports user_btn_2]
- ## user_btn:3
-set_property LOC U17 [get_ports user_btn_3]
-set_property IOSTANDARD LVCMOS33 [get_ports user_btn_3]
  ## Reset:0
 set_property LOC U18 [get_ports Reset]
 set_property IOSTANDARD LVCMOS33 [get_ports Reset]

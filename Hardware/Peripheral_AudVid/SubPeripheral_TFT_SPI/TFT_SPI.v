@@ -16,12 +16,12 @@ module TFT_SPI(
 
 	parameter WorkFrequency=6250000;
 	parameter WorkFrequencyBits=24;	
-	parameter delayUnit=WorkFrequency/1000;
-	//parameter delayUnit=1;
+	//parameter delayUnit=1; //
+	parameter delayUnit=WorkFrequency/1000;	
 	parameter delayTime=160*delayUnit;
 		
 	//Registros y Cables
-	reg  [15:0] data1; //
+	//reg  [15:0] data1; //
 	wire [24:0] InitRegPointer;
 	wire		dataClk;
 	wire		selectedClock;
@@ -30,8 +30,8 @@ module TFT_SPI(
 	wire		SPI_WorkClock;
 	wire		InitReg_RS;
 
-	reg  [4:0]  countp;
-	initial begin countp=0; end
+	// reg  [4:0]  countp;
+	// initial begin countp=0; end
 	//Inicializacion
 	//Instancias
 	wire Buffered_MasterCLK;
@@ -67,33 +67,34 @@ module TFT_SPI(
 		.SPI_CLK(SPI_CLK),
 		.SPI_MOSI(SPI_MOSI),		
 		.dataClk(dataClk)
+		//.reset(RST)
 	);
 
 	//Asignacion Secuencial	
 		
-	always@(posedge dataClk) begin			
-		if(countp<11) begin
-			data1=data;
-			countp=countp+1;
-		end else if(countp<22) begin
-			countp=countp+1;
-			data1=16'h0000;
-		end else begin
-			countp=1;
-			data1=data;
-		end
-	end 
+	// always@(posedge dataClk) begin			
+	// 	if(countp<11) begin
+	// 		data1=data;
+	// 		countp=countp+1;
+	// 	end else if(countp<22) begin
+	// 		countp=countp+1;
+	// 		data1=16'h0000;
+	// 	end else begin
+	// 		countp=1;
+	// 		data1=data;
+	// 	end
+	// end 
 	//Asignacion Combinacional
 
 
 	//	Seleccion de datos
-	assign OutputData = (InitRegPointer<InitDataSize+delayTime) ? InitData : data1;
+	assign OutputData = (InitRegPointer<InitDataSize+delayTime) ? InitData : data;
 	//	Seleccion de reloj SPI
 	assign SPI_CLK=WorkCLK;
 	//	Gestion de pin RS
 	assign RS = (InitRegPointer<InitDataSize+delayTime) ? InitReg_RS : 1;
 	assign RST=1'b1;
-	assign DataClock=dataClk;
+	assign DataClock=(InitRegPointer<InitDataSize+delayTime) ? 0 :dataClk;
 
 
 endmodule
