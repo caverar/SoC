@@ -1,0 +1,7 @@
+GameOver.wavhex		Sector 20    - Sector 1451   00002800-000B5600
+GameStart.wavhex	Sector 1452  - Sector 3520   000B5800-001B8000
+LevelUp.wavhex		Sector 3521  - Sector 4704   001B8200-0024C000
+PieceHold.wavhex	Sector 4705  - Sector 5150   0024C200-00283C00
+Tetris.wavhex		Sector 5151  - Sector 34318  00283E00-010C1C00
+Tetris2.wavhex		Sector 34319 - Sector 91503  000C1E00-02CADE00
+Tetris3.wavhex		Sector 91504 - Sector 132686 02CAE000-040C9C00
