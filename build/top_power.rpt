@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Wed Feb 20 18:54:19 2019
+| Date             : Sun Feb 24 19:26:11 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.312        |
+| Total On-Chip Power (W)  | 0.169        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.240        |
+| Dynamic (W)              | 0.098        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 83.4         |
-| Junction Temperature (C) | 26.6         |
+| Max Ambient (C)          | 84.2         |
+| Junction Temperature (C) | 25.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,25 +49,21 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+--------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
-+--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.002 |        9 |       --- |             --- |
-| Slice Logic              |     0.002 |      732 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      314 |     20800 |            1.51 |
-|   LUT as Distributed RAM |    <0.001 |       40 |      9600 |            0.42 |
-|   CARRY4                 |    <0.001 |       22 |      8150 |            0.27 |
-|   Register               |    <0.001 |      225 |     41600 |            0.54 |
-|   F7/F8 Muxes            |    <0.001 |       19 |     32600 |            0.06 |
-|   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
-|   Others                 |     0.000 |       33 |       --- |             --- |
-| Signals                  |     0.002 |      596 |       --- |             --- |
-| Block RAM                |    <0.001 |      0.5 |        50 |            1.00 |
-| MMCM                     |     0.224 |        2 |         5 |           40.00 |
-| I/O                      |     0.010 |       30 |       106 |           28.30 |
-| Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.312 |          |           |                 |
-+--------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |    <0.001 |        5 |       --- |             --- |
+| Slice Logic    |    <0.001 |      216 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       85 |     20800 |            0.41 |
+|   Register     |    <0.001 |      106 |     41600 |            0.25 |
+|   BUFG         |    <0.001 |        3 |        32 |            9.38 |
+|   Others       |     0.000 |       13 |       --- |             --- |
+| Signals        |    <0.001 |      185 |       --- |             --- |
+| MMCM           |     0.095 |        1 |         5 |           20.00 |
+| I/O            |     0.002 |       39 |       106 |           36.79 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     0.169 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -76,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.017 |       0.007 |      0.010 |
-| Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
+| Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |
+| Vccaux    |       1.800 |     0.065 |       0.053 |      0.013 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -129,17 +125,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------+---------------------------------------------------------------------------------------+-----------------+
-| Clock                          | Domain                                                                                | Constraint (ns) |
-+--------------------------------+---------------------------------------------------------------------------------------+-----------------+
-| I2S_CLK_reloj2_clk_wiz_0_0     | AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/I2S_CLK_reloj2_clk_wiz_0_0          |            70.9 |
-| MasterClocK_reloj1_clk_wiz_0_0 | AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0 |            10.0 |
-| SD_Clock_reloj1_clk_wiz_0_0    | AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0    |            80.0 |
-| TFT_Clock_reloj1_clk_wiz_0_0   | AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0   |           160.0 |
-| clk100                         | clk100                                                                                |            10.0 |
-| clkfbout_reloj1_clk_wiz_0_0    | AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/clkfbout_reloj1_clk_wiz_0_0    |            10.0 |
-| clkfbout_reloj2_clk_wiz_0_0    | AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/clkfbout_reloj2_clk_wiz_0_0         |            50.0 |
-+--------------------------------+---------------------------------------------------------------------------------------+-----------------+
++-----------------------------+-----------------------------------------------------------------------------+-----------------+
+| Clock                       | Domain                                                                      | Constraint (ns) |
++-----------------------------+-----------------------------------------------------------------------------+-----------------+
+| SD_Clock_reloj1_clk_wiz_0_0 | AudVid_ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0 |            80.0 |
+| clk100                      | clk100                                                                      |            10.0 |
+| clkfbout_reloj1_clk_wiz_0_0 | AudVid_ClockManager/Reloj1/MainClockWizard/inst/clkfbout_reloj1_clk_wiz_0_0 |            10.0 |
++-----------------------------+-----------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -148,44 +140,17 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------------------------+-----------+
-| Name                                       | Power (W) |
-+--------------------------------------------+-----------+
-| top                                        |     0.240 |
-|   AudVid                                   |     0.230 |
-|     TilesPositionsRegister_reg_0_63_0_2    |    <0.001 |
-|     TilesPositionsRegister_reg_0_63_3_3    |    <0.001 |
-|     TilesPositionsRegister_reg_0_63_4_4    |    <0.001 |
-|     TilesPositionsRegister_reg_128_191_0_2 |    <0.001 |
-|     TilesPositionsRegister_reg_128_191_3_3 |    <0.001 |
-|     TilesPositionsRegister_reg_128_191_4_4 |    <0.001 |
-|     TilesPositionsRegister_reg_192_255_0_2 |    <0.001 |
-|     TilesPositionsRegister_reg_192_255_3_3 |    <0.001 |
-|     TilesPositionsRegister_reg_192_255_4_4 |    <0.001 |
-|     TilesPositionsRegister_reg_256_319_0_2 |    <0.001 |
-|     TilesPositionsRegister_reg_256_319_3_3 |    <0.001 |
-|     TilesPositionsRegister_reg_256_319_4_4 |    <0.001 |
-|     TilesPositionsRegister_reg_64_127_0_2  |    <0.001 |
-|     TilesPositionsRegister_reg_64_127_3_3  |    <0.001 |
-|     TilesPositionsRegister_reg_64_127_4_4  |    <0.001 |
-|     audvid_clockmanager                    |     0.224 |
-|       Reloj1                               |     0.096 |
-|         MainClockWizard                    |     0.096 |
-|           inst                             |     0.096 |
-|       Reloj2                               |     0.128 |
-|         AudioClock                         |     0.128 |
-|           inst                             |     0.128 |
-|     i2s                                    |    <0.001 |
-|       squaregenerator                      |    <0.001 |
-|     sd_spi                                 |     0.001 |
-|       spi                                  |    <0.001 |
-|       spiCount                             |    <0.001 |
-|       spiInitClock                         |    <0.001 |
-|       spiUtilCount                         |    <0.001 |
-|     tft_spi                                |     0.002 |
-|       counter                              |     0.001 |
-|       initializationRegister               |    <0.001 |
-|       spi                                  |    <0.001 |
-+--------------------------------------------+-----------+
++-----------------------+-----------+
+| Name                  | Power (W) |
++-----------------------+-----------+
+| top                   |     0.098 |
+|   AudVid_ClockManager |     0.095 |
+|     Reloj1            |     0.095 |
+|       MainClockWizard |     0.095 |
+|         inst          |     0.095 |
+|   SD_SPI              |    <0.001 |
+|     spi               |    <0.001 |
+|     spiInitClock      |    <0.001 |
++-----------------------+-----------+
 
 

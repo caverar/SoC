@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Thu Feb 21 15:24:57 2019
+| Date         : Sun Feb 24 19:20:11 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -606,9 +606,9 @@ Slack (MET) :             5.641ns  (required time - arrival time)
                          LUT6 (Prop_lut6_I0_O)        0.295     4.456 f  AudVid/i2s/squaregenerator/data[15]_i_4/O
                          net (fo=1, unplaced)         0.419     4.875    AudVid/i2s/squaregenerator/data[15]_i_4_n_1
                          LUT5 (Prop_lut5_I2_O)        0.124     4.999 f  AudVid/i2s/squaregenerator/data[15]_i_2/O
-                         net (fo=3, unplaced)         0.467     5.466    AudVid/i2s/squaregenerator/data[15]_i_2_n_1
+                         net (fo=3, unplaced)         0.467     5.466    AudVid/i2s/squaregenerator/data1
                          LUT1 (Prop_lut1_I0_O)        0.124     5.590 r  AudVid/i2s/squaregenerator/count[0]_i_1__3/O
-                         net (fo=18, unplaced)        0.833     6.423    AudVid/i2s/squaregenerator/count[0]_i_1__3_n_1
+                         net (fo=18, unplaced)        0.833     6.423    AudVid/i2s/squaregenerator/clear
                          FDRE                                         r  AudVid/i2s/squaregenerator/count_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
@@ -772,7 +772,7 @@ Slack (MET) :             37.308ns  (required time - arrival time)
                          FDRE                                         r  AudVid/sd_spi/spi/count_reg[1]/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.496    43.926 r  AudVid/sd_spi/spi/count_reg[1]/Q
-                         net (fo=14, unplaced)        0.792    44.718    AudVid/sd_spi/spi/count[1]
+                         net (fo=14, unplaced)        0.792    44.718    AudVid/sd_spi/spi/count_reg_n_1_[1]
                          LUT3 (Prop_lut3_I0_O)        0.295    45.013 r  AudVid/sd_spi/spi/Data[0]_i_1/O
                          net (fo=9, unplaced)         0.514    45.527    AudVid/sd_spi/spi/p_1_in
                          FDRE                                         r  AudVid/sd_spi/spi/Data_reg[0]/CE

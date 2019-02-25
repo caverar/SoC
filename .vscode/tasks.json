@@ -38,6 +38,7 @@
                 "Hardware/utilities/FrequencyGenerator.v",
                 "Hardware/utilities/ButtonDebouncer.v",
                 "Hardware/utilities/FrequencyDivider.v",
+                "Hardware/utilities/StereoSignedAdder.v",                
                 "Hardware/utilities/simulationResources/BUF.v",
                 "Hardware/utilities/simulationResources/BUFG.v",
                 "Hardware/utilities/simulationResources/BUFGCE.v",

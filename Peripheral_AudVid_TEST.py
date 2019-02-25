@@ -142,6 +142,7 @@ platform.add_source("Hardware/utilities/FrequencyGenerator.v")
 platform.add_source("Hardware/utilities/Counter.v")
 platform.add_source("Hardware/utilities/ButtonDebouncer.v")
 platform.add_source("Hardware/utilities/ButtonDebouncerTester.v")
+platform.add_source("Hardware/utilities/StereoSignedAdder.v")
 
 
 # Modulo Principal
@@ -168,7 +169,7 @@ class SOC(Module,AutoCSR):
         self.SD_SPI_COUNT_DEBUG     = Signal() 
         self.SD_SPI_UTILCOUNT_DEBUG = Signal()
         self.TilesControlRegister   = Signal(14)
-        self.enable_DEBUG           = Signal()
+        #self.enable_DEBUG           = Signal()
         self.Buffered_SystemClock   = Signal()     
        
         self.specials +=Instance("IBUF",        
@@ -181,7 +182,7 @@ class SOC(Module,AutoCSR):
             i_Reset                  = self.Reset,
             i_CLK                    = self.SystemClock,         
             i_TilesControlRegister   = self.TilesControlRegister,
-            i_enable_DEBUG           = self.enable_DEBUG,
+            #i_enable_DEBUG           = self.enable_DEBUG,
             o_TFT_SPI_CLK            = self.TFT_SPI_CLK,
             o_TFT_SPI_CS             = self.TFT_SPI_CS,
             o_TFT_SPI_MOSI           = self.TFT_SPI_MOSI,
@@ -199,7 +200,7 @@ class SOC(Module,AutoCSR):
 
     
         )
-        self.comb += self.enable_DEBUG.eq(buttons)
+        #self.comb += self.enable_DEBUG.eq(buttons)
         self.comb += self.TilesControlRegister.eq(switches)
         
         self.comb += self.Reset.eq(Reset)

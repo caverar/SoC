@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Thu Feb 21 15:25:00 2019
+| Date         : Sun Feb 24 19:20:11 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,9 +21,9 @@ Table of Contents
 +--------------------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |                     Instance                     |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +--------------------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                      (top) |       2245 |       2141 |     104 |    0 | 1868 |     11 |      3 |            3 |
+| top                                              |                      (top) |       2244 |       2140 |     104 |    0 | 1868 |     11 |      3 |            3 |
 |   (top)                                          |                      (top) |        394 |        378 |      16 |    0 |  535 |      9 |      0 |            0 |
-|   AudVid                                         |                     AudVid |        329 |        289 |      40 |    0 |  219 |      0 |      1 |            0 |
+|   AudVid                                         |                     AudVid |        328 |        288 |      40 |    0 |  219 |      0 |      1 |            0 |
 |     (AudVid)                                     |                     AudVid |        115 |         75 |      40 |    0 |   34 |      0 |      1 |            0 |
 |     audvid_clockmanager                          |        AudVid_ClockManager |          2 |          2 |       0 |    0 |   36 |      0 |      0 |            0 |
 |       Reloj1                                     |                     reloj1 |          0 |          0 |       0 |    0 |   24 |      0 |      0 |            0 |
@@ -40,9 +40,9 @@ Table of Contents
 |       (sd_spi)                                   |                     SD_SPI |         36 |         36 |       0 |    0 |   54 |      0 |      0 |            0 |
 |       spi                                        |                    FullSPI |         29 |         29 |       0 |    0 |   20 |      0 |      0 |            0 |
 |       spiInitClock                               |         FrequencyGenerator |         10 |         10 |       0 |    0 |    7 |      0 |      0 |            0 |
-|     tft_spi                                      |                    TFT_SPI |        122 |        122 |       0 |    0 |   39 |      0 |      0 |            0 |
+|     tft_spi                                      |                    TFT_SPI |        121 |        121 |       0 |    0 |   39 |      0 |      0 |            0 |
 |       (tft_spi)                                  |                    TFT_SPI |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            0 |
-|       counter                                    |                    Counter |         90 |         90 |       0 |    0 |   26 |      0 |      0 |            0 |
+|       counter                                    |                    Counter |         89 |         89 |       0 |    0 |   26 |      0 |      0 |            0 |
 |       initializationRegister                     |     InitializationRegister |         27 |         27 |       0 |    0 |    8 |      0 |      0 |            0 |
 |       spi                                        |                        SPI |          4 |          4 |       0 |    0 |    5 |      0 |      0 |            0 |
 |   lm32_cpu                                       |                   lm32_cpu |       1522 |       1474 |      48 |    0 | 1114 |      2 |      2 |            3 |

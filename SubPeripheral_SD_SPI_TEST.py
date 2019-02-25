@@ -127,7 +127,7 @@ class SOC(Module):
         self.SPI_UTILCOUNT_DEBUG = Signal()
         self.SD_WorkCLK          = Signal()
 
-        self.specials +=Instance("ClockManager",
+        self.specials +=Instance("AudVid_ClockManager",
             i_InputCLK  = self.SystemClock,
             o_MasterCLK = self.MasterCLK,
             o_SDCLK     = self.SD_WorkCLK 
@@ -135,13 +135,13 @@ class SOC(Module):
         self.specials +=Instance("SD_SPI",
             i_MasterCLK           = self.MasterCLK,
             i_WorkCLK             = self.SD_WorkCLK,
-            i_Reset               = self.Reset,
+            #i_Reset               = self.Reset,
             i_SPI_MISO            = self.SD_SPI_MISO,
             o_SPI_MOSI            = self.SD_SPI_MOSI,
             o_SPI_CLK             = self.SD_SPI_CLK,
             o_SPI_CS              = self.SD_SPI_CS,
-            o_SPI_COUNT_DEBUG     = self.SPI_COUNT_DEBUG,
-            o_SPI_UTILCOUNT_DEBUG = self.SPI_UTILCOUNT_DEBUG,
+            #o_SPI_COUNT_DEBUG     = self.SPI_COUNT_DEBUG,
+            #o_SPI_UTILCOUNT_DEBUG = self.SPI_UTILCOUNT_DEBUG,
             i_InputAddress        = self.SD_InputAddress
         )       
         self.comb += leds.eq(self.Leds)

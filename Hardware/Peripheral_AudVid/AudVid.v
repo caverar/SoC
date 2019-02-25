@@ -36,9 +36,9 @@ module AudVid(
     wire        SD_WorkCLK;     //12.5MHz
 
     
-    reg  [3:0]  TilesRegister [3871:0];
-    reg  [15:0] Track1Register [1023:0];
-    reg  [15:0] Track2Register [1023:0]; 
+    reg  [3:0]  TilesRegister  [3871:0];
+    reg  [31:0] Track1Register [255:0];
+    reg  [31:0] Track2Register [255:0]; 
     // reg  [3:0]  TilesRead_XAddress1;
     // reg  [3:0]  TilesRead_YAddress1;
     // reg  [4:0]  TilesRead_TileAddress1;
@@ -67,13 +67,22 @@ module AudVid(
     reg  [23:0] WriteAudio_Track2BeginAddress;
     reg  [23:0] WriteAudio_Track2EndAddress;
     reg         WriteAudio_Track2EnablePlay;
-    reg         WriteAudio_Track2EnableLoop;    
+    reg         WriteAudio_Track2EnableLoop;
+    reg [31:0]  WriteAudio_Track1Data;
+    reg [31:0]  WriteAudio_Track2Data;
+    reg [9:0]   WriteAudio_PlayCount;
+    reg         WriteAudio_EnableSDAudioRead;
+    reg         WriteAudio_BankSelector;    
 
     reg  [23:0] TracksAdressRegister [13:0];
     
 
     initial begin
-
+        WriteAudio_BankSelector       = 0;    
+        WriteAudio_EnableSDAudioRead  = 0;  //indica cuando pedir datos de audio, y cuando cambiar el banco de lectura
+        WriteAudio_Track1Data         = 0;
+        WriteAudio_Track2Data         = 0;
+        WriteAudio_PlayCount          = 0;
         WriteAudio_Track1BeginAddress = 0;
         WriteAudio_Track1EndAddress   = 0;
         WriteAudio_Track1EnablePlay   = 0;
@@ -220,6 +229,41 @@ module AudVid(
         WriteAudio_Track2EnablePlay   <= Track2ControlRegister[4];
         WriteAudio_Track2EnableLoop   <= Track2ControlRegister[3];
     end
+
+    //Reproduccion de Audio
+     
+    always@(posedge DAC_DataClock) begin
+        if(WriteAudio_PlayCount==255) begin
+            WriteAudio_BankSelector<=~WriteAudio_BankSelector;
+            WriteAudio_EnableSDAudioRead<=1;
+        
+        end else if(WriteAudio_PlayCount==127)begin
+        
+            WriteAudio_EnableSDAudioRead<=1;
+            WriteAudio_BankSelector<=~WriteAudio_BankSelector;
+
+        
+        end else begin
+            WriteAudio_EnableSDAudioRead<=0;       
+            WriteAudio_PlayCount<=WriteAudio_PlayCount+2;
+        end 
+
+        if(WriteAudio_Track1EnablePlay)begin
+            WriteAudio_Track1Data<=Track1Register[WriteAudio_PlayCount];
+        end
+        if(WriteAudio_Track2EnablePlay)begin
+            WriteAudio_Track2Data<=Track2Register[WriteAudio_PlayCount];
+        end        
+
+
+    end
+
+    StereoSignedAdder adder(
+        .A(WriteAudio_Track1Data),
+        .B(WriteAudio_Track2Data),
+        .O(DAC_Data)
+    );
+
     //Escritura en pantalla
 
     always@(posedge TFT_DataClock) begin

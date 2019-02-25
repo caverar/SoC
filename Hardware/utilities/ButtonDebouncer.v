@@ -8,6 +8,7 @@ module ButtonDebouncer (
 	wire VerificationClk;
 	reg prevState;
 	reg state;
+	
 
 	//Instancias
 

@@ -157,6 +157,8 @@ platform.add_source("Hardware/utilities/FrequencyGenerator.v")
 platform.add_source("Hardware/utilities/Counter.v")
 platform.add_source("Hardware/utilities/ButtonDebouncer.v")
 platform.add_source("Hardware/utilities/ButtonDebouncerTester.v")
+platform.add_source("Hardware/utilities/StereoSignedAdder.v")
+
 
 
 

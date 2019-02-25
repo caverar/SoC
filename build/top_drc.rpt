@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 20 18:54:17 2019
+| Date         : Sun Feb 24 19:26:10 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_drc -file top_drc.rpt
 | Design       : top
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 6
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| PDRC-153    | Warning  | Gated clock check                                           | 1          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
+| PDRC-153    | Warning  | Gated clock check                                           | 3          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -50,21 +50,45 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net AudVid/sd_spi/spiInitClock/CLK is a gated clock net sourced by a combinational pin AudVid/sd_spi/spiInitClock/count[2]_i_2/O, cell AudVid/sd_spi/spiInitClock/count[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net SD_SPI/spiInitClock/CLK is a gated clock net sourced by a combinational pin SD_SPI/spiInitClock/count[2]_i_2/O, cell SD_SPI/spiInitClock/count[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net SD_SPI/spiInitClock/Data_reg[0] is a gated clock net sourced by a combinational pin SD_SPI/spiInitClock/Data[7]_i_2/O, cell SD_SPI/spiInitClock/Data[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net SD_SPI/spiInitClock/I0 is a gated clock net sourced by a combinational pin SD_SPI/spiInitClock/negedgeBuffer_i_1/O, cell SD_SPI/spiInitClock/negedgeBuffer_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT AudVid/sd_spi/spiInitClock/count[2]_i_2 is driving clock pin of 26 cells. This could lead to large hold time violations. First few involved cells are:
-    AudVid/sd_spi/spi/DataClk_reg {FDRE}
-    AudVid/sd_spi/spi/Data_reg[0] {FDRE}
-    AudVid/sd_spi/spi/Data_reg[1] {FDRE}
-    AudVid/sd_spi/spi/Data_reg[2] {FDRE}
-    AudVid/sd_spi/spi/Data_reg[3] {FDRE}
-    AudVid/sd_spi/spi/Data_reg[4] {FDRE}
-    AudVid/sd_spi/spi/Data_reg[5] {FDRE}
-    AudVid/sd_spi/spi/Data_reg[6] {FDRE}
-    AudVid/sd_spi/spi/Data_reg[7] {FDRE}
+A LUT SD_SPI/spiInitClock/Data[7]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
+    SD_SPI/spi/Data_reg[0] {FDRE}
+    SD_SPI/spi/Data_reg[1] {FDRE}
+    SD_SPI/spi/Data_reg[2] {FDRE}
+    SD_SPI/spi/Data_reg[3] {FDRE}
+    SD_SPI/spi/Data_reg[4] {FDRE}
+    SD_SPI/spi/Data_reg[5] {FDRE}
+    SD_SPI/spi/Data_reg[6] {FDRE}
+    SD_SPI/spi/Data_reg[7] {FDRE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT SD_SPI/spiInitClock/count[2]_i_2 is driving clock pin of 12 cells. This could lead to large hold time violations. First few involved cells are:
+    SD_SPI/spi/DataClk_reg {FDRE}
+    SD_SPI/spi/InputData_reg[0] {FDRE}
+    SD_SPI/spi/InputData_reg[1] {FDRE}
+    SD_SPI/spi/InputData_reg[2] {FDRE}
+    SD_SPI/spi/InputData_reg[3] {FDRE}
+    SD_SPI/spi/InputData_reg[4] {FDRE}
+    SD_SPI/spi/InputData_reg[5] {FDRE}
+    SD_SPI/spi/InputData_reg[6] {FDRE}
+    SD_SPI/spi/InputData_reg[7] {FDRE}
 
 Related violations: <none>
 

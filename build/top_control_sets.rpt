@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Feb 20 18:53:31 2019
+| Date         : Sun Feb 24 19:25:39 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_control_sets -verbose -file top_control_sets.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    40 |
-| Unused register locations in slices containing registers |   134 |
+| Number of unique control sets                            |    19 |
+| Unused register locations in slices containing registers |    76 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,13 +34,11 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |           13 |
-|      4 |            1 |
+|      2 |           10 |
 |      6 |            1 |
 |      8 |            1 |
-|     10 |            1 |
-|     12 |            2 |
-|    16+ |           21 |
+|     12 |            1 |
+|    16+ |            6 |
 +--------+--------------+
 
 
@@ -50,61 +48,40 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             148 |           24 |
+| No           | No                    | No                     |              64 |           10 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             100 |           13 |
-| Yes          | No                    | No                     |              82 |           20 |
+| No           | Yes                   | No                     |              12 |            2 |
+| Yes          | No                    | No                     |             118 |           24 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             120 |           19 |
+| Yes          | Yes                   | No                     |              18 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+
-|                                          Clock Signal                                         |                     Enable Signal                     |                Set/Reset Signal                | Slice Load Count | Bel Load Count |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             |                                                       | AudVid/tft_spi/counter/CS_reg                  |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/Data[2]_i_1_n_1                     |                                                |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/p_1_in                              |                                                |                1 |              2 |
-|  AudVid/tft_spi/spi/dataClk                                                                   |                                                       |                                                |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/Data[5]_i_1_n_1                     |                                                |                1 |              2 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/SD_WorkCLK                            |                                                       |                                                |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/Data[6]_i_1_n_1                     |                                                |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/Data[3]_i_1_n_1                     |                                                |                1 |              2 |
-|  sd_spi/DataClock                                                                             | AudVid/sd_spi/SPI_CS1_out                             |                                                |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/Data[1]_i_1_n_1                     |                                                |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/Data[4]_i_1_n_1                     |                                                |                1 |              2 |
-|  AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/Data[7]_i_1_n_1                     |                                                |                1 |              2 |
-|  n_0_408_BUFG                                                                                 |                                                       |                                                |                1 |              2 |
-|  sd_spi/DataClock                                                                             |                                                       |                                                |                2 |              4 |
-| ~AudVid/i2s/Data_reg[0]_0                                                                     |                                                       |                                                |                1 |              6 |
-|  AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/I2SCLK_reg                                 |                                                       |                                                |                1 |              8 |
-| ~AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/count_reg[3]                          |                                                       |                                                |                1 |             10 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/SD_WorkCLK                            |                                                       | AudVid/sd_spi/spiInitClock/clear               |                2 |             12 |
-| ~AudVid/audvid_clockmanager/Reloj2/I2S_WS_reg                                                 |                                                       |                                                |                1 |             12 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk    |                                                       |                                                |                1 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             | AudVid/TilesPositionsRegister_reg_64_127_0_2_i_1_n_1  |                                                |                2 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             | AudVid/TilesPositionsRegister_reg_0_63_0_2_i_1_n_1    |                                                |                2 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             | AudVid/TilesPositionsRegister_reg_256_319_0_2_i_1_n_1 |                                                |                2 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             | AudVid/TilesPositionsRegister_reg_192_255_0_2_i_1_n_1 |                                                |                2 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             | AudVid/TilesPositionsRegister_reg_128_191_0_2_i_1_n_1 |                                                |                2 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/TFT_Clock_reloj1_clk_wiz_0_0_en_clk   |                                                       |                                                |                1 |             16 |
-| ~AudVid/sd_spi/spiInitClock/CLK                                                               | AudVid/sd_spi/spi/p_1_in                              |                                                |                2 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0_en_clk |                                                       |                                                |                1 |             16 |
-|  AudVid/audvid_clockmanager/Reloj2/AudioClock/inst/I2S_CLK_reloj2_clk_wiz_0_0_en_clk          |                                                       |                                                |                1 |             16 |
-|  sd_spi/DataClock                                                                             | AudVid/sd_spi/OutputData[7]_i_1_n_1                   |                                                |                4 |             16 |
-|  n_0_408_BUFG                                                                                 | AudVid/TilesWrite_XPosition                           |                                                |                3 |             16 |
-|  n_0_408_BUFG                                                                                 | AudVid/TilesWrite_Started                             | AudVid/TilesWrite_XPosition                    |                3 |             16 |
-|  n_0_408_BUFG                                                                                 | AudVid/TilesWrite_Started                             |                                                |                2 |             16 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             |                                                       |                                                |                5 |             18 |
-|  sd_spi/DataClock                                                                             | AudVid/sd_spi/UtilCount[9]_i_2_n_1                    | AudVid/sd_spi/UtilCount[9]_i_1_n_1             |                2 |             18 |
-|  n_0_408_BUFG                                                                                 | AudVid/TilesWrite_TilePosition[0]_i_2_n_1             | AudVid/TilesWrite_TilePosition[0]_i_1_n_1      |                4 |             18 |
-| ~AudVid/sd_spi/spiInitClock/CLK                                                               |                                                       |                                                |                6 |             20 |
-|  AudVid/audvid_clockmanager/Reloj1/MainClockWizard/inst/MasterCLK                             |                                                       | AudVid/i2s/squaregenerator/count[0]_i_1__5_n_1 |                5 |             36 |
-|  AudVid/tft_spi/spi/dataClk                                                                   |                                                       | AudVid/tft_spi/counter/count[24]_i_1_n_1       |                5 |             50 |
-|  sd_spi/DataClock                                                                             | AudVid/sd_spi/spi/E[0]                                | Reset_IBUF                                     |               10 |             68 |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+
++-------------------------------------------------------------------------------------+------------------------------------+-----------------------------+------------------+----------------+
+|                                     Clock Signal                                    |            Enable Signal           |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------------------------------+------------------------------------+-----------------------------+------------------+----------------+
+|  AudVid_ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK                         |                                    |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/Data[3]_i_1_n_0         |                             |                1 |              2 |
+|  DataClock                                                                          | SD_SPI/SPI_CS1_out                 |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/Data[2]_i_1_n_0         |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/Data[6]_i_1_n_0         |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/Data[5]_i_1_n_0         |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/Data[1]_i_1_n_0         |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/Data[4]_i_1_n_0         |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/Data[7]_i_1_n_0         |                             |                1 |              2 |
+|  SD_SPI/spiInitClock/Data_reg[0]                                                    | SD_SPI/spi/p_1_in                  |                             |                1 |              2 |
+|  DataClock                                                                          |                                    |                             |                2 |              6 |
+|  SD_SPI/spiInitClock/CLK                                                            |                                    |                             |                1 |              8 |
+|  AudVid_ClockManager/Reloj1/MainClockWizard/inst/SD_WorkCLK                         |                                    | SD_SPI/spiInitClock/clear   |                2 |             12 |
+|  SD_SPI/spiInitClock/CLK                                                            | SD_SPI/spi/p_1_in                  |                             |                2 |             16 |
+|  DataClock                                                                          | SD_SPI/OutputData[7]_i_1_n_0       |                             |                4 |             16 |
+|  AudVid_ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0_en_clk |                                    |                             |                1 |             16 |
+|  DataClock                                                                          | SD_SPI/UtilCount[9]_i_2_n_0        | SD_SPI/UtilCount[9]_i_1_n_0 |                3 |             18 |
+|  SD_SPI/EnableDataRead                                                              |                                    |                             |                5 |             32 |
+|  DataClock                                                                          | SD_SPI/spi/FSM_onehot_count_reg[0] |                             |                9 |             68 |
++-------------------------------------------------------------------------------------+------------------------------------+-----------------------------+------------------+----------------+
 
 
