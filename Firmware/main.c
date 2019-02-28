@@ -32,24 +32,31 @@ int main(void)
 	
 
 	while(1) {
-		for(int i=0;i<320;i++){
-			if((i%2)>0){
-				putTile(i,20);
-			}else{
-				putTile(i,7);
-			}	
-		}
+		for(int j=0;j<28;j=j+4){
 
-		wait_ms(1000);
-				
-		for(int i=0;i<320;i++){
-			if((i%3)>0){
-				putTile(i,12);
-			}else{
-				putTile(i,5);
-			}	
+			for(int i=0;i<320;i++){
+				if((i%2)>0){
+					putTile(i,j);
+				}else{
+					putTile(i,j+1);
+				}				
+			}
+
+			wait_ms(200);
+			for(int i=0;i<320;i++){
+				if((i%3)>0){
+					putTile(i,j+2);
+				}else{
+					putTile(i,j+3);
+				}				
+			}
+
+			wait_ms(200);	
 		}
-		wait_ms(1000);
+		
+				
+		
+
 	}
 
 	return 0;

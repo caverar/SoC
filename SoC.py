@@ -174,6 +174,7 @@ class SoC(SoCCore):
         sys_clk_freq = int(100e6)
         # SoC with CPU
         SoCCore.__init__(self, platform,
+            csr_data_width=32,
             cpu_type="lm32",
             clk_freq=100e6,
             ident="CPU Test SoC", ident_version=True,

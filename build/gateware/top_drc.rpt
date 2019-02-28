@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sun Feb 24 19:21:26 2019
+| Date         : Wed Feb 27 23:34:45 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_drc -file top_drc.rpt
 | Design       : top
@@ -24,15 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 12
+             Violations found: 14
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
 | DPOP-1      | Warning  | PREG Output pipelining                                      | 1          |
 | DPOP-2      | Warning  | MREG Output pipelining                                      | 3          |
-| PDRC-153    | Warning  | Gated clock check                                           | 3          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| PDRC-153    | Warning  | Gated clock check                                           | 4          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 3          |
 | REQP-165    | Advisory | writefirst                                                  | 2          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
@@ -86,6 +86,11 @@ Gated clock check
 Net AudVid/sd_spi/spiInitClock/I0 is a gated clock net sourced by a combinational pin AudVid/sd_spi/spiInitClock/negedgeBuffer_i_1/O, cell AudVid/sd_spi/spiInitClock/negedgeBuffer_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
+PDRC-153#4 Warning
+Gated clock check  
+Net AudVid/tft_spi/spi/TilesWrite_XAddress0_reg_rep[3] is a gated clock net sourced by a combinational pin AudVid/tft_spi/spi/TilesWrite_YAddress_rep[3]_i_3/O, cell AudVid/tft_spi/spi/TilesWrite_YAddress_rep[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT AudVid/sd_spi/spiInitClock/Data[7]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
@@ -112,6 +117,21 @@ A LUT AudVid/sd_spi/spiInitClock/count[2]_i_2 is driving clock pin of 12 cells. 
     AudVid/sd_spi/spi/InputData_reg[5] {FDRE}
     AudVid/sd_spi/spi/InputData_reg[6] {FDRE}
     AudVid/sd_spi/spi/InputData_reg[7] {FDRE}
+
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT AudVid/tft_spi/spi/TilesWrite_YAddress_rep[3]_i_3 is driving clock pin of 35 cells. This could lead to large hold time violations. First few involved cells are:
+    AudVid/TFT_DataEncoded_reg {RAMB18E1}
+    AudVid/TilesWrite_Started_reg {FDRE}
+    AudVid/TilesWrite_TilePosition_reg[0] {FDRE}
+    AudVid/TilesWrite_TilePosition_reg[1] {FDRE}
+    AudVid/TilesWrite_TilePosition_reg[2] {FDRE}
+    AudVid/TilesWrite_TilePosition_reg[3] {FDRE}
+    AudVid/TilesWrite_TilePosition_reg[4] {FDRE}
+    AudVid/TilesWrite_TilePosition_reg[5] {FDRE}
+    AudVid/TilesWrite_TilePosition_reg[6] {FDRE}
 
 Related violations: <none>
 

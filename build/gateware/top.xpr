@@ -6,7 +6,7 @@
 <Project Version="7" Minor="38" Path="/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="43e4066d150e4fa8b71bc80aa215aa02"/>
+    <Option Name="Id" Val="30ec5ed3aad047cfaf84a31215b275f9"/>
     <Option Name="Part" Val="xc7a35tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -61,55 +61,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Hardware/utilities/ButtonDebouncerTester.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -125,63 +77,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Hardware/utilities/StereoSignedAdder.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Hardware/utilities/ButtonDebouncer.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/top.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/AudVid.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -197,47 +93,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/ColorDecoder.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Hardware/utilities/Counter.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -253,7 +109,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v">
+      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -261,7 +117,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Hardware/utilities/FrequencyGenerator.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -269,7 +125,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -277,7 +133,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -293,6 +157,29 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/VideoData.mem">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/InitialPosition.mem">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
@@ -300,7 +187,119 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/utilities/StereoSignedAdder.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/top.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/utilities/Counter.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/AudVid.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/utilities/ButtonDebouncer.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/utilities/ButtonDebouncerTester.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/ColorDecoder.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -316,7 +315,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v">
+      <File Path="$PPRDIR/../../Hardware/utilities/FrequencyGenerator.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -324,14 +323,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/VideoData.mem">
-        <FileInfo>
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v">
+      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -339,7 +331,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v">
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -350,8 +350,8 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="top"/>
-        <Option Name="VerilogDir" Val="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl"/>
         <Option Name="VerilogDir" Val="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config"/>
+        <Option Name="VerilogDir" Val="$PPRDIR/../../../../../../../../Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
