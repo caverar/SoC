@@ -218,7 +218,7 @@ module AudVid(
 
     
     //Almacenamiento de Audio
-    always@(posedge SD_InputDataClock) begin
+    always@(negedge SD_InputDataClock) begin
         if(WriteAudio_EnableSDAudioRead)begin
             ReadAudio_EnableStorage=1;
         end

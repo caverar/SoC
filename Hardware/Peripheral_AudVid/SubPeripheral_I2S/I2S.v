@@ -12,7 +12,7 @@ module I2S(
     reg  [4:0]  count;
     reg  [31:0] Data;
 
-    wire [31:0] SquareData;
+    //wire [31:0] SquareData;
     
     
     //Inicializacion
@@ -24,25 +24,25 @@ module I2S(
 
 
     //  Generador de Pruebas
-    SquareGenerator squaregenerator(
-        .CLK(MasterCLK), ////////////////
-        .data(SquareData)
-    );
+    // SquareGenerator squaregenerator(
+    //     .CLK(MasterCLK), ////////////////
+    //     .data(SquareData)
+    // );
  
 
 
     //Logica Secuencial
-    always@(negedge I2S_CLK)begin
+    always@(negedge I2S_CLK) begin
         if(count==31)begin
-            I2S_WS=0;
+            I2S_WS<=0;
         end else if(count==15) begin
-            I2S_WS=1;
+            I2S_WS<=1;
         end
         count=count+1;  
     end
     always@(negedge I2S_WS)begin
-        //Data=InputData;
-        Data=SquareData;  
+        Data<=InputData;
+        //Data=SquareData;  
     end
     
     //Logica Combinacional

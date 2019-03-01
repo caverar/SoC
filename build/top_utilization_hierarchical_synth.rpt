@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Thu Feb 28 13:12:08 2019
+| Date         : Fri Mar  1 18:24:07 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -18,23 +18,19 @@ Table of Contents
 1. Utilization by Hierarchy
 ---------------------------
 
-+-----------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-|        Instance       |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
-+-----------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                   |                      (top) |         87 |         87 |       0 |    0 | 136 |      0 |      0 |            0 |
-|   (top)               |                      (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   AudVid_ClockManager |        AudVid_ClockManager |          2 |          2 |       0 |    0 |  36 |      0 |      0 |            0 |
-|     Reloj1            |                     reloj1 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
-|       MainClockWizard |         reloj1_clk_wiz_0_0 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
-|         inst          | reloj1_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
-|     Reloj2            |                     reloj2 |          2 |          2 |       0 |    0 |  12 |      0 |      0 |            0 |
-|       (Reloj2)        |                     reloj2 |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
-|       AudioClock      |         reloj2_clk_wiz_0_0 |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
-|         inst          | reloj2_clk_wiz_0_0_clk_wiz |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
-|   SD_SPI              |                     SD_SPI |         85 |         85 |       0 |    0 | 100 |      0 |      0 |            0 |
-|     (SD_SPI)          |                     SD_SPI |         44 |         44 |       0 |    0 |  71 |      0 |      0 |            0 |
-|     spi               |                    FullSPI |         31 |         31 |       0 |    0 |  22 |      0 |      0 |            0 |
-|     spiInitClock      |         FrequencyGenerator |         10 |         10 |       0 |    0 |   7 |      0 |      0 |            0 |
-+-----------------------+----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
++---------------------------+---------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|          Instance         |        Module       | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++---------------------------+---------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| top                       |               (top) |         88 |         88 |       0 |    0 | 136 |      0 |      0 |            0 |
+|   (top)                   |               (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   AudVid_ClockManager     | AudVid_ClockManager |          2 |          2 |       0 |    0 |  36 |      0 |      0 |            0 |
+|     (AudVid_ClockManager) | AudVid_ClockManager |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
+|     cm1                   |                 CM1 |          0 |          0 |       0 |    0 |  24 |      0 |      0 |            0 |
+|     cm2                   |                 CM2 |          0 |          0 |       0 |    0 |   8 |      0 |      0 |            0 |
+|   SD_SPI                  |              SD_SPI |         86 |         86 |       0 |    0 | 100 |      0 |      0 |            0 |
+|     (SD_SPI)              |              SD_SPI |         53 |         53 |       0 |    0 |  71 |      0 |      0 |            0 |
+|     spi                   |             FullSPI |         24 |         24 |       0 |    0 |  20 |      0 |      0 |            0 |
+|     spiInitClock          |  FrequencyGenerator |          9 |          9 |       0 |    0 |   9 |      0 |      0 |            0 |
++---------------------------+---------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 
 
