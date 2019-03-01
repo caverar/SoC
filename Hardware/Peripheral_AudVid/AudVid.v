@@ -227,11 +227,11 @@ module AudVid(
             if(ReadAudio_EnableStorage)begin
                 //Lectura Track 1
                 if (SDReadCount<512) begin
-                    Track1Register[{WriteAudio_BankSelector,SDReadCount[8:2]}]=SD_InputData<<(8*(SDReadCount[1:0]));
+                    Track1Register[{WriteAudio_BankSelector,SDReadCount[8:2]}]=SD_InputData<<(8*(3-SDReadCount[1:0]));
 
                 //Lectura Track 2 
                 end else if(SDReadCount<1024) begin
-                    Track2Register[{WriteAudio_BankSelector,SDReadCount[8:2]}]=SD_InputData<<(8*(SDReadCount[1:0]));
+                    Track2Register[{WriteAudio_BankSelector,SDReadCount[8:2]}]=SD_InputData<<(8*(3-SDReadCount[1:0]));
 
                 end
             end

@@ -26,8 +26,7 @@ module SD_SPI(
     reg  [9:0]  UtilCount;
     reg         SPI_Enable;
     reg  [7:0]  OutputData;
-    wire        SPI_InputCLK;
-    reg  [9:0]  VideoCount;
+    wire        SPI_InputCLK;    
     reg  [23:0] Address;
     
     
@@ -38,8 +37,7 @@ module SD_SPI(
         UtilCount=0;
         OutputData=8'hFF;
         SPI_CS=1;
-        SPI_Enable=0;
-        VideoCount=0;
+        SPI_Enable=0;        
         EnableDataRead=0;
     end
     //Instancias
@@ -101,8 +99,7 @@ module SD_SPI(
                 0:  begin
                     OutputData<=8'h00;
                     SPI_CS<=1;
-                    SPI_Enable<=0;
-                    VideoCount<=0; 
+                    SPI_Enable<=0;                    
                     count<=1;
                     UtilCount<=0;
                     EnableDataRead<=0;                    

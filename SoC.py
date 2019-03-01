@@ -12,6 +12,7 @@ from migen.build.xilinx import XilinxPlatform
 from litex.soc.integration.soc_core import *
 from litex.soc.integration.builder import *
 from Hardware.AudVid import AudVid
+from litex.soc.cores import gpio
 ##from ios import Led
 
 
@@ -164,13 +165,20 @@ platform.add_source("Hardware/utilities/StereoSignedAdder.v")
 
 # Modulo Principal
 class SoC(SoCCore):
-    csr_peripherals = [ 
-        #"leds",
-        "AudVid_WB"
-    ]
+    csr_peripherals = [         
+        "AudVid_WB",
+        #"Buttons",
+    ]    
+    
     csr_map_update(SoCCore.csr_map, csr_peripherals)
+    
 
     def __init__(self, platform):
+        # interrupt_map= {
+        #     'Buttons': 7,
+        # }
+        # SoCCore.interrupt_map.update(interrupt_map)
+
         sys_clk_freq = int(100e6)
         # SoC with CPU
         SoCCore.__init__(self, platform,
@@ -181,7 +189,10 @@ class SoC(SoCCore):
             integrated_rom_size=0x8000,
             integrated_main_ram_size=16*1024)
 
-        self.submodules.crg =CRG(platform.request("clk100"),platform.request("cpu_reset"))
+
+        
+        #self.submodules.Buttons = gpio.GPIOIn(buttons)
+        self.submodules.crg     = CRG(platform.request("clk100"),platform.request("cpu_reset"))
 
         self.submodules.AudVid_WB   = AudVid()       
 

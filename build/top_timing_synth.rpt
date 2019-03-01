@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sun Feb 24 19:25:31 2019
+| Date         : Thu Feb 28 13:12:07 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -85,11 +85,11 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 2 ports with no output delay specified. (HIGH)
+ There are 3 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
- There is 1 port with no output delay but with a timing clock defined on it or propagating through it (LOW)
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
 
 
 7. checking multiple_clock
@@ -130,10 +130,10 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      7.475        0.000                      0                   77        0.007        0.000                      0                   77        3.000        0.000                       0                    83  
+      6.185        0.000                      0                   79       -0.696       -0.696                      1                   79        3.000        0.000                       0                    85  
 
 
-All user specified timing constraints are met.
+Timing constraints are not met.
 
 
 ------------------------------------------------------------------------------------------------
@@ -161,7 +161,7 @@ Clock                                 WNS(ns)      TNS(ns)  TNS Failing Endpoint
 -----                                 -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 clk100                                                                                                                                                                              3.000        0.000                       0                     2  
   I2S_CLK_reloj2_clk_wiz_0_0           68.271        0.000                      0                   12        0.007        0.000                      0                   12       34.931        0.000                       0                    15  
-  MasterClocK_reloj1_clk_wiz_0_0        7.475        0.000                      0                    8        0.007        0.000                      0                    8        4.500        0.000                       0                    11  
+  MasterClocK_reloj1_clk_wiz_0_0        7.475        0.000                      0                    8        0.007        0.000                      0                    8        4.500        0.000                       0                    13  
   SD_Clock_reloj1_clk_wiz_0_0          37.308        0.000                      0                   49        0.007        0.000                      0                   49       39.500        0.000                       0                    38  
   TFT_Clock_reloj1_clk_wiz_0_0        157.428        0.000                      0                    8        0.007        0.000                      0                    8       53.360        0.000                       0                    11  
   clkfbout_reloj1_clk_wiz_0_0                                                                                                                                                       7.845        0.000                       0                     3  
@@ -173,8 +173,9 @@ clk100                                                                          
 | -----------------
 ------------------------------------------------------------------------------------------------
 
-From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
-----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+From Clock                      To Clock                            WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------                      --------                            -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+SD_Clock_reloj1_clk_wiz_0_0     MasterClocK_reloj1_clk_wiz_0_0        6.185        0.000                      0                    2       -0.696       -0.696                      1                    2  
 
 
 ------------------------------------------------------------------------------------------------
@@ -515,7 +516,7 @@ Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actua
 Min Period        n/a     BUFGCTRL/I0         n/a            2.155         10.000      7.845                AudVid_ClockManager/Reloj1/MainClockWizard/inst/clkout1_buf1/I0
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       10.000      203.360              AudVid_ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT0
 Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500                AudVid_ClockManager/Reloj1/MainClockWizard/inst/seq_reg1_reg[0]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500                AudVid_ClockManager/Reloj1/MainClockWizard/inst/seq_reg1_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500                SD_SPI/spi/SPI_CLK_reg/C
 
 
 
@@ -873,6 +874,156 @@ Sources:            { AudVid_ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/
 Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
 Min Period  n/a     BUFG/I              n/a            2.155         50.000      47.845               AudVid_ClockManager/Reloj2/AudioClock/inst/clkf_buf2/I
 Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       50.000      50.000               AudVid_ClockManager/Reloj2/AudioClock/inst/mmcm_adv_inst2/CLKFBIN
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  SD_Clock_reloj1_clk_wiz_0_0
+  To Clock:  MasterClocK_reloj1_clk_wiz_0_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.185ns,  Total Violation        0.000ns
+Hold  :            1  Failing Endpoint ,  Worst Slack       -0.696ns,  Total Violation       -0.696ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.185ns  (required time - arrival time)
+  Source:                 SD_SPI/spi/count_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by SD_Clock_reloj1_clk_wiz_0_0'  {rise@0.000ns fall@40.000ns period=80.000ns})
+  Destination:            SD_SPI/spi/SPI_MOSI_reg/D
+                            (rising edge-triggered cell FDRE clocked by MasterClocK_reloj1_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             MasterClocK_reloj1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (MasterClocK_reloj1_clk_wiz_0_0 rise@50.000ns - SD_Clock_reloj1_clk_wiz_0_0 fall@40.000ns)
+  Data Path Delay:        2.609ns  (logic 0.915ns (35.071%)  route 1.694ns (64.929%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -1.003ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.582ns = ( 47.418 - 50.000 ) 
+    Source Clock Delay      (SCD):    -1.093ns = ( 38.907 - 40.000 ) 
+    Clock Pessimism Removal (CPR):    0.485ns
+  Clock Uncertainty:      0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.212ns
+    Phase Error              (PE):    0.120ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SD_Clock_reloj1_clk_wiz_0_0 fall edge)
+                                                     40.000    40.000 f  
+    W5                                                0.000    40.000 f  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458    41.458 f  clk100_IBUF_inst/O
+                         net (fo=2, unplaced)         0.584    42.042    AudVid_ClockManager/Reloj1/MainClockWizard/inst/clk100_IBUF
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -5.108    36.935 f  AudVid_ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT1
+                         net (fo=2, unplaced)         0.584    37.519    AudVid_ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0
+                         BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    37.615 f  AudVid_ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf1/O
+                         net (fo=12, unplaced)        0.584    38.199    SD_SPI/spiInitClock/SD_WorkCLK
+                         LUT5 (Prop_lut5_I0_O)        0.124    38.323 r  SD_SPI/spiInitClock/count[2]_i_2/O
+                         net (fo=12, unplaced)        0.584    38.907    SD_SPI/spi/CLK
+                         FDRE                                         r  SD_SPI/spi/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.496    39.403 f  SD_SPI/spi/count_reg[1]/Q
+                         net (fo=14, unplaced)        0.792    40.195    SD_SPI/spi/count[1]
+                         LUT6 (Prop_lut6_I3_O)        0.295    40.490 r  SD_SPI/spi/SPI_MOSI_i_2/O
+                         net (fo=1, unplaced)         0.902    41.392    SD_SPI/spi/SPI_MOSI_i_2_n_0
+                         LUT3 (Prop_lut3_I0_O)        0.124    41.516 r  SD_SPI/spi/SPI_MOSI_i_1/O
+                         net (fo=1, unplaced)         0.000    41.516    SD_SPI/spi/SPI_MOSI_i_1_n_0
+                         FDRE                                         r  SD_SPI/spi/SPI_MOSI_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock MasterClocK_reloj1_clk_wiz_0_0 rise edge)
+                                                     50.000    50.000 r  
+    W5                                                0.000    50.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    50.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    51.388 r  clk100_IBUF_inst/O
+                         net (fo=2, unplaced)         0.439    51.827    AudVid_ClockManager/Reloj1/MainClockWizard/inst/clk100_IBUF
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378    46.449 r  AudVid_ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT0
+                         net (fo=2, unplaced)         0.439    46.888    AudVid_ClockManager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0
+                         BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    46.979 r  AudVid_ClockManager/Reloj1/MainClockWizard/inst/clkout1_buf1/O
+                         net (fo=2, unplaced)         0.439    47.418    SD_SPI/spi/MasterCLK
+                         FDRE                                         r  SD_SPI/spi/SPI_MOSI_reg/C
+                         clock pessimism              0.485    47.904    
+                         clock uncertainty           -0.232    47.672    
+                         FDRE (Setup_fdre_C_D)        0.029    47.701    SD_SPI/spi/SPI_MOSI_reg
+  -------------------------------------------------------------------
+                         required time                         47.701    
+                         arrival time                         -41.516    
+  -------------------------------------------------------------------
+                         slack                                  6.185    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.696ns  (arrival time - required time)
+  Source:                 AudVid_ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT1
+                            (clock source 'SD_Clock_reloj1_clk_wiz_0_0'  {rise@0.000ns fall@40.000ns period=80.000ns})
+  Destination:            SD_SPI/spi/SPI_CLK_reg/D
+                            (rising edge-triggered cell FDRE clocked by MasterClocK_reloj1_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             MasterClocK_reloj1_clk_wiz_0_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (MasterClocK_reloj1_clk_wiz_0_0 rise@0.000ns - SD_Clock_reloj1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        1.069ns  (logic 0.191ns (17.867%)  route 0.878ns (82.133%))
+  Logic Levels:           2  (BUFGCTRL=1 LUT6=1)
+  Clock Path Skew:        1.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.801ns
+    Source Clock Delay      (SCD):    -3.551ns
+    Clock Pessimism Removal (CPR):    0.485ns
+  Clock Uncertainty:      0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.212ns
+    Phase Error              (PE):    0.120ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock SD_Clock_reloj1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  clk100_IBUF_inst/O
+                         net (fo=2, unplaced)         0.439     1.827    AudVid_ClockManager/Reloj1/MainClockWizard/inst/clk100_IBUF
+  -------------------------------------------------------------------    -------------------
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -5.378    -3.551 r  AudVid_ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT1
+                         net (fo=2, unplaced)         0.439    -3.112    AudVid_ClockManager/Reloj1/MainClockWizard/inst/SD_Clock_reloj1_clk_wiz_0_0
+                         BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.091    -3.021 r  AudVid_ClockManager/Reloj1/MainClockWizard/inst/clkout2_buf1/O
+                         net (fo=12, unplaced)        0.439    -2.582    SD_SPI/spiInitClock/SD_WorkCLK
+                         LUT6 (Prop_lut6_I2_O)        0.100    -2.482 r  SD_SPI/spiInitClock/SPI_CLK_i_1/O
+                         net (fo=1, unplaced)         0.000    -2.482    SD_SPI/spi/SPI_Enable_reg
+                         FDRE                                         r  SD_SPI/spi/SPI_CLK_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock MasterClocK_reloj1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
+                         net (fo=2, unplaced)         0.584     2.042    AudVid_ClockManager/Reloj1/MainClockWizard/inst/clk100_IBUF
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  AudVid_ClockManager/Reloj1/MainClockWizard/inst/mmcm_adv_inst1/CLKOUT0
+                         net (fo=2, unplaced)         0.584    -2.481    AudVid_ClockManager/Reloj1/MainClockWizard/inst/MasterClocK_reloj1_clk_wiz_0_0
+                         BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -2.385 r  AudVid_ClockManager/Reloj1/MainClockWizard/inst/clkout1_buf1/O
+                         net (fo=2, unplaced)         0.584    -1.801    SD_SPI/spi/MasterCLK
+                         FDRE                                         r  SD_SPI/spi/SPI_CLK_reg/C
+                         clock pessimism             -0.485    -2.287    
+                         clock uncertainty            0.232    -2.055    
+                         FDRE (Hold_fdre_C_D)         0.269    -1.786    SD_SPI/spi/SPI_CLK_reg
+  -------------------------------------------------------------------
+                         required time                          1.786    
+                         arrival time                          -2.482    
+  -------------------------------------------------------------------
+                         slack                                 -0.696    
+
+
 
 
 

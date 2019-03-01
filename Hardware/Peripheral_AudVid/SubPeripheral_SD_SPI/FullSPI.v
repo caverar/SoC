@@ -1,8 +1,8 @@
 module FullSPI(
     output reg  [7:0] InputData,
     input  wire [7:0] OutputData,
-    output wire       SPI_MOSI,
-    output wire       SPI_CLK,
+    output reg        SPI_MOSI,
+    output reg        SPI_CLK,
     input  wire       SPI_MISO,
     input  wire       MasterCLK,
     input  wire       SPI_InputCLK_posedge,
@@ -36,8 +36,17 @@ module FullSPI(
 
         Data[7-count]<=SPI_MISO;   
     end
+    always@(posedge MasterCLK)begin
 
-    assign SPI_MOSI=(SPI_Enable)? OutputData[7-count]: 1;
-    assign SPI_CLK=(SPI_Enable)? SPI_InputCLK_posedge: 1;
+        if(SPI_Enable)begin
+            SPI_MOSI<=OutputData[7-count];
+            SPI_CLK<=SPI_InputCLK_posedge;
+        end else begin
+            SPI_MOSI<=1;
+            SPI_CLK<=1;
+        end
+    end
+    //assign SPI_MOSI=(SPI_Enable)? OutputData[7-count]: 1;
+    //assign SPI_CLK=(SPI_Enable)? SPI_InputCLK_posedge: 1;
 
 endmodule
