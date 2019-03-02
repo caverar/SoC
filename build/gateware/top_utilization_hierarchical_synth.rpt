@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Fri Mar  1 18:36:42 2019
+| Date         : Sat Mar  2 18:06:00 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,9 +21,9 @@ Table of Contents
 +--------------------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |                     Instance                     |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +--------------------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                      (top) |       2508 |       2404 |     104 |    0 | 2187 |     11 |      5 |            3 |
+| top                                              |                      (top) |       2541 |       2437 |     104 |    0 | 2216 |     11 |      5 |            3 |
 |   (top)                                          |                      (top) |        400 |        384 |      16 |    0 |  661 |      9 |      0 |            0 |
-|   AudVid                                         |                     AudVid |        574 |        534 |      40 |    0 |  412 |      0 |      3 |            0 |
+|   AudVid                                         |                     AudVid |        607 |        567 |      40 |    0 |  441 |      0 |      3 |            0 |
 |     (AudVid)                                     |                     AudVid |        282 |        242 |      40 |    0 |  191 |      0 |      3 |            0 |
 |     adder                                        |          StereoSignedAdder |         32 |         32 |       0 |    0 |    0 |      0 |      0 |            0 |
 |     audvid_clockmanager                          |        AudVid_ClockManager |          2 |          2 |       0 |    0 |   36 |      0 |      0 |            0 |
@@ -31,10 +31,11 @@ Table of Contents
 |       cm1                                        |                        CM1 |          0 |          0 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       cm2                                        |                        CM2 |          0 |          0 |       0 |    0 |    8 |      0 |      0 |            0 |
 |     i2s                                          |                        I2S |         13 |         13 |       0 |    0 |   38 |      0 |      0 |            0 |
-|     sd_spi                                       |                     SD_SPI |        123 |        123 |       0 |    0 |  108 |      0 |      0 |            0 |
-|       (sd_spi)                                   |                     SD_SPI |         59 |         59 |       0 |    0 |   79 |      0 |      0 |            0 |
-|       spi                                        |                    FullSPI |         55 |         55 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       spiInitClock                               |         FrequencyGenerator |          9 |          9 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     sd_spi                                       |                     SD_SPI |        156 |        156 |       0 |    0 |  137 |      0 |      0 |            0 |
+|       (sd_spi)                                   |                     SD_SPI |         78 |         78 |       0 |    0 |   91 |      0 |      0 |            0 |
+|       InitSpi                                    |                    FullSPI |         28 |         28 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       WorkSpi                                    |                  FullSPI_2 |         44 |         44 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       spiInitClock                               |         FrequencyGenerator |          6 |          6 |       0 |    0 |    6 |      0 |      0 |            0 |
 |     tft_spi                                      |                    TFT_SPI |        122 |        122 |       0 |    0 |   39 |      0 |      0 |            0 |
 |       (tft_spi)                                  |                    TFT_SPI |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            0 |
 |       counter                                    |                    Counter |         90 |         90 |       0 |    0 |   26 |      0 |      0 |            0 |

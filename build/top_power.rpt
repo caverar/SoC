@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Fri Mar  1 18:24:57 2019
+| Date             : Sat Mar  2 17:55:58 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.169        |
+| Total On-Chip Power (W)  | 0.171        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.097        |
+| Dynamic (W)              | 0.099        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.2         |
-| Junction Temperature (C) | 25.8         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,16 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      220 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       86 |     20800 |            0.41 |
-|   Register     |    <0.001 |      108 |     41600 |            0.26 |
+| Slice Logic    |    <0.001 |      294 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      126 |     20800 |            0.61 |
+|   Register     |    <0.001 |      137 |     41600 |            0.33 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |    <0.001 |      195 |       --- |             --- |
+|   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
+|   Others       |     0.000 |       13 |       --- |             --- |
+| Signals        |    <0.001 |      242 |       --- |             --- |
 | MMCM           |     0.095 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       39 |       106 |           36.79 |
+| I/O            |     0.002 |       39 |       106 |           36.79 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.169 |          |           |                 |
+| Total          |     0.171 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
 | Vccaux    |       1.800 |     0.065 |       0.053 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -125,13 +126,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------+--------------------------------------------------------+-----------------+
-| Clock                          | Domain                                                 | Constraint (ns) |
-+--------------------------------+--------------------------------------------------------+-----------------+
-| MasterClocK_reloj1_clk_wiz_0_0 | AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0 |            10.0 |
-| clk100                         | clk100                                                 |            10.0 |
-| clkfbout_reloj1_clk_wiz_0_0    | AudVid_ClockManager/cm1/clkfbout_reloj1_clk_wiz_0_0    |            10.0 |
-+--------------------------------+--------------------------------------------------------+-----------------+
++-----------------------------+-----------------------------------------------------+-----------------+
+| Clock                       | Domain                                              | Constraint (ns) |
++-----------------------------+-----------------------------------------------------+-----------------+
+| SD_Clock_reloj1_clk_wiz_0_0 | AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0 |            80.0 |
+| clk100                      | clk100                                              |            10.0 |
+| clkfbout_reloj1_clk_wiz_0_0 | AudVid_ClockManager/cm1/clkfbout_reloj1_clk_wiz_0_0 |            10.0 |
++-----------------------------+-----------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -143,11 +144,12 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| top                   |     0.097 |
-|   AudVid_ClockManager |     0.096 |
-|     cm1               |     0.096 |
-|   SD_SPI              |     0.001 |
-|     spi               |    <0.001 |
+| top                   |     0.099 |
+|   AudVid_ClockManager |     0.095 |
+|     cm1               |     0.095 |
+|   SD_SPI              |    <0.001 |
+|     InitSpi           |    <0.001 |
+|     WorkSpi           |    <0.001 |
 |     spiInitClock      |    <0.001 |
 +-----------------------+-----------+
 

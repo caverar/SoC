@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Fri Mar  1 18:38:06 2019
+| Date             : Sat Mar  2 18:07:27 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.358        |
+| Total On-Chip Power (W)  | 0.360        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.285        |
+| Dynamic (W)              | 0.287        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.2         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.008 |        8 |       --- |             --- |
-| Slice Logic              |     0.008 |     5362 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     2389 |     20800 |           11.49 |
+| Clocks                   |     0.009 |        9 |       --- |             --- |
+| Slice Logic              |     0.008 |     5435 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     2415 |     20800 |           11.61 |
 |   CARRY4                 |    <0.001 |      162 |      8150 |            1.99 |
-|   Register               |    <0.001 |     2179 |     41600 |            5.24 |
+|   Register               |    <0.001 |     2216 |     41600 |            5.33 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      9600 |            1.08 |
-|   F7/F8 Muxes            |    <0.001 |       18 |     32600 |            0.06 |
+|   F7/F8 Muxes            |    <0.001 |       20 |     32600 |            0.06 |
 |   BUFG                   |    <0.001 |        5 |        32 |           15.63 |
-|   Others                 |     0.000 |       57 |       --- |             --- |
-| Signals                  |     0.012 |     4443 |       --- |             --- |
+|   Others                 |     0.000 |       59 |       --- |             --- |
+| Signals                  |     0.012 |     4491 |       --- |             --- |
 | Block RAM                |     0.027 |     13.5 |        50 |           27.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | DSPs                     |    <0.001 |        3 |        90 |            3.33 |
-| I/O                      |     0.005 |       18 |       106 |           16.98 |
+| I/O                      |     0.007 |       18 |       106 |           16.98 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.358 |          |           |                 |
+| Total                    |     0.360 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.065 |       0.055 |      0.010 |
 | Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -135,6 +135,7 @@ Table of Contents
 +--------------------------------+---------------------------------------------------------------+-----------------+
 | I2S_CLK_reloj2_clk_wiz_0_0     | AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0     |            70.9 |
 | MasterClocK_reloj1_clk_wiz_0_0 | AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0 |            10.0 |
+| SD_Clock_reloj1_clk_wiz_0_0    | AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0    |            80.0 |
 | TFT_Clock_reloj1_clk_wiz_0_0   | AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0   |           160.0 |
 | clk100                         | clk100                                                        |            10.0 |
 | clkfbout_reloj1_clk_wiz_0_0    | AudVid/audvid_clockmanager/cm1/clkfbout_reloj1_clk_wiz_0_0    |            10.0 |
@@ -151,8 +152,8 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| top                                              |     0.285 |
-|   AudVid                                         |     0.231 |
+| top                                              |     0.287 |
+|   AudVid                                         |     0.230 |
 |     TilesPositionsRegister_reg_0_63_0_2          |    <0.001 |
 |     TilesPositionsRegister_reg_0_63_3_3          |    <0.001 |
 |     TilesPositionsRegister_reg_0_63_4_4          |    <0.001 |
@@ -174,19 +175,20 @@ Table of Contents
 |       cm2                                        |     0.128 |
 |     i2s                                          |    <0.001 |
 |     sd_spi                                       |     0.001 |
-|       spi                                        |    <0.001 |
+|       InitSpi                                    |    <0.001 |
+|       WorkSpi                                    |    <0.001 |
 |       spiInitClock                               |    <0.001 |
 |     tft_spi                                      |     0.002 |
 |       counter                                    |     0.001 |
 |       initializationRegister                     |    <0.001 |
 |       spi                                        |    <0.001 |
-|   lm32_cpu                                       |     0.024 |
+|   lm32_cpu                                       |     0.025 |
 |     instruction_unit                             |     0.008 |
 |       icache                                     |     0.005 |
 |         memories[0].way_0_data_ram               |     0.003 |
 |         memories[0].way_0_tag_ram                |     0.002 |
 |     interrupt_unit                               |    <0.001 |
-|     load_store_unit                              |     0.008 |
+|     load_store_unit                              |     0.009 |
 |       dcache                                     |     0.006 |
 |         memories[0].data_memories.way_0_data_ram |     0.003 |
 |         memories[0].way_0_tag_ram                |     0.003 |

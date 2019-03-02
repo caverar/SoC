@@ -1,12 +1,11 @@
 module FullSPI(
     output reg  [7:0] InputData,
-    input  wire [7:0] OutputData,
+    output reg        DataClk,    
     output wire       SPI_MOSI,
     output wire       SPI_CLK,
+    input  wire [7:0] OutputData,
     input  wire       SPI_MISO,
-    input  wire       MasterCLK,
-    input  wire       SPI_InputCLK,   
-    output reg        DataClk,
+    input  wire       SPI_InputCLK,
     input  wire       SPI_Enable
     );
 

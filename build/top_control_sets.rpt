@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Fri Mar  1 18:24:17 2019
+| Date         : Sat Mar  2 17:55:19 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_control_sets -verbose -file top_control_sets.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    19 |
-| Unused register locations in slices containing registers |    64 |
+| Number of unique control sets                            |    32 |
+| Unused register locations in slices containing registers |   134 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,13 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |           10 |
-|      8 |            2 |
-|    16+ |            7 |
+|      2 |           17 |
+|      4 |            1 |
+|      8 |            3 |
+|     10 |            2 |
+|     12 |            1 |
+|     14 |            2 |
+|    16+ |            6 |
 +--------+--------------+
 
 
@@ -46,40 +50,53 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              66 |           10 |
+| No           | No                    | No                     |              82 |           14 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              16 |            2 |
-| Yes          | No                    | No                     |             118 |           23 |
+| No           | Yes                   | No                     |              10 |            1 |
+| Yes          | No                    | No                     |             158 |           37 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              16 |            3 |
+| Yes          | Yes                   | No                     |              24 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------------------------------------+------------------------------------+-----------------------------+------------------+----------------+
-|                          Clock Signal                          |            Enable Signal           |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
-+----------------------------------------------------------------+------------------------------------+-----------------------------+------------------+----------------+
-|  FSM_onehot_count_reg[33]_i_2_n_0                              | SD_SPI/SPI_CS1_out                 |                             |                1 |              2 |
-|  AudVid_ClockManager/cm1/CLK                                   |                                    |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[3]_i_1_n_0         |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[2]_i_1_n_0         |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[5]_i_1_n_0         |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[6]_i_1_n_0         |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[7]_i_1_n_0         |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[0]_i_1_n_0         |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[1]_i_1_n_0         |                             |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/Data[4]_i_1_n_0         |                             |                1 |              2 |
-|  FSM_onehot_count_reg[33]_i_2_n_0                              |                                    |                             |                3 |              8 |
-| ~SD_SPI/spiInitClock/CLK                                       |                                    |                             |                2 |              8 |
-|  FSM_onehot_count_reg[33]_i_2_n_0                              | SD_SPI/UtilCount[7]_i_2_n_0        | SD_SPI/UtilCount[7]_i_1_n_0 |                3 |             16 |
-| ~SD_SPI/spiInitClock/CLK                                       | SD_SPI/spi/p_1_in                  |                             |                2 |             16 |
-|  AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk |                                    |                             |                1 |             16 |
-|  AudVid_ClockManager/cm1/CLK                                   |                                    | SD_SPI/spiInitClock/clear   |                2 |             16 |
-|  FSM_onehot_count_reg[33]_i_2_n_0                              | SD_SPI/OutputData[7]_i_1_n_0       |                             |                5 |             16 |
-|  SD_SPI/EnableDataRead                                         |                                    |                             |                3 |             32 |
-|  FSM_onehot_count_reg[33]_i_2_n_0                              | SD_SPI/spi/FSM_onehot_count_reg[0] |                             |                7 |             68 |
-+----------------------------------------------------------------+------------------------------------+-----------------------------+------------------+----------------+
++-------------------------------------------------------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
+|                         Clock Signal                        |                  Enable Signal                  |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[0]_i_1__0_n_0               |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[4]_i_1_n_0                  |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[2]_i_1_n_0                  |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[1]_i_1_n_0                  |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[3]_i_1_n_0                  |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[4]_i_1__0_n_0               |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[1]_i_1__0_n_0               |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[2]_i_1__0_n_0               |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[3]_i_1__0_n_0               |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[5]_i_1__0_n_0               |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[7]_i_1__0_n_0               |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[6]_i_1__0_n_0               |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[5]_i_1_n_0                  |                                   |                1 |              2 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         |                                                 |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[6]_i_1_n_0                  |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[7]_i_1_n_0                  |                                   |                1 |              2 |
+|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[0]_i_1_n_0                  |                                   |                1 |              2 |
+|  Init_DataClock                                             |                                                 |                                   |                1 |              4 |
+| ~SD_SPI/spiInitClock/CLK                                    |                                                 |                                   |                2 |              8 |
+| ~AudVid_ClockManager/cm1/SD_WorkCLK                         |                                                 |                                   |                2 |              8 |
+|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      | SD_SPI/WorkSpi/FSM_sequential_Work_Count_reg[0] |                                   |                1 |              8 |
+|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      | SD_SPI/Work_OutputData[7]_i_2_n_0               | SD_SPI/Work_OutputData[7]_i_1_n_0 |                2 |             10 |
+|  AudVid_ClockManager/cm1/SD_WorkCLK                         |                                                 | SD_SPI/spiInitClock/clear         |                1 |             10 |
+|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      |                                                 |                                   |                4 |             12 |
+|  Init_DataClock                                             | SD_SPI/Init_UtilCount_1                         | SD_SPI/Init_UtilCount[6]_i_1_n_0  |                2 |             14 |
+|  Init_DataClock                                             | SD_SPI/Init_OutputData                          |                                   |                4 |             14 |
+|  AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0_en_clk |                                                 |                                   |                1 |             16 |
+| ~SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[0]_i_1_n_0                  |                                   |                3 |             16 |
+| ~AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[0]_i_1__0_n_0               |                                   |                2 |             16 |
+|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      | SD_SPI/Work_UtilCount_0                         |                                   |                4 |             20 |
+|  SD_SPI/EnableDataRead                                      |                                                 |                                   |                3 |             32 |
+|  Init_DataClock                                             | SD_SPI/InitSpi/FSM_onehot_Init_Count_reg[0]     |                                   |                7 |             52 |
++-------------------------------------------------------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
 
 
