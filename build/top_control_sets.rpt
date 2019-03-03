@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Mar  2 17:55:19 2019
+| Date         : Sun Mar  3 14:19:54 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_control_sets -verbose -file top_control_sets.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    32 |
-| Unused register locations in slices containing registers |   134 |
+| Number of unique control sets                            |    55 |
+| Unused register locations in slices containing registers |   194 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,13 +34,14 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |           17 |
-|      4 |            1 |
+|      2 |           20 |
+|      4 |            3 |
+|      6 |            1 |
 |      8 |            3 |
-|     10 |            2 |
+|     10 |            3 |
 |     12 |            1 |
 |     14 |            2 |
-|    16+ |            6 |
+|    16+ |           22 |
 +--------+--------------+
 
 
@@ -50,53 +51,76 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              82 |           14 |
+| No           | No                    | No                     |             234 |           39 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              10 |            1 |
-| Yes          | No                    | No                     |             158 |           37 |
+| No           | Yes                   | No                     |              62 |            7 |
+| Yes          | No                    | No                     |             170 |           42 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              24 |            4 |
+| Yes          | Yes                   | No                     |             108 |           16 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------------------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
-|                         Clock Signal                        |                  Enable Signal                  |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+-------------------------------------------------------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[0]_i_1__0_n_0               |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[4]_i_1_n_0                  |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[2]_i_1_n_0                  |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[1]_i_1_n_0                  |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[3]_i_1_n_0                  |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[4]_i_1__0_n_0               |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[1]_i_1__0_n_0               |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[2]_i_1__0_n_0               |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[3]_i_1__0_n_0               |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[5]_i_1__0_n_0               |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[7]_i_1__0_n_0               |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[6]_i_1__0_n_0               |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[5]_i_1_n_0                  |                                   |                1 |              2 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         |                                                 |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[6]_i_1_n_0                  |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[7]_i_1_n_0                  |                                   |                1 |              2 |
-|  SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[0]_i_1_n_0                  |                                   |                1 |              2 |
-|  Init_DataClock                                             |                                                 |                                   |                1 |              4 |
-| ~SD_SPI/spiInitClock/CLK                                    |                                                 |                                   |                2 |              8 |
-| ~AudVid_ClockManager/cm1/SD_WorkCLK                         |                                                 |                                   |                2 |              8 |
-|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      | SD_SPI/WorkSpi/FSM_sequential_Work_Count_reg[0] |                                   |                1 |              8 |
-|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      | SD_SPI/Work_OutputData[7]_i_2_n_0               | SD_SPI/Work_OutputData[7]_i_1_n_0 |                2 |             10 |
-|  AudVid_ClockManager/cm1/SD_WorkCLK                         |                                                 | SD_SPI/spiInitClock/clear         |                1 |             10 |
-|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      |                                                 |                                   |                4 |             12 |
-|  Init_DataClock                                             | SD_SPI/Init_UtilCount_1                         | SD_SPI/Init_UtilCount[6]_i_1_n_0  |                2 |             14 |
-|  Init_DataClock                                             | SD_SPI/Init_OutputData                          |                                   |                4 |             14 |
-|  AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0_en_clk |                                                 |                                   |                1 |             16 |
-| ~SD_SPI/spiInitClock/CLK                                    | SD_SPI/InitSpi/Data[0]_i_1_n_0                  |                                   |                3 |             16 |
-| ~AudVid_ClockManager/cm1/SD_WorkCLK                         | SD_SPI/WorkSpi/Data[0]_i_1__0_n_0               |                                   |                2 |             16 |
-|  SD_SPI/WorkSpi/Work_OutputData_reg[1]                      | SD_SPI/Work_UtilCount_0                         |                                   |                4 |             20 |
-|  SD_SPI/EnableDataRead                                      |                                                 |                                   |                3 |             32 |
-|  Init_DataClock                                             | SD_SPI/InitSpi/FSM_onehot_Init_Count_reg[0]     |                                   |                7 |             52 |
-+-------------------------------------------------------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
++-----------------------------------------------------------------------+-------------------------------------------------------+-------------------------------------------+------------------+----------------+
+|                              Clock Signal                             |                     Enable Signal                     |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
++-----------------------------------------------------------------------+-------------------------------------------------------+-------------------------------------------+------------------+----------------+
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[1]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            |                                                       |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[4]_i_1_n_1                 |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[5]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/tft_spi/spi/dataClk                                           |                                                       |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[6]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[0]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[7]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/MasterCLK                             |                                                       | AudVid/tft_spi/counter/CS_reg             |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[2]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[3]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/Data[1]_i_1_n_1                 |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/Data[4]_i_1__0_n_1              |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/Data[6]_i_1_n_1                 |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/Data[3]_i_1_n_1                 |                                           |                1 |              2 |
+|  n_0_483_BUFG                                                         |                                                       |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/p_1_in                          |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/Data[5]_i_1_n_1                 |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/Data[2]_i_1_n_1                 |                                           |                1 |              2 |
+|  AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/Data[7]_i_1_n_1                 |                                           |                1 |              2 |
+|  AudVid/sd_spi/E[0]                                                   |                                                       |                                           |                2 |              4 |
+|  sd_spi/Init_DataClock                                                |                                                       |                                           |                2 |              4 |
+| ~DAC_I2S_WS_OBUF_BUFG                                                 | AudVid/WriteAudio_Track2ControlEnable10_out           |                                           |                1 |              4 |
+|  SD_InputDataClock                                                    |                                                       |                                           |                2 |              6 |
+| ~AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            |                                                       |                                           |                2 |              8 |
+| ~AudVid/sd_spi/spiInitClock/CLK                                       |                                                       |                                           |                1 |              8 |
+|  SD_InputDataClock                                                    | AudVid/sd_spi/WorkSpi/E[0]                            | Reset_IBUF                                |                1 |              8 |
+|  AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            |                                                       | AudVid/sd_spi/spiInitClock/clear          |                1 |             10 |
+| ~AudVid/audvid_clockmanager/cm1/CLK                                   |                                                       |                                           |                1 |             10 |
+|  AudVid/audvid_clockmanager/cm2/CLK                                   |                                                       |                                           |                3 |             10 |
+| ~AudVid/audvid_clockmanager/I2S_WS_reg                                |                                                       |                                           |                2 |             12 |
+|  sd_spi/Init_DataClock                                                | AudVid/sd_spi/Init_UtilCount[6]_i_2_n_1               | AudVid/sd_spi/Init_UtilCount[6]_i_1_n_1   |                2 |             14 |
+|  sd_spi/Init_DataClock                                                | AudVid/sd_spi/Init_OutputData[7]_i_1_n_1              |                                           |                4 |             14 |
+| ~AudVid/audvid_clockmanager/cm1/SD_WorkCLK                            | AudVid/sd_spi/WorkSpi/Data[0]_i_1__0_n_1              |                                           |                2 |             16 |
+|  AudVid/audvid_clockmanager/cm1/MasterCLK                             | AudVid/TilesPositionsRegister_reg_0_63_0_2_i_1_n_1    |                                           |                2 |             16 |
+| ~AudVid/sd_spi/spiInitClock/CLK                                       | AudVid/sd_spi/InitSpi/p_1_in                          |                                           |                3 |             16 |
+|  AudVid/audvid_clockmanager/cm1/MasterCLK                             | AudVid/TilesPositionsRegister_reg_192_255_0_2_i_1_n_1 |                                           |                2 |             16 |
+|  AudVid/audvid_clockmanager/cm1/MasterCLK                             | AudVid/TilesPositionsRegister_reg_128_191_0_2_i_1_n_1 |                                           |                2 |             16 |
+|  AudVid/audvid_clockmanager/cm1/MasterCLK                             | AudVid/TilesPositionsRegister_reg_256_319_0_2_i_1_n_1 |                                           |                2 |             16 |
+|  AudVid/audvid_clockmanager/cm1/MasterCLK                             | AudVid/TilesPositionsRegister_reg_64_127_0_2_i_1_n_1  |                                           |                2 |             16 |
+|  AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk |                                                       |                                           |                1 |             16 |
+|  AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk     |                                                       |                                           |                1 |             16 |
+|  n_0_483_BUFG                                                         | AudVid/TilesWrite_XPosition                           |                                           |                2 |             16 |
+|  AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0_en_clk    |                                                       |                                           |                1 |             16 |
+|  AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0_en_clk   |                                                       |                                           |                1 |             16 |
+|  SD_InputDataClock                                                    | AudVid/sd_spi/Work_OutputData[7]_i_1_n_1              |                                           |                4 |             16 |
+|  n_0_483_BUFG                                                         | AudVid/TilesWrite_Started                             |                                           |                2 |             16 |
+|  n_0_483_BUFG                                                         | AudVid/TilesWrite_Started                             | AudVid/TilesWrite_XPosition               |                2 |             16 |
+|  n_0_483_BUFG                                                         | AudVid/TilesWrite_TilePosition[0]_i_2_n_1             | AudVid/TilesWrite_TilePosition[0]_i_1_n_1 |                3 |             18 |
+| ~SD_InputDataClock                                                    | AudVid/sd_spi/E[0]                                    |                                           |                5 |             20 |
+|  SD_InputDataClock                                                    | AudVid/sd_spi/Work_UtilCount[9]_i_1_n_1               |                                           |                3 |             20 |
+|  AudVid/audvid_clockmanager/cm1/MasterCLK                             |                                                       |                                           |                4 |             20 |
+|  AudVid/tft_spi/spi/dataClk                                           |                                                       | AudVid/tft_spi/counter/count[24]_i_1_n_1  |                5 |             50 |
+|  sd_spi/Init_DataClock                                                | AudVid/sd_spi/InitSpi/E[0]                            | Reset_IBUF                                |                8 |             52 |
+| ~DAC_I2S_WS_OBUF_BUFG                                                 |                                                       |                                           |               13 |             82 |
++-----------------------------------------------------------------------+-------------------------------------------------------+-------------------------------------------+------------------+----------------+
 
 

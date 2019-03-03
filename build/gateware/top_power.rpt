@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Sat Mar  2 18:07:27 2019
+| Date             : Sun Mar  3 14:31:19 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.009 |        9 |       --- |             --- |
-| Slice Logic              |     0.008 |     5435 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     2415 |     20800 |           11.61 |
+| Slice Logic              |     0.008 |     5434 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     2420 |     20800 |           11.63 |
 |   CARRY4                 |    <0.001 |      162 |      8150 |            1.99 |
-|   Register               |    <0.001 |     2216 |     41600 |            5.33 |
+|   Register               |    <0.001 |     2217 |     41600 |            5.33 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      9600 |            1.08 |
 |   F7/F8 Muxes            |    <0.001 |       20 |     32600 |            0.06 |
 |   BUFG                   |    <0.001 |        5 |        32 |           15.63 |
-|   Others                 |     0.000 |       59 |       --- |             --- |
-| Signals                  |     0.012 |     4491 |       --- |             --- |
+|   Others                 |     0.000 |       57 |       --- |             --- |
+| Signals                  |     0.011 |     4484 |       --- |             --- |
 | Block RAM                |     0.027 |     13.5 |        50 |           27.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | DSPs                     |    <0.001 |        3 |        90 |            3.33 |

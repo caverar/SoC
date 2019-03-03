@@ -328,7 +328,7 @@ module AudVid_ClockManager(
   	// IBUF InputBuffer(
   	//   .O (InputCLK_Buffered),
   	//   .I (InputCLK)
-  	//);
+  	// );
 
   	assign InputCLK_Buffered =InputCLK;
   	CM2 cm2(
@@ -342,12 +342,12 @@ module AudVid_ClockManager(
     	.clk_in1(InputCLK_Buffered)
   	);
 
-  	BUFGCE I2S_Synchronizer(
-    	.O (I2SCLK),
-    	.I(I2S_CLK),
-    	.CE(I2SCLK_x10)
-  	);
-
+  	// BUFGCE I2S_Synchronizer(
+    // 	.O (I2SCLK),
+    // 	.I(I2S_CLK),
+    // 	.CE(I2SCLK_x10)
+  	// );
+	assign I2SCLK=I2S_CLK;
   	
 
 	//Divisor de frecuencia en 10

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Mar  2 18:06:00 2019
+| Date         : Sun Mar  3 14:29:53 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -file top_utilization_synth.rpt
 | Design       : top
@@ -171,11 +171,11 @@ Table of Contents
 | MUXF7      |   20 |               MuxFx |
 | OBUF       |   12 |                  IO |
 | RAMB36E1   |   11 |        Block Memory |
-| BUFG       |    7 |               Clock |
+| BUFG       |    8 |               Clock |
 | RAMB18E1   |    5 |        Block Memory |
-| BUFGCTRL   |    5 |               Clock |
 | IBUF       |    4 |                  IO |
 | BUFH       |    4 |               Clock |
+| BUFGCTRL   |    4 |               Clock |
 | DSP48E1    |    3 |    Block Arithmetic |
 | OBUFT      |    2 |                  IO |
 | MMCME2_ADV |    2 |               Clock |

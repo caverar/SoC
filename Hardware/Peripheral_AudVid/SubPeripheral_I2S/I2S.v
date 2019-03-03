@@ -12,7 +12,7 @@ module I2S(
     reg  [4:0]  count;
     reg  [31:0] Data;
 
-    //wire [31:0] SquareData;
+    wire [31:0] SquareData;
     
     
     //Inicializacion
@@ -24,10 +24,10 @@ module I2S(
 
 
     //  Generador de Pruebas
-    // SquareGenerator squaregenerator(
-    //     .CLK(MasterCLK), ////////////////
-    //     .data(SquareData)
-    // );
+    SquareGenerator squaregenerator(
+        .CLK(MasterCLK), ////////////////
+        .data(SquareData)
+    );
  
 
 

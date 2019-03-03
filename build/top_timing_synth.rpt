@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sat Mar  2 17:55:08 2019
+| Date         : Sun Mar  3 14:19:40 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -52,15 +52,63 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There is 1 register/latch pin with no clock driven by root clock pin: AudVid_ClockManager/I2S_CLK_reg/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: AudVid/audvid_clockmanager/I2S_CLK_reg/Q (HIGH)
 
- There are 16 register/latch pins with no clock driven by root clock pin: SD_SPI/EnableDataRead_reg/Q (HIGH)
+ There are 44 register/latch pins with no clock driven by root clock pin: AudVid/i2s/I2S_WS_reg/Q (HIGH)
 
- There are 42 register/latch pins with no clock driven by root clock pin: SD_SPI/InitSpi/DataClk_reg/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/EnableDataRead_reg/Q (HIGH)
 
- There are 25 register/latch pins with no clock driven by root clock pin: SD_SPI/WorkSpi/DataClk_reg/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/InitSpi/DataClk_reg/Q (HIGH)
 
- There are 20 register/latch pins with no clock driven by root clock pin: SD_SPI/spiInitClock/OutputCLK_reg/Q (HIGH)
+ There are 36 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/WorkSpi/DataClk_reg/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: AudVid/sd_spi/spiInitClock/OutputCLK_reg/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[10]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[11]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[12]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[13]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[14]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[15]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[16]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[17]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[18]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[19]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[20]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[21]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[22]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[23]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[24]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[3]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[4]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[5]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[6]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[7]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[8]/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/counter/count_reg[9]/Q (HIGH)
+
+ There are 61 register/latch pins with no clock driven by root clock pin: AudVid/tft_spi/spi/dataClk_reg/Q (HIGH)
 
 
 2. checking constant_clock
@@ -75,25 +123,25 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 190 pins that are not constrained for maximum delay. (HIGH)
+ There are 471 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 17 input ports with no input delay specified. (HIGH)
+ There are 16 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 2 ports with no output delay specified. (HIGH)
+ There are 8 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
- There is 1 port with no output delay but with a timing clock defined on it or propagating through it (LOW)
+ There are 2 ports with no output delay but with a timing clock defined on it or propagating through it (LOW)
 
 
 7. checking multiple_clock
@@ -134,7 +182,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      7.475        0.000                      0                   75        0.007        0.000                      0                   75        3.000        0.000                       0                    82  
+      7.475        0.000                      0                   80        0.007        0.000                      0                   80        3.000        0.000                       0                   138  
 
 
 All user specified timing constraints are met.
@@ -165,9 +213,9 @@ Clock                                 WNS(ns)      TNS(ns)  TNS Failing Endpoint
 -----                                 -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 clk100                                                                                                                                                                              3.000        0.000                       0                     2  
   I2S_CLK_reloj2_clk_wiz_0_0           68.271        0.000                      0                   12        0.007        0.000                      0                   12       34.931        0.000                       0                    15  
-  MasterClocK_reloj1_clk_wiz_0_0        7.475        0.000                      0                    8        0.007        0.000                      0                    8        4.500        0.000                       0                    11  
+  MasterClocK_reloj1_clk_wiz_0_0        7.475        0.000                      0                    8        0.007        0.000                      0                    8        3.750        0.000                       0                    62  
   SD_Clock_reloj1_clk_wiz_0_0          37.481        0.000                      0                   47        0.007        0.000                      0                   47       39.500        0.000                       0                    37  
-  TFT_Clock_reloj1_clk_wiz_0_0        157.428        0.000                      0                    8        0.007        0.000                      0                    8       53.360        0.000                       0                    11  
+  TFT_Clock_reloj1_clk_wiz_0_0        157.428        0.000                      0                   13        0.007        0.000                      0                   13       53.360        0.000                       0                    16  
   clkfbout_reloj1_clk_wiz_0_0                                                                                                                                                       7.845        0.000                       0                     3  
   clkfbout_reloj2_clk_wiz_0_0                                                                                                                                                      47.845        0.000                       0                     3  
 
@@ -214,10 +262,10 @@ Period(ns):         10.000
 Sources:            { clk100 }
 
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751                AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKIN1
-Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000               AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKIN1
-Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKIN1
-High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKIN1
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751                AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000               AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
 
 
 
@@ -234,9 +282,9 @@ PW    :            0  Failing Endpoints,  Worst Slack       34.931ns,  Total Vio
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             68.271ns  (required time - arrival time)
-  Source:                 AudVid_ClockManager/cm2/seq_reg1_reg[7]/C
+  Source:                 AudVid/audvid_clockmanager/cm2/seq_reg1_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by I2S_CLK_reloj2_clk_wiz_0_0  {rise@0.000ns fall@35.431ns period=70.862ns})
-  Destination:            AudVid_ClockManager/cm2/clkout1_buf2/CE0
+  Destination:            AudVid/audvid_clockmanager/cm2/clkout1_buf2/CE0
                             (rising edge-triggered cell BUFGCTRL clocked by I2S_CLK_reloj2_clk_wiz_0_0  {rise@0.000ns fall@35.431ns period=70.862ns})
   Path Group:             I2S_CLK_reloj2_clk_wiz_0_0
   Path Type:              Setup (Max at Slow Process Corner)
@@ -257,35 +305,35 @@ Slack (MET) :             68.271ns  (required time - arrival time)
                          (clock I2S_CLK_reloj2_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.584     2.042    AudVid_ClockManager/cm2/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.584     2.042    AudVid/audvid_clockmanager/cm2/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -5.108    -3.065 r  AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKOUT0
-                         net (fo=2, unplaced)         0.584    -2.481    AudVid_ClockManager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.127    -2.354 r  AudVid_ClockManager/cm2/clkout1_buf_en2/O
-                         net (fo=8, unplaced)         0.584    -1.770    AudVid_ClockManager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm2/seq_reg1_reg[7]/C
+                                                     -5.108    -3.065 r  AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
+                         net (fo=2, unplaced)         0.584    -2.481    AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.127    -2.354 r  AudVid/audvid_clockmanager/cm2/clkout1_buf_en2/O
+                         net (fo=8, unplaced)         0.584    -1.770    AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm2/seq_reg1_reg[7]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.456    -1.314 r  AudVid_ClockManager/cm2/seq_reg1_reg[7]/Q
-                         net (fo=1, unplaced)         0.800    -0.515    AudVid_ClockManager/cm2/seq_reg1[7]
-                         BUFGCTRL                                     r  AudVid_ClockManager/cm2/clkout1_buf2/CE0
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.314 r  AudVid/audvid_clockmanager/cm2/seq_reg1_reg[7]/Q
+                         net (fo=1, unplaced)         0.800    -0.515    AudVid/audvid_clockmanager/cm2/seq_reg1[7]
+                         BUFGCTRL                                     r  AudVid/audvid_clockmanager/cm2/clkout1_buf2/CE0
   -------------------------------------------------------------------    -------------------
 
                          (clock I2S_CLK_reloj2_clk_wiz_0_0 rise edge)
                                                      70.862    70.862 r  
     W5                                                0.000    70.862 r  clk100 (IN)
-                         net (fo=0)                   0.000    70.862    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    72.250 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.439    72.689    AudVid_ClockManager/cm2/clk100_IBUF
+                         net (fo=0)                   0.000    70.862    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    72.250 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.439    72.689    AudVid/audvid_clockmanager/cm2/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -5.378    67.311 r  AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKOUT0
-                         net (fo=2, unplaced)         0.439    67.750    AudVid_ClockManager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
-                         BUFGCTRL                                     r  AudVid_ClockManager/cm2/clkout1_buf2/I0
+                                                     -5.378    67.311 r  AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
+                         net (fo=2, unplaced)         0.439    67.750    AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
+                         BUFGCTRL                                     r  AudVid/audvid_clockmanager/cm2/clkout1_buf2/I0
                          clock pessimism              0.485    68.235    
                          clock uncertainty           -0.145    68.090    
                          BUFGCTRL (Setup_bufgctrl_I0_CE0)
-                                                     -0.334    67.756    AudVid_ClockManager/cm2/clkout1_buf2
+                                                     -0.334    67.756    AudVid/audvid_clockmanager/cm2/clkout1_buf2
   -------------------------------------------------------------------
                          required time                         67.756    
                          arrival time                           0.515    
@@ -299,9 +347,9 @@ Slack (MET) :             68.271ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.007ns  (arrival time - required time)
-  Source:                 AudVid_ClockManager/cm2/seq_reg1_reg[0]/C
+  Source:                 AudVid/audvid_clockmanager/cm2/seq_reg1_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by I2S_CLK_reloj2_clk_wiz_0_0  {rise@0.000ns fall@35.431ns period=70.862ns})
-  Destination:            AudVid_ClockManager/cm2/seq_reg1_reg[1]/D
+  Destination:            AudVid/audvid_clockmanager/cm2/seq_reg1_reg[1]/D
                             (rising edge-triggered cell FDRE clocked by I2S_CLK_reloj2_clk_wiz_0_0  {rise@0.000ns fall@35.431ns period=70.862ns})
   Path Group:             I2S_CLK_reloj2_clk_wiz_0_0
   Path Type:              Hold (Min at Fast Process Corner)
@@ -318,35 +366,35 @@ Slack (MET) :             0.007ns  (arrival time - required time)
                          (clock I2S_CLK_reloj2_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.114     0.340    AudVid_ClockManager/cm2/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.114     0.340    AudVid/audvid_clockmanager/cm2/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.776    -1.436 r  AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKOUT0
-                         net (fo=2, unplaced)         0.114    -1.322    AudVid_ClockManager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid_ClockManager/cm2/clkout1_buf_en2/O
-                         net (fo=8, unplaced)         0.114    -1.188    AudVid_ClockManager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm2/seq_reg1_reg[0]/C
+                                                     -1.776    -1.436 r  AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
+                         net (fo=2, unplaced)         0.114    -1.322    AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid/audvid_clockmanager/cm2/clkout1_buf_en2/O
+                         net (fo=8, unplaced)         0.114    -1.188    AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm2/seq_reg1_reg[0]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid_ClockManager/cm2/seq_reg1_reg[0]/Q
-                         net (fo=1, unplaced)         0.081    -0.966    AudVid_ClockManager/cm2/seq_reg1[0]
-                         FDRE                                         r  AudVid_ClockManager/cm2/seq_reg1_reg[1]/D
+                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid/audvid_clockmanager/cm2/seq_reg1_reg[0]/Q
+                         net (fo=1, unplaced)         0.081    -0.966    AudVid/audvid_clockmanager/cm2/seq_reg1[0]
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm2/seq_reg1_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock I2S_CLK_reloj2_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.259     0.673    AudVid_ClockManager/cm2/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.259     0.673    AudVid/audvid_clockmanager/cm2/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.410    -1.737 r  AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKOUT0
-                         net (fo=2, unplaced)         0.259    -1.478    AudVid_ClockManager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid_ClockManager/cm2/clkout1_buf_en2/O
-                         net (fo=8, unplaced)         0.259    -1.176    AudVid_ClockManager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm2/seq_reg1_reg[1]/C
+                                                     -2.410    -1.737 r  AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
+                         net (fo=2, unplaced)         0.259    -1.478    AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid/audvid_clockmanager/cm2/clkout1_buf_en2/O
+                         net (fo=8, unplaced)         0.259    -1.176    AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm2/seq_reg1_reg[1]/C
                          clock pessimism              0.133    -1.043    
-                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid_ClockManager/cm2/seq_reg1_reg[1]
+                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid/audvid_clockmanager/cm2/seq_reg1_reg[1]
   -------------------------------------------------------------------
                          required time                          0.973    
                          arrival time                          -0.966    
@@ -362,13 +410,13 @@ Pulse Width Checks
 Clock Name:         I2S_CLK_reloj2_clk_wiz_0_0
 Waveform(ns):       { 0.000 35.431 }
 Period(ns):         70.862
-Sources:            { AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKOUT0 }
+Sources:            { AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     BUFGCTRL/I0         n/a            2.155         70.862      68.706               AudVid_ClockManager/cm2/clkout1_buf2/I0
-Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       70.862      142.498              AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKOUT0
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         35.431      34.931               AudVid_ClockManager/I2S_CLK_reg/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         35.431      34.931               AudVid_ClockManager/cm2/seq_reg1_reg[0]/C
+Min Period        n/a     BUFGCTRL/I0         n/a            2.155         70.862      68.706               AudVid/audvid_clockmanager/cm2/clkout1_buf2/I0
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       70.862      142.498              AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         35.431      34.931               AudVid/audvid_clockmanager/I2S_CLK_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         35.431      34.931               AudVid/audvid_clockmanager/cm2/seq_reg1_reg[0]/C
 
 
 
@@ -378,16 +426,16 @@ From Clock:  MasterClocK_reloj1_clk_wiz_0_0
 
 Setup :            0  Failing Endpoints,  Worst Slack        7.475ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.007ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             7.475ns  (required time - arrival time)
-  Source:                 AudVid_ClockManager/cm1/seq_reg1_reg[7]/C
+  Source:                 AudVid/audvid_clockmanager/cm1/seq_reg1_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by MasterClocK_reloj1_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            AudVid_ClockManager/cm1/clkout1_buf1/CE0
+  Destination:            AudVid/audvid_clockmanager/cm1/clkout1_buf1/CE0
                             (rising edge-triggered cell BUFGCTRL clocked by MasterClocK_reloj1_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             MasterClocK_reloj1_clk_wiz_0_0
   Path Type:              Setup (Max at Slow Process Corner)
@@ -408,35 +456,35 @@ Slack (MET) :             7.475ns  (required time - arrival time)
                          (clock MasterClocK_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.584     2.042    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.584     2.042    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -5.108    -3.065 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT0
-                         net (fo=2, unplaced)         0.584    -2.481    AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.127    -2.354 r  AudVid_ClockManager/cm1/clkout1_buf_en1/O
-                         net (fo=8, unplaced)         0.584    -1.770    AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg1_reg[7]/C
+                                                     -5.108    -3.065 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
+                         net (fo=2, unplaced)         0.584    -2.481    AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.127    -2.354 r  AudVid/audvid_clockmanager/cm1/clkout1_buf_en1/O
+                         net (fo=8, unplaced)         0.584    -1.770    AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg1_reg[7]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.456    -1.314 r  AudVid_ClockManager/cm1/seq_reg1_reg[7]/Q
-                         net (fo=1, unplaced)         0.800    -0.515    AudVid_ClockManager/cm1/seq_reg1[7]
-                         BUFGCTRL                                     r  AudVid_ClockManager/cm1/clkout1_buf1/CE0
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.314 r  AudVid/audvid_clockmanager/cm1/seq_reg1_reg[7]/Q
+                         net (fo=1, unplaced)         0.800    -0.515    AudVid/audvid_clockmanager/cm1/seq_reg1[7]
+                         BUFGCTRL                                     r  AudVid/audvid_clockmanager/cm1/clkout1_buf1/CE0
   -------------------------------------------------------------------    -------------------
 
                          (clock MasterClocK_reloj1_clk_wiz_0_0 rise edge)
                                                      10.000    10.000 r  
     W5                                                0.000    10.000 r  clk100 (IN)
-                         net (fo=0)                   0.000    10.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.439    11.827    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000    10.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.439    11.827    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -5.378     6.449 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT0
-                         net (fo=2, unplaced)         0.439     6.888    AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0
-                         BUFGCTRL                                     r  AudVid_ClockManager/cm1/clkout1_buf1/I0
+                                                     -5.378     6.449 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
+                         net (fo=2, unplaced)         0.439     6.888    AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
+                         BUFGCTRL                                     r  AudVid/audvid_clockmanager/cm1/clkout1_buf1/I0
                          clock pessimism              0.485     7.374    
                          clock uncertainty           -0.080     7.294    
                          BUFGCTRL (Setup_bufgctrl_I0_CE0)
-                                                     -0.334     6.960    AudVid_ClockManager/cm1/clkout1_buf1
+                                                     -0.334     6.960    AudVid/audvid_clockmanager/cm1/clkout1_buf1
   -------------------------------------------------------------------
                          required time                          6.960    
                          arrival time                           0.515    
@@ -450,9 +498,9 @@ Slack (MET) :             7.475ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.007ns  (arrival time - required time)
-  Source:                 AudVid_ClockManager/cm1/seq_reg1_reg[0]/C
+  Source:                 AudVid/audvid_clockmanager/cm1/seq_reg1_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by MasterClocK_reloj1_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            AudVid_ClockManager/cm1/seq_reg1_reg[1]/D
+  Destination:            AudVid/audvid_clockmanager/cm1/seq_reg1_reg[1]/D
                             (rising edge-triggered cell FDRE clocked by MasterClocK_reloj1_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             MasterClocK_reloj1_clk_wiz_0_0
   Path Type:              Hold (Min at Fast Process Corner)
@@ -469,35 +517,35 @@ Slack (MET) :             0.007ns  (arrival time - required time)
                          (clock MasterClocK_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.114     0.340    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.114     0.340    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.776    -1.436 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT0
-                         net (fo=2, unplaced)         0.114    -1.322    AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid_ClockManager/cm1/clkout1_buf_en1/O
-                         net (fo=8, unplaced)         0.114    -1.188    AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg1_reg[0]/C
+                                                     -1.776    -1.436 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
+                         net (fo=2, unplaced)         0.114    -1.322    AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid/audvid_clockmanager/cm1/clkout1_buf_en1/O
+                         net (fo=8, unplaced)         0.114    -1.188    AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg1_reg[0]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid_ClockManager/cm1/seq_reg1_reg[0]/Q
-                         net (fo=1, unplaced)         0.081    -0.966    AudVid_ClockManager/cm1/seq_reg1[0]
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg1_reg[1]/D
+                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid/audvid_clockmanager/cm1/seq_reg1_reg[0]/Q
+                         net (fo=1, unplaced)         0.081    -0.966    AudVid/audvid_clockmanager/cm1/seq_reg1[0]
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg1_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock MasterClocK_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.259     0.673    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.259     0.673    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.410    -1.737 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT0
-                         net (fo=2, unplaced)         0.259    -1.478    AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid_ClockManager/cm1/clkout1_buf_en1/O
-                         net (fo=8, unplaced)         0.259    -1.176    AudVid_ClockManager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg1_reg[1]/C
+                                                     -2.410    -1.737 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
+                         net (fo=2, unplaced)         0.259    -1.478    AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid/audvid_clockmanager/cm1/clkout1_buf_en1/O
+                         net (fo=8, unplaced)         0.259    -1.176    AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg1_reg[1]/C
                          clock pessimism              0.133    -1.043    
-                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid_ClockManager/cm1/seq_reg1_reg[1]
+                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid/audvid_clockmanager/cm1/seq_reg1_reg[1]
   -------------------------------------------------------------------
                          required time                          0.973    
                          arrival time                          -0.966    
@@ -513,13 +561,13 @@ Pulse Width Checks
 Clock Name:         MasterClocK_reloj1_clk_wiz_0_0
 Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
-Sources:            { AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT0 }
+Sources:            { AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     BUFGCTRL/I0         n/a            2.155         10.000      7.845                AudVid_ClockManager/cm1/clkout1_buf1/I0
-Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       10.000      203.360              AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT0
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500                AudVid_ClockManager/cm1/seq_reg1_reg[0]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500                AudVid_ClockManager/cm1/seq_reg1_reg[0]/C
+Min Period        n/a     BUFGCTRL/I0         n/a            2.155         10.000      7.845                AudVid/audvid_clockmanager/cm1/clkout1_buf1/I0
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       10.000      203.360              AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                AudVid/TilesPositionsRegister_reg_0_63_4_4/DP/CLK
+High Pulse Width  Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                AudVid/TilesPositionsRegister_reg_0_63_4_4/DP/CLK
 
 
 
@@ -536,9 +584,9 @@ PW    :            0  Failing Endpoints,  Worst Slack       39.500ns,  Total Vio
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             37.481ns  (required time - arrival time)
-  Source:                 SD_SPI/WorkSpi/count_reg[0]/C
+  Source:                 AudVid/sd_spi/WorkSpi/count_reg[0]/C
                             (falling edge-triggered cell FDRE clocked by SD_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@40.000ns period=80.000ns})
-  Destination:            SD_SPI/WorkSpi/Data_reg[0]/CE
+  Destination:            AudVid/sd_spi/WorkSpi/Data_reg[0]/CE
                             (rising edge-triggered cell FDRE clocked by SD_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@40.000ns period=80.000ns})
   Path Group:             SD_Clock_reloj1_clk_wiz_0_0
   Path Type:              Setup (Max at Slow Process Corner)
@@ -559,40 +607,40 @@ Slack (MET) :             37.481ns  (required time - arrival time)
                          (clock SD_Clock_reloj1_clk_wiz_0_0 fall edge)
                                                      40.000    40.000 f  
     W5                                                0.000    40.000 f  clk100 (IN)
-                         net (fo=0)                   0.000    40.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.458    41.458 f  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.584    42.042    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000    40.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458    41.458 f  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.584    42.042    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
-                                                     -5.108    36.935 f  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT1
-                         net (fo=2, unplaced)         0.584    37.519    AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0
+                                                     -5.108    36.935 f  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
+                         net (fo=2, unplaced)         0.584    37.519    AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
                          BUFGCTRL (Prop_bufgctrl_I0_O)
-                                                      0.096    37.615 f  AudVid_ClockManager/cm1/clkout2_buf1/O
-                         net (fo=27, unplaced)        0.584    38.199    SD_SPI/WorkSpi/SD_WorkCLK
-                         FDRE                                         r  SD_SPI/WorkSpi/count_reg[0]/C  (IS_INVERTED)
+                                                      0.096    37.615 f  AudVid/audvid_clockmanager/cm1/clkout2_buf1/O
+                         net (fo=27, unplaced)        0.584    38.199    AudVid/sd_spi/WorkSpi/SD_WorkCLK
+                         FDRE                                         r  AudVid/sd_spi/WorkSpi/count_reg[0]/C  (IS_INVERTED)
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.459    38.658 r  SD_SPI/WorkSpi/count_reg[0]/Q
-                         net (fo=14, unplaced)        0.792    39.450    SD_SPI/WorkSpi/count_reg_n_0_[0]
-                         LUT3 (Prop_lut3_I0_O)        0.295    39.745 r  SD_SPI/WorkSpi/Data[0]_i_1__0/O
-                         net (fo=9, unplaced)         0.514    40.259    SD_SPI/WorkSpi/Data[0]_i_1__0_n_0
-                         FDRE                                         r  SD_SPI/WorkSpi/Data_reg[0]/CE
+                         FDRE (Prop_fdre_C_Q)         0.459    38.658 r  AudVid/sd_spi/WorkSpi/count_reg[0]/Q
+                         net (fo=14, unplaced)        0.792    39.450    AudVid/sd_spi/WorkSpi/count_reg_n_1_[0]
+                         LUT3 (Prop_lut3_I0_O)        0.295    39.745 r  AudVid/sd_spi/WorkSpi/Data[0]_i_1__0/O
+                         net (fo=9, unplaced)         0.514    40.259    AudVid/sd_spi/WorkSpi/Data[0]_i_1__0_n_1
+                         FDRE                                         r  AudVid/sd_spi/WorkSpi/Data_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock SD_Clock_reloj1_clk_wiz_0_0 rise edge)
                                                      80.000    80.000 r  
     W5                                                0.000    80.000 r  clk100 (IN)
-                         net (fo=0)                   0.000    80.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    81.388 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.439    81.827    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000    80.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    81.388 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.439    81.827    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
-                                                     -5.378    76.449 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT1
-                         net (fo=2, unplaced)         0.439    76.888    AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0
+                                                     -5.378    76.449 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
+                         net (fo=2, unplaced)         0.439    76.888    AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
                          BUFGCTRL (Prop_bufgctrl_I0_O)
-                                                      0.091    76.979 r  AudVid_ClockManager/cm1/clkout2_buf1/O
-                         net (fo=27, unplaced)        0.439    77.418    SD_SPI/WorkSpi/SD_WorkCLK
-                         FDRE                                         r  SD_SPI/WorkSpi/Data_reg[0]/C
+                                                      0.091    76.979 r  AudVid/audvid_clockmanager/cm1/clkout2_buf1/O
+                         net (fo=27, unplaced)        0.439    77.418    AudVid/sd_spi/WorkSpi/SD_WorkCLK
+                         FDRE                                         r  AudVid/sd_spi/WorkSpi/Data_reg[0]/C
                          clock pessimism              0.635    78.054    
                          clock uncertainty           -0.112    77.942    
-                         FDRE (Setup_fdre_C_CE)      -0.202    77.740    SD_SPI/WorkSpi/Data_reg[0]
+                         FDRE (Setup_fdre_C_CE)      -0.202    77.740    AudVid/sd_spi/WorkSpi/Data_reg[0]
   -------------------------------------------------------------------
                          required time                         77.740    
                          arrival time                         -40.259    
@@ -606,9 +654,9 @@ Slack (MET) :             37.481ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.007ns  (arrival time - required time)
-  Source:                 AudVid_ClockManager/cm1/seq_reg2_reg[0]/C
+  Source:                 AudVid/audvid_clockmanager/cm1/seq_reg2_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by SD_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@40.000ns period=80.000ns})
-  Destination:            AudVid_ClockManager/cm1/seq_reg2_reg[1]/D
+  Destination:            AudVid/audvid_clockmanager/cm1/seq_reg2_reg[1]/D
                             (rising edge-triggered cell FDRE clocked by SD_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@40.000ns period=80.000ns})
   Path Group:             SD_Clock_reloj1_clk_wiz_0_0
   Path Type:              Hold (Min at Fast Process Corner)
@@ -625,35 +673,35 @@ Slack (MET) :             0.007ns  (arrival time - required time)
                          (clock SD_Clock_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.114     0.340    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.114     0.340    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
-                                                     -1.776    -1.436 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT1
-                         net (fo=2, unplaced)         0.114    -1.322    AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid_ClockManager/cm1/clkout2_buf_en1/O
-                         net (fo=8, unplaced)         0.114    -1.188    AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg2_reg[0]/C
+                                                     -1.776    -1.436 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
+                         net (fo=2, unplaced)         0.114    -1.322    AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid/audvid_clockmanager/cm1/clkout2_buf_en1/O
+                         net (fo=8, unplaced)         0.114    -1.188    AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg2_reg[0]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid_ClockManager/cm1/seq_reg2_reg[0]/Q
-                         net (fo=1, unplaced)         0.081    -0.966    AudVid_ClockManager/cm1/seq_reg2[0]
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg2_reg[1]/D
+                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid/audvid_clockmanager/cm1/seq_reg2_reg[0]/Q
+                         net (fo=1, unplaced)         0.081    -0.966    AudVid/audvid_clockmanager/cm1/seq_reg2[0]
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg2_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock SD_Clock_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.259     0.673    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.259     0.673    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
-                                                     -2.410    -1.737 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT1
-                         net (fo=2, unplaced)         0.259    -1.478    AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid_ClockManager/cm1/clkout2_buf_en1/O
-                         net (fo=8, unplaced)         0.259    -1.176    AudVid_ClockManager/cm1/SD_Clock_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg2_reg[1]/C
+                                                     -2.410    -1.737 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
+                         net (fo=2, unplaced)         0.259    -1.478    AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid/audvid_clockmanager/cm1/clkout2_buf_en1/O
+                         net (fo=8, unplaced)         0.259    -1.176    AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg2_reg[1]/C
                          clock pessimism              0.133    -1.043    
-                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid_ClockManager/cm1/seq_reg2_reg[1]
+                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid/audvid_clockmanager/cm1/seq_reg2_reg[1]
   -------------------------------------------------------------------
                          required time                          0.973    
                          arrival time                          -0.966    
@@ -669,13 +717,13 @@ Pulse Width Checks
 Clock Name:         SD_Clock_reloj1_clk_wiz_0_0
 Waveform(ns):       { 0.000 40.000 }
 Period(ns):         80.000
-Sources:            { AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT1 }
+Sources:            { AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     BUFGCTRL/I0         n/a            2.155         80.000      77.845               AudVid_ClockManager/cm1/clkout2_buf1/I0
-Max Period        n/a     MMCME2_ADV/CLKOUT1  n/a            213.360       80.000      133.360              AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT1
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.000      39.500               AudVid_ClockManager/cm1/seq_reg2_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         40.000      39.500               AudVid_ClockManager/cm1/seq_reg2_reg[0]/C
+Min Period        n/a     BUFGCTRL/I0         n/a            2.155         80.000      77.845               AudVid/audvid_clockmanager/cm1/clkout2_buf1/I0
+Max Period        n/a     MMCME2_ADV/CLKOUT1  n/a            213.360       80.000      133.360              AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         40.000      39.500               AudVid/audvid_clockmanager/cm1/seq_reg2_reg[4]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         40.000      39.500               AudVid/audvid_clockmanager/cm1/seq_reg2_reg[4]/C
 
 
 
@@ -692,9 +740,9 @@ PW    :            0  Failing Endpoints,  Worst Slack       53.360ns,  Total Vio
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             157.428ns  (required time - arrival time)
-  Source:                 AudVid_ClockManager/cm1/seq_reg3_reg[7]/C
+  Source:                 AudVid/audvid_clockmanager/cm1/seq_reg3_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by TFT_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@80.000ns period=160.000ns})
-  Destination:            AudVid_ClockManager/cm1/clkout3_buf1/CE0
+  Destination:            AudVid/audvid_clockmanager/cm1/clkout3_buf1/CE0
                             (rising edge-triggered cell BUFGCTRL clocked by TFT_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@80.000ns period=160.000ns})
   Path Group:             TFT_Clock_reloj1_clk_wiz_0_0
   Path Type:              Setup (Max at Slow Process Corner)
@@ -715,35 +763,35 @@ Slack (MET) :             157.428ns  (required time - arrival time)
                          (clock TFT_Clock_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.584     2.042    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.584     2.042    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
-                                                     -5.108    -3.065 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT2
-                         net (fo=2, unplaced)         0.584    -2.481    AudVid_ClockManager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.127    -2.354 r  AudVid_ClockManager/cm1/clkout3_buf_en1/O
-                         net (fo=8, unplaced)         0.584    -1.770    AudVid_ClockManager/cm1/TFT_Clock_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg3_reg[7]/C
+                                                     -5.108    -3.065 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
+                         net (fo=2, unplaced)         0.584    -2.481    AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.127    -2.354 r  AudVid/audvid_clockmanager/cm1/clkout3_buf_en1/O
+                         net (fo=8, unplaced)         0.584    -1.770    AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg3_reg[7]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.456    -1.314 r  AudVid_ClockManager/cm1/seq_reg3_reg[7]/Q
-                         net (fo=1, unplaced)         0.800    -0.515    AudVid_ClockManager/cm1/seq_reg3[7]
-                         BUFGCTRL                                     r  AudVid_ClockManager/cm1/clkout3_buf1/CE0
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.314 r  AudVid/audvid_clockmanager/cm1/seq_reg3_reg[7]/Q
+                         net (fo=1, unplaced)         0.800    -0.515    AudVid/audvid_clockmanager/cm1/seq_reg3[7]
+                         BUFGCTRL                                     r  AudVid/audvid_clockmanager/cm1/clkout3_buf1/CE0
   -------------------------------------------------------------------    -------------------
 
                          (clock TFT_Clock_reloj1_clk_wiz_0_0 rise edge)
                                                     160.000   160.000 r  
     W5                                                0.000   160.000 r  clk100 (IN)
-                         net (fo=0)                   0.000   160.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.388   161.388 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.439   161.827    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000   160.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388   161.388 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.439   161.827    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
-                                                     -5.378   156.449 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT2
-                         net (fo=2, unplaced)         0.439   156.888    AudVid_ClockManager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
-                         BUFGCTRL                                     r  AudVid_ClockManager/cm1/clkout3_buf1/I0
+                                                     -5.378   156.449 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
+                         net (fo=2, unplaced)         0.439   156.888    AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
+                         BUFGCTRL                                     r  AudVid/audvid_clockmanager/cm1/clkout3_buf1/I0
                          clock pessimism              0.485   157.374    
                          clock uncertainty           -0.126   157.247    
                          BUFGCTRL (Setup_bufgctrl_I0_CE0)
-                                                     -0.334   156.913    AudVid_ClockManager/cm1/clkout3_buf1
+                                                     -0.334   156.913    AudVid/audvid_clockmanager/cm1/clkout3_buf1
   -------------------------------------------------------------------
                          required time                        156.913    
                          arrival time                           0.515    
@@ -757,9 +805,9 @@ Slack (MET) :             157.428ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.007ns  (arrival time - required time)
-  Source:                 AudVid_ClockManager/cm1/seq_reg3_reg[0]/C
+  Source:                 AudVid/audvid_clockmanager/cm1/seq_reg3_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by TFT_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@80.000ns period=160.000ns})
-  Destination:            AudVid_ClockManager/cm1/seq_reg3_reg[1]/D
+  Destination:            AudVid/audvid_clockmanager/cm1/seq_reg3_reg[1]/D
                             (rising edge-triggered cell FDRE clocked by TFT_Clock_reloj1_clk_wiz_0_0  {rise@0.000ns fall@80.000ns period=160.000ns})
   Path Group:             TFT_Clock_reloj1_clk_wiz_0_0
   Path Type:              Hold (Min at Fast Process Corner)
@@ -776,35 +824,35 @@ Slack (MET) :             0.007ns  (arrival time - required time)
                          (clock TFT_Clock_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.114     0.340    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.114     0.340    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
-                                                     -1.776    -1.436 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT2
-                         net (fo=2, unplaced)         0.114    -1.322    AudVid_ClockManager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid_ClockManager/cm1/clkout3_buf_en1/O
-                         net (fo=8, unplaced)         0.114    -1.188    AudVid_ClockManager/cm1/TFT_Clock_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg3_reg[0]/C
+                                                     -1.776    -1.436 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
+                         net (fo=2, unplaced)         0.114    -1.322    AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.020    -1.302 r  AudVid/audvid_clockmanager/cm1/clkout3_buf_en1/O
+                         net (fo=8, unplaced)         0.114    -1.188    AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg3_reg[0]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid_ClockManager/cm1/seq_reg3_reg[0]/Q
-                         net (fo=1, unplaced)         0.081    -0.966    AudVid_ClockManager/cm1/seq_reg3[0]
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg3_reg[1]/D
+                         FDRE (Prop_fdre_C_Q)         0.141    -1.047 r  AudVid/audvid_clockmanager/cm1/seq_reg3_reg[0]/Q
+                         net (fo=1, unplaced)         0.081    -0.966    AudVid/audvid_clockmanager/cm1/seq_reg3[0]
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg3_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock TFT_Clock_reloj1_clk_wiz_0_0 rise edge)
                                                       0.000     0.000 r  
     W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
-                         net (fo=2, unplaced)         0.259     0.673    AudVid_ClockManager/cm1/clk100_IBUF
+                         net (fo=0)                   0.000     0.000    AudVid/audvid_clockmanager/clk100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  AudVid/audvid_clockmanager/InputBuffer/O
+                         net (fo=2, unplaced)         0.259     0.673    AudVid/audvid_clockmanager/cm1/InputCLK_Buffered
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
-                                                     -2.410    -1.737 r  AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT2
-                         net (fo=2, unplaced)         0.259    -1.478    AudVid_ClockManager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
-                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid_ClockManager/cm1/clkout3_buf_en1/O
-                         net (fo=8, unplaced)         0.259    -1.176    AudVid_ClockManager/cm1/TFT_Clock_reloj1_clk_wiz_0_0_en_clk
-                         FDRE                                         r  AudVid_ClockManager/cm1/seq_reg3_reg[1]/C
+                                                     -2.410    -1.737 r  AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
+                         net (fo=2, unplaced)         0.259    -1.478    AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
+                         BUFH (Prop_bufh_I_O)         0.043    -1.435 r  AudVid/audvid_clockmanager/cm1/clkout3_buf_en1/O
+                         net (fo=8, unplaced)         0.259    -1.176    AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0_en_clk
+                         FDRE                                         r  AudVid/audvid_clockmanager/cm1/seq_reg3_reg[1]/C
                          clock pessimism              0.133    -1.043    
-                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid_ClockManager/cm1/seq_reg3_reg[1]
+                         FDRE (Hold_fdre_C_D)         0.070    -0.973    AudVid/audvid_clockmanager/cm1/seq_reg3_reg[1]
   -------------------------------------------------------------------
                          required time                          0.973    
                          arrival time                          -0.966    
@@ -820,13 +868,13 @@ Pulse Width Checks
 Clock Name:         TFT_Clock_reloj1_clk_wiz_0_0
 Waveform(ns):       { 0.000 80.000 }
 Period(ns):         160.000
-Sources:            { AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT2 }
+Sources:            { AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     BUFGCTRL/I0         n/a            2.155         160.000     157.845              AudVid_ClockManager/cm1/clkout3_buf1/I0
-Max Period        n/a     MMCME2_ADV/CLKOUT2  n/a            213.360       160.000     53.360               AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKOUT2
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         80.000      79.500               AudVid_ClockManager/cm1/seq_reg3_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         80.000      79.500               AudVid_ClockManager/cm1/seq_reg3_reg[0]/C
+Min Period        n/a     BUFGCTRL/I0         n/a            2.155         160.000     157.845              AudVid/audvid_clockmanager/cm1/clkout3_buf1/I0
+Max Period        n/a     MMCME2_ADV/CLKOUT2  n/a            213.360       160.000     53.360               AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         80.000      79.500               AudVid/audvid_clockmanager/cm1/seq_reg3_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         80.000      79.500               AudVid/tft_spi/spi/count_reg[0]/C
 
 
 
@@ -845,11 +893,11 @@ Pulse Width Checks
 Clock Name:         clkfbout_reloj1_clk_wiz_0_0
 Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
-Sources:            { AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKFBOUT }
+Sources:            { AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKFBOUT }
 
 Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period  n/a     BUFG/I              n/a            2.155         10.000      7.845                AudVid_ClockManager/cm1/clkf_buf1/I
-Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       10.000      90.000               AudVid_ClockManager/cm1/mmcm_adv_inst1/CLKFBIN
+Min Period  n/a     BUFG/I              n/a            2.155         10.000      7.845                AudVid/audvid_clockmanager/cm1/clkf_buf1/I
+Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       10.000      90.000               AudVid/audvid_clockmanager/cm1/mmcm_adv_inst1/CLKFBIN
 
 
 
@@ -868,11 +916,11 @@ Pulse Width Checks
 Clock Name:         clkfbout_reloj2_clk_wiz_0_0
 Waveform(ns):       { 0.000 25.000 }
 Period(ns):         50.000
-Sources:            { AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKFBOUT }
+Sources:            { AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKFBOUT }
 
 Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period  n/a     BUFG/I              n/a            2.155         50.000      47.845               AudVid_ClockManager/cm2/clkf_buf2/I
-Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       50.000      50.000               AudVid_ClockManager/cm2/mmcm_adv_inst2/CLKFBIN
+Min Period  n/a     BUFG/I              n/a            2.155         50.000      47.845               AudVid/audvid_clockmanager/cm2/clkf_buf2/I
+Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       50.000      50.000               AudVid/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKFBIN
 
 
 
