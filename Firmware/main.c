@@ -22,19 +22,19 @@ static void putTile(unsigned int position, unsigned int tile)
 {
 	
 	unsigned int value = (position<<5) + tile;  
-	AudVid_WB_TilesControlRegisterCSR_write(value);
+	Video_WB_TilesControlRegisterCSR_write(value);
 }
-static void playTrack (unsigned int Track, unsigned int EnableLoop, unsigned int EnablePlay){
-	AudVid_WB_Track1ControlRegisterCSR_write(0);
-	AudVid_WB_Track1ControlRegisterCSR_write((EnablePlay<<4)+(EnableLoop<<3)+Track);
-
+static void playTrack ( unsigned int EnablePlay, unsigned int EnableLoop, unsigned int Track){
+	Audio_WB_Track1ControlRegisterCSR_write(0);
+	Audio_WB_Track1ControlRegisterCSR_write((EnablePlay<<4)+(EnableLoop<<3)+Track);
 }
 
 int main(void)
 {
 	
-	playTrack(1,1,3);
+	
 	while(1) {
+		playTrack(1,1,3);		
 		for(int j=0;j<28;j=j+4){
 
 			for(int i=0;i<320;i++){

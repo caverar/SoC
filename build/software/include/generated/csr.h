@@ -12,34 +12,37 @@ extern uint32_t csr_readl(uint32_t addr);
 #include <hw/common.h>
 #endif /* ! CSR_ACCESSORS_DEFINED */
 
-/* AudVid_WB */
-#define CSR_AUDVID_WB_BASE 0xe0004000
-#define CSR_AUDVID_WB_TILESCONTROLREGISTERCSR_ADDR 0xe0004000
-#define CSR_AUDVID_WB_TILESCONTROLREGISTERCSR_SIZE 1
-static inline unsigned int AudVid_WB_TilesControlRegisterCSR_read(void) {
+/* Audio_WB */
+#define CSR_AUDIO_WB_BASE 0xe0004800
+#define CSR_AUDIO_WB_TRACK1CONTROLREGISTERCSR_ADDR 0xe0004800
+#define CSR_AUDIO_WB_TRACK1CONTROLREGISTERCSR_SIZE 1
+static inline unsigned int Audio_WB_Track1ControlRegisterCSR_read(void) {
+	unsigned int r = csr_readl(0xe0004800);
+	return r;
+}
+static inline void Audio_WB_Track1ControlRegisterCSR_write(unsigned int value) {
+	csr_writel(value, 0xe0004800);
+}
+#define CSR_AUDIO_WB_TRACK2CONTROLREGISTERCSR_ADDR 0xe0004804
+#define CSR_AUDIO_WB_TRACK2CONTROLREGISTERCSR_SIZE 1
+static inline unsigned int Audio_WB_Track2ControlRegisterCSR_read(void) {
+	unsigned int r = csr_readl(0xe0004804);
+	return r;
+}
+static inline void Audio_WB_Track2ControlRegisterCSR_write(unsigned int value) {
+	csr_writel(value, 0xe0004804);
+}
+
+/* Video_WB */
+#define CSR_VIDEO_WB_BASE 0xe0004000
+#define CSR_VIDEO_WB_TILESCONTROLREGISTERCSR_ADDR 0xe0004000
+#define CSR_VIDEO_WB_TILESCONTROLREGISTERCSR_SIZE 1
+static inline unsigned int Video_WB_TilesControlRegisterCSR_read(void) {
 	unsigned int r = csr_readl(0xe0004000);
 	return r;
 }
-static inline void AudVid_WB_TilesControlRegisterCSR_write(unsigned int value) {
+static inline void Video_WB_TilesControlRegisterCSR_write(unsigned int value) {
 	csr_writel(value, 0xe0004000);
-}
-#define CSR_AUDVID_WB_TRACK1CONTROLREGISTERCSR_ADDR 0xe0004004
-#define CSR_AUDVID_WB_TRACK1CONTROLREGISTERCSR_SIZE 1
-static inline unsigned int AudVid_WB_Track1ControlRegisterCSR_read(void) {
-	unsigned int r = csr_readl(0xe0004004);
-	return r;
-}
-static inline void AudVid_WB_Track1ControlRegisterCSR_write(unsigned int value) {
-	csr_writel(value, 0xe0004004);
-}
-#define CSR_AUDVID_WB_TRACK2CONTROLREGISTERCSR_ADDR 0xe0004008
-#define CSR_AUDVID_WB_TRACK2CONTROLREGISTERCSR_SIZE 1
-static inline unsigned int AudVid_WB_Track2ControlRegisterCSR_read(void) {
-	unsigned int r = csr_readl(0xe0004008);
-	return r;
-}
-static inline void AudVid_WB_Track2ControlRegisterCSR_write(unsigned int value) {
-	csr_writel(value, 0xe0004008);
 }
 
 /* ctrl */

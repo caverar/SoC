@@ -1,12 +1,13 @@
-csr_base,AudVid_WB,0xe0004000,,
+csr_base,Audio_WB,0xe0004800,,
+csr_base,Video_WB,0xe0004000,,
 csr_base,ctrl,0xe0000000,,
 csr_base,timer0,0xe0002800,,
 csr_base,uart,0xe0001800,,
 csr_base,uart_phy,0xe0001000,,
 csr_base,identifier_mem,0xe0002000,,
-csr_register,AudVid_WB_TilesControlRegisterCSR,0xe0004000,1,rw
-csr_register,AudVid_WB_Track1ControlRegisterCSR,0xe0004004,1,rw
-csr_register,AudVid_WB_Track2ControlRegisterCSR,0xe0004008,1,rw
+csr_register,Audio_WB_Track1ControlRegisterCSR,0xe0004800,1,rw
+csr_register,Audio_WB_Track2ControlRegisterCSR,0xe0004804,1,rw
+csr_register,Video_WB_TilesControlRegisterCSR,0xe0004000,1,rw
 csr_register,ctrl_reset,0xe0000000,1,rw
 csr_register,ctrl_scratch,0xe0000004,1,rw
 csr_register,ctrl_bus_errors,0xe0000008,1,ro

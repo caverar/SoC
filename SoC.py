@@ -11,7 +11,8 @@ from migen.build.xilinx import XilinxPlatform
 
 from litex.soc.integration.soc_core import *
 from litex.soc.integration.builder import *
-from Hardware.AudVid import AudVid
+from Hardware.Video import Video
+from Hardware.Audio import Audio
 from litex.soc.cores import gpio
 ##from ios import Led
 
@@ -136,22 +137,25 @@ TFT_SPI_CS             = platform.request("TFT_SPI_CS"             , 0)
 #
 
 # Adicion de modulos en verilog
-#   AudVid
-platform.add_source("Hardware/Peripheral_AudVid/AudVid.v")
-platform.add_source("Hardware/Peripheral_AudVid/ColorDecoder.v")
-platform.add_source("Hardware/Peripheral_AudVid/VideoData.mem")
-platform.add_source("Hardware/Peripheral_AudVid/InitialPosition.mem")
-platform.add_source("Hardware/Peripheral_AudVid/AudVid_ClockManager.v")
+#   Video
+platform.add_source("Hardware/Peripheral_Video/Video.v")
+platform.add_source("Hardware/Peripheral_Video/ColorDecoder.v")
+platform.add_source("Hardware/Peripheral_Video/VideoData.mem")
+platform.add_source("Hardware/Peripheral_Video/InitialPosition.mem")
+platform.add_source("Hardware/Peripheral_Video/Video_ClockManager.v")
+#Audio
+platform.add_source("Hardware/Peripheral_Audio/Audio.v")
+platform.add_source("Hardware/Peripheral_Audio/Audio_ClockManager.v")
 #	I2S
-platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/I2S.v")
-platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_I2S/SquareGenerator.v")
+platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v")
+platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v")
 #	TFT_SPI
-platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/TFT_SPI.v")
-platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/InitializationRegister.v")
-platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_TFT_SPI/SPI.v")
+platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v")
+platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v")
+platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v")
 #	SD_SPI_SPI
-platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/SD_SPI.v")
-platform.add_source("Hardware/Peripheral_AudVid/SubPeripheral_SD_SPI/FullSPI.v")
+platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_SD_SPI/SD_SPI.v")
+platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_SD_SPI/FullSPI.v")
 #	utilities
 
 platform.add_source("Hardware/utilities/FrequencyGenerator.v")
@@ -166,7 +170,8 @@ platform.add_source("Hardware/utilities/StereoSignedAdder.v")
 # Modulo Principal
 class SoC(SoCCore):
     csr_peripherals = [         
-        "AudVid_WB",
+        "Video_WB",
+        "Audio_WB",
         #"Buttons",
     ]    
     
@@ -192,9 +197,10 @@ class SoC(SoCCore):
 
         
         #self.submodules.Buttons = gpio.GPIOIn(buttons)
-        self.submodules.crg     = CRG(platform.request("clk100"),platform.request("cpu_reset"))
+        self.submodules.crg         = CRG(platform.request("clk100"),platform.request("cpu_reset"))
 
-        self.submodules.AudVid_WB   = AudVid()       
+        self.submodules.Video_WB    = Video()
+        self.submodules.Audio_WB    = Audio()        
 
         self.CLK                    = Signal()
         self.Reset                  = Signal()        
@@ -216,34 +222,34 @@ class SoC(SoCCore):
         self.SD_SPI_COUNT_DEBUG     = Signal() 
         self.SD_SPI_UTILCOUNT_DEBUG = Signal()
 
-        self.TilesPositionData      = Signal(5)
-        self.TilesPositionAddress   = Signal(9)
 
          
         self.comb += [
             
-            #self.Reset.eq(Reset),
-            self.AudVid_WB.CLK.eq(SystemClock),            
-            self.AudVid_WB.Reset.eq(self.Reset), 
+    
+            self.Video_WB.CLK.eq(SystemClock),            
+            self.Video_WB.Reset.eq(self.Reset), 
            
 
-            TFT_SPI_MOSI.eq(self.AudVid_WB.TFT_SPI_MOSI),
-            TFT_SPI_CLK.eq(self.AudVid_WB.TFT_SPI_CLK),
-            TFT_SPI_CS.eq(self.AudVid_WB.TFT_SPI_CS),
-            TFT_RS.eq(self.AudVid_WB.TFT_RS),
-            TFT_RST.eq(self.AudVid_WB.TFT_RST),
+            TFT_SPI_MOSI.eq(self.Video_WB.TFT_SPI_MOSI),
+            TFT_SPI_CLK.eq(self.Video_WB.TFT_SPI_CLK),
+            TFT_SPI_CS.eq(self.Video_WB.TFT_SPI_CS),
+            TFT_RS.eq(self.Video_WB.TFT_RS),
+            TFT_RST.eq(self.Video_WB.TFT_RST),
 
+            self.Audio_WB.CLK.eq(SystemClock),            
+            self.Audio_WB.Reset.eq(self.Reset), 
             
-            SD_SPI_MOSI.eq(self.AudVid_WB.SD_SPI_MOSI),
-            SD_SPI_CLK.eq(self.AudVid_WB.SD_SPI_CLK),
-            SD_SPI_CS.eq(self.AudVid_WB.SD_SPI_CS),
-            self.AudVid_WB.SD_SPI_MISO.eq(SD_SPI_MISO),      
-            SD_SPI_COUNT_DEBUG.eq(self.AudVid_WB.SD_SPI_COUNT_DEBUG),        
-            SD_SPI_UTILCOUNT_DEBUG.eq(self.AudVid_WB.SD_SPI_UTILCOUNT_DEBUG),
+            SD_SPI_MOSI.eq(self.Audio_WB.SD_SPI_MOSI),
+            SD_SPI_CLK.eq(self.Audio_WB.SD_SPI_CLK),
+            SD_SPI_CS.eq(self.Audio_WB.SD_SPI_CS),
+            self.Audio_WB.SD_SPI_MISO.eq(SD_SPI_MISO),      
+            SD_SPI_COUNT_DEBUG.eq(self.Audio_WB.SD_SPI_COUNT_DEBUG),        
+            SD_SPI_UTILCOUNT_DEBUG.eq(self.Audio_WB.SD_SPI_UTILCOUNT_DEBUG),
 
-            DAC_I2S_DATA.eq(self.AudVid_WB.DAC_I2S_DATA),
-            DAC_I2S_WS.eq(self.AudVid_WB.DAC_I2S_WS),
-            DAC_I2S_CLK.eq(self.AudVid_WB.DAC_I2S_CLK)
+            DAC_I2S_DATA.eq(self.Audio_WB.DAC_I2S_DATA),
+            DAC_I2S_WS.eq(self.Audio_WB.DAC_I2S_WS),
+            DAC_I2S_CLK.eq(self.Audio_WB.DAC_I2S_CLK)
         
   
         ]

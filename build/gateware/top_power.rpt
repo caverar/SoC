@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Sun Mar  3 14:31:19 2019
+| Date             : Sun Mar  3 18:00:38 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.360        |
+| Total On-Chip Power (W)  | 0.367        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.287        |
+| Dynamic (W)              | 0.294        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.2         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.009 |        9 |       --- |             --- |
-| Slice Logic              |     0.008 |     5434 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     2420 |     20800 |           11.63 |
+| Clocks                   |     0.009 |        8 |       --- |             --- |
+| Slice Logic              |     0.009 |     5450 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     2418 |     20800 |           11.63 |
 |   CARRY4                 |    <0.001 |      162 |      8150 |            1.99 |
-|   Register               |    <0.001 |     2217 |     41600 |            5.33 |
+|   Register               |    <0.001 |     2224 |     41600 |            5.35 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      9600 |            1.08 |
 |   F7/F8 Muxes            |    <0.001 |       20 |     32600 |            0.06 |
 |   BUFG                   |    <0.001 |        5 |        32 |           15.63 |
-|   Others                 |     0.000 |       57 |       --- |             --- |
-| Signals                  |     0.011 |     4484 |       --- |             --- |
-| Block RAM                |     0.027 |     13.5 |        50 |           27.00 |
+|   Others                 |     0.000 |       61 |       --- |             --- |
+| Signals                  |     0.012 |     4499 |       --- |             --- |
+| Block RAM                |     0.030 |     13.5 |        50 |           27.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | DSPs                     |    <0.001 |        3 |        90 |            3.33 |
-| I/O                      |     0.007 |       18 |       106 |           16.98 |
+| I/O                      |     0.010 |       18 |       106 |           16.98 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.360 |          |           |                 |
+| Total                    |     0.367 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,16 +77,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.065 |       0.055 |      0.010 |
+| Vccint    |       1.000 |     0.069 |       0.059 |      0.010 |
 | Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.002 |       0.002 |      0.000 |
+| Vccbram   |       1.000 |     0.003 |       0.002 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -130,17 +130,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------+---------------------------------------------------------------+-----------------+
-| Clock                          | Domain                                                        | Constraint (ns) |
-+--------------------------------+---------------------------------------------------------------+-----------------+
-| I2S_CLK_reloj2_clk_wiz_0_0     | AudVid/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0     |            70.9 |
-| MasterClocK_reloj1_clk_wiz_0_0 | AudVid/audvid_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0 |            10.0 |
-| SD_Clock_reloj1_clk_wiz_0_0    | AudVid/audvid_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0    |            80.0 |
-| TFT_Clock_reloj1_clk_wiz_0_0   | AudVid/audvid_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0   |           160.0 |
-| clk100                         | clk100                                                        |            10.0 |
-| clkfbout_reloj1_clk_wiz_0_0    | AudVid/audvid_clockmanager/cm1/clkfbout_reloj1_clk_wiz_0_0    |            10.0 |
-| clkfbout_reloj2_clk_wiz_0_0    | AudVid/audvid_clockmanager/cm2/clkfbout_reloj2_clk_wiz_0_0    |            50.0 |
-+--------------------------------+---------------------------------------------------------------+-----------------+
++--------------------------------+-------------------------------------------------------------+-----------------+
+| Clock                          | Domain                                                      | Constraint (ns) |
++--------------------------------+-------------------------------------------------------------+-----------------+
+| I2S_CLK_reloj2_clk_wiz_0_0     | Audio/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0    |            70.9 |
+| MasterClocK_reloj1_clk_wiz_0_0 | Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0 |            10.0 |
+| TFT_Clock_reloj1_clk_wiz_0_0   | Video/video_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0   |           160.0 |
+| clk100                         | clk100                                                      |            10.0 |
+| clkfbout_reloj1_clk_wiz_0_0    | Video/video_clockmanager/cm1/clkfbout_reloj1_clk_wiz_0_0    |            10.0 |
+| clkfbout_reloj2_clk_wiz_0_0    | Audio/audvid_clockmanager/cm2/clkfbout_reloj2_clk_wiz_0_0   |            50.0 |
++--------------------------------+-------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -152,8 +151,18 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| top                                              |     0.287 |
-|   AudVid                                         |     0.230 |
+| top                                              |     0.294 |
+|   Audio                                          |     0.135 |
+|     adder                                        |    <0.001 |
+|     audvid_clockmanager                          |     0.128 |
+|       cm2                                        |     0.128 |
+|     i2s                                          |    <0.001 |
+|     sd_spi                                       |     0.002 |
+|       InitSpi                                    |    <0.001 |
+|       WorkSpi                                    |    <0.001 |
+|       spiInitClock                               |    <0.001 |
+|       spiWorkClock                               |    <0.001 |
+|   Video                                          |     0.099 |
 |     TilesPositionsRegister_reg_0_63_0_2          |    <0.001 |
 |     TilesPositionsRegister_reg_0_63_3_3          |    <0.001 |
 |     TilesPositionsRegister_reg_0_63_4_4          |    <0.001 |
@@ -169,29 +178,22 @@ Table of Contents
 |     TilesPositionsRegister_reg_64_127_0_2        |    <0.001 |
 |     TilesPositionsRegister_reg_64_127_3_3        |    <0.001 |
 |     TilesPositionsRegister_reg_64_127_4_4        |    <0.001 |
-|     adder                                        |     0.000 |
-|     audvid_clockmanager                          |     0.224 |
-|       cm1                                        |     0.096 |
-|       cm2                                        |     0.128 |
-|     i2s                                          |    <0.001 |
-|     sd_spi                                       |     0.001 |
-|       InitSpi                                    |    <0.001 |
-|       WorkSpi                                    |    <0.001 |
-|       spiInitClock                               |    <0.001 |
 |     tft_spi                                      |     0.002 |
 |       counter                                    |     0.001 |
 |       initializationRegister                     |    <0.001 |
 |       spi                                        |    <0.001 |
+|     video_clockmanager                           |     0.096 |
+|       cm1                                        |     0.096 |
 |   lm32_cpu                                       |     0.025 |
-|     instruction_unit                             |     0.008 |
+|     instruction_unit                             |     0.009 |
 |       icache                                     |     0.005 |
 |         memories[0].way_0_data_ram               |     0.003 |
 |         memories[0].way_0_tag_ram                |     0.002 |
 |     interrupt_unit                               |    <0.001 |
-|     load_store_unit                              |     0.009 |
+|     load_store_unit                              |     0.008 |
 |       dcache                                     |     0.006 |
 |         memories[0].data_memories.way_0_data_ram |     0.003 |
-|         memories[0].way_0_tag_ram                |     0.003 |
+|         memories[0].way_0_tag_ram                |     0.002 |
 |     mc_arithmetic                                |     0.003 |
 |     multiplier                                   |    <0.001 |
 |     registers_reg_r1_0_31_0_5                    |    <0.001 |
