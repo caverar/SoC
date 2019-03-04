@@ -6,11 +6,10 @@
 extern void periodic_isr(void);
 
 
-extern unsigned int state;
+#include "variables.h"
 
-static void putState(unsigned int value){
-	state=value;
-}
+
+
 void isr(void);
 void isr(void)
 {

@@ -6,9 +6,9 @@
 #include <uart.h>
 #include <console.h>
 #include <generated/csr.h>
-
+#include "variables.h"
 //Espera en ms
-volatile unsigned int state;
+
 static void wait_ms(unsigned int time)
 {
 	timer0_en_write(0);
@@ -39,8 +39,8 @@ int main(void)
 		irq_setie(1);
 		playTrack(1,1,3);
 		Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);
-		state=0;
-		if(state==0){		
+		getState(0);
+		if(getState()==0){		
 			for(int j=0;j<28;j=j+4){
 
 				for(int i=0;i<320;i++){
@@ -62,17 +62,17 @@ int main(void)
 
 				wait_ms(200);	
 			}
-		}else if(state==1){
+		}else if(getState()==1){
 			for(int i=0;i<320;i++){
 				putTile(i,5);
 			}
 			wait_ms(200);	
-		}else if(state==2){
+		}else if(getState()==2){
 			for(int i=0;i<320;i++){
 				putTile(i,6);
 			}
 			wait_ms(200);	
-		}else if(state==3){
+		}else if(getState()==3){
 			for(int i=0;i<320;i++){
 				putTile(i,7);
 			}
