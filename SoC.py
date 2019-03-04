@@ -149,6 +149,8 @@ platform.add_source("Hardware/Peripheral_Video/Video_ClockManager.v")
 #  Audio
 platform.add_source("Hardware/Peripheral_Audio/Audio.v")
 platform.add_source("Hardware/Peripheral_Audio/Audio_ClockManager.v")
+platform.add_source("Hardware/Peripheral_Audio/Synthesizer.v")
+platform.add_source("Hardware/Peripheral_Audio/Oscillator.v")
 #	I2S
 platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v")
 platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v")
@@ -156,15 +158,13 @@ platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator
 platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v")
 platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v")
 platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v")
-#	SD_SPI_SPI
-platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_SD_SPI/SD_SPI.v")
-platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_SD_SPI/FullSPI.v")
+
+
 #	utilities
 
 platform.add_source("Hardware/utilities/FrequencyGenerator.v")
 platform.add_source("Hardware/utilities/Counter.v")
 platform.add_source("Hardware/utilities/ButtonDebouncer.v")
-platform.add_source("Hardware/utilities/ButtonDebouncerTester.v")
 platform.add_source("Hardware/utilities/StereoSignedAdder.v")
 
 

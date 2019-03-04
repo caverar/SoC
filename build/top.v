@@ -1,21 +1,5 @@
 /* Machine-generated using Migen */
 module top(
-	input user_led,
-	input user_led_1,
-	input user_led_2,
-	input user_led_3,
-	input user_led_4,
-	input user_led_5,
-	input user_led_6,
-	input user_led_7,
-	input user_led_8,
-	input user_led_9,
-	input user_led_10,
-	input user_led_11,
-	input user_led_12,
-	input user_led_13,
-	input user_led_14,
-	input user_led_15,
 	input user_sw,
 	input user_sw_1,
 	input user_sw_2,
@@ -30,43 +14,23 @@ module top(
 	input user_sw_11,
 	input user_sw_12,
 	input user_sw_13,
-	input user_btn,
-	input Reset,
-	output DAC_I2S_DATA,
-	output DAC_I2S_CLK,
-	output DAC_I2S_WS,
-	output SD_SPI_CLK,
-	output SD_SPI_MOSI,
-	input SD_SPI_MISO,
-	output SD_SPI_CS,
-	output SD_SPI_COUNT_DEBUG,
-	output SD_SPI_UTILCOUNT_DEBUG,
-	output TFT_SPI_CLK,
-	output TFT_SPI_MOSI,
-	output TFT_RS,
-	output TFT_RST,
-	output TFT_SPI_CS,
+	input user_sw_14,
+	input user_sw_15,
+	output I2S_DATA,
+	output I2S_CLK,
+	output I2S_WS,
 	input clk100
 );
 
-wire SystemClock;
-wire Reset_1;
-wire DAC_I2S_CLK_1;
-wire DAC_I2S_DATA_1;
-wire DAC_I2S_WS_1;
-wire TFT_SPI_MOSI_1;
-wire TFT_SPI_CLK_1;
-wire TFT_RS_1;
-wire TFT_RST_1;
-wire TFT_SPI_CS_1;
-wire SD_SPI_MOSI_1;
-wire SD_SPI_MISO_1;
-wire SD_SPI_CLK_1;
-wire SD_SPI_CS_1;
-wire SD_SPI_COUNT_DEBUG_1;
-wire SD_SPI_UTILCOUNT_DEBUG_1;
-wire [13:0] TilesControlRegister;
-wire Buffered_SystemClock;
+reg CLK = 1'd0;
+reg Reset = 1'd0;
+wire DAC_I2S_CLK;
+wire DAC_I2S_DATA;
+wire DAC_I2S_WS;
+reg [4:0] Track1ControlRegisterCSR_storage = 5'd0;
+wire [4:0] Track1ControlRegister;
+reg [4:0] Track2ControlRegisterCSR_storage = 5'd0;
+wire [4:0] Track2ControlRegister;
 wire sys_clk;
 wire sys_rst;
 wire por_clk;
@@ -77,23 +41,11 @@ reg dummy_s;
 initial dummy_s <= 1'd0;
 // synthesis translate_on
 
-assign TilesControlRegister = {user_sw_13, user_sw_12, user_sw_11, user_sw_10, user_sw_9, user_sw_8, user_sw_7, user_sw_6, user_sw_5, user_sw_4, user_sw_3, user_sw_2, user_sw_1, user_sw};
-assign Reset_1 = Reset;
-assign SystemClock = sys_clk;
-assign TFT_SPI_MOSI = TFT_SPI_MOSI_1;
-assign TFT_SPI_CLK = TFT_SPI_CLK_1;
-assign TFT_SPI_CS = TFT_SPI_CS_1;
-assign TFT_RS = TFT_RS_1;
-assign TFT_RST = TFT_RST_1;
-assign SD_SPI_MOSI = SD_SPI_MOSI_1;
-assign SD_SPI_CLK = SD_SPI_CLK_1;
-assign SD_SPI_CS = SD_SPI_CS_1;
-assign SD_SPI_MISO_1 = SD_SPI_MISO;
-assign SD_SPI_COUNT_DEBUG = SD_SPI_COUNT_DEBUG_1;
-assign SD_SPI_UTILCOUNT_DEBUG = SD_SPI_UTILCOUNT_DEBUG_1;
-assign DAC_I2S_DATA = DAC_I2S_DATA_1;
-assign DAC_I2S_WS = DAC_I2S_WS_1;
-assign DAC_I2S_CLK = DAC_I2S_CLK_1;
+assign Track1ControlRegister = Track1ControlRegisterCSR_storage;
+assign Track2ControlRegister = Track2ControlRegisterCSR_storage;
+assign I2S_DATA = DAC_I2S_DATA;
+assign I2S_CLK = DAC_I2S_CLK;
+assign I2S_WS = DAC_I2S_WS;
 assign sys_clk = clk100;
 assign por_clk = clk100;
 assign sys_rst = xilinxvivadotoolchain_int_rst;
@@ -102,29 +54,14 @@ always @(posedge por_clk) begin
 	xilinxvivadotoolchain_int_rst <= 1'd0;
 end
 
-IBUF IBUF(
-	.I(SystemClock),
-	.O(Buffered_SystemClock)
-);
-
-AudVid AudVid(
-	.CLK(SystemClock),
-	.Reset(Reset_1),
-	.SD_SPI_MISO(SD_SPI_MISO_1),
-	.TilesControlRegister(TilesControlRegister),
-	.DAC_I2S_CLK(DAC_I2S_CLK_1),
-	.DAC_I2S_DATA(DAC_I2S_DATA_1),
-	.DAC_I2S_WS(DAC_I2S_WS_1),
-	.SD_SPI_CLK(SD_SPI_CLK_1),
-	.SD_SPI_COUNT_DEBUG(SD_SPI_COUNT_DEBUG_1),
-	.SD_SPI_CS(SD_SPI_CS_1),
-	.SD_SPI_MOSI(SD_SPI_MOSI_1),
-	.SD_SPI_UTILCOUNT_DEBUG(SD_SPI_UTILCOUNT_DEBUG_1),
-	.TFT_RS(TFT_RS_1),
-	.TFT_RST(TFT_RST_1),
-	.TFT_SPI_CLK(TFT_SPI_CLK_1),
-	.TFT_SPI_CS(TFT_SPI_CS_1),
-	.TFT_SPI_MOSI(TFT_SPI_MOSI_1)
+Audio Audio(
+	.CLK(CLK),
+	.Reset(Reset),
+	.Track1ControlRegister(Track1ControlRegister),
+	.Track2ControlRegister(Track2ControlRegister),
+	.DAC_I2S_CLK(DAC_I2S_CLK),
+	.DAC_I2S_DATA(DAC_I2S_DATA),
+	.DAC_I2S_WS(DAC_I2S_WS)
 );
 
 endmodule
