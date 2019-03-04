@@ -339,7 +339,41 @@ reg [4:0] soc_Audio_WB_Track2ControlRegisterCSR_storage_full = 5'd0;
 wire [4:0] soc_Audio_WB_Track2ControlRegisterCSR_storage;
 reg soc_Audio_WB_Track2ControlRegisterCSR_re = 1'd0;
 wire [4:0] soc_Audio_WB_Track2ControlRegister;
+wire soc_Buttons_WB_irq;
+wire soc_Buttons_WB_button1_status;
+reg soc_Buttons_WB_button1_pending = 1'd0;
+wire soc_Buttons_WB_button1_trigger;
+reg soc_Buttons_WB_button1_clear;
+wire soc_Buttons_WB_button2_status;
+reg soc_Buttons_WB_button2_pending = 1'd0;
+wire soc_Buttons_WB_button2_trigger;
+reg soc_Buttons_WB_button2_clear;
+wire soc_Buttons_WB_button3_status;
+reg soc_Buttons_WB_button3_pending = 1'd0;
+wire soc_Buttons_WB_button3_trigger;
+reg soc_Buttons_WB_button3_clear;
+wire soc_Buttons_WB_button4_status;
+reg soc_Buttons_WB_button4_pending = 1'd0;
+wire soc_Buttons_WB_button4_trigger;
+reg soc_Buttons_WB_button4_clear;
+wire soc_Buttons_WB_CLK;
+wire [3:0] soc_Buttons_WB_Buttons;
+reg [3:0] soc_Buttons_WB_DataRegister_status = 4'd0;
+wire [3:0] soc_Buttons_WB_Data;
+wire soc_Buttons_WB_Button1Interrupt;
+wire soc_Buttons_WB_Button2Interrupt;
+wire soc_Buttons_WB_Button3Interrupt;
+wire soc_Buttons_WB_Button4Interrupt;
 reg soc_Reset = 1'd0;
+wire status_re;
+wire [3:0] status_r;
+reg [3:0] status_w;
+wire pending_re;
+wire [3:0] pending_r;
+reg [3:0] pending_w;
+reg [3:0] storage_full = 4'd0;
+wire [3:0] storage;
+reg re = 1'd0;
 wire [29:0] shared_adr;
 wire [31:0] shared_dat_w;
 reg [31:0] shared_dat_r;
@@ -374,21 +408,32 @@ wire [13:0] interface1_bank_bus_adr;
 wire interface1_bank_bus_we;
 wire [31:0] interface1_bank_bus_dat_w;
 reg [31:0] interface1_bank_bus_dat_r = 32'd0;
-wire csrbank1_TilesControlRegisterCSR0_re;
-wire [13:0] csrbank1_TilesControlRegisterCSR0_r;
-wire [13:0] csrbank1_TilesControlRegisterCSR0_w;
+wire csrbank1_DataRegister_re;
+wire [3:0] csrbank1_DataRegister_r;
+wire [3:0] csrbank1_DataRegister_w;
+wire csrbank1_ev_enable0_re;
+wire [3:0] csrbank1_ev_enable0_r;
+wire [3:0] csrbank1_ev_enable0_w;
 wire csrbank1_sel;
 wire [13:0] interface2_bank_bus_adr;
 wire interface2_bank_bus_we;
 wire [31:0] interface2_bank_bus_dat_w;
 reg [31:0] interface2_bank_bus_dat_r = 32'd0;
-wire csrbank2_scratch0_re;
-wire [31:0] csrbank2_scratch0_r;
-wire [31:0] csrbank2_scratch0_w;
-wire csrbank2_bus_errors_re;
-wire [31:0] csrbank2_bus_errors_r;
-wire [31:0] csrbank2_bus_errors_w;
+wire csrbank2_TilesControlRegisterCSR0_re;
+wire [13:0] csrbank2_TilesControlRegisterCSR0_r;
+wire [13:0] csrbank2_TilesControlRegisterCSR0_w;
 wire csrbank2_sel;
+wire [13:0] interface3_bank_bus_adr;
+wire interface3_bank_bus_we;
+wire [31:0] interface3_bank_bus_dat_w;
+reg [31:0] interface3_bank_bus_dat_r = 32'd0;
+wire csrbank3_scratch0_re;
+wire [31:0] csrbank3_scratch0_r;
+wire [31:0] csrbank3_scratch0_w;
+wire csrbank3_bus_errors_re;
+wire [31:0] csrbank3_bus_errors_r;
+wire [31:0] csrbank3_bus_errors_w;
+wire csrbank3_sel;
 wire [13:0] sram_bus_adr;
 wire sram_bus_we;
 wire [31:0] sram_bus_dat_w;
@@ -397,48 +442,48 @@ wire [5:0] adr;
 wire [7:0] dat_r;
 wire sel;
 reg sel_r = 1'd0;
-wire [13:0] interface3_bank_bus_adr;
-wire interface3_bank_bus_we;
-wire [31:0] interface3_bank_bus_dat_w;
-reg [31:0] interface3_bank_bus_dat_r = 32'd0;
-wire csrbank3_load0_re;
-wire [31:0] csrbank3_load0_r;
-wire [31:0] csrbank3_load0_w;
-wire csrbank3_reload0_re;
-wire [31:0] csrbank3_reload0_r;
-wire [31:0] csrbank3_reload0_w;
-wire csrbank3_en0_re;
-wire csrbank3_en0_r;
-wire csrbank3_en0_w;
-wire csrbank3_value_re;
-wire [31:0] csrbank3_value_r;
-wire [31:0] csrbank3_value_w;
-wire csrbank3_ev_enable0_re;
-wire csrbank3_ev_enable0_r;
-wire csrbank3_ev_enable0_w;
-wire csrbank3_sel;
 wire [13:0] interface4_bank_bus_adr;
 wire interface4_bank_bus_we;
 wire [31:0] interface4_bank_bus_dat_w;
 reg [31:0] interface4_bank_bus_dat_r = 32'd0;
-wire csrbank4_txfull_re;
-wire csrbank4_txfull_r;
-wire csrbank4_txfull_w;
-wire csrbank4_rxempty_re;
-wire csrbank4_rxempty_r;
-wire csrbank4_rxempty_w;
+wire csrbank4_load0_re;
+wire [31:0] csrbank4_load0_r;
+wire [31:0] csrbank4_load0_w;
+wire csrbank4_reload0_re;
+wire [31:0] csrbank4_reload0_r;
+wire [31:0] csrbank4_reload0_w;
+wire csrbank4_en0_re;
+wire csrbank4_en0_r;
+wire csrbank4_en0_w;
+wire csrbank4_value_re;
+wire [31:0] csrbank4_value_r;
+wire [31:0] csrbank4_value_w;
 wire csrbank4_ev_enable0_re;
-wire [1:0] csrbank4_ev_enable0_r;
-wire [1:0] csrbank4_ev_enable0_w;
+wire csrbank4_ev_enable0_r;
+wire csrbank4_ev_enable0_w;
 wire csrbank4_sel;
 wire [13:0] interface5_bank_bus_adr;
 wire interface5_bank_bus_we;
 wire [31:0] interface5_bank_bus_dat_w;
 reg [31:0] interface5_bank_bus_dat_r = 32'd0;
-wire csrbank5_tuning_word0_re;
-wire [31:0] csrbank5_tuning_word0_r;
-wire [31:0] csrbank5_tuning_word0_w;
+wire csrbank5_txfull_re;
+wire csrbank5_txfull_r;
+wire csrbank5_txfull_w;
+wire csrbank5_rxempty_re;
+wire csrbank5_rxempty_r;
+wire csrbank5_rxempty_w;
+wire csrbank5_ev_enable0_re;
+wire [1:0] csrbank5_ev_enable0_r;
+wire [1:0] csrbank5_ev_enable0_w;
 wire csrbank5_sel;
+wire [13:0] interface6_bank_bus_adr;
+wire interface6_bank_bus_we;
+wire [31:0] interface6_bank_bus_dat_w;
+reg [31:0] interface6_bank_bus_dat_r = 32'd0;
+wire csrbank6_tuning_word0_re;
+wire [31:0] csrbank6_tuning_word0_r;
+wire [31:0] csrbank6_tuning_word0_w;
+wire csrbank6_sel;
 reg [29:0] array_muxed0;
 reg [31:0] array_muxed1;
 reg [3:0] array_muxed2;
@@ -456,6 +501,8 @@ initial dummy_s <= 1'd0;
 // synthesis translate_on
 
 assign soc_lm32_reset = soc_ctrl_reset;
+assign soc_Buttons_WB_CLK = sys_clk;
+assign soc_Buttons_WB_Buttons = {user_btn_3, user_btn_2, user_btn_1, user_btn};
 assign soc_Video_WB_CLK = sys_clk;
 assign soc_Video_WB_Reset = soc_Reset;
 assign TFT_SPI_MOSI = soc_Video_WB_TFT_SPI_MOSI;
@@ -483,6 +530,7 @@ always @(*) begin
 	soc_lm32_interrupt <= 32'd0;
 	soc_lm32_interrupt[1] <= soc_timer0_irq;
 	soc_lm32_interrupt[2] <= soc_uart_irq;
+	soc_lm32_interrupt[7] <= soc_Buttons_WB_irq;
 // synthesis translate_off
 	dummy_d <= dummy_s;
 // synthesis translate_on
@@ -696,6 +744,96 @@ assign sys_rst = soc_int_rst;
 assign soc_Video_WB_TilesControlRegister = soc_Video_WB_storage;
 assign soc_Audio_WB_Track1ControlRegister = soc_Audio_WB_Track1ControlRegisterCSR_storage;
 assign soc_Audio_WB_Track2ControlRegister = soc_Audio_WB_Track2ControlRegisterCSR_storage;
+assign soc_Buttons_WB_Data = soc_Buttons_WB_DataRegister_status;
+assign soc_Buttons_WB_button1_trigger = soc_Buttons_WB_Button1Interrupt;
+assign soc_Buttons_WB_button2_trigger = soc_Buttons_WB_Button2Interrupt;
+assign soc_Buttons_WB_button3_trigger = soc_Buttons_WB_Button3Interrupt;
+assign soc_Buttons_WB_button4_trigger = soc_Buttons_WB_Button4Interrupt;
+
+// synthesis translate_off
+reg dummy_d_10;
+// synthesis translate_on
+always @(*) begin
+	soc_Buttons_WB_button1_clear <= 1'd0;
+	if ((pending_re & pending_r[0])) begin
+		soc_Buttons_WB_button1_clear <= 1'd1;
+	end
+// synthesis translate_off
+	dummy_d_10 <= dummy_s;
+// synthesis translate_on
+end
+
+// synthesis translate_off
+reg dummy_d_11;
+// synthesis translate_on
+always @(*) begin
+	soc_Buttons_WB_button2_clear <= 1'd0;
+	if ((pending_re & pending_r[1])) begin
+		soc_Buttons_WB_button2_clear <= 1'd1;
+	end
+// synthesis translate_off
+	dummy_d_11 <= dummy_s;
+// synthesis translate_on
+end
+
+// synthesis translate_off
+reg dummy_d_12;
+// synthesis translate_on
+always @(*) begin
+	soc_Buttons_WB_button3_clear <= 1'd0;
+	if ((pending_re & pending_r[2])) begin
+		soc_Buttons_WB_button3_clear <= 1'd1;
+	end
+// synthesis translate_off
+	dummy_d_12 <= dummy_s;
+// synthesis translate_on
+end
+
+// synthesis translate_off
+reg dummy_d_13;
+// synthesis translate_on
+always @(*) begin
+	status_w <= 4'd0;
+	status_w[0] <= soc_Buttons_WB_button1_status;
+	status_w[1] <= soc_Buttons_WB_button2_status;
+	status_w[2] <= soc_Buttons_WB_button3_status;
+	status_w[3] <= soc_Buttons_WB_button4_status;
+// synthesis translate_off
+	dummy_d_13 <= dummy_s;
+// synthesis translate_on
+end
+
+// synthesis translate_off
+reg dummy_d_14;
+// synthesis translate_on
+always @(*) begin
+	soc_Buttons_WB_button4_clear <= 1'd0;
+	if ((pending_re & pending_r[3])) begin
+		soc_Buttons_WB_button4_clear <= 1'd1;
+	end
+// synthesis translate_off
+	dummy_d_14 <= dummy_s;
+// synthesis translate_on
+end
+
+// synthesis translate_off
+reg dummy_d_15;
+// synthesis translate_on
+always @(*) begin
+	pending_w <= 4'd0;
+	pending_w[0] <= soc_Buttons_WB_button1_pending;
+	pending_w[1] <= soc_Buttons_WB_button2_pending;
+	pending_w[2] <= soc_Buttons_WB_button3_pending;
+	pending_w[3] <= soc_Buttons_WB_button4_pending;
+// synthesis translate_off
+	dummy_d_15 <= dummy_s;
+// synthesis translate_on
+end
+assign soc_Buttons_WB_irq = ((((pending_w[0] & storage[0]) | (pending_w[1] & storage[1])) | (pending_w[2] & storage[2])) | (pending_w[3] & storage[3]));
+assign soc_Buttons_WB_button1_status = 1'd0;
+assign soc_Buttons_WB_button2_status = 1'd0;
+assign soc_Buttons_WB_button3_status = 1'd0;
+assign soc_Buttons_WB_button4_status = 1'd0;
 assign shared_adr = array_muxed0;
 assign shared_dat_w = array_muxed1;
 assign shared_sel = array_muxed2;
@@ -713,7 +851,7 @@ assign soc_lm32_dbus_err = (shared_err & (grant == 1'd1));
 assign request = {soc_lm32_dbus_cyc, soc_lm32_ibus_cyc};
 
 // synthesis translate_off
-reg dummy_d_10;
+reg dummy_d_16;
 // synthesis translate_on
 always @(*) begin
 	slave_sel <= 4'd0;
@@ -722,7 +860,7 @@ always @(*) begin
 	slave_sel[2] <= (shared_adr[28:26] == 3'd4);
 	slave_sel[3] <= (shared_adr[28:26] == 3'd6);
 // synthesis translate_off
-	dummy_d_10 <= dummy_s;
+	dummy_d_16 <= dummy_s;
 // synthesis translate_on
 end
 assign soc_rom_bus_adr = shared_adr;
@@ -761,7 +899,7 @@ assign shared_err = (((soc_rom_bus_err | soc_sram_bus_err) | soc_main_ram_bus_er
 assign wait_1 = ((shared_stb & shared_cyc) & (~shared_ack));
 
 // synthesis translate_off
-reg dummy_d_11;
+reg dummy_d_17;
 // synthesis translate_on
 always @(*) begin
 	shared_dat_r <= 32'd0;
@@ -775,7 +913,7 @@ always @(*) begin
 		error <= 1'd1;
 	end
 // synthesis translate_off
-	dummy_d_11 <= dummy_s;
+	dummy_d_17 <= dummy_s;
 // synthesis translate_on
 end
 assign done = (count == 1'd0);
@@ -788,25 +926,37 @@ assign soc_Audio_WB_Track1ControlRegisterCSR_storage = soc_Audio_WB_Track1Contro
 assign csrbank0_Track1ControlRegisterCSR0_w = soc_Audio_WB_Track1ControlRegisterCSR_storage_full[4:0];
 assign soc_Audio_WB_Track2ControlRegisterCSR_storage = soc_Audio_WB_Track2ControlRegisterCSR_storage_full[4:0];
 assign csrbank0_Track2ControlRegisterCSR0_w = soc_Audio_WB_Track2ControlRegisterCSR_storage_full[4:0];
-assign csrbank1_sel = (interface1_bank_bus_adr[13:9] == 4'd8);
-assign csrbank1_TilesControlRegisterCSR0_r = interface1_bank_bus_dat_w[13:0];
-assign csrbank1_TilesControlRegisterCSR0_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[0] == 1'd0));
+assign csrbank1_sel = (interface1_bank_bus_adr[13:9] == 4'd10);
+assign csrbank1_DataRegister_r = interface1_bank_bus_dat_w[3:0];
+assign csrbank1_DataRegister_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 1'd0));
+assign status_r = interface1_bank_bus_dat_w[3:0];
+assign status_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 1'd1));
+assign pending_r = interface1_bank_bus_dat_w[3:0];
+assign pending_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 2'd2));
+assign csrbank1_ev_enable0_r = interface1_bank_bus_dat_w[3:0];
+assign csrbank1_ev_enable0_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 2'd3));
+assign csrbank1_DataRegister_w = soc_Buttons_WB_DataRegister_status[3:0];
+assign storage = storage_full[3:0];
+assign csrbank1_ev_enable0_w = storage_full[3:0];
+assign csrbank2_sel = (interface2_bank_bus_adr[13:9] == 4'd8);
+assign csrbank2_TilesControlRegisterCSR0_r = interface2_bank_bus_dat_w[13:0];
+assign csrbank2_TilesControlRegisterCSR0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[0] == 1'd0));
 assign soc_Video_WB_storage = soc_Video_WB_storage_full[13:0];
-assign csrbank1_TilesControlRegisterCSR0_w = soc_Video_WB_storage_full[13:0];
-assign csrbank2_sel = (interface2_bank_bus_adr[13:9] == 1'd0);
-assign soc_ctrl_reset_reset_r = interface2_bank_bus_dat_w[0];
-assign soc_ctrl_reset_reset_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[1:0] == 1'd0));
-assign csrbank2_scratch0_r = interface2_bank_bus_dat_w[31:0];
-assign csrbank2_scratch0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[1:0] == 1'd1));
-assign csrbank2_bus_errors_r = interface2_bank_bus_dat_w[31:0];
-assign csrbank2_bus_errors_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[1:0] == 2'd2));
+assign csrbank2_TilesControlRegisterCSR0_w = soc_Video_WB_storage_full[13:0];
+assign csrbank3_sel = (interface3_bank_bus_adr[13:9] == 1'd0);
+assign soc_ctrl_reset_reset_r = interface3_bank_bus_dat_w[0];
+assign soc_ctrl_reset_reset_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[1:0] == 1'd0));
+assign csrbank3_scratch0_r = interface3_bank_bus_dat_w[31:0];
+assign csrbank3_scratch0_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[1:0] == 1'd1));
+assign csrbank3_bus_errors_r = interface3_bank_bus_dat_w[31:0];
+assign csrbank3_bus_errors_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[1:0] == 2'd2));
 assign soc_ctrl_storage = soc_ctrl_storage_full[31:0];
-assign csrbank2_scratch0_w = soc_ctrl_storage_full[31:0];
-assign csrbank2_bus_errors_w = soc_ctrl_bus_errors_status[31:0];
+assign csrbank3_scratch0_w = soc_ctrl_storage_full[31:0];
+assign csrbank3_bus_errors_w = soc_ctrl_bus_errors_status[31:0];
 assign sel = (sram_bus_adr[13:9] == 3'd4);
 
 // synthesis translate_off
-reg dummy_d_12;
+reg dummy_d_18;
 // synthesis translate_on
 always @(*) begin
 	sram_bus_dat_r <= 32'd0;
@@ -814,64 +964,65 @@ always @(*) begin
 		sram_bus_dat_r <= dat_r;
 	end
 // synthesis translate_off
-	dummy_d_12 <= dummy_s;
+	dummy_d_18 <= dummy_s;
 // synthesis translate_on
 end
 assign adr = sram_bus_adr[5:0];
-assign csrbank3_sel = (interface3_bank_bus_adr[13:9] == 3'd5);
-assign csrbank3_load0_r = interface3_bank_bus_dat_w[31:0];
-assign csrbank3_load0_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 1'd0));
-assign csrbank3_reload0_r = interface3_bank_bus_dat_w[31:0];
-assign csrbank3_reload0_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 1'd1));
-assign csrbank3_en0_r = interface3_bank_bus_dat_w[0];
-assign csrbank3_en0_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 2'd2));
-assign soc_timer0_update_value_r = interface3_bank_bus_dat_w[0];
-assign soc_timer0_update_value_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 2'd3));
-assign csrbank3_value_r = interface3_bank_bus_dat_w[31:0];
-assign csrbank3_value_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 3'd4));
-assign soc_timer0_eventmanager_status_r = interface3_bank_bus_dat_w[0];
-assign soc_timer0_eventmanager_status_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 3'd5));
-assign soc_timer0_eventmanager_pending_r = interface3_bank_bus_dat_w[0];
-assign soc_timer0_eventmanager_pending_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 3'd6));
-assign csrbank3_ev_enable0_r = interface3_bank_bus_dat_w[0];
-assign csrbank3_ev_enable0_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[2:0] == 3'd7));
+assign csrbank4_sel = (interface4_bank_bus_adr[13:9] == 3'd5);
+assign csrbank4_load0_r = interface4_bank_bus_dat_w[31:0];
+assign csrbank4_load0_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 1'd0));
+assign csrbank4_reload0_r = interface4_bank_bus_dat_w[31:0];
+assign csrbank4_reload0_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 1'd1));
+assign csrbank4_en0_r = interface4_bank_bus_dat_w[0];
+assign csrbank4_en0_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 2'd2));
+assign soc_timer0_update_value_r = interface4_bank_bus_dat_w[0];
+assign soc_timer0_update_value_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 2'd3));
+assign csrbank4_value_r = interface4_bank_bus_dat_w[31:0];
+assign csrbank4_value_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 3'd4));
+assign soc_timer0_eventmanager_status_r = interface4_bank_bus_dat_w[0];
+assign soc_timer0_eventmanager_status_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 3'd5));
+assign soc_timer0_eventmanager_pending_r = interface4_bank_bus_dat_w[0];
+assign soc_timer0_eventmanager_pending_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 3'd6));
+assign csrbank4_ev_enable0_r = interface4_bank_bus_dat_w[0];
+assign csrbank4_ev_enable0_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 3'd7));
 assign soc_timer0_load_storage = soc_timer0_load_storage_full[31:0];
-assign csrbank3_load0_w = soc_timer0_load_storage_full[31:0];
+assign csrbank4_load0_w = soc_timer0_load_storage_full[31:0];
 assign soc_timer0_reload_storage = soc_timer0_reload_storage_full[31:0];
-assign csrbank3_reload0_w = soc_timer0_reload_storage_full[31:0];
+assign csrbank4_reload0_w = soc_timer0_reload_storage_full[31:0];
 assign soc_timer0_en_storage = soc_timer0_en_storage_full;
-assign csrbank3_en0_w = soc_timer0_en_storage_full;
-assign csrbank3_value_w = soc_timer0_value_status[31:0];
+assign csrbank4_en0_w = soc_timer0_en_storage_full;
+assign csrbank4_value_w = soc_timer0_value_status[31:0];
 assign soc_timer0_eventmanager_storage = soc_timer0_eventmanager_storage_full;
-assign csrbank3_ev_enable0_w = soc_timer0_eventmanager_storage_full;
-assign csrbank4_sel = (interface4_bank_bus_adr[13:9] == 2'd3);
-assign soc_uart_rxtx_r = interface4_bank_bus_dat_w[7:0];
-assign soc_uart_rxtx_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 1'd0));
-assign csrbank4_txfull_r = interface4_bank_bus_dat_w[0];
-assign csrbank4_txfull_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 1'd1));
-assign csrbank4_rxempty_r = interface4_bank_bus_dat_w[0];
-assign csrbank4_rxempty_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 2'd2));
-assign soc_uart_eventmanager_status_r = interface4_bank_bus_dat_w[1:0];
-assign soc_uart_eventmanager_status_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 2'd3));
-assign soc_uart_eventmanager_pending_r = interface4_bank_bus_dat_w[1:0];
-assign soc_uart_eventmanager_pending_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 3'd4));
-assign csrbank4_ev_enable0_r = interface4_bank_bus_dat_w[1:0];
-assign csrbank4_ev_enable0_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[2:0] == 3'd5));
-assign csrbank4_txfull_w = soc_uart_txfull_status;
-assign csrbank4_rxempty_w = soc_uart_rxempty_status;
+assign csrbank4_ev_enable0_w = soc_timer0_eventmanager_storage_full;
+assign csrbank5_sel = (interface5_bank_bus_adr[13:9] == 2'd3);
+assign soc_uart_rxtx_r = interface5_bank_bus_dat_w[7:0];
+assign soc_uart_rxtx_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[2:0] == 1'd0));
+assign csrbank5_txfull_r = interface5_bank_bus_dat_w[0];
+assign csrbank5_txfull_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[2:0] == 1'd1));
+assign csrbank5_rxempty_r = interface5_bank_bus_dat_w[0];
+assign csrbank5_rxempty_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[2:0] == 2'd2));
+assign soc_uart_eventmanager_status_r = interface5_bank_bus_dat_w[1:0];
+assign soc_uart_eventmanager_status_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[2:0] == 2'd3));
+assign soc_uart_eventmanager_pending_r = interface5_bank_bus_dat_w[1:0];
+assign soc_uart_eventmanager_pending_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[2:0] == 3'd4));
+assign csrbank5_ev_enable0_r = interface5_bank_bus_dat_w[1:0];
+assign csrbank5_ev_enable0_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[2:0] == 3'd5));
+assign csrbank5_txfull_w = soc_uart_txfull_status;
+assign csrbank5_rxempty_w = soc_uart_rxempty_status;
 assign soc_uart_eventmanager_storage = soc_uart_eventmanager_storage_full[1:0];
-assign csrbank4_ev_enable0_w = soc_uart_eventmanager_storage_full[1:0];
-assign csrbank5_sel = (interface5_bank_bus_adr[13:9] == 2'd2);
-assign csrbank5_tuning_word0_r = interface5_bank_bus_dat_w[31:0];
-assign csrbank5_tuning_word0_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[0] == 1'd0));
+assign csrbank5_ev_enable0_w = soc_uart_eventmanager_storage_full[1:0];
+assign csrbank6_sel = (interface6_bank_bus_adr[13:9] == 2'd2);
+assign csrbank6_tuning_word0_r = interface6_bank_bus_dat_w[31:0];
+assign csrbank6_tuning_word0_re = ((csrbank6_sel & interface6_bank_bus_we) & (interface6_bank_bus_adr[0] == 1'd0));
 assign soc_uart_phy_storage = soc_uart_phy_storage_full[31:0];
-assign csrbank5_tuning_word0_w = soc_uart_phy_storage_full[31:0];
+assign csrbank6_tuning_word0_w = soc_uart_phy_storage_full[31:0];
 assign interface0_bank_bus_adr = soc_interface_adr;
 assign interface1_bank_bus_adr = soc_interface_adr;
 assign interface2_bank_bus_adr = soc_interface_adr;
 assign interface3_bank_bus_adr = soc_interface_adr;
 assign interface4_bank_bus_adr = soc_interface_adr;
 assign interface5_bank_bus_adr = soc_interface_adr;
+assign interface6_bank_bus_adr = soc_interface_adr;
 assign sram_bus_adr = soc_interface_adr;
 assign interface0_bank_bus_we = soc_interface_we;
 assign interface1_bank_bus_we = soc_interface_we;
@@ -879,6 +1030,7 @@ assign interface2_bank_bus_we = soc_interface_we;
 assign interface3_bank_bus_we = soc_interface_we;
 assign interface4_bank_bus_we = soc_interface_we;
 assign interface5_bank_bus_we = soc_interface_we;
+assign interface6_bank_bus_we = soc_interface_we;
 assign sram_bus_we = soc_interface_we;
 assign interface0_bank_bus_dat_w = soc_interface_dat_w;
 assign interface1_bank_bus_dat_w = soc_interface_dat_w;
@@ -886,11 +1038,12 @@ assign interface2_bank_bus_dat_w = soc_interface_dat_w;
 assign interface3_bank_bus_dat_w = soc_interface_dat_w;
 assign interface4_bank_bus_dat_w = soc_interface_dat_w;
 assign interface5_bank_bus_dat_w = soc_interface_dat_w;
+assign interface6_bank_bus_dat_w = soc_interface_dat_w;
 assign sram_bus_dat_w = soc_interface_dat_w;
-assign soc_interface_dat_r = ((((((interface0_bank_bus_dat_r | interface1_bank_bus_dat_r) | interface2_bank_bus_dat_r) | interface3_bank_bus_dat_r) | interface4_bank_bus_dat_r) | interface5_bank_bus_dat_r) | sram_bus_dat_r);
+assign soc_interface_dat_r = (((((((interface0_bank_bus_dat_r | interface1_bank_bus_dat_r) | interface2_bank_bus_dat_r) | interface3_bank_bus_dat_r) | interface4_bank_bus_dat_r) | interface5_bank_bus_dat_r) | interface6_bank_bus_dat_r) | sram_bus_dat_r);
 
 // synthesis translate_off
-reg dummy_d_13;
+reg dummy_d_19;
 // synthesis translate_on
 always @(*) begin
 	array_muxed0 <= 30'd0;
@@ -903,12 +1056,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_13 <= dummy_s;
+	dummy_d_19 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_14;
+reg dummy_d_20;
 // synthesis translate_on
 always @(*) begin
 	array_muxed1 <= 32'd0;
@@ -921,12 +1074,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_14 <= dummy_s;
+	dummy_d_20 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_15;
+reg dummy_d_21;
 // synthesis translate_on
 always @(*) begin
 	array_muxed2 <= 4'd0;
@@ -939,12 +1092,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_15 <= dummy_s;
+	dummy_d_21 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_16;
+reg dummy_d_22;
 // synthesis translate_on
 always @(*) begin
 	array_muxed3 <= 1'd0;
@@ -957,12 +1110,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_16 <= dummy_s;
+	dummy_d_22 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_17;
+reg dummy_d_23;
 // synthesis translate_on
 always @(*) begin
 	array_muxed4 <= 1'd0;
@@ -975,12 +1128,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_17 <= dummy_s;
+	dummy_d_23 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_18;
+reg dummy_d_24;
 // synthesis translate_on
 always @(*) begin
 	array_muxed5 <= 1'd0;
@@ -993,12 +1146,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_18 <= dummy_s;
+	dummy_d_24 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_19;
+reg dummy_d_25;
 // synthesis translate_on
 always @(*) begin
 	array_muxed6 <= 3'd0;
@@ -1011,12 +1164,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_19 <= dummy_s;
+	dummy_d_25 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_20;
+reg dummy_d_26;
 // synthesis translate_on
 always @(*) begin
 	array_muxed7 <= 2'd0;
@@ -1029,7 +1182,7 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_20 <= dummy_s;
+	dummy_d_26 <= dummy_s;
 // synthesis translate_on
 end
 assign soc_uart_phy_rx = regs1;
@@ -1227,6 +1380,30 @@ always @(posedge sys_clk) begin
 	if (((~soc_timer0_zero_trigger) & soc_timer0_zero_old_trigger)) begin
 		soc_timer0_zero_pending <= 1'd1;
 	end
+	if (soc_Buttons_WB_button1_clear) begin
+		soc_Buttons_WB_button1_pending <= 1'd0;
+	end
+	if (soc_Buttons_WB_button1_trigger) begin
+		soc_Buttons_WB_button1_pending <= 1'd1;
+	end
+	if (soc_Buttons_WB_button2_clear) begin
+		soc_Buttons_WB_button2_pending <= 1'd0;
+	end
+	if (soc_Buttons_WB_button2_trigger) begin
+		soc_Buttons_WB_button2_pending <= 1'd1;
+	end
+	if (soc_Buttons_WB_button3_clear) begin
+		soc_Buttons_WB_button3_pending <= 1'd0;
+	end
+	if (soc_Buttons_WB_button3_trigger) begin
+		soc_Buttons_WB_button3_pending <= 1'd1;
+	end
+	if (soc_Buttons_WB_button4_clear) begin
+		soc_Buttons_WB_button4_pending <= 1'd0;
+	end
+	if (soc_Buttons_WB_button4_trigger) begin
+		soc_Buttons_WB_button4_pending <= 1'd1;
+	end
 	case (grant)
 		1'd0: begin
 			if ((~request[0])) begin
@@ -1272,119 +1449,140 @@ always @(posedge sys_clk) begin
 	soc_Audio_WB_Track2ControlRegisterCSR_re <= csrbank0_Track2ControlRegisterCSR0_re;
 	interface1_bank_bus_dat_r <= 1'd0;
 	if (csrbank1_sel) begin
-		case (interface1_bank_bus_adr[0])
+		case (interface1_bank_bus_adr[1:0])
 			1'd0: begin
-				interface1_bank_bus_dat_r <= csrbank1_TilesControlRegisterCSR0_w;
-			end
-		endcase
-	end
-	if (csrbank1_TilesControlRegisterCSR0_re) begin
-		soc_Video_WB_storage_full[13:0] <= csrbank1_TilesControlRegisterCSR0_r;
-	end
-	soc_Video_WB_re <= csrbank1_TilesControlRegisterCSR0_re;
-	interface2_bank_bus_dat_r <= 1'd0;
-	if (csrbank2_sel) begin
-		case (interface2_bank_bus_adr[1:0])
-			1'd0: begin
-				interface2_bank_bus_dat_r <= soc_ctrl_reset_reset_w;
+				interface1_bank_bus_dat_r <= csrbank1_DataRegister_w;
 			end
 			1'd1: begin
-				interface2_bank_bus_dat_r <= csrbank2_scratch0_w;
+				interface1_bank_bus_dat_r <= status_w;
 			end
 			2'd2: begin
-				interface2_bank_bus_dat_r <= csrbank2_bus_errors_w;
-			end
-		endcase
-	end
-	if (csrbank2_scratch0_re) begin
-		soc_ctrl_storage_full[31:0] <= csrbank2_scratch0_r;
-	end
-	soc_ctrl_re <= csrbank2_scratch0_re;
-	sel_r <= sel;
-	interface3_bank_bus_dat_r <= 1'd0;
-	if (csrbank3_sel) begin
-		case (interface3_bank_bus_adr[2:0])
-			1'd0: begin
-				interface3_bank_bus_dat_r <= csrbank3_load0_w;
-			end
-			1'd1: begin
-				interface3_bank_bus_dat_r <= csrbank3_reload0_w;
-			end
-			2'd2: begin
-				interface3_bank_bus_dat_r <= csrbank3_en0_w;
+				interface1_bank_bus_dat_r <= pending_w;
 			end
 			2'd3: begin
-				interface3_bank_bus_dat_r <= soc_timer0_update_value_w;
-			end
-			3'd4: begin
-				interface3_bank_bus_dat_r <= csrbank3_value_w;
-			end
-			3'd5: begin
-				interface3_bank_bus_dat_r <= soc_timer0_eventmanager_status_w;
-			end
-			3'd6: begin
-				interface3_bank_bus_dat_r <= soc_timer0_eventmanager_pending_w;
-			end
-			3'd7: begin
-				interface3_bank_bus_dat_r <= csrbank3_ev_enable0_w;
+				interface1_bank_bus_dat_r <= csrbank1_ev_enable0_w;
 			end
 		endcase
 	end
-	if (csrbank3_load0_re) begin
-		soc_timer0_load_storage_full[31:0] <= csrbank3_load0_r;
+	if (csrbank1_ev_enable0_re) begin
+		storage_full[3:0] <= csrbank1_ev_enable0_r;
 	end
-	soc_timer0_load_re <= csrbank3_load0_re;
-	if (csrbank3_reload0_re) begin
-		soc_timer0_reload_storage_full[31:0] <= csrbank3_reload0_r;
+	re <= csrbank1_ev_enable0_re;
+	interface2_bank_bus_dat_r <= 1'd0;
+	if (csrbank2_sel) begin
+		case (interface2_bank_bus_adr[0])
+			1'd0: begin
+				interface2_bank_bus_dat_r <= csrbank2_TilesControlRegisterCSR0_w;
+			end
+		endcase
 	end
-	soc_timer0_reload_re <= csrbank3_reload0_re;
-	if (csrbank3_en0_re) begin
-		soc_timer0_en_storage_full <= csrbank3_en0_r;
+	if (csrbank2_TilesControlRegisterCSR0_re) begin
+		soc_Video_WB_storage_full[13:0] <= csrbank2_TilesControlRegisterCSR0_r;
 	end
-	soc_timer0_en_re <= csrbank3_en0_re;
-	if (csrbank3_ev_enable0_re) begin
-		soc_timer0_eventmanager_storage_full <= csrbank3_ev_enable0_r;
+	soc_Video_WB_re <= csrbank2_TilesControlRegisterCSR0_re;
+	interface3_bank_bus_dat_r <= 1'd0;
+	if (csrbank3_sel) begin
+		case (interface3_bank_bus_adr[1:0])
+			1'd0: begin
+				interface3_bank_bus_dat_r <= soc_ctrl_reset_reset_w;
+			end
+			1'd1: begin
+				interface3_bank_bus_dat_r <= csrbank3_scratch0_w;
+			end
+			2'd2: begin
+				interface3_bank_bus_dat_r <= csrbank3_bus_errors_w;
+			end
+		endcase
 	end
-	soc_timer0_eventmanager_re <= csrbank3_ev_enable0_re;
+	if (csrbank3_scratch0_re) begin
+		soc_ctrl_storage_full[31:0] <= csrbank3_scratch0_r;
+	end
+	soc_ctrl_re <= csrbank3_scratch0_re;
+	sel_r <= sel;
 	interface4_bank_bus_dat_r <= 1'd0;
 	if (csrbank4_sel) begin
 		case (interface4_bank_bus_adr[2:0])
 			1'd0: begin
-				interface4_bank_bus_dat_r <= soc_uart_rxtx_w;
+				interface4_bank_bus_dat_r <= csrbank4_load0_w;
 			end
 			1'd1: begin
-				interface4_bank_bus_dat_r <= csrbank4_txfull_w;
+				interface4_bank_bus_dat_r <= csrbank4_reload0_w;
 			end
 			2'd2: begin
-				interface4_bank_bus_dat_r <= csrbank4_rxempty_w;
+				interface4_bank_bus_dat_r <= csrbank4_en0_w;
 			end
 			2'd3: begin
-				interface4_bank_bus_dat_r <= soc_uart_eventmanager_status_w;
+				interface4_bank_bus_dat_r <= soc_timer0_update_value_w;
 			end
 			3'd4: begin
-				interface4_bank_bus_dat_r <= soc_uart_eventmanager_pending_w;
+				interface4_bank_bus_dat_r <= csrbank4_value_w;
 			end
 			3'd5: begin
+				interface4_bank_bus_dat_r <= soc_timer0_eventmanager_status_w;
+			end
+			3'd6: begin
+				interface4_bank_bus_dat_r <= soc_timer0_eventmanager_pending_w;
+			end
+			3'd7: begin
 				interface4_bank_bus_dat_r <= csrbank4_ev_enable0_w;
 			end
 		endcase
 	end
-	if (csrbank4_ev_enable0_re) begin
-		soc_uart_eventmanager_storage_full[1:0] <= csrbank4_ev_enable0_r;
+	if (csrbank4_load0_re) begin
+		soc_timer0_load_storage_full[31:0] <= csrbank4_load0_r;
 	end
-	soc_uart_eventmanager_re <= csrbank4_ev_enable0_re;
+	soc_timer0_load_re <= csrbank4_load0_re;
+	if (csrbank4_reload0_re) begin
+		soc_timer0_reload_storage_full[31:0] <= csrbank4_reload0_r;
+	end
+	soc_timer0_reload_re <= csrbank4_reload0_re;
+	if (csrbank4_en0_re) begin
+		soc_timer0_en_storage_full <= csrbank4_en0_r;
+	end
+	soc_timer0_en_re <= csrbank4_en0_re;
+	if (csrbank4_ev_enable0_re) begin
+		soc_timer0_eventmanager_storage_full <= csrbank4_ev_enable0_r;
+	end
+	soc_timer0_eventmanager_re <= csrbank4_ev_enable0_re;
 	interface5_bank_bus_dat_r <= 1'd0;
 	if (csrbank5_sel) begin
-		case (interface5_bank_bus_adr[0])
+		case (interface5_bank_bus_adr[2:0])
 			1'd0: begin
-				interface5_bank_bus_dat_r <= csrbank5_tuning_word0_w;
+				interface5_bank_bus_dat_r <= soc_uart_rxtx_w;
+			end
+			1'd1: begin
+				interface5_bank_bus_dat_r <= csrbank5_txfull_w;
+			end
+			2'd2: begin
+				interface5_bank_bus_dat_r <= csrbank5_rxempty_w;
+			end
+			2'd3: begin
+				interface5_bank_bus_dat_r <= soc_uart_eventmanager_status_w;
+			end
+			3'd4: begin
+				interface5_bank_bus_dat_r <= soc_uart_eventmanager_pending_w;
+			end
+			3'd5: begin
+				interface5_bank_bus_dat_r <= csrbank5_ev_enable0_w;
 			end
 		endcase
 	end
-	if (csrbank5_tuning_word0_re) begin
-		soc_uart_phy_storage_full[31:0] <= csrbank5_tuning_word0_r;
+	if (csrbank5_ev_enable0_re) begin
+		soc_uart_eventmanager_storage_full[1:0] <= csrbank5_ev_enable0_r;
 	end
-	soc_uart_phy_re <= csrbank5_tuning_word0_re;
+	soc_uart_eventmanager_re <= csrbank5_ev_enable0_re;
+	interface6_bank_bus_dat_r <= 1'd0;
+	if (csrbank6_sel) begin
+		case (interface6_bank_bus_adr[0])
+			1'd0: begin
+				interface6_bank_bus_dat_r <= csrbank6_tuning_word0_w;
+			end
+		endcase
+	end
+	if (csrbank6_tuning_word0_re) begin
+		soc_uart_phy_storage_full[31:0] <= csrbank6_tuning_word0_r;
+	end
+	soc_uart_phy_re <= csrbank6_tuning_word0_re;
 	if (sys_rst) begin
 		soc_ctrl_storage_full <= 32'd305419896;
 		soc_ctrl_re <= 1'd0;
@@ -1447,16 +1645,23 @@ always @(posedge sys_clk) begin
 		soc_Audio_WB_Track1ControlRegisterCSR_re <= 1'd0;
 		soc_Audio_WB_Track2ControlRegisterCSR_storage_full <= 5'd0;
 		soc_Audio_WB_Track2ControlRegisterCSR_re <= 1'd0;
+		soc_Buttons_WB_button1_pending <= 1'd0;
+		soc_Buttons_WB_button2_pending <= 1'd0;
+		soc_Buttons_WB_button3_pending <= 1'd0;
+		soc_Buttons_WB_button4_pending <= 1'd0;
+		storage_full <= 4'd0;
+		re <= 1'd0;
 		grant <= 1'd0;
 		slave_sel_r <= 4'd0;
 		count <= 20'd1000000;
 		interface0_bank_bus_dat_r <= 32'd0;
 		interface1_bank_bus_dat_r <= 32'd0;
 		interface2_bank_bus_dat_r <= 32'd0;
-		sel_r <= 1'd0;
 		interface3_bank_bus_dat_r <= 32'd0;
+		sel_r <= 1'd0;
 		interface4_bank_bus_dat_r <= 32'd0;
 		interface5_bank_bus_dat_r <= 32'd0;
+		interface6_bank_bus_dat_r <= 32'd0;
 	end
 	regs0 <= serial_rx;
 	regs1 <= regs0;
@@ -1542,35 +1747,35 @@ initial begin
 	$readmemh("mem_2.init", mem_2);
 end
 
-reg [9:0] storage[0:15];
+reg [9:0] storage_1[0:15];
 reg [9:0] memdat;
 reg [9:0] memdat_1;
 always @(posedge sys_clk) begin
 	if (soc_uart_tx_fifo_wrport_we)
-		storage[soc_uart_tx_fifo_wrport_adr] <= soc_uart_tx_fifo_wrport_dat_w;
-	memdat <= storage[soc_uart_tx_fifo_wrport_adr];
+		storage_1[soc_uart_tx_fifo_wrport_adr] <= soc_uart_tx_fifo_wrport_dat_w;
+	memdat <= storage_1[soc_uart_tx_fifo_wrport_adr];
 end
 
 always @(posedge sys_clk) begin
 	if (soc_uart_tx_fifo_rdport_re)
-		memdat_1 <= storage[soc_uart_tx_fifo_rdport_adr];
+		memdat_1 <= storage_1[soc_uart_tx_fifo_rdport_adr];
 end
 
 assign soc_uart_tx_fifo_wrport_dat_r = memdat;
 assign soc_uart_tx_fifo_rdport_dat_r = memdat_1;
 
-reg [9:0] storage_1[0:15];
+reg [9:0] storage_2[0:15];
 reg [9:0] memdat_2;
 reg [9:0] memdat_3;
 always @(posedge sys_clk) begin
 	if (soc_uart_rx_fifo_wrport_we)
-		storage_1[soc_uart_rx_fifo_wrport_adr] <= soc_uart_rx_fifo_wrport_dat_w;
-	memdat_2 <= storage_1[soc_uart_rx_fifo_wrport_adr];
+		storage_2[soc_uart_rx_fifo_wrport_adr] <= soc_uart_rx_fifo_wrport_dat_w;
+	memdat_2 <= storage_2[soc_uart_rx_fifo_wrport_adr];
 end
 
 always @(posedge sys_clk) begin
 	if (soc_uart_rx_fifo_rdport_re)
-		memdat_3 <= storage_1[soc_uart_rx_fifo_rdport_adr];
+		memdat_3 <= storage_2[soc_uart_rx_fifo_rdport_adr];
 end
 
 assign soc_uart_rx_fifo_wrport_dat_r = memdat_2;
@@ -1613,6 +1818,16 @@ Audio Audio(
 	.SD_SPI_CS(soc_Audio_WB_SD_SPI_CS),
 	.SD_SPI_MOSI(soc_Audio_WB_SD_SPI_MOSI),
 	.SD_SPI_UTILCOUNT_DEBUG(soc_Audio_WB_SD_SPI_UTILCOUNT_DEBUG)
+);
+
+Buttons Buttons(
+	.CLK(soc_Buttons_WB_CLK),
+	.buttons(soc_Buttons_WB_Buttons),
+	.Button1Interrupt(soc_Buttons_WB_Button1Interrupt),
+	.Button2Interrupt(soc_Buttons_WB_Button2Interrupt),
+	.Button3Interrupt(soc_Buttons_WB_Button3Interrupt),
+	.Button4Interrupt(soc_Buttons_WB_Button4Interrupt),
+	.data(soc_Buttons_WB_Data)
 );
 
 endmodule

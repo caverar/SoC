@@ -13,6 +13,7 @@ from litex.soc.integration.soc_core import *
 from litex.soc.integration.builder import *
 from Hardware.Video import Video
 from Hardware.Audio import Audio
+from Hardware.Buttons import Buttons
 from litex.soc.cores import gpio
 ##from ios import Led
 
@@ -137,13 +138,15 @@ TFT_SPI_CS             = platform.request("TFT_SPI_CS"             , 0)
 #
 
 # Adicion de modulos en verilog
+#   Buttons
+platform.add_source("Hardware/Peripheral_Buttons/Buttons.v")
 #   Video
 platform.add_source("Hardware/Peripheral_Video/Video.v")
 platform.add_source("Hardware/Peripheral_Video/ColorDecoder.v")
 platform.add_source("Hardware/Peripheral_Video/VideoData.mem")
 platform.add_source("Hardware/Peripheral_Video/InitialPosition.mem")
 platform.add_source("Hardware/Peripheral_Video/Video_ClockManager.v")
-#Audio
+#  Audio
 platform.add_source("Hardware/Peripheral_Audio/Audio.v")
 platform.add_source("Hardware/Peripheral_Audio/Audio_ClockManager.v")
 #	I2S
@@ -172,17 +175,17 @@ class SoC(SoCCore):
     csr_peripherals = [         
         "Video_WB",
         "Audio_WB",
-        #"Buttons",
+        "Buttons_WB",
     ]    
     
     csr_map_update(SoCCore.csr_map, csr_peripherals)
     
 
     def __init__(self, platform):
-        # interrupt_map= {
-        #     'Buttons': 7,
-        # }
-        # SoCCore.interrupt_map.update(interrupt_map)
+        interrupt_map= {
+            'Buttons_WB': 7,
+        }
+        SoCCore.interrupt_map.update(interrupt_map)
 
         sys_clk_freq = int(100e6)
         # SoC with CPU
@@ -200,7 +203,8 @@ class SoC(SoCCore):
         self.submodules.crg         = CRG(platform.request("clk100"),platform.request("cpu_reset"))
 
         self.submodules.Video_WB    = Video()
-        self.submodules.Audio_WB    = Audio()        
+        self.submodules.Audio_WB    = Audio()
+        self.submodules.Buttons_WB  = Buttons()         
 
         self.CLK                    = Signal()
         self.Reset                  = Signal()        
@@ -226,7 +230,8 @@ class SoC(SoCCore):
          
         self.comb += [
             
-    
+            self.Buttons_WB.CLK.eq(SystemClock),
+            self.Buttons_WB.Buttons.eq(buttons),
             self.Video_WB.CLK.eq(SystemClock),            
             self.Video_WB.Reset.eq(self.Reset), 
            

@@ -8,6 +8,7 @@
 #include <generated/csr.h>
 
 //Espera en ms
+volatile unsigned int state;
 static void wait_ms(unsigned int time)
 {
 	timer0_en_write(0);
@@ -29,36 +30,54 @@ static void playTrack ( unsigned int EnablePlay, unsigned int EnableLoop, unsign
 	Audio_WB_Track1ControlRegisterCSR_write((EnablePlay<<4)+(EnableLoop<<3)+Track);
 }
 
+
 int main(void)
-{
-	
+{	
 	
 	while(1) {
-		playTrack(1,1,3);		
-		for(int j=0;j<28;j=j+4){
+		irq_setmask(1<<7);
+		irq_setie(1);
+		playTrack(1,1,3);
+		Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);
+		state=0;
+		if(state==0){		
+			for(int j=0;j<28;j=j+4){
 
-			for(int i=0;i<320;i++){
-				if((i%2)>0){
-					putTile(i,j);
-				}else{
-					putTile(i,j+1);
-				}				
+				for(int i=0;i<320;i++){
+					if((i%2)>0){
+						putTile(i,j);
+					}else{
+						putTile(i,j+1);
+					}				
+				}
+
+				wait_ms(200);
+				for(int i=0;i<320;i++){
+					if((i%3)>0){
+						putTile(i,j+2);
+					}else{
+						putTile(i,j+3);
+					}				
+				}
+
+				wait_ms(200);	
 			}
-
-			wait_ms(200);
+		}else if(state==1){
 			for(int i=0;i<320;i++){
-				if((i%3)>0){
-					putTile(i,j+2);
-				}else{
-					putTile(i,j+3);
-				}				
+				putTile(i,5);
 			}
-
+			wait_ms(200);	
+		}else if(state==2){
+			for(int i=0;i<320;i++){
+				putTile(i,6);
+			}
+			wait_ms(200);	
+		}else if(state==3){
+			for(int i=0;i<320;i++){
+				putTile(i,7);
+			}
 			wait_ms(200);	
 		}
-		
-				
-		
 
 	}
 

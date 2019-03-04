@@ -41,8 +41,8 @@ module I2S(
         count=count+1;  
     end
     always@(negedge I2S_WS)begin
-        Data<=InputData;
-        //Data=SquareData;  
+        //Data<=InputData;
+        Data=SquareData;  
     end
     
     //Logica Combinacional

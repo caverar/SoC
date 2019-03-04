@@ -33,6 +33,42 @@ static inline void Audio_WB_Track2ControlRegisterCSR_write(unsigned int value) {
 	csr_writel(value, 0xe0004804);
 }
 
+/* Buttons_WB */
+#define CSR_BUTTONS_WB_BASE 0xe0005000
+#define CSR_BUTTONS_WB_DATAREGISTER_ADDR 0xe0005000
+#define CSR_BUTTONS_WB_DATAREGISTER_SIZE 1
+static inline unsigned int Buttons_WB_DataRegister_read(void) {
+	unsigned int r = csr_readl(0xe0005000);
+	return r;
+}
+#define CSR_BUTTONS_WB_EV_STATUS_ADDR 0xe0005004
+#define CSR_BUTTONS_WB_EV_STATUS_SIZE 1
+static inline unsigned int Buttons_WB_ev_status_read(void) {
+	unsigned int r = csr_readl(0xe0005004);
+	return r;
+}
+static inline void Buttons_WB_ev_status_write(unsigned int value) {
+	csr_writel(value, 0xe0005004);
+}
+#define CSR_BUTTONS_WB_EV_PENDING_ADDR 0xe0005008
+#define CSR_BUTTONS_WB_EV_PENDING_SIZE 1
+static inline unsigned int Buttons_WB_ev_pending_read(void) {
+	unsigned int r = csr_readl(0xe0005008);
+	return r;
+}
+static inline void Buttons_WB_ev_pending_write(unsigned int value) {
+	csr_writel(value, 0xe0005008);
+}
+#define CSR_BUTTONS_WB_EV_ENABLE_ADDR 0xe000500c
+#define CSR_BUTTONS_WB_EV_ENABLE_SIZE 1
+static inline unsigned int Buttons_WB_ev_enable_read(void) {
+	unsigned int r = csr_readl(0xe000500c);
+	return r;
+}
+static inline void Buttons_WB_ev_enable_write(unsigned int value) {
+	csr_writel(value, 0xe000500c);
+}
+
 /* Video_WB */
 #define CSR_VIDEO_WB_BASE 0xe0004000
 #define CSR_VIDEO_WB_TILESCONTROLREGISTERCSR_ADDR 0xe0004000
@@ -222,6 +258,10 @@ static inline int timer0_interrupt_read(void) {
 #define UART_INTERRUPT 2
 static inline int uart_interrupt_read(void) {
 	return 2;
+}
+#define BUTTONS_WB_INTERRUPT 7
+static inline int buttons_wb_interrupt_read(void) {
+	return 7;
 }
 #define CSR_DATA_WIDTH 32
 static inline int csr_data_width_read(void) {
