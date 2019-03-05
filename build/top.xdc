@@ -55,6 +55,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports I2S_CLK]
  ## I2S_WS:0
 set_property LOC A14 [get_ports I2S_WS]
 set_property IOSTANDARD LVCMOS33 [get_ports I2S_WS]
+ ## cpu_reset:0
+set_property LOC U18 [get_ports cpu_reset]
+set_property IOSTANDARD LVCMOS33 [get_ports cpu_reset]
  ## clk100:0
 set_property LOC W5 [get_ports clk100]
 set_property IOSTANDARD LVCMOS33 [get_ports clk100]

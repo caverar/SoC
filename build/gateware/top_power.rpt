@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Sun Mar  3 22:58:25 2019
+| Date             : Mon Mar  4 20:53:46 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.365        |
+| Total On-Chip Power (W)  | 0.359        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.292        |
+| Dynamic (W)              | 0.287        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.2         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.009 |        8 |       --- |             --- |
-| Slice Logic              |     0.009 |     5587 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     2428 |     20800 |           11.67 |
-|   CARRY4                 |    <0.001 |      183 |      8150 |            2.25 |
-|   Register               |    <0.001 |     2318 |     41600 |            5.57 |
+| Slice Logic              |     0.008 |     4847 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     2150 |     20800 |           10.34 |
+|   CARRY4                 |    <0.001 |      150 |      8150 |            1.84 |
+|   Register               |    <0.001 |     2009 |     41600 |            4.83 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      9600 |            1.08 |
-|   F7/F8 Muxes            |    <0.001 |       15 |     32600 |            0.05 |
-|   BUFG                   |    <0.001 |        5 |        32 |           15.63 |
-|   Others                 |     0.000 |       78 |       --- |             --- |
-| Signals                  |     0.012 |     4585 |       --- |             --- |
-| Block RAM                |     0.027 |     12.5 |        50 |           25.00 |
+|   F7/F8 Muxes            |    <0.001 |       13 |     32600 |            0.04 |
+|   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
+|   Others                 |     0.000 |       70 |       --- |             --- |
+| Signals                  |     0.012 |     4119 |       --- |             --- |
+| Block RAM                |     0.028 |     12.5 |        50 |           25.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | DSPs                     |    <0.001 |        3 |        90 |            3.33 |
-| I/O                      |     0.011 |       22 |       106 |           20.75 |
+| I/O                      |     0.006 |       16 |       106 |           15.09 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.365 |          |           |                 |
+| Total                    |     0.359 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,9 +77,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.067 |       0.056 |      0.010 |
+| Vccint    |       1.000 |     0.066 |       0.055 |      0.010 |
 | Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -96,17 +96,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
-| Device models               | High       | Device models are Production                           |                                                                                                                    |
-|                             |            |                                                        |                                                                                                                    |
-| Overall confidence level    | Low        |                                                        |                                                                                                                    |
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -151,17 +151,13 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| top                                              |     0.292 |
-|   Audio                                          |     0.131 |
+| top                                              |     0.287 |
+|   Audio                                          |     0.129 |
 |     audvid_clockmanager                          |     0.128 |
 |       cm2                                        |     0.128 |
 |     i2s                                          |    <0.001 |
-|       squaregenerator                            |    <0.001 |
-|     sd_spi                                       |     0.001 |
-|       InitSpi                                    |    <0.001 |
-|       WorkSpi                                    |    <0.001 |
-|       spiInitClock                               |    <0.001 |
-|       spiWorkClock                               |    <0.001 |
+|     synthesizer1                                 |    <0.001 |
+|       E4                                         |    <0.001 |
 |   Buttons                                        |    <0.001 |
 |     button1                                      |    <0.001 |
 |       verificationCLk                            |    <0.001 |
@@ -193,7 +189,7 @@ Table of Contents
 |       spi                                        |    <0.001 |
 |     video_clockmanager                           |     0.096 |
 |       cm1                                        |     0.096 |
-|   lm32_cpu                                       |     0.025 |
+|   lm32_cpu                                       |     0.026 |
 |     adder                                        |    <0.001 |
 |       addsub                                     |    <0.001 |
 |     instruction_unit                             |     0.010 |
@@ -202,9 +198,9 @@ Table of Contents
 |         memories[0].way_0_tag_ram                |     0.002 |
 |     interrupt_unit                               |    <0.001 |
 |     load_store_unit                              |     0.009 |
-|       dcache                                     |     0.006 |
+|       dcache                                     |     0.007 |
 |         memories[0].data_memories.way_0_data_ram |     0.004 |
-|         memories[0].way_0_tag_ram                |     0.003 |
+|         memories[0].way_0_tag_ram                |     0.002 |
 |     mc_arithmetic                                |     0.002 |
 |     multiplier                                   |    <0.001 |
 |     registers_reg_r1_0_31_0_5                    |    <0.001 |

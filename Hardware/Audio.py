@@ -21,16 +21,11 @@ class Audio(Module,AutoCSR):
         self.CLK                    = Signal()
         self.Reset                  = Signal()
 
-        ##SD    
-        self.SD_SPI_MISO            = Signal()
+     
 
     ##Salidas
 
-        self.SD_SPI_MOSI            = Signal()        
-        self.SD_SPI_CLK             = Signal()
-        self.SD_SPI_CS              = Signal()
-        self.SD_SPI_COUNT_DEBUG     = Signal() 
-        self.SD_SPI_UTILCOUNT_DEBUG = Signal()
+        
 
         ##DAC 
 
@@ -87,6 +82,7 @@ _io = [
     ("user_sw"    , 14, Pins("T1" ), IOStandard("LVCMOS33")),
     ("user_sw"    , 15, Pins("R2" ), IOStandard("LVCMOS33")),
     ("clk100"     , 0 , Pins("W5" ), IOStandard("LVCMOS33")),
+    ("cpu_reset"  , 0 , Pins("U18"), IOStandard("LVCMOS33")),
 
     #I2S-JB
     ("I2S_WS"     , 0 , Pins("A14"), IOStandard("LVCMOS33")),
@@ -115,6 +111,7 @@ switches       = Cat(*[platform.request("user_sw" , i) for i in range(16)])
 I2S_DATA       = platform.request("I2S_DATA" , 0)
 I2S_CLK        = platform.request("I2S_CLK"  , 0)
 I2S_WS         = platform.request("I2S_WS"   , 0)
+Reset          = platform.request("cpu_reset", 0)
 
 
 platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v")
@@ -122,6 +119,7 @@ platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator
 platform.add_source("Hardware/Peripheral_Audio/Audio_ClockManager.v")
 platform.add_source("Hardware/Peripheral_Audio/Synthesizer.v")
 platform.add_source("Hardware/Peripheral_Audio/Oscillator.v")
+platform.add_source("Hardware/Peripheral_Audio/Audio.v")
 #	utilities
 
 platform.add_source("Hardware/utilities/FrequencyGenerator.v")
@@ -134,4 +132,7 @@ soc = Audio()
 soc.comb+=I2S_DATA.eq(soc.DAC_I2S_DATA)
 soc.comb+=I2S_CLK.eq(soc.DAC_I2S_CLK)
 soc.comb+=I2S_WS.eq(soc.DAC_I2S_WS)
+soc.comb+=soc.CLK.eq(SystemClock)
+soc.comb+=soc.Reset.eq(Reset)
+
 platform.build(soc)

@@ -19,11 +19,12 @@ module top(
 	output I2S_DATA,
 	output I2S_CLK,
 	output I2S_WS,
+	input cpu_reset,
 	input clk100
 );
 
-reg CLK = 1'd0;
-reg Reset = 1'd0;
+wire CLK;
+wire Reset;
 wire DAC_I2S_CLK;
 wire DAC_I2S_DATA;
 wire DAC_I2S_WS;
@@ -46,6 +47,8 @@ assign Track2ControlRegister = Track2ControlRegisterCSR_storage;
 assign I2S_DATA = DAC_I2S_DATA;
 assign I2S_CLK = DAC_I2S_CLK;
 assign I2S_WS = DAC_I2S_WS;
+assign CLK = sys_clk;
+assign Reset = cpu_reset;
 assign sys_clk = clk100;
 assign por_clk = clk100;
 assign sys_rst = xilinxvivadotoolchain_int_rst;

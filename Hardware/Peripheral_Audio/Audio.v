@@ -58,11 +58,7 @@ module Audio(
         WriteAudio_Track2BeginAddress  = 0;
         WriteAudio_Track2EndAddress    = 0;
         WriteAudio_Track1EnablePlay    = 0;
-        WriteAudio_Track1EnableLoop    = 0;
-        
-               
-        SD_InputAddress           = 24'h000014; 
-        SDReadCount               = 0;        
+        WriteAudio_Track1EnableLoop    = 0; 
         
 
     end
@@ -82,21 +78,22 @@ module Audio(
         .SyncCLK(DAC_DataClock),
         .InputData(DAC_Data)        
     );
-    StereoSignedAdder adder(
-        .A(WriteAudio_Track1Data),
-        .B(WriteAudio_Track2Data),
-        .O(DAC_Data)
-    );
+    // StereoSignedAdder adder(
+    //     .A(WriteAudio_Track1Data),
+    //     .B(WriteAudio_Track2Data),
+    //     .O(DAC_Data)
+    // );
 
-    module Synthesizer(
+    Synthesizer synthesizer1(
         .MasterCLK(MasterCLK),
         .Reset(Reset),
-        .DataClock(Tempo_CLK),
-        .InputData(24'h00A00B),  
+        .OutputDataClock(DAC_DataClock),
+        .InputDataClock(Tempo_CLK),
+        .InputData(24'h000008),  
         .OutputData(DAC_Data)
     );
     //	Reloj de tempo de cancion -400Khz 
-	FrequencyGenerator #(.MasterFrequency(100000000),.frequency(180),  .bitsNumber(20)) spiInitClock(
+	FrequencyGenerator #(.MasterFrequency(100000000),.frequency(4),  .bitsNumber(26)) spiInitClock(
 		.InputCLK(MasterCLK),
 		.OutputCLK(Tempo_CLK)        
 	);

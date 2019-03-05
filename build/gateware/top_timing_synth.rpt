@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sun Mar  3 22:57:01 2019
+| Date         : Mon Mar  4 20:52:24 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -54,17 +54,7 @@ Table of Contents
 --------------------
  There are 6 register/latch pins with no clock driven by root clock pin: Audio/audvid_clockmanager/I2S_CLK_reg/Q (HIGH)
 
- There are 61 register/latch pins with no clock driven by root clock pin: Audio/i2s/I2S_WS_reg/Q (HIGH)
-
- There are 24 register/latch pins with no clock driven by root clock pin: Audio/sd_spi/EnableDataRead_reg/Q (HIGH)
-
- There are 42 register/latch pins with no clock driven by root clock pin: Audio/sd_spi/InitSpi/DataClk_reg/Q (HIGH)
-
- There are 35 register/latch pins with no clock driven by root clock pin: Audio/sd_spi/WorkSpi/DataClk_reg/Q (HIGH)
-
- There are 20 register/latch pins with no clock driven by root clock pin: Audio/sd_spi/spiInitClock/OutputCLK_reg/Q (HIGH)
-
- There are 20 register/latch pins with no clock driven by root clock pin: Audio/sd_spi/spiWorkClock/OutputCLK_reg/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: Audio/i2s/I2S_WS_reg/Q (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: Buttons/button1/verificationCLk/OutputCLK_reg/Q (HIGH)
 
@@ -133,21 +123,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 540 pins that are not constrained for maximum delay. (HIGH)
+ There are 164 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 7 input ports with no input delay specified. (HIGH)
+ There are 6 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 10 ports with no output delay specified. (HIGH)
+ There are 7 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -192,7 +182,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      2.381        0.000                      0                 6708       -0.021       -0.521                     35                 6708        3.000        0.000                       0                  2257  
+      2.381        0.000                      0                 6586       -0.021       -0.521                     35                 6586        3.000        0.000                       0                  2147  
 
 
 Timing constraints are not met.
@@ -221,7 +211,7 @@ clk100                            {0.000 5.000}        10.000          100.000
 
 Clock                                 WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                                 -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk100                                  2.381        0.000                      0                 6352        0.007        0.000                      0                 6352        3.000        0.000                       0                  2150  
+clk100                                  2.381        0.000                      0                 6230        0.007        0.000                      0                 6230        3.000        0.000                       0                  2040  
   I2S_CLK_reloj2_clk_wiz_0_0           68.271        0.000                      0                   12        0.007        0.000                      0                   12       34.931        0.000                       0                    15  
   MasterClocK_reloj1_clk_wiz_0_0        7.475        0.000                      0                    8        0.007        0.000                      0                    8        3.750        0.000                       0                    59  
   SD_Clock_reloj1_clk_wiz_0_0          77.442        0.000                      0                    8        0.007        0.000                      0                    8       39.500        0.000                       0                    11  
@@ -295,7 +285,7 @@ Slack (MET) :             2.381ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.800     2.258    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.096     2.354 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.584     2.938    clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.584     2.938    clk100_IBUF_BUFG
                          FDRE                                         r  storage_full_reg[1]/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.456     3.394 r  storage_full_reg[1]/Q
@@ -323,7 +313,7 @@ Slack (MET) :             2.381ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.760    12.148    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.091    12.239 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.439    12.678    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.439    12.678    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/clk100_IBUF_BUFG
                          RAMB36E1                                     r  lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/mem_reg/CLKBWRCLK
                          clock pessimism              0.115    12.793    
                          clock uncertainty           -0.035    12.758    
@@ -364,7 +354,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.337     0.564    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.026     0.590 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.114     0.704    clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.114     0.704    clk100_IBUF_BUFG
                          FDRE                                         r  regs0_reg/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.141     0.845 r  regs0_reg/Q
@@ -378,7 +368,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.355     0.769    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.029     0.798 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.259     1.057    clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.259     1.057    clk100_IBUF_BUFG
                          FDRE                                         r  regs1_reg/C
                          clock pessimism             -0.208     0.849    
                          FDRE (Hold_fdre_C_D)         0.070     0.919    regs1_reg
@@ -447,7 +437,7 @@ Slack (MET) :             68.271ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.800     2.258    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.096     2.354 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.584     2.938    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.584     2.938    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -1.480     1.458 r  Audio/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
                          net (fo=2, unplaced)         0.584     2.042    Audio/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
@@ -467,7 +457,7 @@ Slack (MET) :             68.271ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    72.250 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.760    73.009    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.091    73.100 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.439    73.539    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.439    73.539    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -1.290    72.250 r  Audio/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
                          net (fo=2, unplaced)         0.439    72.689    Audio/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
@@ -512,7 +502,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.337     0.564    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.026     0.590 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.114     0.704    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.114     0.704    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -0.477     0.226 r  Audio/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
                          net (fo=2, unplaced)         0.114     0.340    Audio/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
@@ -532,7 +522,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.355     0.769    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.029     0.798 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.259     1.057    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.259     1.057    Audio/audvid_clockmanager/cm2/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -0.643     0.414 r  Audio/audvid_clockmanager/cm2/mmcm_adv_inst2/CLKOUT0
                          net (fo=2, unplaced)         0.259     0.673    Audio/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0
@@ -606,7 +596,7 @@ Slack (MET) :             7.475ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.800     2.258    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.096     2.354 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.584     2.938    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.584     2.938    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -1.480     1.458 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
                          net (fo=2, unplaced)         0.584     2.042    Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
@@ -626,7 +616,7 @@ Slack (MET) :             7.475ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.760    12.148    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.091    12.239 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.439    12.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.439    12.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -1.290    11.388 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
                          net (fo=2, unplaced)         0.439    11.827    Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
@@ -671,7 +661,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.337     0.564    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.026     0.590 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.114     0.704    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.114     0.704    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -0.477     0.226 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
                          net (fo=2, unplaced)         0.114     0.340    Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
@@ -691,7 +681,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.355     0.769    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.029     0.798 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -0.643     0.414 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
                          net (fo=2, unplaced)         0.259     0.673    Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
@@ -765,7 +755,7 @@ Slack (MET) :             77.442ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.800     2.258    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.096     2.354 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.584     2.938    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.584     2.938    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -1.480     1.458 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
                          net (fo=2, unplaced)         0.584     2.042    Video/video_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
@@ -785,7 +775,7 @@ Slack (MET) :             77.442ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    81.388 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.760    82.148    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.091    82.239 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.439    82.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.439    82.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -1.290    81.388 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
                          net (fo=2, unplaced)         0.439    81.827    Video/video_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
@@ -830,7 +820,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.337     0.564    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.026     0.590 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.114     0.704    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.114     0.704    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -0.477     0.226 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
                          net (fo=2, unplaced)         0.114     0.340    Video/video_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
@@ -850,7 +840,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.355     0.769    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.029     0.798 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -0.643     0.414 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT1
                          net (fo=2, unplaced)         0.259     0.673    Video/video_clockmanager/cm1/SD_Clock_reloj1_clk_wiz_0_0
@@ -924,7 +914,7 @@ Slack (MET) :             157.428ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.800     2.258    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.096     2.354 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.584     2.938    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.584     2.938    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
                                                      -1.480     1.458 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
                          net (fo=2, unplaced)         0.584     2.042    Video/video_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
@@ -944,7 +934,7 @@ Slack (MET) :             157.428ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388   161.388 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.760   162.148    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.091   162.239 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.439   162.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.439   162.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
                                                      -1.290   161.388 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
                          net (fo=2, unplaced)         0.439   161.827    Video/video_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
@@ -989,7 +979,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.337     0.564    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.026     0.590 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.114     0.704    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.114     0.704    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
                                                      -0.477     0.226 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
                          net (fo=2, unplaced)         0.114     0.340    Video/video_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
@@ -1009,7 +999,7 @@ Slack (MET) :             0.007ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.355     0.769    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.029     0.798 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT2)
                                                      -0.643     0.414 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT2
                          net (fo=2, unplaced)         0.259     0.673    Video/video_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0
@@ -1127,7 +1117,7 @@ Slack (MET) :             6.918ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.800     2.258    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.096     2.354 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.584     2.938    clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.584     2.938    clk100_IBUF_BUFG
                          FDRE                                         r  soc_Video_WB_storage_full_reg[13]/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.456     3.394 f  soc_Video_WB_storage_full_reg[13]/Q
@@ -1144,7 +1134,7 @@ Slack (MET) :             6.918ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.760    12.148    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.091    12.239 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.439    12.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.439    12.678    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -1.290    11.388 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
                          net (fo=2, unplaced)         0.439    11.827    Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0
@@ -1195,7 +1185,7 @@ Slack (VIOLATED) :        -0.021ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.337     0.564    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.026     0.590 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.114     0.704    clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.114     0.704    clk100_IBUF_BUFG
                          FDRE                                         r  soc_Video_WB_storage_full_reg[0]/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.141     0.845 r  soc_Video_WB_storage_full_reg[0]/Q
@@ -1210,7 +1200,7 @@ Slack (VIOLATED) :        -0.021ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, unplaced)         0.355     0.769    clk100_IBUF
                          BUFG (Prop_bufg_I_O)         0.029     0.798 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=2150, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
+                         net (fo=2040, unplaced)      0.259     1.057    Video/video_clockmanager/cm1/clk100_IBUF_BUFG
                          MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
                                                      -0.643     0.414 r  Video/video_clockmanager/cm1/mmcm_adv_inst1/CLKOUT0
                          net (fo=2, unplaced)         0.259     0.673    Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0

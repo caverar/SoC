@@ -219,14 +219,7 @@ class SoC(SoCCore):
         self.TFT_RST                = Signal()
         self.TFT_SPI_CS             = Signal()
 
-        self.SD_SPI_MOSI            = Signal()
-        self.SD_SPI_MISO            = Signal()
-        self.SD_SPI_CLK             = Signal()
-        self.SD_SPI_CS              = Signal()
-        self.SD_SPI_COUNT_DEBUG     = Signal() 
-        self.SD_SPI_UTILCOUNT_DEBUG = Signal()
-
-
+        
          
         self.comb += [
             
@@ -245,12 +238,7 @@ class SoC(SoCCore):
             self.Audio_WB.CLK.eq(SystemClock),            
             self.Audio_WB.Reset.eq(self.Reset), 
             
-            SD_SPI_MOSI.eq(self.Audio_WB.SD_SPI_MOSI),
-            SD_SPI_CLK.eq(self.Audio_WB.SD_SPI_CLK),
-            SD_SPI_CS.eq(self.Audio_WB.SD_SPI_CS),
-            self.Audio_WB.SD_SPI_MISO.eq(SD_SPI_MISO),      
-            SD_SPI_COUNT_DEBUG.eq(self.Audio_WB.SD_SPI_COUNT_DEBUG),        
-            SD_SPI_UTILCOUNT_DEBUG.eq(self.Audio_WB.SD_SPI_UTILCOUNT_DEBUG),
+            
 
             DAC_I2S_DATA.eq(self.Audio_WB.DAC_I2S_DATA),
             DAC_I2S_WS.eq(self.Audio_WB.DAC_I2S_WS),

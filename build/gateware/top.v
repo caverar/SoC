@@ -39,12 +39,12 @@ module top(
 	output DAC_I2S_DATA,
 	output DAC_I2S_CLK,
 	output DAC_I2S_WS,
-	output SD_SPI_CLK,
-	output SD_SPI_MOSI,
+	input SD_SPI_CLK,
+	input SD_SPI_MOSI,
 	input SD_SPI_MISO,
-	output SD_SPI_CS,
-	output SD_SPI_COUNT_DEBUG,
-	output SD_SPI_UTILCOUNT_DEBUG,
+	input SD_SPI_CS,
+	input SD_SPI_COUNT_DEBUG,
+	input SD_SPI_UTILCOUNT_DEBUG,
 	output TFT_SPI_CLK,
 	output TFT_SPI_MOSI,
 	output TFT_RS,
@@ -322,12 +322,6 @@ reg soc_Video_WB_re = 1'd0;
 wire [13:0] soc_Video_WB_TilesControlRegister;
 wire soc_Audio_WB_CLK;
 wire soc_Audio_WB_Reset;
-wire soc_Audio_WB_SD_SPI_MISO;
-wire soc_Audio_WB_SD_SPI_MOSI;
-wire soc_Audio_WB_SD_SPI_CLK;
-wire soc_Audio_WB_SD_SPI_CS;
-wire soc_Audio_WB_SD_SPI_COUNT_DEBUG;
-wire soc_Audio_WB_SD_SPI_UTILCOUNT_DEBUG;
 wire soc_Audio_WB_DAC_I2S_CLK;
 wire soc_Audio_WB_DAC_I2S_DATA;
 wire soc_Audio_WB_DAC_I2S_WS;
@@ -512,12 +506,6 @@ assign TFT_RS = soc_Video_WB_TFT_RS;
 assign TFT_RST = soc_Video_WB_TFT_RST;
 assign soc_Audio_WB_CLK = sys_clk;
 assign soc_Audio_WB_Reset = soc_Reset;
-assign SD_SPI_MOSI = soc_Audio_WB_SD_SPI_MOSI;
-assign SD_SPI_CLK = soc_Audio_WB_SD_SPI_CLK;
-assign SD_SPI_CS = soc_Audio_WB_SD_SPI_CS;
-assign soc_Audio_WB_SD_SPI_MISO = SD_SPI_MISO;
-assign SD_SPI_COUNT_DEBUG = soc_Audio_WB_SD_SPI_COUNT_DEBUG;
-assign SD_SPI_UTILCOUNT_DEBUG = soc_Audio_WB_SD_SPI_UTILCOUNT_DEBUG;
 assign DAC_I2S_DATA = soc_Audio_WB_DAC_I2S_DATA;
 assign DAC_I2S_WS = soc_Audio_WB_DAC_I2S_WS;
 assign DAC_I2S_CLK = soc_Audio_WB_DAC_I2S_CLK;
@@ -1807,17 +1795,11 @@ Video Video(
 Audio Audio(
 	.CLK(soc_Audio_WB_CLK),
 	.Reset(soc_Audio_WB_Reset),
-	.SD_SPI_MISO(soc_Audio_WB_SD_SPI_MISO),
 	.Track1ControlRegister(soc_Audio_WB_Track1ControlRegister),
 	.Track2ControlRegister(soc_Audio_WB_Track2ControlRegister),
 	.DAC_I2S_CLK(soc_Audio_WB_DAC_I2S_CLK),
 	.DAC_I2S_DATA(soc_Audio_WB_DAC_I2S_DATA),
-	.DAC_I2S_WS(soc_Audio_WB_DAC_I2S_WS),
-	.SD_SPI_CLK(soc_Audio_WB_SD_SPI_CLK),
-	.SD_SPI_COUNT_DEBUG(soc_Audio_WB_SD_SPI_COUNT_DEBUG),
-	.SD_SPI_CS(soc_Audio_WB_SD_SPI_CS),
-	.SD_SPI_MOSI(soc_Audio_WB_SD_SPI_MOSI),
-	.SD_SPI_UTILCOUNT_DEBUG(soc_Audio_WB_SD_SPI_UTILCOUNT_DEBUG)
+	.DAC_I2S_WS(soc_Audio_WB_DAC_I2S_WS)
 );
 
 Buttons Buttons(

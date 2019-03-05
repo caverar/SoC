@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sun Mar  3 22:57:30 2019
+| Date         : Mon Mar  4 20:52:50 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -21,35 +21,29 @@ Table of Contents
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |                     Instance                     |                Module                | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                                (top) |       2532 |       2428 |     104 |    0 | 2318 |     11 |      3 |            3 |
+| top                                              |                                (top) |       2254 |       2150 |     104 |    0 | 2009 |     11 |      3 |            3 |
 |   (top)                                          |                                (top) |        399 |        383 |      16 |    0 |  678 |      9 |      0 |            0 |
-|   Audio                                          |                                Audio |        302 |        302 |       0 |    0 |  341 |      0 |      0 |            0 |
-|     (Audio)                                      |                                Audio |        160 |        160 |       0 |    0 |  154 |      0 |      0 |            0 |
-|     audvid_clockmanager                          |                   Audio_ClockManager |          2 |          2 |       0 |    0 |   13 |      0 |      0 |            0 |
-|       (audvid_clockmanager)                      |                   Audio_ClockManager |          2 |          2 |       0 |    0 |    5 |      0 |      0 |            0 |
+|   Audio                                          |                                Audio |         21 |         21 |       0 |    0 |   32 |      0 |      0 |            0 |
+|     audvid_clockmanager                          |                   Audio_ClockManager |          2 |          2 |       0 |    0 |   12 |      0 |      0 |            0 |
+|       (audvid_clockmanager)                      |                   Audio_ClockManager |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
 |       cm2                                        |                                  CM2 |          0 |          0 |       0 |    0 |    8 |      0 |      0 |            0 |
-|     i2s                                          |                                  I2S |         14 |         14 |       0 |    0 |   29 |      0 |      0 |            0 |
-|       (i2s)                                      |                                  I2S |          7 |          7 |       0 |    0 |    9 |      0 |      0 |            0 |
-|       squaregenerator                            |                      SquareGenerator |          7 |          7 |       0 |    0 |   20 |      0 |      0 |            0 |
-|     sd_spi                                       |                               SD_SPI |        126 |        126 |       0 |    0 |  145 |      0 |      0 |            0 |
-|       (sd_spi)                                   |                               SD_SPI |         73 |         73 |       0 |    0 |   91 |      0 |      0 |            0 |
-|       InitSpi                                    |                              FullSPI |         20 |         20 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       WorkSpi                                    |                            FullSPI_8 |         20 |         20 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       spiInitClock                               |                   FrequencyGenerator |          9 |          9 |       0 |    0 |    9 |      0 |      0 |            0 |
-|       spiWorkClock                               |   FrequencyGenerator__parameterized0 |          4 |          4 |       0 |    0 |    5 |      0 |      0 |            0 |
+|     i2s                                          |                                  I2S |          6 |          6 |       0 |    0 |    8 |      0 |      0 |            0 |
+|     synthesizer1                                 |                          Synthesizer |         13 |         13 |       0 |    0 |   12 |      0 |      0 |            0 |
+|       (synthesizer1)                             |                          Synthesizer |          0 |          0 |       0 |    0 |    2 |      0 |      0 |            0 |
+|       E4                                         |           Oscillator__parameterized6 |         13 |         13 |       0 |    0 |   10 |      0 |      0 |            0 |
 |   Buttons                                        |                              Buttons |         36 |         36 |       0 |    0 |   96 |      0 |      0 |            0 |
 |     button1                                      |                      ButtonDebouncer |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button1)                                  |                      ButtonDebouncer |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            | FrequencyGenerator__parameterized1_7 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            | FrequencyGenerator__parameterized0_7 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |     button2                                      |                    ButtonDebouncer_2 |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button2)                                  |                    ButtonDebouncer_2 |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            | FrequencyGenerator__parameterized1_6 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            | FrequencyGenerator__parameterized0_6 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |     button3                                      |                    ButtonDebouncer_3 |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button3)                                  |                    ButtonDebouncer_3 |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            | FrequencyGenerator__parameterized1_5 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            | FrequencyGenerator__parameterized0_5 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |     button4                                      |                    ButtonDebouncer_4 |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button4)                                  |                    ButtonDebouncer_4 |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            |   FrequencyGenerator__parameterized1 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            |   FrequencyGenerator__parameterized0 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |   Video                                          |                                Video |        236 |        196 |      40 |    0 |   89 |      0 |      1 |            0 |
 |     (Video)                                      |                                Video |        115 |         75 |      40 |    0 |   34 |      0 |      1 |            0 |
 |     tft_spi                                      |                              TFT_SPI |        121 |        121 |       0 |    0 |   39 |      0 |      0 |            0 |
@@ -58,19 +52,19 @@ Table of Contents
 |       spi                                        |                                  SPI |          4 |          4 |       0 |    0 |    5 |      0 |      0 |            0 |
 |     video_clockmanager                           |                   Video_ClockManager |          0 |          0 |       0 |    0 |   16 |      0 |      0 |            0 |
 |       cm1                                        |                                  CM1 |          0 |          0 |       0 |    0 |   16 |      0 |      0 |            0 |
-|   lm32_cpu                                       |                             lm32_cpu |       1559 |       1511 |      48 |    0 | 1114 |      2 |      2 |            3 |
+|   lm32_cpu                                       |                             lm32_cpu |       1562 |       1514 |      48 |    0 | 1114 |      2 |      2 |            3 |
 |     (lm32_cpu)                                   |                             lm32_cpu |        161 |        113 |      48 |    0 |  340 |      0 |      0 |            0 |
 |     adder                                        |                           lm32_adder |          8 |          8 |       0 |    0 |    0 |      0 |      0 |            0 |
 |       addsub                                     |                          lm32_addsub |          8 |          8 |       0 |    0 |    0 |      0 |      0 |            0 |
-|     instruction_unit                             |                lm32_instruction_unit |        568 |        568 |       0 |    0 |  310 |      1 |      1 |            0 |
+|     instruction_unit                             |                lm32_instruction_unit |        569 |        569 |       0 |    0 |  310 |      1 |      1 |            0 |
 |       (instruction_unit)                         |                lm32_instruction_unit |        367 |        367 |       0 |    0 |  264 |      0 |      0 |            0 |
-|       icache                                     |                          lm32_icache |        201 |        201 |       0 |    0 |   46 |      1 |      1 |            0 |
-|         (icache)                                 |                          lm32_icache |        127 |        127 |       0 |    0 |   46 |      0 |      0 |            0 |
+|       icache                                     |                          lm32_icache |        202 |        202 |       0 |    0 |   46 |      1 |      1 |            0 |
+|         (icache)                                 |                          lm32_icache |        128 |        128 |       0 |    0 |   46 |      0 |      0 |            0 |
 |         memories[0].way_0_data_ram               |                           lm32_ram_0 |         22 |         22 |       0 |    0 |    0 |      1 |      0 |            0 |
 |         memories[0].way_0_tag_ram                |           lm32_ram__parameterized0_1 |         52 |         52 |       0 |    0 |    0 |      0 |      1 |            0 |
 |     interrupt_unit                               |                       lm32_interrupt |         72 |         72 |       0 |    0 |   34 |      0 |      0 |            0 |
-|     load_store_unit                              |                 lm32_load_store_unit |        347 |        347 |       0 |    0 |  211 |      1 |      1 |            0 |
-|       (load_store_unit)                          |                 lm32_load_store_unit |        147 |        147 |       0 |    0 |  167 |      0 |      0 |            0 |
+|     load_store_unit                              |                 lm32_load_store_unit |        349 |        349 |       0 |    0 |  211 |      1 |      1 |            0 |
+|       (load_store_unit)                          |                 lm32_load_store_unit |        149 |        149 |       0 |    0 |  167 |      0 |      0 |            0 |
 |       dcache                                     |                          lm32_dcache |        200 |        200 |       0 |    0 |   44 |      1 |      1 |            0 |
 |         (dcache)                                 |                          lm32_dcache |         98 |         98 |       0 |    0 |   44 |      0 |      0 |            0 |
 |         memories[0].data_memories.way_0_data_ram |                             lm32_ram |         84 |         84 |       0 |    0 |    0 |      1 |      0 |            0 |

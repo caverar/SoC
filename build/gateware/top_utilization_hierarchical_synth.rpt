@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Sun Mar  3 22:57:02 2019
+| Date         : Mon Mar  4 20:52:24 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,35 +21,29 @@ Table of Contents
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |                     Instance                     |                Module                | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                                (top) |       2547 |       2443 |     104 |    0 | 2325 |     11 |      3 |            3 |
+| top                                              |                                (top) |       2265 |       2161 |     104 |    0 | 2017 |     11 |      3 |            3 |
 |   (top)                                          |                                (top) |        401 |        385 |      16 |    0 |  678 |      9 |      0 |            0 |
-|   Audio                                          |                                Audio |        303 |        303 |       0 |    0 |  340 |      0 |      0 |            0 |
-|     (Audio)                                      |                                Audio |        160 |        160 |       0 |    0 |  154 |      0 |      0 |            0 |
+|   Audio                                          |                                Audio |         21 |         21 |       0 |    0 |   32 |      0 |      0 |            0 |
 |     audvid_clockmanager                          |                   Audio_ClockManager |          2 |          2 |       0 |    0 |   12 |      0 |      0 |            0 |
 |       (audvid_clockmanager)                      |                   Audio_ClockManager |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
 |       cm2                                        |                                  CM2 |          0 |          0 |       0 |    0 |    8 |      0 |      0 |            0 |
-|     i2s                                          |                                  I2S |         15 |         15 |       0 |    0 |   29 |      0 |      0 |            0 |
-|       (i2s)                                      |                                  I2S |          7 |          7 |       0 |    0 |    9 |      0 |      0 |            0 |
-|       squaregenerator                            |                      SquareGenerator |          8 |          8 |       0 |    0 |   20 |      0 |      0 |            0 |
-|     sd_spi                                       |                               SD_SPI |        126 |        126 |       0 |    0 |  145 |      0 |      0 |            0 |
-|       (sd_spi)                                   |                               SD_SPI |         73 |         73 |       0 |    0 |   91 |      0 |      0 |            0 |
-|       InitSpi                                    |                              FullSPI |         20 |         20 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       WorkSpi                                    |                            FullSPI_8 |         20 |         20 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       spiInitClock                               |                   FrequencyGenerator |          9 |          9 |       0 |    0 |    9 |      0 |      0 |            0 |
-|       spiWorkClock                               |   FrequencyGenerator__parameterized0 |          4 |          4 |       0 |    0 |    5 |      0 |      0 |            0 |
+|     i2s                                          |                                  I2S |          6 |          6 |       0 |    0 |    8 |      0 |      0 |            0 |
+|     synthesizer1                                 |                          Synthesizer |         13 |         13 |       0 |    0 |   12 |      0 |      0 |            0 |
+|       (synthesizer1)                             |                          Synthesizer |          0 |          0 |       0 |    0 |    2 |      0 |      0 |            0 |
+|       E4                                         |           Oscillator__parameterized6 |         13 |         13 |       0 |    0 |   10 |      0 |      0 |            0 |
 |   Buttons                                        |                              Buttons |         36 |         36 |       0 |    0 |   96 |      0 |      0 |            0 |
 |     button1                                      |                      ButtonDebouncer |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button1)                                  |                      ButtonDebouncer |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            | FrequencyGenerator__parameterized1_7 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            | FrequencyGenerator__parameterized0_7 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |     button2                                      |                    ButtonDebouncer_2 |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button2)                                  |                    ButtonDebouncer_2 |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            | FrequencyGenerator__parameterized1_6 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            | FrequencyGenerator__parameterized0_6 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |     button3                                      |                    ButtonDebouncer_3 |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button3)                                  |                    ButtonDebouncer_3 |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            | FrequencyGenerator__parameterized1_5 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            | FrequencyGenerator__parameterized0_5 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |     button4                                      |                    ButtonDebouncer_4 |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button4)                                  |                    ButtonDebouncer_4 |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       verificationCLk                            |   FrequencyGenerator__parameterized1 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
+|       verificationCLk                            |   FrequencyGenerator__parameterized0 |          8 |          8 |       0 |    0 |   22 |      0 |      0 |            0 |
 |   Video                                          |                                Video |        237 |        197 |      40 |    0 |   97 |      0 |      1 |            0 |
 |     (Video)                                      |                                Video |        115 |         75 |      40 |    0 |   34 |      0 |      1 |            0 |
 |     tft_spi                                      |                              TFT_SPI |        122 |        122 |       0 |    0 |   39 |      0 |      0 |            0 |

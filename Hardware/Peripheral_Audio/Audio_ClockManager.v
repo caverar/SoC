@@ -151,12 +151,12 @@ module Audio_ClockManager(
 		.clk_in1(InputCLK)
 	);  	
 
-		// BUFGCE I2S_Synchronizer(
-		// 	.O (I2SCLK),
-		// 	.I(I2S_CLK),
-		// 	.CE(I2SCLK_x10)
-		// );
-	assign I2SCLK=I2S_CLK;
+	BUFGCE I2S_Synchronizer(
+	 	.O (I2SCLK),
+	 	.I(I2S_CLK),
+	 	.CE(I2SCLK_x10)
+	);
+	//assign I2SCLK=I2S_CLK;
 		
 
 	//Divisor de frecuencia en 10
