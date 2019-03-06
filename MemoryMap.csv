@@ -6,8 +6,7 @@ csr_base,timer0,0xe0002800,,
 csr_base,uart,0xe0001800,,
 csr_base,uart_phy,0xe0001000,,
 csr_base,identifier_mem,0xe0002000,,
-csr_register,Audio_WB_Track1ControlRegisterCSR,0xe0004800,1,rw
-csr_register,Audio_WB_Track2ControlRegisterCSR,0xe0004804,1,rw
+csr_register,Audio_WB_AudioControlRegisterCSR,0xe0004800,1,rw
 csr_register,Buttons_WB_DataRegister,0xe0005000,1,ro
 csr_register,Buttons_WB_ev_status,0xe0005004,1,rw
 csr_register,Buttons_WB_ev_pending,0xe0005008,1,rw

@@ -16,50 +16,31 @@ from litex.soc.interconnect.csr import *
 # Modulo Principal
 class Audio(Module,AutoCSR):
     def __init__(self):
-    ##Entradas
-        
+    ##Entradas        
         self.CLK                    = Signal()
         self.Reset                  = Signal()
-
-     
-
     ##Salidas
-
-        
-
-        ##DAC 
-
         self.DAC_I2S_CLK            = Signal()
         self.DAC_I2S_DATA           = Signal()
         self.DAC_I2S_WS             = Signal()
-
-        
-
-       
-    ##Valores Internos
-        
-        self.Track1ControlRegisterCSR = CSRStorage(5)
-        self.Track1ControlRegister    = Signal(5)
-        self.Track2ControlRegisterCSR = CSRStorage(5)
-        self.Track2ControlRegister    = Signal(5)
-
-        
-
+    ##Valores Internos        
+        self.AudioControlRegisterCSR = CSRStorage(4)
+        self.AudioControlRegister    = Signal(4)
+    ##Instancia
         self.specials +=Instance("Audio",
 
             i_Reset                  = self.Reset,
             i_CLK                    = self.CLK,                   
-            i_Track1ControlRegister  = self.Track1ControlRegister,
-            i_Track2ControlRegister  = self.Track2ControlRegister,            
+            i_AudioControlRegister  =  self.AudioControlRegister,            
             o_DAC_I2S_DATA           = self.DAC_I2S_DATA,
             o_DAC_I2S_CLK            = self.DAC_I2S_CLK,  
             o_DAC_I2S_WS             = self.DAC_I2S_WS    
         )
                 
-        self.comb += self.Track1ControlRegister.eq(self.Track1ControlRegisterCSR.storage)
-        self.comb += self.Track2ControlRegister.eq(self.Track2ControlRegisterCSR.storage)  
+        self.comb += self.AudioControlRegister.eq(self.AudioControlRegisterCSR.storage)
+        
 
-#Testeo
+# Testeo
 #-----------------------------------------------------------------------
 # Definicion de Pines
 #
@@ -134,5 +115,6 @@ soc.comb+=I2S_CLK.eq(soc.DAC_I2S_CLK)
 soc.comb+=I2S_WS.eq(soc.DAC_I2S_WS)
 soc.comb+=soc.CLK.eq(SystemClock)
 soc.comb+=soc.Reset.eq(Reset)
+soc.comb+=soc.AudioControlRegisterCSR.storage.eq(0x8)
 
 platform.build(soc)

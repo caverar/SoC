@@ -9,37 +9,18 @@
 #include "variables.h"
 //Espera en ms
 
-static void wait_ms(unsigned int time)
-{
-	timer0_en_write(0);
-	timer0_reload_write(0);
-	timer0_load_write(time*(SYSTEM_CLOCK_FREQUENCY/1000));
-	timer0_en_write(1);
-	timer0_update_value_write(1);
-	while(timer0_value_read()) timer0_update_value_write(1);
-}
-
-static void putTile(unsigned int position, unsigned int tile)
-{
-	
-	unsigned int value = (position<<5) + tile;  
-	Video_WB_TilesControlRegisterCSR_write(value);
-}
-static void playTrack ( unsigned int EnablePlay, unsigned int EnableLoop, unsigned int Track){
-	Audio_WB_Track1ControlRegisterCSR_write(0);
-	Audio_WB_Track1ControlRegisterCSR_write((EnablePlay<<4)+(EnableLoop<<3)+Track);
-}
 
 
 int main(void)
 {	
-	
+	putState(2);
+	//playSoundTrack();
 	while(1) {
 		irq_setmask(1<<7);
-		irq_setie(1);
-		playTrack(1,1,3);
+		irq_setie(1);		
 		Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);
-		getState(0);
+
+		
 		if(getState()==0){		
 			for(int j=0;j<28;j=j+4){
 
@@ -71,7 +52,13 @@ int main(void)
 			for(int i=0;i<320;i++){
 				putTile(i,6);
 			}
-			wait_ms(200);	
+			wait_ms(200);
+			playSoundEffect(1);
+			wait_ms(1000);
+			playSoundEffect(2);
+			wait_ms(1000);
+			playSoundEffect(3);
+			wait_ms(1000);	
 		}else if(getState()==3){
 			for(int i=0;i<320;i++){
 				putTile(i,7);

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Mon Mar  4 20:52:50 2019
+| Date         : Tue Mar  5 22:17:44 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -21,16 +21,50 @@ Table of Contents
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |                     Instance                     |                Module                | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                                (top) |       2254 |       2150 |     104 |    0 | 2009 |     11 |      3 |            3 |
-|   (top)                                          |                                (top) |        399 |        383 |      16 |    0 |  678 |      9 |      0 |            0 |
-|   Audio                                          |                                Audio |         21 |         21 |       0 |    0 |   32 |      0 |      0 |            0 |
-|     audvid_clockmanager                          |                   Audio_ClockManager |          2 |          2 |       0 |    0 |   12 |      0 |      0 |            0 |
-|       (audvid_clockmanager)                      |                   Audio_ClockManager |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
+| top                                              |                                (top) |       2635 |       2531 |     104 |    0 | 2671 |     11 |      4 |            3 |
+|   (top)                                          |                                (top) |        397 |        381 |      16 |    0 |  671 |      9 |      0 |            0 |
+|   Audio                                          |                                Audio |        403 |        403 |       0 |    0 |  701 |      0 |      1 |            0 |
+|     (Audio)                                      |                                Audio |         19 |         19 |       0 |    0 |   29 |      0 |      1 |            0 |
+|     SoundEffectSynthesizer                       |                          Synthesizer |        164 |        164 |       0 |    0 |  299 |      0 |      0 |            0 |
+|       (SoundEffectSynthesizer)                   |                          Synthesizer |          0 |          0 |       0 |    0 |    4 |      0 |      0 |            0 |
+|       A3                                         |                         Oscillator_9 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       A4                                         |       Oscillator__parameterized11_10 |          9 |          9 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       ASharp3                                    |        Oscillator__parameterized0_11 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       ASharp4                                    |       Oscillator__parameterized12_12 |          9 |          9 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       B3                                         |        Oscillator__parameterized1_13 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       B4                                         |       Oscillator__parameterized13_14 |         14 |         14 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       C4                                         |        Oscillator__parameterized2_15 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       CSharp4                                    |        Oscillator__parameterized3_16 |         10 |         10 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       D4                                         |        Oscillator__parameterized4_17 |         13 |         13 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       DSharp4                                    |        Oscillator__parameterized5_18 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       E4                                         |        Oscillator__parameterized6_19 |         13 |         13 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       F4                                         |        Oscillator__parameterized7_20 |         10 |         10 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       FSharp4                                    |        Oscillator__parameterized8_21 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       G4                                         |        Oscillator__parameterized9_22 |          9 |          9 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       GSharp4                                    |       Oscillator__parameterized10_23 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
+|     SoundTrackSynthesizer                        |                        Synthesizer_8 |        168 |        168 |       0 |    0 |  299 |      0 |      0 |            0 |
+|       (SoundTrackSynthesizer)                    |                        Synthesizer_8 |          0 |          0 |       0 |    0 |    4 |      0 |      0 |            0 |
+|       A3                                         |                           Oscillator |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       A4                                         |          Oscillator__parameterized11 |          9 |          9 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       ASharp3                                    |           Oscillator__parameterized0 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       ASharp4                                    |          Oscillator__parameterized12 |          9 |          9 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       B3                                         |           Oscillator__parameterized1 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       B4                                         |          Oscillator__parameterized13 |         16 |         16 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       C4                                         |           Oscillator__parameterized2 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       CSharp4                                    |           Oscillator__parameterized3 |         10 |         10 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       D4                                         |           Oscillator__parameterized4 |         13 |         13 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       DSharp4                                    |           Oscillator__parameterized5 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       E4                                         |           Oscillator__parameterized6 |         13 |         13 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       F4                                         |           Oscillator__parameterized7 |         10 |         10 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       FSharp4                                    |           Oscillator__parameterized8 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
+|       G4                                         |           Oscillator__parameterized9 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       GSharp4                                    |          Oscillator__parameterized10 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
+|     adder                                        |                    StereoSignedAdder |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     audio_clockmanager                           |                   Audio_ClockManager |          2 |          2 |       0 |    0 |   12 |      0 |      0 |            0 |
+|       (audio_clockmanager)                       |                   Audio_ClockManager |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
 |       cm2                                        |                                  CM2 |          0 |          0 |       0 |    0 |    8 |      0 |      0 |            0 |
-|     i2s                                          |                                  I2S |          6 |          6 |       0 |    0 |    8 |      0 |      0 |            0 |
-|     synthesizer1                                 |                          Synthesizer |         13 |         13 |       0 |    0 |   12 |      0 |      0 |            0 |
-|       (synthesizer1)                             |                          Synthesizer |          0 |          0 |       0 |    0 |    2 |      0 |      0 |            0 |
-|       E4                                         |           Oscillator__parameterized6 |         13 |         13 |       0 |    0 |   10 |      0 |      0 |            0 |
+|     i2s                                          |                                  I2S |         13 |         13 |       0 |    0 |   36 |      0 |      0 |            0 |
+|     spiInitClock                                 |                   FrequencyGenerator |          9 |          9 |       0 |    0 |   26 |      0 |      0 |            0 |
 |   Buttons                                        |                              Buttons |         36 |         36 |       0 |    0 |   96 |      0 |      0 |            0 |
 |     button1                                      |                      ButtonDebouncer |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       (button1)                                  |                      ButtonDebouncer |          1 |          1 |       0 |    0 |    2 |      0 |      0 |            0 |
@@ -52,19 +86,19 @@ Table of Contents
 |       spi                                        |                                  SPI |          4 |          4 |       0 |    0 |    5 |      0 |      0 |            0 |
 |     video_clockmanager                           |                   Video_ClockManager |          0 |          0 |       0 |    0 |   16 |      0 |      0 |            0 |
 |       cm1                                        |                                  CM1 |          0 |          0 |       0 |    0 |   16 |      0 |      0 |            0 |
-|   lm32_cpu                                       |                             lm32_cpu |       1562 |       1514 |      48 |    0 | 1114 |      2 |      2 |            3 |
+|   lm32_cpu                                       |                             lm32_cpu |       1563 |       1515 |      48 |    0 | 1114 |      2 |      2 |            3 |
 |     (lm32_cpu)                                   |                             lm32_cpu |        161 |        113 |      48 |    0 |  340 |      0 |      0 |            0 |
 |     adder                                        |                           lm32_adder |          8 |          8 |       0 |    0 |    0 |      0 |      0 |            0 |
 |       addsub                                     |                          lm32_addsub |          8 |          8 |       0 |    0 |    0 |      0 |      0 |            0 |
-|     instruction_unit                             |                lm32_instruction_unit |        569 |        569 |       0 |    0 |  310 |      1 |      1 |            0 |
-|       (instruction_unit)                         |                lm32_instruction_unit |        367 |        367 |       0 |    0 |  264 |      0 |      0 |            0 |
+|     instruction_unit                             |                lm32_instruction_unit |        571 |        571 |       0 |    0 |  310 |      1 |      1 |            0 |
+|       (instruction_unit)                         |                lm32_instruction_unit |        369 |        369 |       0 |    0 |  264 |      0 |      0 |            0 |
 |       icache                                     |                          lm32_icache |        202 |        202 |       0 |    0 |   46 |      1 |      1 |            0 |
 |         (icache)                                 |                          lm32_icache |        128 |        128 |       0 |    0 |   46 |      0 |      0 |            0 |
 |         memories[0].way_0_data_ram               |                           lm32_ram_0 |         22 |         22 |       0 |    0 |    0 |      1 |      0 |            0 |
 |         memories[0].way_0_tag_ram                |           lm32_ram__parameterized0_1 |         52 |         52 |       0 |    0 |    0 |      0 |      1 |            0 |
 |     interrupt_unit                               |                       lm32_interrupt |         72 |         72 |       0 |    0 |   34 |      0 |      0 |            0 |
-|     load_store_unit                              |                 lm32_load_store_unit |        349 |        349 |       0 |    0 |  211 |      1 |      1 |            0 |
-|       (load_store_unit)                          |                 lm32_load_store_unit |        149 |        149 |       0 |    0 |  167 |      0 |      0 |            0 |
+|     load_store_unit                              |                 lm32_load_store_unit |        347 |        347 |       0 |    0 |  211 |      1 |      1 |            0 |
+|       (load_store_unit)                          |                 lm32_load_store_unit |        147 |        147 |       0 |    0 |  167 |      0 |      0 |            0 |
 |       dcache                                     |                          lm32_dcache |        200 |        200 |       0 |    0 |   44 |      1 |      1 |            0 |
 |         (dcache)                                 |                          lm32_dcache |         98 |         98 |       0 |    0 |   44 |      0 |      0 |            0 |
 |         memories[0].data_memories.way_0_data_ram |                             lm32_ram |         84 |         84 |       0 |    0 |    0 |      1 |      0 |            0 |

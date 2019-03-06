@@ -23,8 +23,8 @@ module ButtonDebouncer (
 	
 	//Procedimiento Secuencial 
 	always@(posedge VerificationClk)begin
-		prevState=state;
-		state=Input;
+		prevState<=state;
+		state<=Input;
 	end
 
 	assign Output= state && !prevState;	

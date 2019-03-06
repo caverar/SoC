@@ -325,14 +325,10 @@ wire soc_Audio_WB_Reset;
 wire soc_Audio_WB_DAC_I2S_CLK;
 wire soc_Audio_WB_DAC_I2S_DATA;
 wire soc_Audio_WB_DAC_I2S_WS;
-reg [4:0] soc_Audio_WB_Track1ControlRegisterCSR_storage_full = 5'd0;
-wire [4:0] soc_Audio_WB_Track1ControlRegisterCSR_storage;
-reg soc_Audio_WB_Track1ControlRegisterCSR_re = 1'd0;
-wire [4:0] soc_Audio_WB_Track1ControlRegister;
-reg [4:0] soc_Audio_WB_Track2ControlRegisterCSR_storage_full = 5'd0;
-wire [4:0] soc_Audio_WB_Track2ControlRegisterCSR_storage;
-reg soc_Audio_WB_Track2ControlRegisterCSR_re = 1'd0;
-wire [4:0] soc_Audio_WB_Track2ControlRegister;
+reg [3:0] soc_Audio_WB_storage_full = 4'd0;
+wire [3:0] soc_Audio_WB_storage;
+reg soc_Audio_WB_re = 1'd0;
+wire [3:0] soc_Audio_WB_AudioControlRegister;
 wire soc_Buttons_WB_irq;
 wire soc_Buttons_WB_button1_status;
 reg soc_Buttons_WB_button1_pending = 1'd0;
@@ -391,12 +387,9 @@ wire [13:0] interface0_bank_bus_adr;
 wire interface0_bank_bus_we;
 wire [31:0] interface0_bank_bus_dat_w;
 reg [31:0] interface0_bank_bus_dat_r = 32'd0;
-wire csrbank0_Track1ControlRegisterCSR0_re;
-wire [4:0] csrbank0_Track1ControlRegisterCSR0_r;
-wire [4:0] csrbank0_Track1ControlRegisterCSR0_w;
-wire csrbank0_Track2ControlRegisterCSR0_re;
-wire [4:0] csrbank0_Track2ControlRegisterCSR0_r;
-wire [4:0] csrbank0_Track2ControlRegisterCSR0_w;
+wire csrbank0_AudioControlRegisterCSR0_re;
+wire [3:0] csrbank0_AudioControlRegisterCSR0_r;
+wire [3:0] csrbank0_AudioControlRegisterCSR0_w;
 wire csrbank0_sel;
 wire [13:0] interface1_bank_bus_adr;
 wire interface1_bank_bus_we;
@@ -730,8 +723,7 @@ assign sys_clk = clk100;
 assign por_clk = clk100;
 assign sys_rst = soc_int_rst;
 assign soc_Video_WB_TilesControlRegister = soc_Video_WB_storage;
-assign soc_Audio_WB_Track1ControlRegister = soc_Audio_WB_Track1ControlRegisterCSR_storage;
-assign soc_Audio_WB_Track2ControlRegister = soc_Audio_WB_Track2ControlRegisterCSR_storage;
+assign soc_Audio_WB_AudioControlRegister = soc_Audio_WB_storage;
 assign soc_Buttons_WB_Data = soc_Buttons_WB_DataRegister_status;
 assign soc_Buttons_WB_button1_trigger = soc_Buttons_WB_Button1Interrupt;
 assign soc_Buttons_WB_button2_trigger = soc_Buttons_WB_Button2Interrupt;
@@ -906,14 +898,10 @@ always @(*) begin
 end
 assign done = (count == 1'd0);
 assign csrbank0_sel = (interface0_bank_bus_adr[13:9] == 4'd9);
-assign csrbank0_Track1ControlRegisterCSR0_r = interface0_bank_bus_dat_w[4:0];
-assign csrbank0_Track1ControlRegisterCSR0_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[0] == 1'd0));
-assign csrbank0_Track2ControlRegisterCSR0_r = interface0_bank_bus_dat_w[4:0];
-assign csrbank0_Track2ControlRegisterCSR0_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[0] == 1'd1));
-assign soc_Audio_WB_Track1ControlRegisterCSR_storage = soc_Audio_WB_Track1ControlRegisterCSR_storage_full[4:0];
-assign csrbank0_Track1ControlRegisterCSR0_w = soc_Audio_WB_Track1ControlRegisterCSR_storage_full[4:0];
-assign soc_Audio_WB_Track2ControlRegisterCSR_storage = soc_Audio_WB_Track2ControlRegisterCSR_storage_full[4:0];
-assign csrbank0_Track2ControlRegisterCSR0_w = soc_Audio_WB_Track2ControlRegisterCSR_storage_full[4:0];
+assign csrbank0_AudioControlRegisterCSR0_r = interface0_bank_bus_dat_w[3:0];
+assign csrbank0_AudioControlRegisterCSR0_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[0] == 1'd0));
+assign soc_Audio_WB_storage = soc_Audio_WB_storage_full[3:0];
+assign csrbank0_AudioControlRegisterCSR0_w = soc_Audio_WB_storage_full[3:0];
 assign csrbank1_sel = (interface1_bank_bus_adr[13:9] == 4'd10);
 assign csrbank1_DataRegister_r = interface1_bank_bus_dat_w[3:0];
 assign csrbank1_DataRegister_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 1'd0));
@@ -1420,21 +1408,14 @@ always @(posedge sys_clk) begin
 	if (csrbank0_sel) begin
 		case (interface0_bank_bus_adr[0])
 			1'd0: begin
-				interface0_bank_bus_dat_r <= csrbank0_Track1ControlRegisterCSR0_w;
-			end
-			1'd1: begin
-				interface0_bank_bus_dat_r <= csrbank0_Track2ControlRegisterCSR0_w;
+				interface0_bank_bus_dat_r <= csrbank0_AudioControlRegisterCSR0_w;
 			end
 		endcase
 	end
-	if (csrbank0_Track1ControlRegisterCSR0_re) begin
-		soc_Audio_WB_Track1ControlRegisterCSR_storage_full[4:0] <= csrbank0_Track1ControlRegisterCSR0_r;
+	if (csrbank0_AudioControlRegisterCSR0_re) begin
+		soc_Audio_WB_storage_full[3:0] <= csrbank0_AudioControlRegisterCSR0_r;
 	end
-	soc_Audio_WB_Track1ControlRegisterCSR_re <= csrbank0_Track1ControlRegisterCSR0_re;
-	if (csrbank0_Track2ControlRegisterCSR0_re) begin
-		soc_Audio_WB_Track2ControlRegisterCSR_storage_full[4:0] <= csrbank0_Track2ControlRegisterCSR0_r;
-	end
-	soc_Audio_WB_Track2ControlRegisterCSR_re <= csrbank0_Track2ControlRegisterCSR0_re;
+	soc_Audio_WB_re <= csrbank0_AudioControlRegisterCSR0_re;
 	interface1_bank_bus_dat_r <= 1'd0;
 	if (csrbank1_sel) begin
 		case (interface1_bank_bus_adr[1:0])
@@ -1629,10 +1610,8 @@ always @(posedge sys_clk) begin
 		soc_timer0_value <= 32'd0;
 		soc_Video_WB_storage_full <= 14'd0;
 		soc_Video_WB_re <= 1'd0;
-		soc_Audio_WB_Track1ControlRegisterCSR_storage_full <= 5'd0;
-		soc_Audio_WB_Track1ControlRegisterCSR_re <= 1'd0;
-		soc_Audio_WB_Track2ControlRegisterCSR_storage_full <= 5'd0;
-		soc_Audio_WB_Track2ControlRegisterCSR_re <= 1'd0;
+		soc_Audio_WB_storage_full <= 4'd0;
+		soc_Audio_WB_re <= 1'd0;
 		soc_Buttons_WB_button1_pending <= 1'd0;
 		soc_Buttons_WB_button2_pending <= 1'd0;
 		soc_Buttons_WB_button3_pending <= 1'd0;
@@ -1793,10 +1772,9 @@ Video Video(
 );
 
 Audio Audio(
+	.AudioControlRegister(soc_Audio_WB_AudioControlRegister),
 	.CLK(soc_Audio_WB_CLK),
 	.Reset(soc_Audio_WB_Reset),
-	.Track1ControlRegister(soc_Audio_WB_Track1ControlRegister),
-	.Track2ControlRegister(soc_Audio_WB_Track2ControlRegister),
 	.DAC_I2S_CLK(soc_Audio_WB_DAC_I2S_CLK),
 	.DAC_I2S_DATA(soc_Audio_WB_DAC_I2S_DATA),
 	.DAC_I2S_WS(soc_Audio_WB_DAC_I2S_WS)

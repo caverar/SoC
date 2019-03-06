@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Mon Mar  4 20:53:46 2019
+| Date             : Tue Mar  5 22:18:45 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.359        |
+| Total On-Chip Power (W)  | 0.367        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.287        |
+| Dynamic (W)              | 0.294        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.2         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.009 |        8 |       --- |             --- |
-| Slice Logic              |     0.008 |     4847 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     2150 |     20800 |           10.34 |
-|   CARRY4                 |    <0.001 |      150 |      8150 |            1.84 |
-|   Register               |    <0.001 |     2009 |     41600 |            4.83 |
+| Clocks                   |     0.013 |        8 |       --- |             --- |
+| Slice Logic              |     0.010 |     6170 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     2531 |     20800 |           12.17 |
+|   CARRY4                 |    <0.001 |      315 |      8150 |            3.87 |
+|   Register               |    <0.001 |     2671 |     41600 |            6.42 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      9600 |            1.08 |
-|   F7/F8 Muxes            |    <0.001 |       13 |     32600 |            0.04 |
-|   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
-|   Others                 |     0.000 |       70 |       --- |             --- |
-| Signals                  |     0.012 |     4119 |       --- |             --- |
-| Block RAM                |     0.028 |     12.5 |        50 |           25.00 |
+|   F7/F8 Muxes            |    <0.001 |       38 |     32600 |            0.12 |
+|   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
+|   Others                 |     0.000 |      136 |       --- |             --- |
+| Signals                  |     0.014 |     5180 |       --- |             --- |
+| Block RAM                |     0.028 |       13 |        50 |           26.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | DSPs                     |    <0.001 |        3 |        90 |            3.33 |
 | I/O                      |     0.006 |       16 |       106 |           15.09 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.359 |          |           |                 |
+| Total                    |     0.367 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.066 |       0.055 |      0.010 |
+| Vccint    |       1.000 |     0.073 |       0.063 |      0.010 |
 | Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -133,12 +133,12 @@ Table of Contents
 +--------------------------------+-------------------------------------------------------------+-----------------+
 | Clock                          | Domain                                                      | Constraint (ns) |
 +--------------------------------+-------------------------------------------------------------+-----------------+
-| I2S_CLK_reloj2_clk_wiz_0_0     | Audio/audvid_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0    |            70.9 |
+| I2S_CLK_reloj2_clk_wiz_0_0     | Audio/audio_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0     |            70.9 |
 | MasterClocK_reloj1_clk_wiz_0_0 | Video/video_clockmanager/cm1/MasterClocK_reloj1_clk_wiz_0_0 |            10.0 |
 | TFT_Clock_reloj1_clk_wiz_0_0   | Video/video_clockmanager/cm1/TFT_Clock_reloj1_clk_wiz_0_0   |           160.0 |
 | clk100                         | clk100                                                      |            10.0 |
 | clkfbout_reloj1_clk_wiz_0_0    | Video/video_clockmanager/cm1/clkfbout_reloj1_clk_wiz_0_0    |            10.0 |
-| clkfbout_reloj2_clk_wiz_0_0    | Audio/audvid_clockmanager/cm2/clkfbout_reloj2_clk_wiz_0_0   |            50.0 |
+| clkfbout_reloj2_clk_wiz_0_0    | Audio/audio_clockmanager/cm2/clkfbout_reloj2_clk_wiz_0_0    |            50.0 |
 +--------------------------------+-------------------------------------------------------------+-----------------+
 
 
@@ -151,13 +151,45 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| top                                              |     0.287 |
-|   Audio                                          |     0.129 |
-|     audvid_clockmanager                          |     0.128 |
+| top                                              |     0.294 |
+|   Audio                                          |     0.136 |
+|     SoundEffectSynthesizer                       |     0.003 |
+|       A3                                         |    <0.001 |
+|       A4                                         |    <0.001 |
+|       ASharp3                                    |    <0.001 |
+|       ASharp4                                    |    <0.001 |
+|       B3                                         |    <0.001 |
+|       B4                                         |    <0.001 |
+|       C4                                         |    <0.001 |
+|       CSharp4                                    |    <0.001 |
+|       D4                                         |    <0.001 |
+|       DSharp4                                    |    <0.001 |
+|       E4                                         |    <0.001 |
+|       F4                                         |    <0.001 |
+|       FSharp4                                    |    <0.001 |
+|       G4                                         |    <0.001 |
+|       GSharp4                                    |    <0.001 |
+|     SoundTrackSynthesizer                        |     0.003 |
+|       A3                                         |    <0.001 |
+|       A4                                         |    <0.001 |
+|       ASharp3                                    |    <0.001 |
+|       ASharp4                                    |    <0.001 |
+|       B3                                         |    <0.001 |
+|       B4                                         |    <0.001 |
+|       C4                                         |    <0.001 |
+|       CSharp4                                    |    <0.001 |
+|       D4                                         |    <0.001 |
+|       DSharp4                                    |    <0.001 |
+|       E4                                         |    <0.001 |
+|       F4                                         |    <0.001 |
+|       FSharp4                                    |    <0.001 |
+|       G4                                         |    <0.001 |
+|       GSharp4                                    |    <0.001 |
+|     adder                                        |    <0.001 |
+|     audio_clockmanager                           |     0.128 |
 |       cm2                                        |     0.128 |
 |     i2s                                          |    <0.001 |
-|     synthesizer1                                 |    <0.001 |
-|       E4                                         |    <0.001 |
+|     spiInitClock                                 |    <0.001 |
 |   Buttons                                        |    <0.001 |
 |     button1                                      |    <0.001 |
 |       verificationCLk                            |    <0.001 |
@@ -189,7 +221,7 @@ Table of Contents
 |       spi                                        |    <0.001 |
 |     video_clockmanager                           |     0.096 |
 |       cm1                                        |     0.096 |
-|   lm32_cpu                                       |     0.026 |
+|   lm32_cpu                                       |     0.027 |
 |     adder                                        |    <0.001 |
 |       addsub                                     |    <0.001 |
 |     instruction_unit                             |     0.010 |
@@ -200,7 +232,7 @@ Table of Contents
 |     load_store_unit                              |     0.009 |
 |       dcache                                     |     0.007 |
 |         memories[0].data_memories.way_0_data_ram |     0.004 |
-|         memories[0].way_0_tag_ram                |     0.002 |
+|         memories[0].way_0_tag_ram                |     0.003 |
 |     mc_arithmetic                                |     0.002 |
 |     multiplier                                   |    <0.001 |
 |     registers_reg_r1_0_31_0_5                    |    <0.001 |

@@ -14,23 +14,14 @@ extern uint32_t csr_readl(uint32_t addr);
 
 /* Audio_WB */
 #define CSR_AUDIO_WB_BASE 0xe0004800
-#define CSR_AUDIO_WB_TRACK1CONTROLREGISTERCSR_ADDR 0xe0004800
-#define CSR_AUDIO_WB_TRACK1CONTROLREGISTERCSR_SIZE 1
-static inline unsigned int Audio_WB_Track1ControlRegisterCSR_read(void) {
+#define CSR_AUDIO_WB_AUDIOCONTROLREGISTERCSR_ADDR 0xe0004800
+#define CSR_AUDIO_WB_AUDIOCONTROLREGISTERCSR_SIZE 1
+static inline unsigned int Audio_WB_AudioControlRegisterCSR_read(void) {
 	unsigned int r = csr_readl(0xe0004800);
 	return r;
 }
-static inline void Audio_WB_Track1ControlRegisterCSR_write(unsigned int value) {
+static inline void Audio_WB_AudioControlRegisterCSR_write(unsigned int value) {
 	csr_writel(value, 0xe0004800);
-}
-#define CSR_AUDIO_WB_TRACK2CONTROLREGISTERCSR_ADDR 0xe0004804
-#define CSR_AUDIO_WB_TRACK2CONTROLREGISTERCSR_SIZE 1
-static inline unsigned int Audio_WB_Track2ControlRegisterCSR_read(void) {
-	unsigned int r = csr_readl(0xe0004804);
-	return r;
-}
-static inline void Audio_WB_Track2ControlRegisterCSR_write(unsigned int value) {
-	csr_writel(value, 0xe0004804);
 }
 
 /* Buttons_WB */

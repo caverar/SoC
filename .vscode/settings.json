@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "type_traits": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "csr.h": "c"
     }
 }

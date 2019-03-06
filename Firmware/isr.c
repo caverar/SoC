@@ -8,11 +8,12 @@ extern void periodic_isr(void);
 
 #include "variables.h"
 
-
+unsigned int localState=0;
 
 void isr(void);
 void isr(void)
 {
+		
 	unsigned int irqs;
 	unsigned int ButtonInterrupt;
 	
@@ -26,15 +27,25 @@ void isr(void)
 		
 		if((ButtonInterrupt & 1)==1){
 			putState(0);
+			if(localState==0){
+				playSoundTrack();
+				localState=1;
+			}else{
+				stopSoundTrack();
+				localState=0;
+			}
 						
 		}else if((ButtonInterrupt & (1<<1))==1<<1){
 			putState(1);
+			
 						
 		}else if((ButtonInterrupt & (1<<2))==1<<2){
 			putState(2);
 			
+			
 		}else if((ButtonInterrupt & (1<<3))==1<<3){
 			putState(3);
+			
 		}
 		Buttons_WB_ev_pending_write((1<<3)+(1<<2)+(1<<1)+1);
 		
