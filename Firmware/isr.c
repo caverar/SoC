@@ -37,15 +37,16 @@ void isr(void)
 						
 		}else if((ButtonInterrupt & (1<<1))==1<<1){
 			putState(1);
+			playSoundEffect(1);
 			
 						
 		}else if((ButtonInterrupt & (1<<2))==1<<2){
 			putState(2);
-			
+			playSoundEffect(2);			
 			
 		}else if((ButtonInterrupt & (1<<3))==1<<3){
 			putState(3);
-			
+			playSoundEffect(3);			
 		}
 		Buttons_WB_ev_pending_write((1<<3)+(1<<2)+(1<<1)+1);
 		

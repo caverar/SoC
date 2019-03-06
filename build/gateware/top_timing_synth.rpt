@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Tue Mar  5 22:17:15 2019
+| Date         : Wed Mar  6 01:10:33 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -54,9 +54,9 @@ Table of Contents
 --------------------
  There are 6 register/latch pins with no clock driven by root clock pin: Audio/audio_clockmanager/I2S_CLK_reg/Q (HIGH)
 
- There are 45 register/latch pins with no clock driven by root clock pin: Audio/i2s/I2S_WS_reg/Q (HIGH)
+ There are 43 register/latch pins with no clock driven by root clock pin: Audio/i2s/I2S_WS_reg/Q (HIGH)
 
- There are 19 register/latch pins with no clock driven by root clock pin: Audio/spiInitClock/OutputCLK_reg/Q (HIGH)
+ There are 20 register/latch pins with no clock driven by root clock pin: Audio/spiInitClock/OutputCLK_reg/Q (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: Buttons/button1/verificationCLk/OutputCLK_reg/Q (HIGH)
 
@@ -125,7 +125,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 260 pins that are not constrained for maximum delay. (HIGH)
+ There are 255 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

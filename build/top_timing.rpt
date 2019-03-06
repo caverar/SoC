@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Tue Mar  5 22:13:23 2019
+| Date         : Wed Mar  6 01:06:47 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_timing_summary -datasheet -max_paths 10 -file top_timing.rpt
 | Design       : top
@@ -130,7 +130,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.773        0.000                      0                  623        0.122        0.000                      0                  623        3.000        0.000                       0                   342  
+      5.597        0.000                      0                  623        0.053        0.000                      0                  623        3.000        0.000                       0                   342  
 
 
 All user specified timing constraints are met.
@@ -155,7 +155,7 @@ clk100                         {0.000 5.000}      10.000          100.000
 
 Clock                              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk100                               5.773        0.000                      0                  611        0.238        0.000                      0                  611        3.000        0.000                       0                   324  
+clk100                               5.597        0.000                      0                  611        0.053        0.000                      0                  611        3.000        0.000                       0                   324  
   I2S_CLK_reloj2_clk_wiz_0_0        69.145        0.000                      0                   12        0.122        0.000                      0                   12       34.931        0.000                       0                    15  
   clkfbout_reloj2_clk_wiz_0_0                                                                                                                                                   47.845        0.000                       0                     3  
 
@@ -188,141 +188,27 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  clk100
   To Clock:  clk100
 
-Setup :            0  Failing Endpoints,  Worst Slack        5.773ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.238ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        5.597ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.053ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             5.773ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]/C
-                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/R
-                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.641ns  (logic 1.002ns (27.519%)  route 2.639ns (72.481%))
-  Logic Levels:           2  (LUT4=1 LUT6=1)
-  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.010ns = ( 15.010 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.318ns
-    Clock Pessimism Removal (CPR):    0.281ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100 rise edge)     0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk100_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.797     5.318    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
-    SLICE_X2Y119         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y119         FDRE (Prop_fdre_C_Q)         0.518     5.836 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]/Q
-                         net (fo=3, routed)           1.074     6.910    Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]
-    SLICE_X3Y119         LUT4 (Prop_lut4_I1_O)        0.152     7.062 f  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6/O
-                         net (fo=1, routed)           0.800     7.862    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6_n_0
-    SLICE_X3Y120         LUT6 (Prop_lut6_I2_O)        0.332     8.194 r  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_3__13/O
-                         net (fo=20, routed)          0.765     8.959    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_1__8_n_0
-    SLICE_X2Y122         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100 rise edge)    10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk100 (IN)
-                         net (fo=0)                   0.000    10.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk100_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.669    15.010    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
-    SLICE_X2Y122         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/C
-                         clock pessimism              0.281    15.291    
-                         clock uncertainty           -0.035    15.256    
-    SLICE_X2Y122         FDRE (Setup_fdre_C_R)       -0.524    14.732    Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]
-  -------------------------------------------------------------------
-                         required time                         14.732    
-                         arrival time                          -8.959    
-  -------------------------------------------------------------------
-                         slack                                  5.773    
-
-Slack (MET) :             5.773ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]/C
-                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]/R
-                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.641ns  (logic 1.002ns (27.519%)  route 2.639ns (72.481%))
-  Logic Levels:           2  (LUT4=1 LUT6=1)
-  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.010ns = ( 15.010 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.318ns
-    Clock Pessimism Removal (CPR):    0.281ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100 rise edge)     0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk100_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.797     5.318    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
-    SLICE_X2Y119         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y119         FDRE (Prop_fdre_C_Q)         0.518     5.836 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]/Q
-                         net (fo=3, routed)           1.074     6.910    Audio/SoundTrackSynthesizer/DSharp4/count_reg[7]
-    SLICE_X3Y119         LUT4 (Prop_lut4_I1_O)        0.152     7.062 f  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6/O
-                         net (fo=1, routed)           0.800     7.862    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6_n_0
-    SLICE_X3Y120         LUT6 (Prop_lut6_I2_O)        0.332     8.194 r  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_3__13/O
-                         net (fo=20, routed)          0.765     8.959    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_1__8_n_0
-    SLICE_X2Y122         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100 rise edge)    10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk100 (IN)
-                         net (fo=0)                   0.000    10.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk100_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.669    15.010    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
-    SLICE_X2Y122         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]/C
-                         clock pessimism              0.281    15.291    
-                         clock uncertainty           -0.035    15.256    
-    SLICE_X2Y122         FDRE (Setup_fdre_C_R)       -0.524    14.732    Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]
-  -------------------------------------------------------------------
-                         required time                         14.732    
-                         arrival time                          -8.959    
-  -------------------------------------------------------------------
-                         slack                                  5.773    
-
-Slack (MET) :             5.792ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/C
+Slack (MET) :             5.597ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            Audio/SoundTrackSynthesizer/ASharp3/count_reg[16]/R
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.624ns  (logic 1.002ns (27.649%)  route 2.622ns (72.351%))
+  Data Path Delay:        3.819ns  (logic 1.002ns (26.239%)  route 2.817ns (73.761%))
   Logic Levels:           2  (LUT4=1 LUT6=1)
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.948ns = ( 14.948 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.253ns
+    Destination Clock Delay (DCD):    4.956ns = ( 14.956 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.261ns
     Clock Pessimism Removal (CPR):    0.280ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -338,16 +224,16 @@ Slack (MET) :             5.792ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.732     5.253    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
-    SLICE_X8Y116         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/C
+                         net (fo=323, routed)         1.740     5.261    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X8Y116         FDRE (Prop_fdre_C_Q)         0.518     5.771 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/Q
-                         net (fo=4, routed)           1.085     6.856    Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]
-    SLICE_X9Y116         LUT4 (Prop_lut4_I1_O)        0.152     7.008 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
-                         net (fo=1, routed)           0.785     7.793    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
-    SLICE_X9Y115         LUT6 (Prop_lut6_I0_O)        0.332     8.125 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
-                         net (fo=20, routed)          0.752     8.877    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
-    SLICE_X8Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[16]/R
+    SLICE_X8Y105         FDRE (Prop_fdre_C_Q)         0.518     5.779 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/Q
+                         net (fo=4, routed)           0.867     6.646    Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]
+    SLICE_X9Y105         LUT4 (Prop_lut4_I0_O)        0.152     6.798 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
+                         net (fo=1, routed)           0.810     7.608    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
+    SLICE_X9Y104         LUT6 (Prop_lut6_I0_O)        0.332     7.940 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
+                         net (fo=20, routed)          1.140     9.080    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[16]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)    10.000    10.000 r  
@@ -356,30 +242,30 @@ Slack (MET) :             5.792ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.607    14.948    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
-    SLICE_X8Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[16]/C
-                         clock pessimism              0.280    15.228    
-                         clock uncertainty           -0.035    15.193    
-    SLICE_X8Y117         FDRE (Setup_fdre_C_R)       -0.524    14.669    Audio/SoundTrackSynthesizer/ASharp3/count_reg[16]
+                         net (fo=323, routed)         1.615    14.956    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[16]/C
+                         clock pessimism              0.280    15.236    
+                         clock uncertainty           -0.035    15.201    
+    SLICE_X8Y106         FDRE (Setup_fdre_C_R)       -0.524    14.677    Audio/SoundTrackSynthesizer/ASharp3/count_reg[16]
   -------------------------------------------------------------------
-                         required time                         14.669    
-                         arrival time                          -8.877    
+                         required time                         14.677    
+                         arrival time                          -9.080    
   -------------------------------------------------------------------
-                         slack                                  5.792    
+                         slack                                  5.597    
 
-Slack (MET) :             5.792ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/C
+Slack (MET) :             5.597ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/R
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.624ns  (logic 1.002ns (27.649%)  route 2.622ns (72.351%))
+  Data Path Delay:        3.819ns  (logic 1.002ns (26.239%)  route 2.817ns (73.761%))
   Logic Levels:           2  (LUT4=1 LUT6=1)
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.948ns = ( 14.948 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.253ns
+    Destination Clock Delay (DCD):    4.956ns = ( 14.956 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.261ns
     Clock Pessimism Removal (CPR):    0.280ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -395,16 +281,16 @@ Slack (MET) :             5.792ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.732     5.253    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
-    SLICE_X8Y116         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/C
+                         net (fo=323, routed)         1.740     5.261    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X8Y116         FDRE (Prop_fdre_C_Q)         0.518     5.771 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/Q
-                         net (fo=4, routed)           1.085     6.856    Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]
-    SLICE_X9Y116         LUT4 (Prop_lut4_I1_O)        0.152     7.008 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
-                         net (fo=1, routed)           0.785     7.793    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
-    SLICE_X9Y115         LUT6 (Prop_lut6_I0_O)        0.332     8.125 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
-                         net (fo=20, routed)          0.752     8.877    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
-    SLICE_X8Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/R
+    SLICE_X8Y105         FDRE (Prop_fdre_C_Q)         0.518     5.779 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/Q
+                         net (fo=4, routed)           0.867     6.646    Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]
+    SLICE_X9Y105         LUT4 (Prop_lut4_I0_O)        0.152     6.798 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
+                         net (fo=1, routed)           0.810     7.608    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
+    SLICE_X9Y104         LUT6 (Prop_lut6_I0_O)        0.332     7.940 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
+                         net (fo=20, routed)          1.140     9.080    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)    10.000    10.000 r  
@@ -413,87 +299,203 @@ Slack (MET) :             5.792ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.607    14.948    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
-    SLICE_X8Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
-                         clock pessimism              0.280    15.228    
-                         clock uncertainty           -0.035    15.193    
-    SLICE_X8Y117         FDRE (Setup_fdre_C_R)       -0.524    14.669    Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]
+                         net (fo=323, routed)         1.615    14.956    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
+                         clock pessimism              0.280    15.236    
+                         clock uncertainty           -0.035    15.201    
+    SLICE_X8Y106         FDRE (Setup_fdre_C_R)       -0.524    14.677    Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]
   -------------------------------------------------------------------
-                         required time                         14.669    
-                         arrival time                          -8.877    
+                         required time                         14.677    
+                         arrival time                          -9.080    
   -------------------------------------------------------------------
-                         slack                                  5.792    
+                         slack                                  5.597    
 
-Slack (MET) :             5.809ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/GSharp4/count_reg[14]/C
+Slack (MET) :             5.656ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/GSharp4/count_reg[16]/R
+  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/R
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.607ns  (logic 0.996ns (27.616%)  route 2.611ns (72.384%))
-  Logic Levels:           2  (LUT2=1 LUT6=1)
+  Data Path Delay:        3.944ns  (logic 0.956ns (24.241%)  route 2.988ns (75.759%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.025ns = ( 15.025 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100 rise edge)     0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk100_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
+                         net (fo=323, routed)         1.627     5.148    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y99          FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.456     5.604 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]/Q
+                         net (fo=3, routed)           0.883     6.487    Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]
+    SLICE_X2Y98          LUT4 (Prop_lut4_I3_O)        0.152     6.639 f  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6/O
+                         net (fo=1, routed)           0.984     7.622    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6_n_0
+    SLICE_X4Y98          LUT6 (Prop_lut6_I2_O)        0.348     7.970 r  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_3__13/O
+                         net (fo=20, routed)          1.121     9.092    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_1__8_n_0
+    SLICE_X3Y101         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100 rise edge)    10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    10.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk100_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
+                         net (fo=323, routed)         1.684    15.025    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y101         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/C
+                         clock pessimism              0.187    15.212    
+                         clock uncertainty           -0.035    15.177    
+    SLICE_X3Y101         FDRE (Setup_fdre_C_R)       -0.429    14.748    Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]
+  -------------------------------------------------------------------
+                         required time                         14.748    
+                         arrival time                          -9.092    
+  -------------------------------------------------------------------
+                         slack                                  5.656    
+
+Slack (MET) :             5.656ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]/R
+                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
+  Data Path Delay:        3.944ns  (logic 0.956ns (24.241%)  route 2.988ns (75.759%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.025ns = ( 15.025 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
+    Clock Pessimism Removal (CPR):    0.187ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100 rise edge)     0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk100_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
+                         net (fo=323, routed)         1.627     5.148    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y99          FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.456     5.604 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]/Q
+                         net (fo=3, routed)           0.883     6.487    Audio/SoundTrackSynthesizer/DSharp4/count_reg[9]
+    SLICE_X2Y98          LUT4 (Prop_lut4_I3_O)        0.152     6.639 f  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6/O
+                         net (fo=1, routed)           0.984     7.622    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_7__6_n_0
+    SLICE_X4Y98          LUT6 (Prop_lut6_I2_O)        0.348     7.970 r  Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_3__13/O
+                         net (fo=20, routed)          1.121     9.092    Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_1__8_n_0
+    SLICE_X3Y101         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100 rise edge)    10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    10.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk100_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
+                         net (fo=323, routed)         1.684    15.025    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y101         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]/C
+                         clock pessimism              0.187    15.212    
+                         clock uncertainty           -0.035    15.177    
+    SLICE_X3Y101         FDRE (Setup_fdre_C_R)       -0.429    14.748    Audio/SoundTrackSynthesizer/DSharp4/count_reg[17]
+  -------------------------------------------------------------------
+                         required time                         14.748    
+                         arrival time                          -9.092    
+  -------------------------------------------------------------------
+                         slack                                  5.656    
+
+Slack (MET) :             5.722ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/B4/count_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Audio/SoundTrackSynthesizer/B4/count_reg[16]/R
+                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
+  Data Path Delay:        3.788ns  (logic 0.828ns (21.860%)  route 2.960ns (78.140%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.015ns = ( 15.015 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.322ns
+    Clock Pessimism Removal (CPR):    0.281ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk100 rise edge)     0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk100_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
+                         net (fo=323, routed)         1.801     5.322    Audio/SoundTrackSynthesizer/B4/clk100_IBUF_BUFG
+    SLICE_X4Y115         FDRE                                         r  Audio/SoundTrackSynthesizer/B4/count_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y115         FDRE (Prop_fdre_C_Q)         0.456     5.778 r  Audio/SoundTrackSynthesizer/B4/count_reg[11]/Q
+                         net (fo=4, routed)           1.129     6.907    Audio/SoundTrackSynthesizer/B4/count_reg[11]
+    SLICE_X5Y115         LUT5 (Prop_lut5_I2_O)        0.124     7.031 f  Audio/SoundTrackSynthesizer/B4/count[0]_i_6/O
+                         net (fo=3, routed)           0.613     7.645    Audio/SoundTrackSynthesizer/B4/count[0]_i_6_n_0
+    SLICE_X5Y113         LUT4 (Prop_lut4_I3_O)        0.124     7.769 f  Audio/SoundTrackSynthesizer/B4/count[0]_i_4/O
+                         net (fo=2, routed)           0.414     8.182    Audio/SoundTrackSynthesizer/B4/count[0]_i_4_n_0
+    SLICE_X5Y113         LUT5 (Prop_lut5_I2_O)        0.124     8.306 r  Audio/SoundTrackSynthesizer/B4/count[0]_i_1__0/O
+                         net (fo=17, routed)          0.804     9.110    Audio/SoundTrackSynthesizer/B4/clear
+    SLICE_X4Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/B4/count_reg[16]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk100 rise edge)    10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    10.000    clk100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk100_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
+                         net (fo=323, routed)         1.674    15.015    Audio/SoundTrackSynthesizer/B4/clk100_IBUF_BUFG
+    SLICE_X4Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/B4/count_reg[16]/C
+                         clock pessimism              0.281    15.296    
+                         clock uncertainty           -0.035    15.261    
+    SLICE_X4Y117         FDRE (Setup_fdre_C_R)       -0.429    14.832    Audio/SoundTrackSynthesizer/B4/count_reg[16]
+  -------------------------------------------------------------------
+                         required time                         14.832    
+                         arrival time                          -9.110    
+  -------------------------------------------------------------------
+                         slack                                  5.722    
+
+Slack (MET) :             5.722ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Audio/SoundTrackSynthesizer/ASharp3/count_reg[12]/R
+                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk100
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
+  Data Path Delay:        3.693ns  (logic 1.002ns (27.131%)  route 2.691ns (72.869%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.942ns = ( 14.942 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.248ns
-    Clock Pessimism Removal (CPR):    0.281ns
-  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk100 rise edge)     0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk100 (IN)
-                         net (fo=0)                   0.000     0.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
-                         net (fo=1, routed)           1.967     3.425    clk100_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.727     5.248    Audio/SoundTrackSynthesizer/GSharp4/clk100_IBUF_BUFG
-    SLICE_X10Y121        FDRE                                         r  Audio/SoundTrackSynthesizer/GSharp4/count_reg[14]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X10Y121        FDRE (Prop_fdre_C_Q)         0.518     5.766 r  Audio/SoundTrackSynthesizer/GSharp4/count_reg[14]/Q
-                         net (fo=3, routed)           0.857     6.623    Audio/SoundTrackSynthesizer/GSharp4/count_reg[14]
-    SLICE_X11Y121        LUT2 (Prop_lut2_I0_O)        0.152     6.775 f  Audio/SoundTrackSynthesizer/GSharp4/count[0]_i_5__2/O
-                         net (fo=2, routed)           1.008     7.783    Audio/SoundTrackSynthesizer/GSharp4/count[0]_i_5__2_n_0
-    SLICE_X11Y120        LUT6 (Prop_lut6_I1_O)        0.326     8.109 r  Audio/SoundTrackSynthesizer/GSharp4/count[0]_i_3__2/O
-                         net (fo=19, routed)          0.746     8.855    Audio/SoundTrackSynthesizer/GSharp4/count[0]_i_1__3_n_0
-    SLICE_X10Y122        FDRE                                         r  Audio/SoundTrackSynthesizer/GSharp4/count_reg[16]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk100 rise edge)    10.000    10.000 r  
-    W5                                                0.000    10.000 r  clk100 (IN)
-                         net (fo=0)                   0.000    10.000    clk100
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
-                         net (fo=1, routed)           1.862    13.250    clk100_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.601    14.942    Audio/SoundTrackSynthesizer/GSharp4/clk100_IBUF_BUFG
-    SLICE_X10Y122        FDRE                                         r  Audio/SoundTrackSynthesizer/GSharp4/count_reg[16]/C
-                         clock pessimism              0.281    15.223    
-                         clock uncertainty           -0.035    15.188    
-    SLICE_X10Y122        FDRE (Setup_fdre_C_R)       -0.524    14.664    Audio/SoundTrackSynthesizer/GSharp4/count_reg[16]
-  -------------------------------------------------------------------
-                         required time                         14.664    
-                         arrival time                          -8.855    
-  -------------------------------------------------------------------
-                         slack                                  5.809    
-
-Slack (MET) :             5.847ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/C
-                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/ASharp3/data_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk100
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        4.120ns  (logic 1.126ns (27.330%)  route 2.994ns (72.670%))
-  Logic Levels:           3  (LUT2=1 LUT4=1 LUT6=1)
-  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.946ns = ( 14.946 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.253ns
+    Destination Clock Delay (DCD):    4.956ns = ( 14.956 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.261ns
     Clock Pessimism Removal (CPR):    0.280ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -509,18 +511,16 @@ Slack (MET) :             5.847ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.732     5.253    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
-    SLICE_X8Y116         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/C
+                         net (fo=323, routed)         1.740     5.261    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X8Y116         FDRE (Prop_fdre_C_Q)         0.518     5.771 f  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/Q
-                         net (fo=4, routed)           1.085     6.856    Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]
-    SLICE_X9Y116         LUT4 (Prop_lut4_I1_O)        0.152     7.008 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
-                         net (fo=1, routed)           0.785     7.793    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
-    SLICE_X9Y115         LUT6 (Prop_lut6_I0_O)        0.332     8.125 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
-                         net (fo=20, routed)          1.124     9.249    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
-    SLICE_X9Y118         LUT2 (Prop_lut2_I1_O)        0.124     9.373 r  Audio/SoundTrackSynthesizer/ASharp3/data[1]_i_1__12/O
-                         net (fo=1, routed)           0.000     9.373    Audio/SoundTrackSynthesizer/ASharp3/data[1]_i_1__12_n_0
-    SLICE_X9Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/data_reg[1]/D
+    SLICE_X8Y106         FDRE (Prop_fdre_C_Q)         0.518     5.779 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/Q
+                         net (fo=3, routed)           0.880     6.659    Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]
+    SLICE_X9Y105         LUT4 (Prop_lut4_I2_O)        0.152     6.811 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
+                         net (fo=1, routed)           0.810     7.621    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
+    SLICE_X9Y104         LUT6 (Prop_lut6_I0_O)        0.332     7.953 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
+                         net (fo=20, routed)          1.001     8.954    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[12]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)    10.000    10.000 r  
@@ -529,31 +529,31 @@ Slack (MET) :             5.847ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.605    14.946    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
-    SLICE_X9Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/data_reg[1]/C
-                         clock pessimism              0.280    15.226    
-                         clock uncertainty           -0.035    15.191    
-    SLICE_X9Y118         FDRE (Setup_fdre_C_D)        0.029    15.220    Audio/SoundTrackSynthesizer/ASharp3/data_reg[1]
+                         net (fo=323, routed)         1.615    14.956    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[12]/C
+                         clock pessimism              0.280    15.236    
+                         clock uncertainty           -0.035    15.201    
+    SLICE_X8Y105         FDRE (Setup_fdre_C_R)       -0.524    14.677    Audio/SoundTrackSynthesizer/ASharp3/count_reg[12]
   -------------------------------------------------------------------
-                         required time                         15.220    
-                         arrival time                          -9.373    
+                         required time                         14.677    
+                         arrival time                          -8.954    
   -------------------------------------------------------------------
-                         slack                                  5.847    
+                         slack                                  5.722    
 
-Slack (MET) :             5.854ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+Slack (MET) :             5.722ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/A3/count_reg[16]/R
+  Destination:            Audio/SoundTrackSynthesizer/ASharp3/count_reg[13]/R
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.560ns  (logic 0.996ns (27.979%)  route 2.564ns (72.021%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.017ns = ( 15.017 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.325ns
-    Clock Pessimism Removal (CPR):    0.281ns
+  Data Path Delay:        3.693ns  (logic 1.002ns (27.131%)  route 2.691ns (72.869%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.956ns = ( 14.956 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.261ns
+    Clock Pessimism Removal (CPR):    0.280ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -568,16 +568,16 @@ Slack (MET) :             5.854ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.804     5.325    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y113         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+                         net (fo=323, routed)         1.740     5.261    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y113         FDRE (Prop_fdre_C_Q)         0.518     5.843 r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/Q
-                         net (fo=3, routed)           1.075     6.918    Audio/SoundTrackSynthesizer/A3/count_reg[7]
-    SLICE_X3Y113         LUT5 (Prop_lut5_I3_O)        0.152     7.070 f  Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11/O
-                         net (fo=1, routed)           0.806     7.876    Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11_n_0
-    SLICE_X4Y115         LUT6 (Prop_lut6_I2_O)        0.326     8.202 r  Audio/SoundTrackSynthesizer/A3/count[0]_i_3__11/O
-                         net (fo=20, routed)          0.683     8.885    Audio/SoundTrackSynthesizer/A3/count[0]_i_1__14_n_0
-    SLICE_X2Y116         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[16]/R
+    SLICE_X8Y106         FDRE (Prop_fdre_C_Q)         0.518     5.779 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/Q
+                         net (fo=3, routed)           0.880     6.659    Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]
+    SLICE_X9Y105         LUT4 (Prop_lut4_I2_O)        0.152     6.811 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
+                         net (fo=1, routed)           0.810     7.621    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
+    SLICE_X9Y104         LUT6 (Prop_lut6_I0_O)        0.332     7.953 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
+                         net (fo=20, routed)          1.001     8.954    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[13]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)    10.000    10.000 r  
@@ -586,31 +586,31 @@ Slack (MET) :             5.854ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.676    15.017    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y116         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[16]/C
-                         clock pessimism              0.281    15.298    
-                         clock uncertainty           -0.035    15.263    
-    SLICE_X2Y116         FDRE (Setup_fdre_C_R)       -0.524    14.739    Audio/SoundTrackSynthesizer/A3/count_reg[16]
+                         net (fo=323, routed)         1.615    14.956    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[13]/C
+                         clock pessimism              0.280    15.236    
+                         clock uncertainty           -0.035    15.201    
+    SLICE_X8Y105         FDRE (Setup_fdre_C_R)       -0.524    14.677    Audio/SoundTrackSynthesizer/ASharp3/count_reg[13]
   -------------------------------------------------------------------
-                         required time                         14.739    
-                         arrival time                          -8.885    
+                         required time                         14.677    
+                         arrival time                          -8.954    
   -------------------------------------------------------------------
-                         slack                                  5.854    
+                         slack                                  5.722    
 
-Slack (MET) :             5.854ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+Slack (MET) :             5.722ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/A3/count_reg[17]/R
+  Destination:            Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/R
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.560ns  (logic 0.996ns (27.979%)  route 2.564ns (72.021%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.017ns = ( 15.017 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.325ns
-    Clock Pessimism Removal (CPR):    0.281ns
+  Data Path Delay:        3.693ns  (logic 1.002ns (27.131%)  route 2.691ns (72.869%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.956ns = ( 14.956 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.261ns
+    Clock Pessimism Removal (CPR):    0.280ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -625,16 +625,16 @@ Slack (MET) :             5.854ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.804     5.325    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y113         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+                         net (fo=323, routed)         1.740     5.261    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y113         FDRE (Prop_fdre_C_Q)         0.518     5.843 r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/Q
-                         net (fo=3, routed)           1.075     6.918    Audio/SoundTrackSynthesizer/A3/count_reg[7]
-    SLICE_X3Y113         LUT5 (Prop_lut5_I3_O)        0.152     7.070 f  Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11/O
-                         net (fo=1, routed)           0.806     7.876    Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11_n_0
-    SLICE_X4Y115         LUT6 (Prop_lut6_I2_O)        0.326     8.202 r  Audio/SoundTrackSynthesizer/A3/count[0]_i_3__11/O
-                         net (fo=20, routed)          0.683     8.885    Audio/SoundTrackSynthesizer/A3/count[0]_i_1__14_n_0
-    SLICE_X2Y116         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[17]/R
+    SLICE_X8Y106         FDRE (Prop_fdre_C_Q)         0.518     5.779 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/Q
+                         net (fo=3, routed)           0.880     6.659    Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]
+    SLICE_X9Y105         LUT4 (Prop_lut4_I2_O)        0.152     6.811 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
+                         net (fo=1, routed)           0.810     7.621    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
+    SLICE_X9Y104         LUT6 (Prop_lut6_I0_O)        0.332     7.953 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
+                         net (fo=20, routed)          1.001     8.954    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)    10.000    10.000 r  
@@ -643,31 +643,31 @@ Slack (MET) :             5.854ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.676    15.017    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y116         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[17]/C
-                         clock pessimism              0.281    15.298    
-                         clock uncertainty           -0.035    15.263    
-    SLICE_X2Y116         FDRE (Setup_fdre_C_R)       -0.524    14.739    Audio/SoundTrackSynthesizer/A3/count_reg[17]
+                         net (fo=323, routed)         1.615    14.956    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]/C
+                         clock pessimism              0.280    15.236    
+                         clock uncertainty           -0.035    15.201    
+    SLICE_X8Y105         FDRE (Setup_fdre_C_R)       -0.524    14.677    Audio/SoundTrackSynthesizer/ASharp3/count_reg[14]
   -------------------------------------------------------------------
-                         required time                         14.739    
-                         arrival time                          -8.885    
+                         required time                         14.677    
+                         arrival time                          -8.954    
   -------------------------------------------------------------------
-                         slack                                  5.854    
+                         slack                                  5.722    
 
-Slack (MET) :             5.858ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+Slack (MET) :             5.722ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/A3/count_reg[0]/R
+  Destination:            Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/R
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.559ns  (logic 0.996ns (27.984%)  route 2.563ns (72.016%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.020ns = ( 15.020 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.325ns
-    Clock Pessimism Removal (CPR):    0.281ns
+  Data Path Delay:        3.693ns  (logic 1.002ns (27.131%)  route 2.691ns (72.869%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.956ns = ( 14.956 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.261ns
+    Clock Pessimism Removal (CPR):    0.280ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -682,16 +682,16 @@ Slack (MET) :             5.858ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.804     5.325    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y113         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+                         net (fo=323, routed)         1.740     5.261    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y113         FDRE (Prop_fdre_C_Q)         0.518     5.843 r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/Q
-                         net (fo=3, routed)           1.075     6.918    Audio/SoundTrackSynthesizer/A3/count_reg[7]
-    SLICE_X3Y113         LUT5 (Prop_lut5_I3_O)        0.152     7.070 f  Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11/O
-                         net (fo=1, routed)           0.806     7.876    Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11_n_0
-    SLICE_X4Y115         LUT6 (Prop_lut6_I2_O)        0.326     8.202 r  Audio/SoundTrackSynthesizer/A3/count[0]_i_3__11/O
-                         net (fo=20, routed)          0.682     8.884    Audio/SoundTrackSynthesizer/A3/count[0]_i_1__14_n_0
-    SLICE_X2Y112         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[0]/R
+    SLICE_X8Y106         FDRE (Prop_fdre_C_Q)         0.518     5.779 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/Q
+                         net (fo=3, routed)           0.880     6.659    Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]
+    SLICE_X9Y105         LUT4 (Prop_lut4_I2_O)        0.152     6.811 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
+                         net (fo=1, routed)           0.810     7.621    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
+    SLICE_X9Y104         LUT6 (Prop_lut6_I0_O)        0.332     7.953 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
+                         net (fo=20, routed)          1.001     8.954    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)    10.000    10.000 r  
@@ -700,31 +700,31 @@ Slack (MET) :             5.858ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.679    15.020    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y112         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[0]/C
-                         clock pessimism              0.281    15.301    
-                         clock uncertainty           -0.035    15.266    
-    SLICE_X2Y112         FDRE (Setup_fdre_C_R)       -0.524    14.742    Audio/SoundTrackSynthesizer/A3/count_reg[0]
+                         net (fo=323, routed)         1.615    14.956    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y105         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]/C
+                         clock pessimism              0.280    15.236    
+                         clock uncertainty           -0.035    15.201    
+    SLICE_X8Y105         FDRE (Setup_fdre_C_R)       -0.524    14.677    Audio/SoundTrackSynthesizer/ASharp3/count_reg[15]
   -------------------------------------------------------------------
-                         required time                         14.742    
-                         arrival time                          -8.884    
+                         required time                         14.677    
+                         arrival time                          -8.954    
   -------------------------------------------------------------------
-                         slack                                  5.858    
+                         slack                                  5.722    
 
-Slack (MET) :             5.858ns  (required time - arrival time)
-  Source:                 Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+Slack (MET) :             5.740ns  (required time - arrival time)
+  Source:                 Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/A3/count_reg[1]/R
+  Destination:            Audio/SoundTrackSynthesizer/ASharp3/count_reg[4]/R
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk100 rise@10.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        3.559ns  (logic 0.996ns (27.984%)  route 2.563ns (72.016%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.020ns = ( 15.020 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.325ns
-    Clock Pessimism Removal (CPR):    0.281ns
+  Data Path Delay:        3.676ns  (logic 1.002ns (27.259%)  route 2.674ns (72.741%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.956ns = ( 14.956 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.261ns
+    Clock Pessimism Removal (CPR):    0.280ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -739,16 +739,16 @@ Slack (MET) :             5.858ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.804     5.325    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y113         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/C
+                         net (fo=323, routed)         1.740     5.261    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y106         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y113         FDRE (Prop_fdre_C_Q)         0.518     5.843 r  Audio/SoundTrackSynthesizer/A3/count_reg[7]/Q
-                         net (fo=3, routed)           1.075     6.918    Audio/SoundTrackSynthesizer/A3/count_reg[7]
-    SLICE_X3Y113         LUT5 (Prop_lut5_I3_O)        0.152     7.070 f  Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11/O
-                         net (fo=1, routed)           0.806     7.876    Audio/SoundTrackSynthesizer/A3/count[0]_i_7__11_n_0
-    SLICE_X4Y115         LUT6 (Prop_lut6_I2_O)        0.326     8.202 r  Audio/SoundTrackSynthesizer/A3/count[0]_i_3__11/O
-                         net (fo=20, routed)          0.682     8.884    Audio/SoundTrackSynthesizer/A3/count[0]_i_1__14_n_0
-    SLICE_X2Y112         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[1]/R
+    SLICE_X8Y106         FDRE (Prop_fdre_C_Q)         0.518     5.779 r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]/Q
+                         net (fo=3, routed)           0.880     6.659    Audio/SoundTrackSynthesizer/ASharp3/count_reg[17]
+    SLICE_X9Y105         LUT4 (Prop_lut4_I2_O)        0.152     6.811 f  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11/O
+                         net (fo=1, routed)           0.810     7.621    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_5__11_n_0
+    SLICE_X9Y104         LUT6 (Prop_lut6_I0_O)        0.332     7.953 r  Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_3__10/O
+                         net (fo=20, routed)          0.984     8.937    Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__13_n_0
+    SLICE_X8Y103         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[4]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)    10.000    10.000 r  
@@ -757,16 +757,16 @@ Slack (MET) :             5.858ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         1.679    15.020    Audio/SoundTrackSynthesizer/A3/clk100_IBUF_BUFG
-    SLICE_X2Y112         FDRE                                         r  Audio/SoundTrackSynthesizer/A3/count_reg[1]/C
-                         clock pessimism              0.281    15.301    
-                         clock uncertainty           -0.035    15.266    
-    SLICE_X2Y112         FDRE (Setup_fdre_C_R)       -0.524    14.742    Audio/SoundTrackSynthesizer/A3/count_reg[1]
+                         net (fo=323, routed)         1.615    14.956    Audio/SoundTrackSynthesizer/ASharp3/clk100_IBUF_BUFG
+    SLICE_X8Y103         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp3/count_reg[4]/C
+                         clock pessimism              0.280    15.236    
+                         clock uncertainty           -0.035    15.201    
+    SLICE_X8Y103         FDRE (Setup_fdre_C_R)       -0.524    14.677    Audio/SoundTrackSynthesizer/ASharp3/count_reg[4]
   -------------------------------------------------------------------
-                         required time                         14.742    
-                         arrival time                          -8.884    
+                         required time                         14.677    
+                         arrival time                          -8.937    
   -------------------------------------------------------------------
-                         slack                                  5.858    
+                         slack                                  5.740    
 
 
 
@@ -774,20 +774,20 @@ Slack (MET) :             5.858ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.238ns  (arrival time - required time)
-  Source:                 Audio/SoundTrackSynthesizer/FSharp4/count_reg[17]/C
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/FSharp4/data_reg[15]/D
+  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.362ns  (logic 0.186ns (51.313%)  route 0.176ns (48.687%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.067ns
-    Source Clock Delay      (SCD):    1.552ns
-    Clock Pessimism Removal (CPR):    0.482ns
+  Data Path Delay:        0.510ns  (logic 0.392ns (76.863%)  route 0.118ns (23.137%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -797,14 +797,18 @@ Slack (MET) :             0.238ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.668     1.552    Audio/SoundTrackSynthesizer/FSharp4/clk100_IBUF_BUFG
-    SLICE_X3Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/FSharp4/count_reg[17]/C
+                         net (fo=323, routed)         0.594     1.477    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y99          FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y118         FDRE (Prop_fdre_C_Q)         0.141     1.693 r  Audio/SoundTrackSynthesizer/FSharp4/count_reg[17]/Q
-                         net (fo=3, routed)           0.176     1.869    Audio/SoundTrackSynthesizer/FSharp4/count_reg[17]
-    SLICE_X4Y118         LUT5 (Prop_lut5_I2_O)        0.045     1.914 r  Audio/SoundTrackSynthesizer/FSharp4/data[15]_i_1__10/O
-                         net (fo=1, routed)           0.000     1.914    Audio/SoundTrackSynthesizer/FSharp4/data[15]_i_1__10_n_0
-    SLICE_X4Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/FSharp4/data_reg[15]/D
+    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.141     1.618 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/Q
+                         net (fo=3, routed)           0.117     1.736    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.197     1.933 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7/CO[3]
+                         net (fo=1, routed)           0.001     1.933    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7_n_0
+    SLICE_X3Y100         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     1.987 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7/O[0]
+                         net (fo=1, routed)           0.000     1.987    Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7_n_7
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -813,30 +817,30 @@ Slack (MET) :             0.238ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.939     2.067    Audio/SoundTrackSynthesizer/FSharp4/clk100_IBUF_BUFG
-    SLICE_X4Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/FSharp4/data_reg[15]/C
-                         clock pessimism             -0.482     1.585    
-    SLICE_X4Y118         FDRE (Hold_fdre_C_D)         0.091     1.676    Audio/SoundTrackSynthesizer/FSharp4/data_reg[15]
+                         net (fo=323, routed)         0.951     2.079    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]/C
+                         clock pessimism             -0.249     1.830    
+    SLICE_X3Y100         FDRE (Hold_fdre_C_D)         0.105     1.935    Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]
   -------------------------------------------------------------------
-                         required time                         -1.676    
-                         arrival time                           1.914    
+                         required time                         -1.935    
+                         arrival time                           1.987    
   -------------------------------------------------------------------
-                         slack                                  0.238    
+                         slack                                  0.053    
 
-Slack (MET) :             0.244ns  (arrival time - required time)
-  Source:                 Audio/SoundTrackSynthesizer/CSharp4/count_reg[16]/C
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 Audio/spiInitClock/counter_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/CSharp4/data_reg[15]/D
+  Destination:            Audio/spiInitClock/counter_reg[16]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.349ns  (logic 0.186ns (53.310%)  route 0.163ns (46.690%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.063ns
-    Source Clock Delay      (SCD):    1.546ns
-    Clock Pessimism Removal (CPR):    0.503ns
+  Data Path Delay:        0.540ns  (logic 0.413ns (76.452%)  route 0.127ns (23.548%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.077ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -846,14 +850,21 @@ Slack (MET) :             0.244ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.662     1.546    Audio/SoundTrackSynthesizer/CSharp4/clk100_IBUF_BUFG
-    SLICE_X0Y124         FDRE                                         r  Audio/SoundTrackSynthesizer/CSharp4/count_reg[16]/C
+                         net (fo=323, routed)         0.592     1.475    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y98          FDRE                                         r  Audio/spiInitClock/counter_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y124         FDRE (Prop_fdre_C_Q)         0.141     1.687 r  Audio/SoundTrackSynthesizer/CSharp4/count_reg[16]/Q
-                         net (fo=5, routed)           0.163     1.850    Audio/SoundTrackSynthesizer/CSharp4/count_reg[16]
-    SLICE_X1Y123         LUT6 (Prop_lut6_I3_O)        0.045     1.895 r  Audio/SoundTrackSynthesizer/CSharp4/data[15]_i_1__1/O
-                         net (fo=1, routed)           0.000     1.895    Audio/SoundTrackSynthesizer/CSharp4/data[15]_i_1__1_n_0
-    SLICE_X1Y123         FDRE                                         r  Audio/SoundTrackSynthesizer/CSharp4/data_reg[15]/D
+    SLICE_X6Y98          FDRE (Prop_fdre_C_Q)         0.164     1.639 r  Audio/spiInitClock/counter_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.766    Audio/spiInitClock/counter_reg[10]
+    SLICE_X6Y98          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.922 r  Audio/spiInitClock/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.922    Audio/spiInitClock/counter_reg[8]_i_1_n_0
+    SLICE_X6Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.962 r  Audio/spiInitClock/counter_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.962    Audio/spiInitClock/counter_reg[12]_i_1_n_0
+    SLICE_X6Y100         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     2.015 r  Audio/spiInitClock/counter_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.015    Audio/spiInitClock/counter_reg[16]_i_1_n_7
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -862,30 +873,30 @@ Slack (MET) :             0.244ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.935     2.063    Audio/SoundTrackSynthesizer/CSharp4/clk100_IBUF_BUFG
-    SLICE_X1Y123         FDRE                                         r  Audio/SoundTrackSynthesizer/CSharp4/data_reg[15]/C
-                         clock pessimism             -0.503     1.560    
-    SLICE_X1Y123         FDRE (Hold_fdre_C_D)         0.091     1.651    Audio/SoundTrackSynthesizer/CSharp4/data_reg[15]
+                         net (fo=323, routed)         0.949     2.077    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[16]/C
+                         clock pessimism             -0.249     1.828    
+    SLICE_X6Y100         FDRE (Hold_fdre_C_D)         0.134     1.962    Audio/spiInitClock/counter_reg[16]
   -------------------------------------------------------------------
-                         required time                         -1.651    
-                         arrival time                           1.895    
+                         required time                         -1.962    
+                         arrival time                           2.015    
   -------------------------------------------------------------------
-                         slack                                  0.244    
+                         slack                                  0.054    
 
-Slack (MET) :             0.249ns  (arrival time - required time)
-  Source:                 Audio/SoundTrackSynthesizer/ASharp4/count_reg[16]/C
+Slack (MET) :             0.064ns  (arrival time - required time)
+  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/ASharp4/data_reg[15]/D
+  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[14]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.356ns  (logic 0.186ns (52.209%)  route 0.170ns (47.791%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.064ns
-    Source Clock Delay      (SCD):    1.546ns
-    Clock Pessimism Removal (CPR):    0.502ns
+  Data Path Delay:        0.521ns  (logic 0.403ns (77.351%)  route 0.118ns (22.649%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -895,14 +906,18 @@ Slack (MET) :             0.249ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.662     1.546    Audio/SoundTrackSynthesizer/ASharp4/clk100_IBUF_BUFG
-    SLICE_X4Y123         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp4/count_reg[16]/C
+                         net (fo=323, routed)         0.594     1.477    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y99          FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y123         FDRE (Prop_fdre_C_Q)         0.141     1.687 r  Audio/SoundTrackSynthesizer/ASharp4/count_reg[16]/Q
-                         net (fo=3, routed)           0.170     1.857    Audio/SoundTrackSynthesizer/ASharp4/count_reg[16]
-    SLICE_X5Y121         LUT5 (Prop_lut5_I2_O)        0.045     1.902 r  Audio/SoundTrackSynthesizer/ASharp4/data[15]_i_1__8/O
-                         net (fo=1, routed)           0.000     1.902    Audio/SoundTrackSynthesizer/ASharp4/data[15]_i_1__8_n_0
-    SLICE_X5Y121         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp4/data_reg[15]/D
+    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.141     1.618 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/Q
+                         net (fo=3, routed)           0.117     1.736    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.197     1.933 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7/CO[3]
+                         net (fo=1, routed)           0.001     1.933    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7_n_0
+    SLICE_X3Y100         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     1.998 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7/O[2]
+                         net (fo=1, routed)           0.000     1.998    Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7_n_5
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[14]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -911,30 +926,30 @@ Slack (MET) :             0.249ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.936     2.064    Audio/SoundTrackSynthesizer/ASharp4/clk100_IBUF_BUFG
-    SLICE_X5Y121         FDRE                                         r  Audio/SoundTrackSynthesizer/ASharp4/data_reg[15]/C
-                         clock pessimism             -0.502     1.562    
-    SLICE_X5Y121         FDRE (Hold_fdre_C_D)         0.091     1.653    Audio/SoundTrackSynthesizer/ASharp4/data_reg[15]
+                         net (fo=323, routed)         0.951     2.079    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[14]/C
+                         clock pessimism             -0.249     1.830    
+    SLICE_X3Y100         FDRE (Hold_fdre_C_D)         0.105     1.935    Audio/SoundTrackSynthesizer/DSharp4/count_reg[14]
   -------------------------------------------------------------------
-                         required time                         -1.653    
-                         arrival time                           1.902    
+                         required time                         -1.935    
+                         arrival time                           1.998    
   -------------------------------------------------------------------
-                         slack                                  0.249    
+                         slack                                  0.064    
 
-Slack (MET) :             0.252ns  (arrival time - required time)
-  Source:                 Audio/spiInitClock/counter_reg[3]/C
+Slack (MET) :             0.067ns  (arrival time - required time)
+  Source:                 Audio/spiInitClock/counter_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/spiInitClock/counter_reg[3]/D
+  Destination:            Audio/spiInitClock/counter_reg[18]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.357ns  (logic 0.249ns (69.714%)  route 0.108ns (30.286%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.074ns
-    Source Clock Delay      (SCD):    1.556ns
-    Clock Pessimism Removal (CPR):    0.518ns
+  Data Path Delay:        0.553ns  (logic 0.426ns (77.005%)  route 0.127ns (22.995%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.077ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -944,15 +959,21 @@ Slack (MET) :             0.252ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.672     1.556    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y110         FDRE                                         r  Audio/spiInitClock/counter_reg[3]/C
+                         net (fo=323, routed)         0.592     1.475    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y98          FDRE                                         r  Audio/spiInitClock/counter_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y110         FDRE (Prop_fdre_C_Q)         0.141     1.697 r  Audio/spiInitClock/counter_reg[3]/Q
-                         net (fo=1, routed)           0.108     1.805    Audio/spiInitClock/counter_reg_n_0_[3]
-    SLICE_X5Y110         CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     1.913 r  Audio/spiInitClock/counter_reg[0]_i_2/O[3]
-                         net (fo=1, routed)           0.000     1.913    Audio/spiInitClock/counter_reg[0]_i_2_n_4
-    SLICE_X5Y110         FDRE                                         r  Audio/spiInitClock/counter_reg[3]/D
+    SLICE_X6Y98          FDRE (Prop_fdre_C_Q)         0.164     1.639 r  Audio/spiInitClock/counter_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.766    Audio/spiInitClock/counter_reg[10]
+    SLICE_X6Y98          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.922 r  Audio/spiInitClock/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.922    Audio/spiInitClock/counter_reg[8]_i_1_n_0
+    SLICE_X6Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.962 r  Audio/spiInitClock/counter_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.962    Audio/spiInitClock/counter_reg[12]_i_1_n_0
+    SLICE_X6Y100         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.066     2.028 r  Audio/spiInitClock/counter_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.028    Audio/spiInitClock/counter_reg[16]_i_1_n_5
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[18]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -961,30 +982,30 @@ Slack (MET) :             0.252ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.946     2.074    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y110         FDRE                                         r  Audio/spiInitClock/counter_reg[3]/C
-                         clock pessimism             -0.518     1.556    
-    SLICE_X5Y110         FDRE (Hold_fdre_C_D)         0.105     1.661    Audio/spiInitClock/counter_reg[3]
+                         net (fo=323, routed)         0.949     2.077    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[18]/C
+                         clock pessimism             -0.249     1.828    
+    SLICE_X6Y100         FDRE (Hold_fdre_C_D)         0.134     1.962    Audio/spiInitClock/counter_reg[18]
   -------------------------------------------------------------------
-                         required time                         -1.661    
-                         arrival time                           1.913    
+                         required time                         -1.962    
+                         arrival time                           2.028    
   -------------------------------------------------------------------
-                         slack                                  0.252    
+                         slack                                  0.067    
 
-Slack (MET) :             0.256ns  (arrival time - required time)
-  Source:                 Audio/spiInitClock/counter_reg[4]/C
+Slack (MET) :             0.089ns  (arrival time - required time)
+  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/spiInitClock/counter_reg[4]/D
+  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[13]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.361ns  (logic 0.256ns (70.880%)  route 0.105ns (29.120%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.074ns
-    Source Clock Delay      (SCD):    1.556ns
-    Clock Pessimism Removal (CPR):    0.518ns
+  Data Path Delay:        0.546ns  (logic 0.428ns (78.388%)  route 0.118ns (21.612%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -994,15 +1015,18 @@ Slack (MET) :             0.256ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.672     1.556    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y111         FDRE                                         r  Audio/spiInitClock/counter_reg[4]/C
+                         net (fo=323, routed)         0.594     1.477    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y99          FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y111         FDRE (Prop_fdre_C_Q)         0.141     1.697 r  Audio/spiInitClock/counter_reg[4]/Q
-                         net (fo=1, routed)           0.105     1.802    Audio/spiInitClock/counter_reg_n_0_[4]
-    SLICE_X5Y111         CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.115     1.917 r  Audio/spiInitClock/counter_reg[4]_i_1/O[0]
-                         net (fo=1, routed)           0.000     1.917    Audio/spiInitClock/counter_reg[4]_i_1_n_7
-    SLICE_X5Y111         FDRE                                         r  Audio/spiInitClock/counter_reg[4]/D
+    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.141     1.618 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/Q
+                         net (fo=3, routed)           0.117     1.736    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.197     1.933 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7/CO[3]
+                         net (fo=1, routed)           0.001     1.933    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7_n_0
+    SLICE_X3Y100         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.090     2.023 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7/O[1]
+                         net (fo=1, routed)           0.000     2.023    Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7_n_6
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[13]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -1011,30 +1035,30 @@ Slack (MET) :             0.256ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.946     2.074    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y111         FDRE                                         r  Audio/spiInitClock/counter_reg[4]/C
-                         clock pessimism             -0.518     1.556    
-    SLICE_X5Y111         FDRE (Hold_fdre_C_D)         0.105     1.661    Audio/spiInitClock/counter_reg[4]
+                         net (fo=323, routed)         0.951     2.079    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[13]/C
+                         clock pessimism             -0.249     1.830    
+    SLICE_X3Y100         FDRE (Hold_fdre_C_D)         0.105     1.935    Audio/SoundTrackSynthesizer/DSharp4/count_reg[13]
   -------------------------------------------------------------------
-                         required time                         -1.661    
-                         arrival time                           1.917    
+                         required time                         -1.935    
+                         arrival time                           2.023    
   -------------------------------------------------------------------
-                         slack                                  0.256    
+                         slack                                  0.089    
 
-Slack (MET) :             0.256ns  (arrival time - required time)
-  Source:                 Audio/spiInitClock/counter_reg[2]/C
+Slack (MET) :             0.089ns  (arrival time - required time)
+  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/spiInitClock/counter_reg[2]/D
+  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[15]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.361ns  (logic 0.252ns (69.733%)  route 0.109ns (30.267%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.074ns
-    Source Clock Delay      (SCD):    1.556ns
-    Clock Pessimism Removal (CPR):    0.518ns
+  Data Path Delay:        0.546ns  (logic 0.428ns (78.388%)  route 0.118ns (21.612%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1044,15 +1068,18 @@ Slack (MET) :             0.256ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.672     1.556    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y110         FDRE                                         r  Audio/spiInitClock/counter_reg[2]/C
+                         net (fo=323, routed)         0.594     1.477    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y99          FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y110         FDRE (Prop_fdre_C_Q)         0.141     1.697 r  Audio/spiInitClock/counter_reg[2]/Q
-                         net (fo=1, routed)           0.109     1.806    Audio/spiInitClock/counter_reg_n_0_[2]
-    SLICE_X5Y110         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.111     1.917 r  Audio/spiInitClock/counter_reg[0]_i_2/O[2]
-                         net (fo=1, routed)           0.000     1.917    Audio/spiInitClock/counter_reg[0]_i_2_n_5
-    SLICE_X5Y110         FDRE                                         r  Audio/spiInitClock/counter_reg[2]/D
+    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.141     1.618 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/Q
+                         net (fo=3, routed)           0.117     1.736    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.197     1.933 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7/CO[3]
+                         net (fo=1, routed)           0.001     1.933    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7_n_0
+    SLICE_X3Y100         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.090     2.023 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7/O[3]
+                         net (fo=1, routed)           0.000     2.023    Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7_n_4
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[15]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -1061,30 +1088,30 @@ Slack (MET) :             0.256ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.946     2.074    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y110         FDRE                                         r  Audio/spiInitClock/counter_reg[2]/C
-                         clock pessimism             -0.518     1.556    
-    SLICE_X5Y110         FDRE (Hold_fdre_C_D)         0.105     1.661    Audio/spiInitClock/counter_reg[2]
+                         net (fo=323, routed)         0.951     2.079    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y100         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[15]/C
+                         clock pessimism             -0.249     1.830    
+    SLICE_X3Y100         FDRE (Hold_fdre_C_D)         0.105     1.935    Audio/SoundTrackSynthesizer/DSharp4/count_reg[15]
   -------------------------------------------------------------------
-                         required time                         -1.661    
-                         arrival time                           1.917    
+                         required time                         -1.935    
+                         arrival time                           2.023    
   -------------------------------------------------------------------
-                         slack                                  0.256    
+                         slack                                  0.089    
 
-Slack (MET) :             0.256ns  (arrival time - required time)
-  Source:                 Audio/spiInitClock/counter_reg[6]/C
+Slack (MET) :             0.090ns  (arrival time - required time)
+  Source:                 Audio/spiInitClock/counter_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/spiInitClock/counter_reg[6]/D
+  Destination:            Audio/spiInitClock/counter_reg[17]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.361ns  (logic 0.252ns (69.733%)  route 0.109ns (30.267%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.074ns
-    Source Clock Delay      (SCD):    1.556ns
-    Clock Pessimism Removal (CPR):    0.518ns
+  Data Path Delay:        0.576ns  (logic 0.449ns (77.923%)  route 0.127ns (22.077%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.077ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1094,15 +1121,21 @@ Slack (MET) :             0.256ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.672     1.556    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y111         FDRE                                         r  Audio/spiInitClock/counter_reg[6]/C
+                         net (fo=323, routed)         0.592     1.475    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y98          FDRE                                         r  Audio/spiInitClock/counter_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y111         FDRE (Prop_fdre_C_Q)         0.141     1.697 r  Audio/spiInitClock/counter_reg[6]/Q
-                         net (fo=1, routed)           0.109     1.806    Audio/spiInitClock/counter_reg_n_0_[6]
-    SLICE_X5Y111         CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.111     1.917 r  Audio/spiInitClock/counter_reg[4]_i_1/O[2]
-                         net (fo=1, routed)           0.000     1.917    Audio/spiInitClock/counter_reg[4]_i_1_n_5
-    SLICE_X5Y111         FDRE                                         r  Audio/spiInitClock/counter_reg[6]/D
+    SLICE_X6Y98          FDRE (Prop_fdre_C_Q)         0.164     1.639 r  Audio/spiInitClock/counter_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.766    Audio/spiInitClock/counter_reg[10]
+    SLICE_X6Y98          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.922 r  Audio/spiInitClock/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.922    Audio/spiInitClock/counter_reg[8]_i_1_n_0
+    SLICE_X6Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.962 r  Audio/spiInitClock/counter_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.962    Audio/spiInitClock/counter_reg[12]_i_1_n_0
+    SLICE_X6Y100         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.089     2.051 r  Audio/spiInitClock/counter_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.051    Audio/spiInitClock/counter_reg[16]_i_1_n_6
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[17]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -1111,30 +1144,30 @@ Slack (MET) :             0.256ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.946     2.074    Audio/spiInitClock/clk100_IBUF_BUFG
-    SLICE_X5Y111         FDRE                                         r  Audio/spiInitClock/counter_reg[6]/C
-                         clock pessimism             -0.518     1.556    
-    SLICE_X5Y111         FDRE (Hold_fdre_C_D)         0.105     1.661    Audio/spiInitClock/counter_reg[6]
+                         net (fo=323, routed)         0.949     2.077    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[17]/C
+                         clock pessimism             -0.249     1.828    
+    SLICE_X6Y100         FDRE (Hold_fdre_C_D)         0.134     1.962    Audio/spiInitClock/counter_reg[17]
   -------------------------------------------------------------------
-                         required time                         -1.661    
-                         arrival time                           1.917    
+                         required time                         -1.962    
+                         arrival time                           2.051    
   -------------------------------------------------------------------
-                         slack                                  0.256    
+                         slack                                  0.090    
 
-Slack (MET) :             0.261ns  (arrival time - required time)
-  Source:                 Audio/SoundTrackSynthesizer/G4/count_reg[5]/C
+Slack (MET) :             0.092ns  (arrival time - required time)
+  Source:                 Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/G4/data_reg[15]/D
+  Destination:            Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.365ns  (logic 0.254ns (69.531%)  route 0.111ns (30.469%))
-  Logic Levels:           2  (LUT6=2)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.066ns
-    Source Clock Delay      (SCD):    1.550ns
-    Clock Pessimism Removal (CPR):    0.503ns
+  Data Path Delay:        0.549ns  (logic 0.431ns (78.506%)  route 0.118ns (21.494%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1144,16 +1177,21 @@ Slack (MET) :             0.261ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.666     1.550    Audio/SoundTrackSynthesizer/G4/clk100_IBUF_BUFG
-    SLICE_X6Y119         FDRE                                         r  Audio/SoundTrackSynthesizer/G4/count_reg[5]/C
+                         net (fo=323, routed)         0.594     1.477    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y99          FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X6Y119         FDRE (Prop_fdre_C_Q)         0.164     1.714 r  Audio/SoundTrackSynthesizer/G4/count_reg[5]/Q
-                         net (fo=2, routed)           0.060     1.774    Audio/SoundTrackSynthesizer/G4/count_reg[5]
-    SLICE_X7Y119         LUT6 (Prop_lut6_I0_O)        0.045     1.819 r  Audio/SoundTrackSynthesizer/G4/data[15]_i_2__2/O
-                         net (fo=1, routed)           0.051     1.870    Audio/SoundTrackSynthesizer/G4/data[15]_i_2__2_n_0
-    SLICE_X7Y119         LUT6 (Prop_lut6_I2_O)        0.045     1.915 r  Audio/SoundTrackSynthesizer/G4/data[15]_i_1__5/O
-                         net (fo=1, routed)           0.000     1.915    Audio/SoundTrackSynthesizer/G4/data[15]_i_1__5_n_0
-    SLICE_X7Y119         FDRE                                         r  Audio/SoundTrackSynthesizer/G4/data_reg[15]/D
+    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.141     1.618 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]/Q
+                         net (fo=3, routed)           0.117     1.736    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.197     1.933 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7/CO[3]
+                         net (fo=1, routed)           0.001     1.933    Audio/SoundTrackSynthesizer/DSharp4/count_reg[8]_i_1__7_n_0
+    SLICE_X3Y100         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     1.972 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7/CO[3]
+                         net (fo=1, routed)           0.000     1.972    Audio/SoundTrackSynthesizer/DSharp4/count_reg[12]_i_1__7_n_0
+    SLICE_X3Y101         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     2.026 r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]_i_1__7/O[0]
+                         net (fo=1, routed)           0.000     2.026    Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]_i_1__7_n_7
+    SLICE_X3Y101         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -1162,30 +1200,30 @@ Slack (MET) :             0.261ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.938     2.066    Audio/SoundTrackSynthesizer/G4/clk100_IBUF_BUFG
-    SLICE_X7Y119         FDRE                                         r  Audio/SoundTrackSynthesizer/G4/data_reg[15]/C
-                         clock pessimism             -0.503     1.563    
-    SLICE_X7Y119         FDRE (Hold_fdre_C_D)         0.091     1.654    Audio/SoundTrackSynthesizer/G4/data_reg[15]
+                         net (fo=323, routed)         0.951     2.079    Audio/SoundTrackSynthesizer/DSharp4/clk100_IBUF_BUFG
+    SLICE_X3Y101         FDRE                                         r  Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]/C
+                         clock pessimism             -0.249     1.830    
+    SLICE_X3Y101         FDRE (Hold_fdre_C_D)         0.105     1.935    Audio/SoundTrackSynthesizer/DSharp4/count_reg[16]
   -------------------------------------------------------------------
-                         required time                         -1.654    
-                         arrival time                           1.915    
+                         required time                         -1.935    
+                         arrival time                           2.026    
   -------------------------------------------------------------------
-                         slack                                  0.261    
+                         slack                                  0.092    
 
-Slack (MET) :             0.262ns  (arrival time - required time)
-  Source:                 Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]/C
+Slack (MET) :             0.092ns  (arrival time - required time)
+  Source:                 Audio/spiInitClock/counter_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]/D
+  Destination:            Audio/spiInitClock/counter_reg[19]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.367ns  (logic 0.249ns (67.838%)  route 0.118ns (32.162%))
-  Logic Levels:           1  (CARRY4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.070ns
-    Source Clock Delay      (SCD):    1.553ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Data Path Delay:        0.578ns  (logic 0.451ns (78.000%)  route 0.127ns (22.000%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.077ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1195,15 +1233,21 @@ Slack (MET) :             0.262ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.669     1.553    Audio/SoundTrackSynthesizer/FSharp4/clk100_IBUF_BUFG
-    SLICE_X3Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]/C
+                         net (fo=323, routed)         0.592     1.475    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y98          FDRE                                         r  Audio/spiInitClock/counter_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y117         FDRE (Prop_fdre_C_Q)         0.141     1.694 r  Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]/Q
-                         net (fo=3, routed)           0.118     1.812    Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]
-    SLICE_X3Y117         CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.108     1.920 r  Audio/SoundTrackSynthesizer/FSharp4/count_reg[12]_i_1__4/O[3]
-                         net (fo=1, routed)           0.000     1.920    Audio/SoundTrackSynthesizer/FSharp4/count_reg[12]_i_1__4_n_4
-    SLICE_X3Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]/D
+    SLICE_X6Y98          FDRE (Prop_fdre_C_Q)         0.164     1.639 r  Audio/spiInitClock/counter_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.766    Audio/spiInitClock/counter_reg[10]
+    SLICE_X6Y98          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.922 r  Audio/spiInitClock/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.922    Audio/spiInitClock/counter_reg[8]_i_1_n_0
+    SLICE_X6Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.962 r  Audio/spiInitClock/counter_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.962    Audio/spiInitClock/counter_reg[12]_i_1_n_0
+    SLICE_X6Y100         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.091     2.053 r  Audio/spiInitClock/counter_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.053    Audio/spiInitClock/counter_reg[16]_i_1_n_4
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[19]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -1212,30 +1256,30 @@ Slack (MET) :             0.262ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.942     2.070    Audio/SoundTrackSynthesizer/FSharp4/clk100_IBUF_BUFG
-    SLICE_X3Y117         FDRE                                         r  Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]/C
-                         clock pessimism             -0.517     1.553    
-    SLICE_X3Y117         FDRE (Hold_fdre_C_D)         0.105     1.658    Audio/SoundTrackSynthesizer/FSharp4/count_reg[15]
+                         net (fo=323, routed)         0.949     2.077    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y100         FDRE                                         r  Audio/spiInitClock/counter_reg[19]/C
+                         clock pessimism             -0.249     1.828    
+    SLICE_X6Y100         FDRE (Hold_fdre_C_D)         0.134     1.962    Audio/spiInitClock/counter_reg[19]
   -------------------------------------------------------------------
-                         required time                         -1.658    
-                         arrival time                           1.920    
+                         required time                         -1.962    
+                         arrival time                           2.053    
   -------------------------------------------------------------------
-                         slack                                  0.262    
+                         slack                                  0.092    
 
-Slack (MET) :             0.263ns  (arrival time - required time)
-  Source:                 Audio/SoundTrackSynthesizer/A4/data_reg[15]/C
+Slack (MET) :             0.094ns  (arrival time - required time)
+  Source:                 Audio/spiInitClock/counter_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            Audio/SoundTrackSynthesizer/A4/data_reg[15]/D
+  Destination:            Audio/spiInitClock/counter_reg[20]/D
                             (rising edge-triggered cell FDRE clocked by clk100  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk100
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk100 rise@0.000ns - clk100 rise@0.000ns)
-  Data Path Delay:        0.354ns  (logic 0.186ns (52.507%)  route 0.168ns (47.493%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.069ns
-    Source Clock Delay      (SCD):    1.552ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Data Path Delay:        0.580ns  (logic 0.453ns (78.075%)  route 0.127ns (21.924%))
+  Logic Levels:           4  (CARRY4=4)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.077ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1245,14 +1289,24 @@ Slack (MET) :             0.263ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.668     1.552    Audio/SoundTrackSynthesizer/A4/clk100_IBUF_BUFG
-    SLICE_X1Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/A4/data_reg[15]/C
+                         net (fo=323, routed)         0.592     1.475    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y98          FDRE                                         r  Audio/spiInitClock/counter_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y118         FDRE (Prop_fdre_C_Q)         0.141     1.693 r  Audio/SoundTrackSynthesizer/A4/data_reg[15]/Q
-                         net (fo=3, routed)           0.168     1.861    Audio/SoundTrackSynthesizer/A4/data_reg[15]_0
-    SLICE_X1Y118         LUT6 (Prop_lut6_I0_O)        0.045     1.906 r  Audio/SoundTrackSynthesizer/A4/data[15]_i_1__7/O
-                         net (fo=1, routed)           0.000     1.906    Audio/SoundTrackSynthesizer/A4/data[15]_i_1__7_n_0
-    SLICE_X1Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/A4/data_reg[15]/D
+    SLICE_X6Y98          FDRE (Prop_fdre_C_Q)         0.164     1.639 r  Audio/spiInitClock/counter_reg[10]/Q
+                         net (fo=3, routed)           0.127     1.766    Audio/spiInitClock/counter_reg[10]
+    SLICE_X6Y98          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.156     1.922 r  Audio/spiInitClock/counter_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.922    Audio/spiInitClock/counter_reg[8]_i_1_n_0
+    SLICE_X6Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.962 r  Audio/spiInitClock/counter_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.962    Audio/spiInitClock/counter_reg[12]_i_1_n_0
+    SLICE_X6Y100         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     2.002 r  Audio/spiInitClock/counter_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.002    Audio/spiInitClock/counter_reg[16]_i_1_n_0
+    SLICE_X6Y101         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     2.055 r  Audio/spiInitClock/counter_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.055    Audio/spiInitClock/counter_reg[20]_i_1_n_7
+    SLICE_X6Y101         FDRE                                         r  Audio/spiInitClock/counter_reg[20]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk100 rise edge)     0.000     0.000 r  
@@ -1261,15 +1315,15 @@ Slack (MET) :             0.263ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk100_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk100_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk100_IBUF_BUFG_inst/O
-                         net (fo=323, routed)         0.941     2.069    Audio/SoundTrackSynthesizer/A4/clk100_IBUF_BUFG
-    SLICE_X1Y118         FDRE                                         r  Audio/SoundTrackSynthesizer/A4/data_reg[15]/C
-                         clock pessimism             -0.517     1.552    
-    SLICE_X1Y118         FDRE (Hold_fdre_C_D)         0.091     1.643    Audio/SoundTrackSynthesizer/A4/data_reg[15]
+                         net (fo=323, routed)         0.949     2.077    Audio/spiInitClock/clk100_IBUF_BUFG
+    SLICE_X6Y101         FDRE                                         r  Audio/spiInitClock/counter_reg[20]/C
+                         clock pessimism             -0.249     1.828    
+    SLICE_X6Y101         FDRE (Hold_fdre_C_D)         0.134     1.962    Audio/spiInitClock/counter_reg[20]
   -------------------------------------------------------------------
-                         required time                         -1.643    
-                         arrival time                           1.906    
+                         required time                         -1.962    
+                         arrival time                           2.055    
   -------------------------------------------------------------------
-                         slack                                  0.263    
+                         slack                                  0.094    
 
 
 
@@ -1285,35 +1339,35 @@ Sources:            { clk100 }
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
 Min Period        n/a     BUFG/I             n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1    clk100_IBUF_BUFG_inst/I
 Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  Audio/audio_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X9Y116     Audio/SoundTrackEnable_reg/C
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X2Y112     Audio/SoundTrackSynthesizer/A3/count_reg[0]/C
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X2Y114     Audio/SoundTrackSynthesizer/A3/count_reg[10]/C
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X2Y114     Audio/SoundTrackSynthesizer/A3/count_reg[11]/C
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X2Y115     Audio/SoundTrackSynthesizer/A3/count_reg[12]/C
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X2Y115     Audio/SoundTrackSynthesizer/A3/count_reg[13]/C
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X2Y115     Audio/SoundTrackSynthesizer/A3/count_reg[14]/C
-Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X0Y118     Audio/SoundTrackSynthesizer/A4/count_reg[13]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X9Y103     Audio/SoundTrackEnable_reg/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X4Y101     Audio/SoundTrackSynthesizer/A3/count_reg[0]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X4Y103     Audio/SoundTrackSynthesizer/A3/count_reg[10]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X4Y103     Audio/SoundTrackSynthesizer/A3/count_reg[11]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X4Y104     Audio/SoundTrackSynthesizer/A3/count_reg[12]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X4Y104     Audio/SoundTrackSynthesizer/A3/count_reg[13]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X4Y104     Audio/SoundTrackSynthesizer/A3/count_reg[14]/C
+Min Period        n/a     FDRE/C             n/a            1.000         10.000      9.000      SLICE_X2Y106     Audio/SoundTrackSynthesizer/A4/count_reg[13]/C
 Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  Audio/audio_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
 Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  Audio/audio_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
 Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  Audio/audio_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X9Y119     Audio/SoundTrackSynthesizer/GSharp4/data_reg[15]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X9Y119     Audio/SoundTrackSynthesizer/GSharp4/data_reg[1]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X5Y110     Audio/spiInitClock/counter_reg[0]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X8Y119     Audio/SoundTrackSynthesizer/A4/data_reg[1]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X12Y120    Audio/SoundTrackSynthesizer/B3/count_reg[0]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X5Y110     Audio/spiInitClock/counter_reg[1]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X12Y120    Audio/SoundTrackSynthesizer/B3/count_reg[1]/C
-Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X12Y120    Audio/SoundTrackSynthesizer/B3/count_reg[2]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X6Y109     Audio/SoundTrackSynthesizer/C4/count_reg[10]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X6Y109     Audio/SoundTrackSynthesizer/C4/count_reg[11]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X6Y110     Audio/SoundTrackSynthesizer/C4/count_reg[12]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X6Y110     Audio/SoundTrackSynthesizer/C4/count_reg[13]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X6Y110     Audio/SoundTrackSynthesizer/C4/count_reg[14]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X6Y110     Audio/SoundTrackSynthesizer/C4/count_reg[15]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X7Y109     Audio/SoundTrackSynthesizer/B3/count_reg[0]/C
+Low Pulse Width   Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X6Y109     Audio/SoundTrackSynthesizer/C4/count_reg[8]/C
 High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  Audio/audio_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
 High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  Audio/audio_clockmanager/cm2/mmcm_adv_inst2/CLKIN1
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X0Y118     Audio/SoundTrackSynthesizer/A4/count_reg[13]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X0Y118     Audio/SoundTrackSynthesizer/A4/count_reg[14]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X0Y118     Audio/SoundTrackSynthesizer/A4/count_reg[15]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X0Y119     Audio/SoundTrackSynthesizer/A4/count_reg[16]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X7Y120     Audio/SoundTrackSynthesizer/ASharp4/data_reg[1]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X11Y114    Audio/SoundTrackSynthesizer/C4/count_reg[0]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X0Y124     Audio/SoundTrackSynthesizer/CSharp4/count_reg[16]/C
-High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X0Y124     Audio/SoundTrackSynthesizer/CSharp4/count_reg[17]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X9Y103     Audio/SoundTrackEnable_reg/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X4Y103     Audio/SoundTrackSynthesizer/A3/count_reg[10]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X4Y103     Audio/SoundTrackSynthesizer/A3/count_reg[11]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X4Y104     Audio/SoundTrackSynthesizer/A3/count_reg[12]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X4Y104     Audio/SoundTrackSynthesizer/A3/count_reg[13]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X4Y104     Audio/SoundTrackSynthesizer/A3/count_reg[14]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X2Y106     Audio/SoundTrackSynthesizer/A4/count_reg[13]/C
+High Pulse Width  Slow    FDRE/C             n/a            0.500         5.000       4.500      SLICE_X2Y106     Audio/SoundTrackSynthesizer/A4/count_reg[14]/C
 
 
 
@@ -2684,7 +2738,7 @@ Setup between Clocks
 Source | Destination |  Src:Rise     | Process |  Src:Rise     | Process |  Src:Fall     | Process |  Src:Fall     | Process |
 Clock  | Clock       | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  |
 -------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
-clk100 | clk100      |         4.227 | SLOW    |               |         |               |         |               |         |
+clk100 | clk100      |         4.403 | SLOW    |               |         |               |         |               |         |
 -------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
 
 

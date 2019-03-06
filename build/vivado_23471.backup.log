@@ -1,0 +1,273 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Wed Mar  6 00:47:11 2019
+# Process ID: 23471
+# Current directory: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build
+# Command line: vivado -mode batch -source top.tcl
+# Log file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.log
+# Journal file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.jou
+#-----------------------------------------------------------
+source top.tcl
+# create_project -force -name top -part xc7a35tcpg236-1
+# set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+# add_files {top.v}
+# set_property library work [get_files {top.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:]
+# read_xdc top.xdc
+# synth_design -top top -part xc7a35tcpg236-1
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23496 
+WARNING: [Synth 8-2611] redeclaration of ansi port I2SCLK is not allowed [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:142]
+WARNING: [Synth 8-992] I2S_CLK is already implicitly declared earlier [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:164]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1261.148 ; gain = 77.262 ; free physical = 1221 ; free virtual = 5169
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Audio' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:2]
+INFO: [Synth 8-3876] $readmem data file 'SoundTrack.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:37]
+INFO: [Synth 8-3876] $readmem data file 'Track1.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:38]
+INFO: [Synth 8-3876] $readmem data file 'Track2.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:39]
+INFO: [Synth 8-6157] synthesizing module 'Audio_ClockManager' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:136]
+INFO: [Synth 8-6157] synthesizing module 'CM2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:3]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:51]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:51]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 55.125000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 78.125000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (1#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (3#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+INFO: [Synth 8-6157] synthesizing module 'BUFH' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'BUFH' (4#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'CM2' (5#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_ClockManager' (6#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:136]
+INFO: [Synth 8-6157] synthesizing module 'I2S' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SquareGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SquareGenerator' (7#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'I2S' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:1]
+INFO: [Synth 8-6157] synthesizing module 'StereoSignedAdder' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'StereoSignedAdder' (9#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Synthesizer' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 227273 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 214517 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized0' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized1' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 202477 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized1' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 191113 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized2' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized3' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 180387 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized3' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized4' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 170262 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized4' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized5' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 160706 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized5' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized6' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 151686 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized6' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized7' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 143173 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized7' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized8' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 135137 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized8' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized9' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 127552 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized9' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized10' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 120394 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized10' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized11' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 113636 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized11' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized12' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 107258 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized12' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized13' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 101238 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized13' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Synthesizer' (11#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+	Parameter MasterFrequency bound to: 100000000 - type: integer 
+	Parameter frequency bound to: 5 - type: integer 
+	Parameter bitsNumber bound to: 25 - type: integer 
+	Parameter limit bound to: 20000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator' (12#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Audio' (13#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top' (14#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
+WARNING: [Synth 8-3331] design Synthesizer has unconnected port Reset
+WARNING: [Synth 8-3331] design Synthesizer has unconnected port InputDataClock
+WARNING: [Synth 8-3331] design top has unconnected port user_sw
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_1
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_2
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_3
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_4
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_5
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_6
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_7
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_8
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_9
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_10
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_11
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_12
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_13
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_14
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_15
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.398 ; gain = 109.512 ; free physical = 1238 ; free virtual = 5186
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.398 ; gain = 109.512 ; free physical = 1238 ; free virtual = 5186
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.398 ; gain = 109.512 ; free physical = 1238 ; free virtual = 5186
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:67]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:69]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:69]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFGCE => BUFGCTRL: 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1621.742 ; gain = 0.000 ; free physical = 969 ; free virtual = 4930
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+1
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 27 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 00:48:02 2019...

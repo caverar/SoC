@@ -33,8 +33,8 @@ void stopSoundTrack(){
 }
 
 void playSoundEffect(unsigned int Track){
-	unsigned int CurrentValue=(0+(1<<3)) & Audio_WB_AudioControlRegisterCSR_read();
-	//printf("Value %u",CurrentValue+Track+(1<<2));	 	
+	unsigned int CurrentValue=(1<<3) & Audio_WB_AudioControlRegisterCSR_read();
+	//printf(" Value: %u",CurrentValue+Track+(1<<2));	 	
  	Audio_WB_AudioControlRegisterCSR_write(CurrentValue);
 	Audio_WB_AudioControlRegisterCSR_write(CurrentValue+Track+(1<<2));
 }

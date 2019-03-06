@@ -109,6 +109,34 @@ module Audio(
     end
     
 
+    always@(posedge Tempo_CLK, negedge SoundEffectEnable)begin
+        if(SoundEffectEnable==0)begin
+            SoundEffectCount<=0;
+        end else if(Tempo_CLK)begin            
+            //Reproduccion
+            //if(SoundEffectEnable)begin
+                if(SoundEffectSelected==1)begin
+                    if(SoundEffectCount<3)begin
+                        SoundEffectCount<=SoundEffectCount+1;
+                    end
+                end else if(SoundEffectSelected==2)begin
+                    if(SoundEffectCount<2)begin
+                        SoundEffectCount<=SoundEffectCount+1;
+                    end
+                end else if(SoundEffectSelected==3)begin
+                    if(SoundEffectCount<1)begin
+                        SoundEffectCount<=SoundEffectCount+1;
+                    end
+                end else begin
+                    SoundEffectCount<=0;
+                end
+
+            // end else begin
+            //     SoundEffectCount<=0;
+            // end
+        end
+    end
+
     always@(posedge Tempo_CLK)begin
         //Reproduccion SoundTrack
         if(SoundTrackEnable)begin                      
@@ -118,27 +146,7 @@ module Audio(
                 SoundTrackCount<=0;
             end
         end else begin
-            SoundTrackCount<=0;
-        
-        end
-        //Reproduccion
-        if(SoundEffectEnable)begin
-            if(SoundEffectSelected==1)begin
-                if(SoundEffectCount<3)begin
-                    SoundEffectCount<=SoundEffectCount+1;
-                end
-            end else if(SoundEffectSelected==2)begin
-                if(SoundEffectCount<2)begin
-                    SoundEffectCount<=SoundEffectCount+1;
-                end
-            end else if(SoundEffectSelected==3)begin
-                if(SoundEffectCount<1)begin
-                    SoundEffectCount<=SoundEffectCount+1;
-                end
-            end
-
-        end else begin
-            SoundEffectCount<=0;
+            SoundTrackCount<=0;            
         end
     end
 
@@ -168,7 +176,9 @@ module Audio(
                 end else begin
                     SoundEffectData<=0;
                 end
-            end            
+            end else begin
+                SoundEffectData<=0;
+            end          
         end else begin
             SoundEffectData<=0;
         end

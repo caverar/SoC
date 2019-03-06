@@ -21,7 +21,7 @@ int main(void)
 		Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);
 
 		
-		if(getState()==0){		
+		if(getState()==0){					
 			for(int j=0;j<28;j=j+4){
 
 				for(int i=0;i<320;i++){
@@ -47,26 +47,21 @@ int main(void)
 			for(int i=0;i<320;i++){
 				putTile(i,5);
 			}
-			wait_ms(200);	
+			wait_ms(200);			
+				
 		}else if(getState()==2){
 			for(int i=0;i<320;i++){
 				putTile(i,6);
 			}
-			wait_ms(200);
-			playSoundEffect(1);
-			wait_ms(1000);
-			playSoundEffect(2);
-			wait_ms(1000);
-			playSoundEffect(3);
-			wait_ms(1000);	
+			wait_ms(200);			
+				
 		}else if(getState()==3){
 			for(int i=0;i<320;i++){
 				putTile(i,7);
 			}
-			wait_ms(200);	
+			wait_ms(200);		
+				
 		}
-
 	}
-
 	return 0;
 }

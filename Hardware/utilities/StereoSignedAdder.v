@@ -1,7 +1,7 @@
 module StereoSignedAdder(
     input  wire [31:0] A,
     input  wire [31:0] B,
-    output wire signed [31:0] O
+    output wire [31:0] O
     );
     wire signed [15:0] Chanel1A=A [15:0];
     wire signed [15:0] Chanel1B=B [15:0];

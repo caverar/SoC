@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Tue Mar  5 22:13:24 2019
+| Date             : Wed Mar  6 01:06:48 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.007 |      0.010 |
+| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
 | Vccaux    |       1.800 |     0.084 |       0.071 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -147,7 +147,7 @@ Table of Contents
 | Name                      | Power (W) |
 +---------------------------+-----------+
 | top                       |     0.137 |
-|   Audio                   |     0.135 |
+|   Audio                   |     0.134 |
 |     SoundTrackSynthesizer |     0.005 |
 |       A3                  |    <0.001 |
 |       A4                  |    <0.001 |
