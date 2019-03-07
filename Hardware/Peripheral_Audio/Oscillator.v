@@ -11,10 +11,10 @@ module Oscillator#(parameter limit=128, parameter bits=18)(
     always@(posedge CLK) begin
         if(count<limit/2)begin
             count<=count+1;
-            data<=16'h0FFF;
+            data<=16'h3FFF;
         end else if(count<limit)begin
             count<=count+1;
-            data<=16'h8FFF;
+            data<=16'h0000;
         end else begin
             count<=0;
         end

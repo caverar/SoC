@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Wed Mar  6 01:06:48 2019
+| Date             : Wed Mar  6 20:09:49 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.209        |
+| Total On-Chip Power (W)  | 0.210        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.137        |
+| Dynamic (W)              | 0.138        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        5 |       --- |             --- |
-| Slice Logic    |     0.001 |      738 |       --- |             --- |
-|   LUT as Logic |     0.001 |      203 |     20800 |            0.98 |
+| Slice Logic    |     0.001 |      697 |       --- |             --- |
+|   LUT as Logic |     0.001 |      186 |     20800 |            0.89 |
 |   CARRY4       |    <0.001 |       82 |      8150 |            1.01 |
-|   Register     |    <0.001 |      364 |     41600 |            0.88 |
-|   F7/F8 Muxes  |    <0.001 |       13 |     32600 |            0.04 |
+|   Register     |    <0.001 |      345 |     41600 |            0.83 |
+|   F7/F8 Muxes  |    <0.001 |        6 |     32600 |            0.02 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       46 |       --- |             --- |
-| Signals        |     0.002 |      598 |       --- |             --- |
+| Signals        |     0.002 |      588 |       --- |             --- |
 | Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
 | MMCM           |     0.128 |        1 |         5 |           20.00 |
-| I/O            |     0.002 |        4 |       106 |            3.77 |
+| I/O            |     0.003 |        4 |       106 |            3.77 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.209 |          |           |                 |
+| Total          |     0.210 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -146,8 +146,8 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| top                       |     0.137 |
-|   Audio                   |     0.134 |
+| top                       |     0.138 |
+|   Audio                   |     0.135 |
 |     SoundTrackSynthesizer |     0.005 |
 |       A3                  |    <0.001 |
 |       A4                  |    <0.001 |

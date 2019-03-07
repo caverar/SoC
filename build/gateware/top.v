@@ -36,15 +36,13 @@ module top(
 	input user_btn_1,
 	input user_btn_2,
 	input user_btn_3,
+	input external_buttons,
+	input external_buttons_1,
+	input external_buttons_2,
+	input external_buttons_3,
 	output DAC_I2S_DATA,
 	output DAC_I2S_CLK,
 	output DAC_I2S_WS,
-	input SD_SPI_CLK,
-	input SD_SPI_MOSI,
-	input SD_SPI_MISO,
-	input SD_SPI_CS,
-	input SD_SPI_COUNT_DEBUG,
-	input SD_SPI_UTILCOUNT_DEBUG,
 	output TFT_SPI_CLK,
 	output TFT_SPI_MOSI,
 	output TFT_RS,
@@ -489,7 +487,7 @@ initial dummy_s <= 1'd0;
 
 assign soc_lm32_reset = soc_ctrl_reset;
 assign soc_Buttons_WB_CLK = sys_clk;
-assign soc_Buttons_WB_Buttons = {user_btn_3, user_btn_2, user_btn_1, user_btn};
+assign soc_Buttons_WB_Buttons = {external_buttons_3, external_buttons_2, external_buttons_1, external_buttons};
 assign soc_Video_WB_CLK = sys_clk;
 assign soc_Video_WB_Reset = soc_Reset;
 assign TFT_SPI_MOSI = soc_Video_WB_TFT_SPI_MOSI;

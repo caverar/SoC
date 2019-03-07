@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Wed Mar  6 01:10:33 2019
+| Date         : Wed Mar  6 20:13:48 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,49 +21,49 @@ Table of Contents
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |                     Instance                     |                Module                | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                                (top) |       2661 |       2557 |     104 |    0 | 2678 |     11 |      4 |            3 |
+| top                                              |                                (top) |       2652 |       2548 |     104 |    0 | 2643 |     11 |      4 |            3 |
 |   (top)                                          |                                (top) |        400 |        384 |      16 |    0 |  671 |      9 |      0 |            0 |
-|   Audio                                          |                                Audio |        417 |        417 |       0 |    0 |  700 |      0 |      1 |            0 |
-|     (Audio)                                      |                                Audio |         21 |         21 |       0 |    0 |   30 |      0 |      1 |            0 |
-|     SoundEffectSynthesizer                       |                          Synthesizer |        171 |        171 |       0 |    0 |  299 |      0 |      0 |            0 |
-|       (SoundEffectSynthesizer)                   |                          Synthesizer |          0 |          0 |       0 |    0 |    4 |      0 |      0 |            0 |
-|       A3                                         |                         Oscillator_9 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       A4                                         |       Oscillator__parameterized11_10 |         10 |         10 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       ASharp3                                    |        Oscillator__parameterized0_11 |         10 |         10 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       ASharp4                                    |       Oscillator__parameterized12_12 |          9 |          9 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       B3                                         |        Oscillator__parameterized1_13 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       B4                                         |       Oscillator__parameterized13_14 |         14 |         14 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       C4                                         |        Oscillator__parameterized2_15 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       CSharp4                                    |        Oscillator__parameterized3_16 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       D4                                         |        Oscillator__parameterized4_17 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       DSharp4                                    |        Oscillator__parameterized5_18 |         15 |         15 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       E4                                         |        Oscillator__parameterized6_19 |         13 |         13 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       F4                                         |        Oscillator__parameterized7_20 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       FSharp4                                    |        Oscillator__parameterized8_21 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       G4                                         |        Oscillator__parameterized9_22 |         10 |         10 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       GSharp4                                    |       Oscillator__parameterized10_23 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
-|     SoundTrackSynthesizer                        |                        Synthesizer_8 |        175 |        175 |       0 |    0 |  299 |      0 |      0 |            0 |
-|       (SoundTrackSynthesizer)                    |                        Synthesizer_8 |          0 |          0 |       0 |    0 |    4 |      0 |      0 |            0 |
-|       A3                                         |                           Oscillator |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       A4                                         |          Oscillator__parameterized11 |         10 |         10 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       ASharp3                                    |           Oscillator__parameterized0 |         10 |         10 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       ASharp4                                    |          Oscillator__parameterized12 |          9 |          9 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       B3                                         |           Oscillator__parameterized1 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       B4                                         |          Oscillator__parameterized13 |         16 |         16 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       C4                                         |           Oscillator__parameterized2 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       CSharp4                                    |           Oscillator__parameterized3 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       D4                                         |           Oscillator__parameterized4 |         14 |         14 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       DSharp4                                    |           Oscillator__parameterized5 |         15 |         15 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       E4                                         |           Oscillator__parameterized6 |         13 |         13 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       F4                                         |           Oscillator__parameterized7 |         11 |         11 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       FSharp4                                    |           Oscillator__parameterized8 |          9 |          9 |       0 |    0 |   20 |      0 |      0 |            0 |
-|       G4                                         |           Oscillator__parameterized9 |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
-|       GSharp4                                    |          Oscillator__parameterized10 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
-|     adder                                        |                    StereoSignedAdder |         26 |         26 |       0 |    0 |    0 |      0 |      0 |            0 |
+|   Audio                                          |                                Audio |        408 |        408 |       0 |    0 |  665 |      0 |      1 |            0 |
+|     (Audio)                                      |                                Audio |         18 |         18 |       0 |    0 |   28 |      0 |      1 |            0 |
+|     SoundEffectSynthesizer                       |                          Synthesizer |        166 |        166 |       0 |    0 |  281 |      0 |      0 |            0 |
+|       (SoundEffectSynthesizer)                   |                          Synthesizer |          0 |          0 |       0 |    0 |    1 |      0 |      0 |            0 |
+|       A3                                         |                         Oscillator_9 |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       A4                                         |       Oscillator__parameterized11_10 |         11 |         11 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       ASharp3                                    |        Oscillator__parameterized0_11 |         10 |         10 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       ASharp4                                    |       Oscillator__parameterized12_12 |         11 |         11 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       B3                                         |        Oscillator__parameterized1_13 |         14 |         14 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       B4                                         |       Oscillator__parameterized13_14 |         12 |         12 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       C4                                         |        Oscillator__parameterized2_15 |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       CSharp4                                    |        Oscillator__parameterized3_16 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       D4                                         |        Oscillator__parameterized4_17 |         13 |         13 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       DSharp4                                    |        Oscillator__parameterized5_18 |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       E4                                         |        Oscillator__parameterized6_19 |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       F4                                         |        Oscillator__parameterized7_20 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       FSharp4                                    |        Oscillator__parameterized8_21 |          8 |          8 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       G4                                         |        Oscillator__parameterized9_22 |          7 |          7 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       GSharp4                                    |       Oscillator__parameterized10_23 |         10 |         10 |       0 |    0 |   18 |      0 |      0 |            0 |
+|     SoundTrackSynthesizer                        |                        Synthesizer_8 |        172 |        172 |       0 |    0 |  282 |      0 |      0 |            0 |
+|       (SoundTrackSynthesizer)                    |                        Synthesizer_8 |          0 |          0 |       0 |    0 |    2 |      0 |      0 |            0 |
+|       A3                                         |                           Oscillator |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       A4                                         |          Oscillator__parameterized11 |         11 |         11 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       ASharp3                                    |           Oscillator__parameterized0 |         10 |         10 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       ASharp4                                    |          Oscillator__parameterized12 |         11 |         11 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       B3                                         |           Oscillator__parameterized1 |         15 |         15 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       B4                                         |          Oscillator__parameterized13 |         13 |         13 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       C4                                         |           Oscillator__parameterized2 |         13 |         13 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       CSharp4                                    |           Oscillator__parameterized3 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       D4                                         |           Oscillator__parameterized4 |         14 |         14 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       DSharp4                                    |           Oscillator__parameterized5 |         13 |         13 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       E4                                         |           Oscillator__parameterized6 |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       F4                                         |           Oscillator__parameterized7 |         11 |         11 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       FSharp4                                    |           Oscillator__parameterized8 |          8 |          8 |       0 |    0 |   19 |      0 |      0 |            0 |
+|       G4                                         |           Oscillator__parameterized9 |          8 |          8 |       0 |    0 |   18 |      0 |      0 |            0 |
+|       GSharp4                                    |          Oscillator__parameterized10 |         10 |         10 |       0 |    0 |   18 |      0 |      0 |            0 |
+|     adder                                        |                    StereoSignedAdder |         28 |         28 |       0 |    0 |    0 |      0 |      0 |            0 |
 |     audio_clockmanager                           |                   Audio_ClockManager |          2 |          2 |       0 |    0 |   12 |      0 |      0 |            0 |
 |       (audio_clockmanager)                       |                   Audio_ClockManager |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
 |       cm2                                        |                                  CM2 |          0 |          0 |       0 |    0 |    8 |      0 |      0 |            0 |
-|     i2s                                          |                                  I2S |         13 |         13 |       0 |    0 |   34 |      0 |      0 |            0 |
+|     i2s                                          |                                  I2S |         13 |         13 |       0 |    0 |   36 |      0 |      0 |            0 |
 |     spiInitClock                                 |                   FrequencyGenerator |          9 |          9 |       0 |    0 |   26 |      0 |      0 |            0 |
 |   Buttons                                        |                              Buttons |         36 |         36 |       0 |    0 |   96 |      0 |      0 |            0 |
 |     button1                                      |                      ButtonDebouncer |          9 |          9 |       0 |    0 |   24 |      0 |      0 |            0 |

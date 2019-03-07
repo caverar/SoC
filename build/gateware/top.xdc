@@ -106,6 +106,18 @@ set_property IOSTANDARD LVCMOS33 [get_ports user_btn_2]
  ## user_btn:3
 set_property LOC U17 [get_ports user_btn_3]
 set_property IOSTANDARD LVCMOS33 [get_ports user_btn_3]
+ ## external_buttons:0
+set_property LOC K17 [get_ports external_buttons]
+set_property IOSTANDARD LVCMOS33 [get_ports external_buttons]
+ ## external_buttons:1
+set_property LOC M18 [get_ports external_buttons_1]
+set_property IOSTANDARD LVCMOS33 [get_ports external_buttons_1]
+ ## external_buttons:2
+set_property LOC N17 [get_ports external_buttons_2]
+set_property IOSTANDARD LVCMOS33 [get_ports external_buttons_2]
+ ## external_buttons:3
+set_property LOC P18 [get_ports external_buttons_3]
+set_property IOSTANDARD LVCMOS33 [get_ports external_buttons_3]
  ## DAC_I2S_DATA:0
 set_property LOC A16 [get_ports DAC_I2S_DATA]
 set_property IOSTANDARD LVCMOS33 [get_ports DAC_I2S_DATA]
@@ -115,24 +127,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports DAC_I2S_CLK]
  ## DAC_I2S_WS:0
 set_property LOC A14 [get_ports DAC_I2S_WS]
 set_property IOSTANDARD LVCMOS33 [get_ports DAC_I2S_WS]
- ## SD_SPI_CLK:0
-set_property LOC N17 [get_ports SD_SPI_CLK]
-set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CLK]
- ## SD_SPI_MOSI:0
-set_property LOC M18 [get_ports SD_SPI_MOSI]
-set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MOSI]
- ## SD_SPI_MISO:0
-set_property LOC K17 [get_ports SD_SPI_MISO]
-set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MISO]
- ## SD_SPI_CS:0
-set_property LOC P18 [get_ports SD_SPI_CS]
-set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CS]
- ## SD_SPI_COUNT_DEBUG:0
-set_property LOC L17 [get_ports SD_SPI_COUNT_DEBUG]
-set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_COUNT_DEBUG]
- ## SD_SPI_UTILCOUNT_DEBUG:0
-set_property LOC M19 [get_ports SD_SPI_UTILCOUNT_DEBUG]
-set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_UTILCOUNT_DEBUG]
  ## TFT_SPI_CLK:0
 set_property LOC H1 [get_ports TFT_SPI_CLK]
 set_property IOSTANDARD LVCMOS33 [get_ports TFT_SPI_CLK]

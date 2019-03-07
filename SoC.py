@@ -74,12 +74,11 @@ _io = [
     ("TFT_SPI_CLK"            , 0 , Pins("H1" ), IOStandard("LVCMOS33")),
 
     #SD_SPI_SPI-JC
-    ("SD_SPI_MISO"            , 0 , Pins("K17"), IOStandard("LVCMOS33")),
-    ("SD_SPI_MOSI"            , 0 , Pins("M18"), IOStandard("LVCMOS33")),
-    ("SD_SPI_CLK"             , 0 , Pins("N17"), IOStandard("LVCMOS33")),
-    ("SD_SPI_CS"              , 0 , Pins("P18"), IOStandard("LVCMOS33")),
-    ("SD_SPI_COUNT_DEBUG"     , 0 , Pins("L17"), IOStandard("LVCMOS33")),
-    ("SD_SPI_UTILCOUNT_DEBUG" , 0 , Pins("M19"), IOStandard("LVCMOS33")),
+    ("external_buttons"       , 0 , Pins("K17"), IOStandard("LVCMOS33")),
+    ("external_buttons"       , 1 , Pins("M18"), IOStandard("LVCMOS33")),
+    ("external_buttons"       , 2 , Pins("N17"), IOStandard("LVCMOS33")),
+    ("external_buttons"       , 3 , Pins("P18"), IOStandard("LVCMOS33")),
+    
 
     ("serial", 0,
         Subsignal("tx", Pins("A18")),
@@ -110,20 +109,14 @@ def csr_map_update(csr_map, csr_peripherals):
 platform = Platform()
 #Definicion de pines como variables
 
-leds                   = Cat(*[platform.request("user_led", i) for i in range(16) ])
-switches               = Cat(*[platform.request("user_sw" , i) for i in range(16)])
-buttons                = Cat(*[platform.request("user_btn", i) for i in range(4) ])
+leds                   = Cat(*[platform.request("user_led",         i) for i in range(16)])
+switches               = Cat(*[platform.request("user_sw" ,         i) for i in range(16)])
+buttons                = Cat(*[platform.request("user_btn",         i) for i in range(4) ])
+external_buttons       = Cat(*[platform.request("external_buttons", i) for i in range(4) ])
 SystemClock            = ClockSignal()
-#Reset                  = platform.request("cpu_reset"              , 0)
 DAC_I2S_DATA           = platform.request("DAC_I2S_DATA"           , 0)
 DAC_I2S_CLK            = platform.request("DAC_I2S_CLK"            , 0)
 DAC_I2S_WS             = platform.request("DAC_I2S_WS"             , 0)
-SD_SPI_CLK             = platform.request("SD_SPI_CLK"             , 0)
-SD_SPI_MOSI            = platform.request("SD_SPI_MOSI"            , 0)
-SD_SPI_MISO            = platform.request("SD_SPI_MISO"            , 0)
-SD_SPI_CS              = platform.request("SD_SPI_CS"              , 0)
-SD_SPI_COUNT_DEBUG     = platform.request("SD_SPI_COUNT_DEBUG"     , 0)
-SD_SPI_UTILCOUNT_DEBUG = platform.request("SD_SPI_UTILCOUNT_DEBUG" , 0)
 TFT_SPI_CLK            = platform.request("TFT_SPI_CLK"            , 0)
 TFT_SPI_MOSI           = platform.request("TFT_SPI_MOSI"           , 0)
 TFT_RS                 = platform.request("TFT_RS"                 , 0)
@@ -224,7 +217,7 @@ class SoC(SoCCore):
         self.comb += [
             
             self.Buttons_WB.CLK.eq(SystemClock),
-            self.Buttons_WB.Buttons.eq(buttons),
+            self.Buttons_WB.Buttons.eq(external_buttons),
             self.Video_WB.CLK.eq(SystemClock),            
             self.Video_WB.Reset.eq(self.Reset), 
            
