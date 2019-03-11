@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Mar  7 12:55:37 2019'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon Mar 11 14:55:25 2019'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2288692" description="" />
-  <keyValuePair key="date_generated" value="Thu Mar  7 12:55:36 2019" description="" />
+  <keyValuePair key="date_generated" value="Mon Mar 11 14:55:24 2019" description="" />
   <keyValuePair key="os_platform" value="LIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2018.2.1 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="2f80864e26724d7dba981179076dd443" description="" />
+  <keyValuePair key="project_id" value="10eae9308f4e4a34a8a426024054ea7b" description="" />
   <keyValuePair key="project_iteration" value="1" description="" />
   <keyValuePair key="random_id" value="42a169acc5dd54aba65a14bf6b8d6a8b" description="" />
   <keyValuePair key="registration_id" value="211487537_0_0_075" description="" />
@@ -20,7 +20,7 @@
  </section>
  <section name="user_environment" level="1" order="2" description="">
   <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz" description="" />
-  <keyValuePair key="cpu_speed" value="1331.550 MHz" description="" />
+  <keyValuePair key="cpu_speed" value="1349.662 MHz" description="" />
   <keyValuePair key="os_name" value="Ubuntu" description="" />
   <keyValuePair key="os_release" value="Ubuntu 18.04.2 LTS" description="" />
   <keyValuePair key="system_ram" value="4.000 GB" description="" />
@@ -154,7 +154,7 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="cpg236" description="" />
-   <keyValuePair key="pct_clock_constrained" value="1.200000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="1.160000" description="" />
    <keyValuePair key="pct_inputs_defined" value="100" description="" />
    <keyValuePair key="platform" value="lin64" description="" />
    <keyValuePair key="process" value="typical" description="" />
@@ -463,7 +463,7 @@
  <section name="router" level="1" order="8" description="">
   <section name="usage" level="2" order="1" description="">
    <keyValuePair key="actual_expansions" value="785868" description="" />
-   <keyValuePair key="bogomips" value="3991" description="" />
+   <keyValuePair key="bogomips" value="3990" description="" />
    <keyValuePair key="bram18" value="1" description="" />
    <keyValuePair key="bram36" value="0" description="" />
    <keyValuePair key="bufg" value="0" description="" />
@@ -526,7 +526,7 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:37s" description="" />
+   <keyValuePair key="elapsed" value="00:00:39s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
    <keyValuePair key="memory_gain" value="437.977MB" description="" />
    <keyValuePair key="memory_peak" value="1621.758MB" description="" />

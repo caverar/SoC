@@ -12,7 +12,7 @@ module ButtonDebouncer (
 
 	//Instancias
 
-	FrequencyGenerator #(.frequency(10), .bitsNumber(30)) verificationCLk(
+	FrequencyGenerator #(.frequency(5), .bitsNumber(30)) verificationCLk( //10 funciona maso
 		.InputCLK(clk),
 		.OutputCLK(VerificationClk)
 	);
