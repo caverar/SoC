@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Wed Mar  6 20:15:17 2019
+| Date             : Thu Mar  7 13:00:31 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.012 |        8 |       --- |             --- |
-| Slice Logic              |     0.010 |     6099 |       --- |             --- |
-|   LUT as Logic           |     0.008 |     2508 |     20800 |           12.06 |
+| Slice Logic              |     0.010 |     6119 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     2514 |     20800 |           12.09 |
 |   CARRY4                 |    <0.001 |      315 |      8150 |            3.87 |
-|   Register               |    <0.001 |     2635 |     41600 |            6.33 |
+|   Register               |    <0.001 |     2647 |     41600 |            6.36 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      9600 |            1.08 |
 |   F7/F8 Muxes            |    <0.001 |       27 |     32600 |            0.08 |
 |   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
 |   Others                 |     0.000 |      136 |       --- |             --- |
-| Signals                  |     0.014 |     5164 |       --- |             --- |
+| Signals                  |     0.014 |     5195 |       --- |             --- |
 | Block RAM                |     0.028 |       13 |        50 |           26.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | DSPs                     |    <0.001 |        3 |        90 |            3.33 |
@@ -190,7 +190,7 @@ Table of Contents
 |       cm2                                        |     0.128 |
 |     i2s                                          |    <0.001 |
 |     spiInitClock                                 |    <0.001 |
-|   Buttons                                        |    <0.001 |
+|   Buttons                                        |     0.001 |
 |     button1                                      |    <0.001 |
 |       verificationCLk                            |    <0.001 |
 |     button2                                      |    <0.001 |
@@ -232,7 +232,7 @@ Table of Contents
 |     load_store_unit                              |     0.009 |
 |       dcache                                     |     0.007 |
 |         memories[0].data_memories.way_0_data_ram |     0.004 |
-|         memories[0].way_0_tag_ram                |     0.003 |
+|         memories[0].way_0_tag_ram                |     0.002 |
 |     mc_arithmetic                                |     0.002 |
 |     multiplier                                   |    <0.001 |
 |     registers_reg_r1_0_31_0_5                    |    <0.001 |

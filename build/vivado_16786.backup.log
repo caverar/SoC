@@ -2,8 +2,8 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Wed Mar  6 09:29:45 2019
-# Process ID: 17698
+# Start of session at: Thu Mar  7 12:25:19 2019
+# Process ID: 16786
 # Current directory: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build
 # Command line: vivado -mode batch -source top.tcl
 # Log file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.log
@@ -12,36 +12,36 @@
 source top.tcl
 # create_project -force -name top -part xc7a35tcpg236-1
 # set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:]
 # add_files {top.v}
 # set_property library work [get_files {top.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:]
 # add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}
 # set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:]
-# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}
-# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:]
 # read_xdc top.xdc
 # synth_design -top top -part xc7a35tcpg236-1
 Command: synth_design -top top -part xc7a35tcpg236-1
@@ -49,11 +49,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17732 
+INFO: Helper process launched with PID 16825 
 WARNING: [Synth 8-2611] redeclaration of ansi port I2SCLK is not allowed [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:142]
 WARNING: [Synth 8-992] I2S_CLK is already implicitly declared earlier [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:164]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.160 ; gain = 77.262 ; free physical = 1052 ; free virtual = 5955
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.152 ; gain = 77.262 ; free physical = 1021 ; free virtual = 5479
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
 INFO: [Synth 8-6157] synthesizing module 'Audio' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:2]
@@ -220,7 +220,7 @@ WARNING: [Synth 8-3331] design top has unconnected port user_sw_13
 WARNING: [Synth 8-3331] design top has unconnected port user_sw_14
 WARNING: [Synth 8-3331] design top has unconnected port user_sw_15
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.410 ; gain = 109.512 ; free physical = 1065 ; free virtual = 5970
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.402 ; gain = 109.512 ; free physical = 1035 ; free virtual = 5495
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -233,10 +233,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.410 ; gain = 109.512 ; free physical = 1066 ; free virtual = 5971
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.402 ; gain = 109.512 ; free physical = 1034 ; free virtual = 5495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.410 ; gain = 109.512 ; free physical = 1066 ; free virtual = 5971
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.402 ; gain = 109.512 ; free physical = 1034 ; free virtual = 5495
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -263,29 +263,29 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1621.754 ; gain = 0.000 ; free physical = 801 ; free virtual = 5720
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1621.746 ; gain = 0.000 ; free physical = 783 ; free virtual = 5242
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 880 ; free virtual = 5799
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 864 ; free virtual = 5323
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 880 ; free virtual = 5799
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 864 ; free virtual = 5323
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 881 ; free virtual = 5799
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 865 ; free virtual = 5324
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "Track1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Track2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 WARNING: [Synth 8-6040] Register SoundTrackCount_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6014] Unused sequential element SoundTrackData_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:81]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 873 ; free virtual = 5792
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 856 ; free virtual = 5315
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -517,7 +517,10 @@ WARNING: [Synth 8-3331] design top has unconnected port user_sw_15
 INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectEnable_reg' (FD) to 'Audio/SoundEffectSelected_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSelected_reg[1]' (FD) to 'Audio/SoundEffectSelected_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSelected_reg[0] )
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[4]' (FD) to 'Audio/SoundEffectData_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[5]' (FD) to 'Audio/SoundEffectData_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[6]' (FD) to 'Audio/SoundEffectData_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[7]' (FD) to 'Audio/SoundEffectData_reg[3]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[14]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[14]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[14]'
@@ -548,165 +551,161 @@ INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[
 INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[14]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[14]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/E4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/E4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/D4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/D4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/C4/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/C4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B3/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/B3/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A3/data_reg[14]' (FDRE) to 'Audio/SoundTrackSynthesizer/A3/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/B4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/A4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/G4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/G4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/F4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/F4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/E4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/E4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/D4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/D4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/C4/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[14]' (FDRE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/E4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/E4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/D4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/D4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/C4/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/C4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B3/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/B3/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A3/data_reg[13]' (FDRE) to 'Audio/SoundTrackSynthesizer/A3/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/B4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/A4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/G4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/G4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/F4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/F4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/E4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/E4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/D4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/D4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/C4/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[13]' (FDRE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[12]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/B4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/ASharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/A4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/GSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/G4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/FSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/F4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/E4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/DSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/D4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/CSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/C4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/B3/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/ASharp3/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/A3/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/B4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/ASharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/A4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/GSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/G4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/FSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/F4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/E4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/DSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/D4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/CSharp4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/C4/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/B3/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/ASharp3/data_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/A3/data_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/B4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/ASharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/A4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/GSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/G4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/FSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/F4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/E4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/DSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/D4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/CSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/C4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/B3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/ASharp3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/A3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/B4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/ASharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/A4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/GSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/G4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/FSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/F4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/E4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/DSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/D4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/CSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/C4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/B3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/ASharp3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/A3/data_reg[14] )
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/E4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/D4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/C4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B3/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A3/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/A3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/B4/data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/G4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/F4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/E4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/D4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/E4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/D4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/C4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B3/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A3/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/A3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/B4/data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/G4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/F4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/E4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/D4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[10]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[0]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectData_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectData_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/OutputData_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/OutputData_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/OutputData_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/i2s/Data_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/i2s/Data_reg[12] )
-WARNING: [Synth 8-3332] Sequential element (Audio/i2s/Data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/B4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/ASharp4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/A4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/GSharp4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/G4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/FSharp4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/F4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/E4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/DSharp4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/D4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/CSharp4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/C4/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/B3/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/ASharp3/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/A3/data_reg[12]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B4/data_reg[12]) is unused and will be removed from module top.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/i2s/Data_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/i2s/Data_reg[14] )
+WARNING: [Synth 8-3332] Sequential element (Audio/i2s/Data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/B4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/ASharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/A4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/GSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/G4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/FSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/F4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/E4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/DSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/D4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/CSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/C4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/B3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/ASharp3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/A3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/GSharp4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/GSharp4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/GSharp4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/G4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/G4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/G4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/FSharp4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/FSharp4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/FSharp4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/F4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/F4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/F4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/E4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/E4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/E4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/DSharp4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/DSharp4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/DSharp4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/D4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/D4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/D4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/CSharp4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/CSharp4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/CSharp4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/C4/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/C4/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/C4/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B3/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B3/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B3/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp3/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp3/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp3/data_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A3/data_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A3/data_reg[14]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A3/data_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[3]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectData_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectData_reg[3]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSelected_reg[0]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/OutputData_reg[1]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 851 ; free virtual = 5773
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:44 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 835 ; free virtual = 5296
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -734,13 +733,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 731 ; free virtual = 5654
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 714 ; free virtual = 5178
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 724 ; free virtual = 5648
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 707 ; free virtual = 5171
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -753,7 +752,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance Audio/SoundTrackData_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:59 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 723 ; free virtual = 5647
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:59 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 707 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -777,7 +776,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 723 ; free virtual = 5647
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 706 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -790,7 +789,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 723 ; free virtual = 5647
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 706 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -802,25 +801,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 723 ; free virtual = 5647
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 706 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 723 ; free virtual = 5647
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 706 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 723 ; free virtual = 5647
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 706 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 723 ; free virtual = 5647
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 706 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -844,8 +843,8 @@ Report Cell Usage:
 |6     |LUT2       |    26|
 |7     |LUT3       |    18|
 |8     |LUT4       |    29|
-|9     |LUT5       |    37|
-|10    |LUT6       |    88|
+|9     |LUT5       |    36|
+|10    |LUT6       |    89|
 |11    |MMCME2_ADV |     1|
 |12    |MUXF7      |     4|
 |13    |MUXF8      |     2|
@@ -883,11 +882,11 @@ Report Instance Areas:
 |22    |    spiInitClock          |FrequencyGenerator          |    43|
 +------+--------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 725 ; free virtual = 5647
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 1621.746 ; gain = 437.855 ; free physical = 706 ; free virtual = 5170
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1621.754 ; gain = 109.512 ; free physical = 858 ; free virtual = 5702
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1621.762 ; gain = 437.855 ; free physical = 869 ; free virtual = 5713
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1621.746 ; gain = 109.512 ; free physical = 761 ; free virtual = 5225
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 770 ; free virtual = 5234
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 93 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -907,19 +906,19 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   BUFGCE => BUFGCTRL: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-218 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+217 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1621.762 ; gain = 437.977 ; free physical = 851 ; free virtual = 5695
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 1621.754 ; gain = 437.977 ; free physical = 753 ; free virtual = 5217
 # report_timing_summary -file top_timing_synth.rpt
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
-report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1995.961 ; gain = 374.199 ; free physical = 545 ; free virtual = 5389
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1995.953 ; gain = 374.199 ; free physical = 448 ; free virtual = 4913
 # report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
-report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1995.961 ; gain = 0.000 ; free physical = 545 ; free virtual = 5389
+report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1995.953 ; gain = 0.000 ; free physical = 449 ; free virtual = 4913
 # report_utilization -file top_utilization_synth.rpt
-report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1995.961 ; gain = 0.000 ; free physical = 545 ; free virtual = 5389
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1995.953 ; gain = 0.000 ; free physical = 449 ; free virtual = 4913
 # opt_design
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -931,60 +930,60 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2048.977 ; gain = 53.016 ; free physical = 539 ; free virtual = 5383
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2038.969 ; gain = 43.016 ; free physical = 443 ; free virtual = 4908
 
 Starting Cache Timing Information Task
-Ending Cache Timing Information Task | Checksum: 899cdd36
+Ending Cache Timing Information Task | Checksum: d9ea873c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 539 ; free virtual = 5383
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 443 ; free virtual = 4908
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 3 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 167b6d020
+Phase 1 Retarget | Checksum: b3106883
 
-Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5385
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 167b6d020
+Phase 2 Constant propagation | Checksum: b3106883
 
-Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5385
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: a7df2442
+Phase 3 Sweep | Checksum: dbc9c251
 
-Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5385
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: a7df2442
+Phase 4 BUFG optimization | Checksum: dbc9c251
 
-Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5385
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 13bfed3f9
+Phase 5 Shift Register Optimization | Checksum: 153b862ba
 
-Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5386
+Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 13bfed3f9
+Phase 6 Post Processing Netlist | Checksum: 153b862ba
 
-Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5386
+Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5386
-Ending Logic Optimization Task | Checksum: 13bfed3f9
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
+Ending Logic Optimization Task | Checksum: 153b862ba
 
-Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2048.977 ; gain = 0.000 ; free physical = 541 ; free virtual = 5386
+Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2038.969 ; gain = 0.000 ; free physical = 444 ; free virtual = 4909
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -1017,17 +1016,17 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 13bfed3f9
+Ending PowerOpt Patch Enables Task | Checksum: 153b862ba
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 537 ; free virtual = 5383
-Ending Power Optimization Task | Checksum: 13bfed3f9
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 441 ; free virtual = 4907
+Ending Power Optimization Task | Checksum: 153b862ba
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2239.094 ; gain = 190.117 ; free physical = 541 ; free virtual = 5388
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2233.094 ; gain = 194.125 ; free physical = 446 ; free virtual = 4912
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 13bfed3f9
+Ending Final Cleanup Task | Checksum: 153b862ba
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 541 ; free virtual = 5388
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 446 ; free virtual = 4912
 INFO: [Common 17-83] Releasing license: Implementation
 21 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
@@ -1049,43 +1048,43 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 539 ; free virtual = 5385
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 443 ; free virtual = 4909
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d02c455b
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 539 ; free virtual = 5385
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 539 ; free virtual = 5385
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 443 ; free virtual = 4909
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 443 ; free virtual = 4909
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: ee26471b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.77 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 538 ; free virtual = 5385
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.76 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 443 ; free virtual = 4909
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1d3ef1725
+Phase 1.3 Build Placer Netlist Model | Checksum: 142a71ba5
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 537 ; free virtual = 5383
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 441 ; free virtual = 4907
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1d3ef1725
+Phase 1.4 Constrain Clocks/Macros | Checksum: 142a71ba5
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 537 ; free virtual = 5383
-Phase 1 Placer Initialization | Checksum: 1d3ef1725
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 441 ; free virtual = 4907
+Phase 1 Placer Initialization | Checksum: 142a71ba5
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 537 ; free virtual = 5383
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 441 ; free virtual = 4907
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 16fb143cc
+Phase 2.1 Floorplanning | Checksum: 166c7e144
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 535 ; free virtual = 5382
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 440 ; free virtual = 4906
 
 Phase 2.2 Physical Synthesis In Placer
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4899
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -1099,52 +1098,52 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2 Physical Synthesis In Placer | Checksum: 141ce393b
+Phase 2.2 Physical Synthesis In Placer | Checksum: 17ce5c31d
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 527 ; free virtual = 5374
-Phase 2 Global Placement | Checksum: 11e71a555
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4898
+Phase 2 Global Placement | Checksum: 1af77bcb8
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5375
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4898
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 11e71a555
+Phase 3.1 Commit Multi Column Macros | Checksum: 1af77bcb8
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5375
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4898
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a3328da4
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: ed9d18bb
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 171d8be91
+Phase 3.3 Area Swap Optimization | Checksum: a22912cf
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 171d8be91
+Phase 3.4 Pipeline Register Optimization | Checksum: a22912cf
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1bfc297c3
+Phase 3.5 Small Shape Detail Placement | Checksum: 163474c39
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 526 ; free virtual = 5373
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 19eff3a10
+Phase 3.6 Re-assign LUT pins | Checksum: dfe49985
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 526 ; free virtual = 5373
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 19eff3a10
+Phase 3.7 Pipeline Register Optimization | Checksum: dfe49985
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 526 ; free virtual = 5373
-Phase 3 Detail Placement | Checksum: 19eff3a10
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
+Phase 3 Detail Placement | Checksum: dfe49985
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 526 ; free virtual = 5373
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -1152,53 +1151,53 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1db6317ab
+Post Placement Optimization Initialization | Checksum: c7c4fc18
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1db6317ab
+Phase 4.1.1.1 BUFG Insertion | Checksum: c7c4fc18
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 527 ; free virtual = 5373
-INFO: [Place 30-746] Post Placement Timing Summary WNS=5.908. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 17ab9e989
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.870. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 122219088
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 527 ; free virtual = 5373
-Phase 4.1 Post Commit Optimization | Checksum: 17ab9e989
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
+Phase 4.1 Post Commit Optimization | Checksum: 122219088
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 527 ; free virtual = 5373
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 432 ; free virtual = 4898
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 17ab9e989
+Phase 4.2 Post Placement Cleanup | Checksum: 122219088
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4899
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 17ab9e989
+Phase 4.3 Placer Reporting | Checksum: 122219088
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4899
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1ff233c0e
+Phase 4.4 Final Placement Cleanup | Checksum: 1a68ae30d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1ff233c0e
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4899
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1a68ae30d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 528 ; free virtual = 5374
-Ending Placer Task | Checksum: 19d392176
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 433 ; free virtual = 4899
+Ending Placer Task | Checksum: f63b1569
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 532 ; free virtual = 5379
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 438 ; free virtual = 4904
 INFO: [Common 17-83] Releasing license: Implementation
 16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 532 ; free virtual = 5379
+place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 438 ; free virtual = 4904
 # report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
-report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 532 ; free virtual = 5378
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 438 ; free virtual = 4904
 # report_utilization -file top_utilization_place.rpt
-report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 532 ; free virtual = 5378
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 437 ; free virtual = 4903
 # report_io -file top_io.rpt
-report_io: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 527 ; free virtual = 5373
+report_io: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 431 ; free virtual = 4897
 # report_control_sets -verbose -file top_control_sets.rpt
-report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 532 ; free virtual = 5378
+report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 438 ; free virtual = 4904
 # report_clock_utilization -file top_clock_utilization.rpt
 # route_design
 Command: route_design
@@ -1212,98 +1211,98 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
-Checksum: PlaceDB: a8555507 ConstDB: 0 ShapeSum: f4e3cc6f RouteDB: 0
+Checksum: PlaceDB: 15748fa ConstDB: 0 ShapeSum: f4e3cc6f RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 1105b7958
+Phase 1 Build RT Design | Checksum: f33e9771
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 422 ; free virtual = 5268
-Post Restoration Checksum: NetGraph: d4907554 NumContArr: 3bcb0404 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 338 ; free virtual = 4815
+Post Restoration Checksum: NetGraph: 9285b6bb NumContArr: 60b8e0b6 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 1105b7958
+Phase 2.1 Create Timer | Checksum: f33e9771
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 422 ; free virtual = 5268
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 337 ; free virtual = 4814
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 1105b7958
+Phase 2.2 Fix Topology Constraints | Checksum: f33e9771
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 406 ; free virtual = 5252
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 322 ; free virtual = 4799
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 1105b7958
+Phase 2.3 Pre Route Cleanup | Checksum: f33e9771
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 406 ; free virtual = 5253
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 322 ; free virtual = 4799
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 15f74fe12
+Phase 2.4 Update Timing | Checksum: 118cd8d3a
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 397 ; free virtual = 5243
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.893  | TNS=0.000  | WHS=-0.088 | THS=-2.685 |
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 314 ; free virtual = 4791
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.849  | TNS=0.000  | WHS=-0.098 | THS=-2.454 |
 
-Phase 2 Router Initialization | Checksum: 1536fce15
+Phase 2 Router Initialization | Checksum: 16e0d106c
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 397 ; free virtual = 5243
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 317 ; free virtual = 4794
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1ba1c96a3
+Phase 3 Initial Routing | Checksum: 1b8722c46
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 402 ; free virtual = 5248
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 317 ; free virtual = 4794
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 32
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.745  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.458  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 15697993a
+Phase 4.1 Global Iteration 0 | Checksum: 28a64db18
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 403 ; free virtual = 5249
-Phase 4 Rip-up And Reroute | Checksum: 15697993a
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
+Phase 4 Rip-up And Reroute | Checksum: 28a64db18
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 403 ; free virtual = 5249
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 15697993a
+Phase 5.1 Delay CleanUp | Checksum: 28a64db18
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 403 ; free virtual = 5249
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 15697993a
+Phase 5.2 Clock Skew Optimization | Checksum: 28a64db18
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 403 ; free virtual = 5249
-Phase 5 Delay and Skew Optimization | Checksum: 15697993a
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
+Phase 5 Delay and Skew Optimization | Checksum: 28a64db18
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 403 ; free virtual = 5249
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 157fec871
+Phase 6.1.1 Update Timing | Checksum: 1affe122e
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 402 ; free virtual = 5249
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.846  | TNS=0.000  | WHS=0.062  | THS=0.000  |
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.560  | TNS=0.000  | WHS=0.044  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 157fec871
+Phase 6.1 Hold Fix Iter | Checksum: 1c664eaf4
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 402 ; free virtual = 5249
-Phase 6 Post Hold Fix | Checksum: 157fec871
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
+Phase 6 Post Hold Fix | Checksum: 1c664eaf4
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 403 ; free virtual = 5249
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0671291 %
-  Global Horizontal Routing Utilization  = 0.0615565 %
+  Global Vertical Routing Utilization    = 0.0676074 %
+  Global Horizontal Routing Utilization  = 0.0619469 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1312,38 +1311,38 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 9fc06fc8
+Phase 7 Route finalize | Checksum: 1d805dd1c
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 403 ; free virtual = 5249
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 319 ; free virtual = 4795
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 9fc06fc8
+Phase 8 Verifying routed nets | Checksum: 1d805dd1c
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 402 ; free virtual = 5248
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 318 ; free virtual = 4795
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 6e38e54f
+Phase 9 Depositing Routes | Checksum: 1b297b8e1
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 402 ; free virtual = 5248
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 318 ; free virtual = 4795
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=5.846  | TNS=0.000  | WHS=0.062  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.560  | TNS=0.000  | WHS=0.044  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 6e38e54f
+Phase 10 Post Router Timing | Checksum: 1b297b8e1
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 402 ; free virtual = 5248
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 318 ; free virtual = 4795
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 420 ; free virtual = 5266
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 333 ; free virtual = 4810
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:25 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 420 ; free virtual = 5266
+route_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:25 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 333 ; free virtual = 4810
 # phys_opt_design
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -1476,7 +1475,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      5.845        0.000                      0                  608        0.065        0.000                      0                  608        3.000        0.000                       0                   327  
+      5.560        0.000                      0                  608        0.047        0.000                      0                  608        3.000        0.000                       0                   327  
 
 
 All user specified timing constraints are met.
@@ -1501,7 +1500,7 @@ clk100                         {0.000 5.000}      10.000          100.000
 
 Clock                              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk100                               5.845        0.000                      0                  596        0.065        0.000                      0                  596        3.000        0.000                       0                   309  
+clk100                               5.560        0.000                      0                  596        0.047        0.000                      0                  596        3.000        0.000                       0                   309  
   I2S_CLK_reloj2_clk_wiz_0_0        69.145        0.000                      0                   12        0.122        0.000                      0                   12       34.931        0.000                       0                    15  
   clkfbout_reloj2_clk_wiz_0_0                                                                                                                                                   47.845        0.000                       0                     3  
 
@@ -1530,7 +1529,7 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2239.094 ; gain = 0.000 ; free physical = 416 ; free virtual = 5264
+Write XDEF Complete: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2233.094 ; gain = 0.000 ; free physical = 329 ; free virtual = 4808
 INFO: [Common 17-1381] The checkpoint '/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top_route.dcp' has been generated.
 # report_route_status -file top_route_status.rpt
 # report_drc -file top_drc.rpt
@@ -1597,6 +1596,6 @@ INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK 
 INFO: [Common 17-83] Releasing license: Implementation
 8 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2468.715 ; gain = 229.621 ; free physical = 445 ; free virtual = 5066
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:02:29 . Memory (MB): peak = 2468.715 ; gain = 235.621 ; free physical = 420 ; free virtual = 4684
 # quit
-INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 09:32:26 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  7 12:30:13 2019...
