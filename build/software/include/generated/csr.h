@@ -14,14 +14,32 @@ extern uint32_t csr_readl(uint32_t addr);
 
 /* Audio_WB */
 #define CSR_AUDIO_WB_BASE 0xe0004800
-#define CSR_AUDIO_WB_AUDIOCONTROLREGISTERCSR_ADDR 0xe0004800
-#define CSR_AUDIO_WB_AUDIOCONTROLREGISTERCSR_SIZE 1
-static inline unsigned int Audio_WB_AudioControlRegisterCSR_read(void) {
+#define CSR_AUDIO_WB_AUDIOCONTROLREGISTER_ADDR 0xe0004800
+#define CSR_AUDIO_WB_AUDIOCONTROLREGISTER_SIZE 1
+static inline unsigned int Audio_WB_AudioControlRegister_read(void) {
 	unsigned int r = csr_readl(0xe0004800);
 	return r;
 }
-static inline void Audio_WB_AudioControlRegisterCSR_write(unsigned int value) {
+static inline void Audio_WB_AudioControlRegister_write(unsigned int value) {
 	csr_writel(value, 0xe0004800);
+}
+#define CSR_AUDIO_WB_SOUNDTRACKINITIALIZATIONREGISTER_ADDR 0xe0004804
+#define CSR_AUDIO_WB_SOUNDTRACKINITIALIZATIONREGISTER_SIZE 1
+static inline unsigned int Audio_WB_SoundTrackInitializationRegister_read(void) {
+	unsigned int r = csr_readl(0xe0004804);
+	return r;
+}
+static inline void Audio_WB_SoundTrackInitializationRegister_write(unsigned int value) {
+	csr_writel(value, 0xe0004804);
+}
+#define CSR_AUDIO_WB_INITIALIZATIONENABLEREGISTER_ADDR 0xe0004808
+#define CSR_AUDIO_WB_INITIALIZATIONENABLEREGISTER_SIZE 1
+static inline unsigned int Audio_WB_InitializationEnableRegister_read(void) {
+	unsigned int r = csr_readl(0xe0004808);
+	return r;
+}
+static inline void Audio_WB_InitializationEnableRegister_write(unsigned int value) {
+	csr_writel(value, 0xe0004808);
 }
 
 /* Buttons_WB */

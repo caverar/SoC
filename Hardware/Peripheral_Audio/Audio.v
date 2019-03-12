@@ -2,7 +2,9 @@
 module Audio(
     input  wire        Reset,
     input  wire        CLK,      
-    input  wire [3:0]  AudioControlRegister,   
+    input  wire [3:0]  AudioControlRegister,
+    input  wire [15:0] SoundTrackInitializationRegister,
+    input  wire        InitializationEnableRegister,   
     output wire        DAC_I2S_DATA,
     output wire        DAC_I2S_CLK,
     output wire        DAC_I2S_WS
@@ -184,5 +186,12 @@ module Audio(
         end
 
     end
+
+    always@(posedge MasterCLK)begin
+        if(InitializationEnableRegister && SoundTrackInitializationRegister[15:8]<=187)begin
+            SoundTrack[SoundTrackInitializationRegister[15:8]]<=SoundTrackInitializationRegister[7:0];
+        end
+    end
+     
 
 endmodule  

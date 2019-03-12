@@ -1,35 +1,24 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Mon Feb 18 04:32:44 2019
+[*] Tue Mar 12 16:55:25 2019
 [*]
 [dumpfile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/SoC.vcd"
-[dumpfile_mtime] "Mon Feb 18 04:32:44 2019"
-[dumpfile_size] 273375232
+[dumpfile_mtime] "Tue Mar 12 16:54:07 2019"
+[dumpfile_size] 702
 [savefile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Simulation.gtkw"
-[timestart] 8557000000
+[timestart] 0
 [size] 1283 713
 [pos] -1 -1
-*-27.748714 8849760000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
-[treeopen] AudVid_TB.
-[treeopen] AudVid_TB.uut.
+*-25.748714 42200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SD_SPI_TB.
 [sst_width] 314
 [signals_width] 307
 [sst_expanded] 1
 [sst_vpaned_height] 193
 @28
-AudVid_TB.uut.TFT_SPI_MOSI
-@22
-AudVid_TB.uut.tft_spi.InitRegPointer[24:0]
-AudVid_TB.uut.TFT_Data[15:0]
-AudVid_TB.uut.TilesWrite_Address[11:0]
-AudVid_TB.uut.TFT_DataEncoded[3:0]
-@25
-AudVid_TB.uut.TilesWrite_TileAddress[4:0]
-@24
-AudVid_TB.uut.TilesWrite_TilePosition[8:0]
-AudVid_TB.uut.TilesWrite_XAddress[3:0]
-AudVid_TB.uut.TilesWrite_YAddress[3:0]
-AudVid_TB.uut.TilesWrite_XPosition[7:0]
-AudVid_TB.uut.TilesWrite_YPosition[7:0]
+SD_SPI_TB.uut.MasterCLK
+SD_SPI_TB.uut.DataCLK
+@29
+SD_SPI_TB.uut.BussyDataWriteRegister
 [pattern_trace] 1
 [pattern_trace] 0

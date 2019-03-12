@@ -17,27 +17,31 @@ from litex.soc.interconnect.csr import *
 class Audio(Module,AutoCSR):
     def __init__(self):
     ##Entradas        
-        self.CLK                    = Signal()
-        self.Reset                  = Signal()
+        self.CLK                                = Signal()
+        self.Reset                              = Signal()
     ##Salidas
-        self.DAC_I2S_CLK            = Signal()
-        self.DAC_I2S_DATA           = Signal()
-        self.DAC_I2S_WS             = Signal()
+        self.DAC_I2S_CLK                        = Signal()
+        self.DAC_I2S_DATA                       = Signal()
+        self.DAC_I2S_WS                         = Signal()
     ##Valores Internos        
-        self.AudioControlRegisterCSR = CSRStorage(4)
-        self.AudioControlRegister    = Signal(4)
+        
+        self.AudioControlRegister               = CSRStorage(4)
+        self.SoundTrackInitializationRegister   = CSRStorage(16)
+        self.InitializationEnableRegister       = CSRStorage(1)
     ##Instancia
         self.specials +=Instance("Audio",
 
-            i_Reset                  = self.Reset,
-            i_CLK                    = self.CLK,                   
-            i_AudioControlRegister  =  self.AudioControlRegister,            
-            o_DAC_I2S_DATA           = self.DAC_I2S_DATA,
-            o_DAC_I2S_CLK            = self.DAC_I2S_CLK,  
-            o_DAC_I2S_WS             = self.DAC_I2S_WS    
+            i_Reset                             = self.Reset,
+            i_CLK                               = self.CLK,                   
+            i_AudioControlRegister              = self.AudioControlRegister.storage,
+            i_SoundTrackInitializationRegister  = self.SoundTrackInitializationRegister.storage,
+            i_InitializationEnableRegister      = self.InitializationEnableRegister.storage,   
+            o_DAC_I2S_DATA                      = self.DAC_I2S_DATA,
+            o_DAC_I2S_CLK                       = self.DAC_I2S_CLK,  
+            o_DAC_I2S_WS                        = self.DAC_I2S_WS    
         )
-                
-        self.comb += self.AudioControlRegister.eq(self.AudioControlRegisterCSR.storage)
+
+        #self.comb += self.AudioControlRegister.eq(self.AudioControlRegisterCSR.storage)
         
 
 # Testeo
@@ -84,15 +88,15 @@ class Platform(XilinxPlatform):
 
  #----------------------------------------------------------------------
 #Creacion de Plataforma
-platform = Platform()
+platform    = Platform()
 #Definicion de pines como variables
-SystemClock    = ClockSignal()
+SystemClock = ClockSignal()
 
-switches       = Cat(*[platform.request("user_sw" , i) for i in range(16)])
-I2S_DATA       = platform.request("I2S_DATA" , 0)
-I2S_CLK        = platform.request("I2S_CLK"  , 0)
-I2S_WS         = platform.request("I2S_WS"   , 0)
-Reset          = platform.request("cpu_reset", 0)
+switches    = Cat(*[platform.request("user_sw" , i) for i in range(16)])
+I2S_DATA    = platform.request("I2S_DATA" , 0)
+I2S_CLK     = platform.request("I2S_CLK"  , 0)
+I2S_WS      = platform.request("I2S_WS"   , 0)
+Reset       = platform.request("cpu_reset", 0)
 
 
 platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v")
@@ -115,6 +119,8 @@ soc.comb+=I2S_CLK.eq(soc.DAC_I2S_CLK)
 soc.comb+=I2S_WS.eq(soc.DAC_I2S_WS)
 soc.comb+=soc.CLK.eq(SystemClock)
 soc.comb+=soc.Reset.eq(Reset)
-soc.comb+=soc.AudioControlRegisterCSR.storage.eq(0x8)
+soc.comb+=soc.AudioControlRegister.storage.eq(0x8)
+soc.comb+=soc.SoundTrackInitializationRegister.storage.eq(0x00)
+soc.comb+=soc.InitializationEnableRegister.storage.eq(0b0)
 
 platform.build(soc)

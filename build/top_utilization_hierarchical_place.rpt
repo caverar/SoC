@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Mon Mar 11 14:54:22 2019
+| Date         : Tue Mar 12 12:35:20 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -21,10 +21,10 @@ Table of Contents
 +-------------------------------+-----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
 |            Instance           |            Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +-------------------------------+-----------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
-| top                           |                       (top) |        186 |        186 |       0 |    0 | 345 |      0 |      1 |            0 |
+| top                           |                       (top) |        231 |        195 |      36 |    0 | 345 |      0 |      0 |            0 |
 |   (top)                       |                       (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
-|   Audio                       |                       Audio |        186 |        186 |       0 |    0 | 345 |      0 |      1 |            0 |
-|     (Audio)                   |                       Audio |          8 |          8 |       0 |    0 |  17 |      0 |      1 |            0 |
+|   Audio                       |                       Audio |        231 |        195 |      36 |    0 | 345 |      0 |      0 |            0 |
+|     (Audio)                   |                       Audio |         53 |         17 |      36 |    0 |  17 |      0 |      0 |            0 |
 |     SoundTrackSynthesizer     |                 Synthesizer |        162 |        162 |       0 |    0 | 282 |      0 |      0 |            0 |
 |       (SoundTrackSynthesizer) |                 Synthesizer |          0 |          0 |       0 |    0 |   2 |      0 |      0 |            0 |
 |       A3                      |                  Oscillator |         10 |         10 |       0 |    0 |  19 |      0 |      0 |            0 |

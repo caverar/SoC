@@ -142,6 +142,18 @@ set_property IOSTANDARD LVCMOS33 [get_ports TFT_RST]
  ## TFT_SPI_CS:0
 set_property LOC J1 [get_ports TFT_SPI_CS]
 set_property IOSTANDARD LVCMOS33 [get_ports TFT_SPI_CS]
+ ## SD_SPI_CS:0
+set_property LOC J3 [get_ports SD_SPI_CS]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CS]
+ ## SD_SPI_CLK:0
+set_property LOC L3 [get_ports SD_SPI_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CLK]
+ ## SD_SPI_MOSI:0
+set_property LOC M2 [get_ports SD_SPI_MOSI]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MOSI]
+ ## SD_SPI_MISO:0
+set_property LOC N2 [get_ports SD_SPI_MISO]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MISO]
  ## serial:0.tx
 set_property LOC A18 [get_ports serial_tx]
 set_property IOSTANDARD LVCMOS33 [get_ports serial_tx]

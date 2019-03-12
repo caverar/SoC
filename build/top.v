@@ -28,8 +28,9 @@ wire Reset;
 wire DAC_I2S_CLK;
 wire DAC_I2S_DATA;
 wire DAC_I2S_WS;
-wire [3:0] storage;
-wire [3:0] AudioControlRegister;
+wire [3:0] AudioControlRegister_storage;
+wire [15:0] SoundTrackInitializationRegister_storage;
+wire InitializationEnableRegister_storage;
 wire sys_clk;
 wire sys_rst;
 wire por_clk;
@@ -40,13 +41,14 @@ reg dummy_s;
 initial dummy_s <= 1'd0;
 // synthesis translate_on
 
-assign AudioControlRegister = storage;
 assign I2S_DATA = DAC_I2S_DATA;
 assign I2S_CLK = DAC_I2S_CLK;
 assign I2S_WS = DAC_I2S_WS;
 assign CLK = sys_clk;
 assign Reset = cpu_reset;
-assign storage = 4'd8;
+assign AudioControlRegister_storage = 4'd8;
+assign SoundTrackInitializationRegister_storage = 1'd0;
+assign InitializationEnableRegister_storage = 1'd0;
 assign sys_clk = clk100;
 assign por_clk = clk100;
 assign sys_rst = xilinxvivadotoolchain_int_rst;
@@ -56,9 +58,11 @@ always @(posedge por_clk) begin
 end
 
 Audio Audio(
-	.AudioControlRegister(AudioControlRegister),
+	.AudioControlRegister(AudioControlRegister_storage),
 	.CLK(CLK),
+	.InitializationEnableRegister(InitializationEnableRegister_storage),
 	.Reset(Reset),
+	.SoundTrackInitializationRegister(SoundTrackInitializationRegister_storage),
 	.DAC_I2S_CLK(DAC_I2S_CLK),
 	.DAC_I2S_DATA(DAC_I2S_DATA),
 	.DAC_I2S_WS(DAC_I2S_WS)

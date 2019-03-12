@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Mon Mar 11 14:59:39 2019
+| Date         : Tue Mar 12 12:39:56 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,10 +21,10 @@ Table of Contents
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |                     Instance                     |                Module                | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +--------------------------------------------------+--------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                                (top) |       2660 |       2556 |     104 |    0 | 2659 |     11 |      4 |            3 |
-|   (top)                                          |                                (top) |        400 |        384 |      16 |    0 |  671 |      9 |      0 |            0 |
-|   Audio                                          |                                Audio |        408 |        408 |       0 |    0 |  665 |      0 |      1 |            0 |
-|     (Audio)                                      |                                Audio |         18 |         18 |       0 |    0 |   28 |      0 |      1 |            0 |
+| top                                              |                                (top) |       2674 |       2570 |     104 |    0 | 2680 |     11 |      4 |            3 |
+|   (top)                                          |                                (top) |        412 |        396 |      16 |    0 |  700 |      9 |      0 |            0 |
+|   Audio                                          |                                Audio |        410 |        410 |       0 |    0 |  657 |      0 |      1 |            0 |
+|     (Audio)                                      |                                Audio |         20 |         20 |       0 |    0 |   20 |      0 |      1 |            0 |
 |     SoundEffectSynthesizer                       |                          Synthesizer |        166 |        166 |       0 |    0 |  281 |      0 |      0 |            0 |
 |       (SoundEffectSynthesizer)                   |                          Synthesizer |          0 |          0 |       0 |    0 |    1 |      0 |      0 |            0 |
 |       A3                                         |                         Oscillator_9 |         12 |         12 |       0 |    0 |   19 |      0 |      0 |            0 |
@@ -88,9 +88,9 @@ Table of Contents
 |     video_clockmanager                           |                   Video_ClockManager |          0 |          0 |       0 |    0 |   24 |      0 |      0 |            0 |
 |       cm1                                        |                                  CM1 |          0 |          0 |       0 |    0 |   24 |      0 |      0 |            0 |
 |   lm32_cpu                                       |                             lm32_cpu |       1571 |       1523 |      48 |    0 | 1114 |      2 |      2 |            3 |
-|     (lm32_cpu)                                   |                             lm32_cpu |        161 |        113 |      48 |    0 |  340 |      0 |      0 |            0 |
-|     adder                                        |                           lm32_adder |          8 |          8 |       0 |    0 |    0 |      0 |      0 |            0 |
-|       addsub                                     |                          lm32_addsub |          8 |          8 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     (lm32_cpu)                                   |                             lm32_cpu |        157 |        109 |      48 |    0 |  340 |      0 |      0 |            0 |
+|     adder                                        |                           lm32_adder |         12 |         12 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       addsub                                     |                          lm32_addsub |         12 |         12 |       0 |    0 |    0 |      0 |      0 |            0 |
 |     instruction_unit                             |                lm32_instruction_unit |        573 |        573 |       0 |    0 |  310 |      1 |      1 |            0 |
 |       (instruction_unit)                         |                lm32_instruction_unit |        370 |        370 |       0 |    0 |  264 |      0 |      0 |            0 |
 |       icache                                     |                          lm32_icache |        203 |        203 |       0 |    0 |   46 |      1 |      1 |            0 |

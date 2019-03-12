@@ -22,62 +22,67 @@ from litex.soc.cores import gpio
 # Definicion de Pines
 #
 _io = [
-    ("user_led"                 , 0 , Pins("U16"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 1 , Pins("E19"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 2 , Pins("U19"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 3 , Pins("V19"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 4 , Pins("W18"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 5 , Pins("U15"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 6 , Pins("U14"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 7 , Pins("V14"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 8 , Pins("V13"), IOStandard("LVCMOS33")),
-    ("user_led"                 , 9 , Pins("V3" ), IOStandard("LVCMOS33")),
-    ("user_led"                 , 10, Pins("W3" ), IOStandard("LVCMOS33")),
-    ("user_led"                 , 11, Pins("U3" ), IOStandard("LVCMOS33")),
-    ("user_led"                 , 12, Pins("P3" ), IOStandard("LVCMOS33")),
-    ("user_led"                 , 13, Pins("N3" ), IOStandard("LVCMOS33")),
-    ("user_led"                 , 14, Pins("P1" ), IOStandard("LVCMOS33")),
-    ("user_led"                 , 15, Pins("L1" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 0 , Pins("V17"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 1 , Pins("V16"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 2 , Pins("W16"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 3 , Pins("W17"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 4 , Pins("W15"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 5 , Pins("V15"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 6 , Pins("W14"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 7 , Pins("W13"), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 8 , Pins("V2" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 9 , Pins("T3" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 10, Pins("T2" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 11, Pins("R3" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 12, Pins("W2" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 13, Pins("U1" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 14, Pins("T1" ), IOStandard("LVCMOS33")),
-    ("user_sw"                  , 15, Pins("R2" ), IOStandard("LVCMOS33")),    
-    ("user_btn"                 , 0 , Pins("T18"), IOStandard("LVCMOS33")),
-    ("user_btn"                 , 1 , Pins("W19"), IOStandard("LVCMOS33")),
-    ("user_btn"                 , 2 , Pins("T17"), IOStandard("LVCMOS33")),
-    ("user_btn"                 , 3 , Pins("U17"), IOStandard("LVCMOS33")),
-    ("clk100"                   , 0 , Pins("W5" ), IOStandard("LVCMOS33")),
-    ("cpu_reset"                , 0 , Pins("U18"), IOStandard("LVCMOS33")),
+    ("user_led"         , 0 , Pins("U16"), IOStandard("LVCMOS33")),
+    ("user_led"         , 1 , Pins("E19"), IOStandard("LVCMOS33")),
+    ("user_led"         , 2 , Pins("U19"), IOStandard("LVCMOS33")),
+    ("user_led"         , 3 , Pins("V19"), IOStandard("LVCMOS33")),
+    ("user_led"         , 4 , Pins("W18"), IOStandard("LVCMOS33")),
+    ("user_led"         , 5 , Pins("U15"), IOStandard("LVCMOS33")),
+    ("user_led"         , 6 , Pins("U14"), IOStandard("LVCMOS33")),
+    ("user_led"         , 7 , Pins("V14"), IOStandard("LVCMOS33")),
+    ("user_led"         , 8 , Pins("V13"), IOStandard("LVCMOS33")),
+    ("user_led"         , 9 , Pins("V3" ), IOStandard("LVCMOS33")),
+    ("user_led"         , 10, Pins("W3" ), IOStandard("LVCMOS33")),
+    ("user_led"         , 11, Pins("U3" ), IOStandard("LVCMOS33")),
+    ("user_led"         , 12, Pins("P3" ), IOStandard("LVCMOS33")),
+    ("user_led"         , 13, Pins("N3" ), IOStandard("LVCMOS33")),
+    ("user_led"         , 14, Pins("P1" ), IOStandard("LVCMOS33")),
+    ("user_led"         , 15, Pins("L1" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 0 , Pins("V17"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 1 , Pins("V16"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 2 , Pins("W16"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 3 , Pins("W17"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 4 , Pins("W15"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 5 , Pins("V15"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 6 , Pins("W14"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 7 , Pins("W13"), IOStandard("LVCMOS33")),
+    ("user_sw"          , 8 , Pins("V2" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 9 , Pins("T3" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 10, Pins("T2" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 11, Pins("R3" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 12, Pins("W2" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 13, Pins("U1" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 14, Pins("T1" ), IOStandard("LVCMOS33")),
+    ("user_sw"          , 15, Pins("R2" ), IOStandard("LVCMOS33")),    
+    ("user_btn"         , 0 , Pins("T18"), IOStandard("LVCMOS33")),
+    ("user_btn"         , 1 , Pins("W19"), IOStandard("LVCMOS33")),
+    ("user_btn"         , 2 , Pins("T17"), IOStandard("LVCMOS33")),
+    ("user_btn"         , 3 , Pins("U17"), IOStandard("LVCMOS33")),
+    ("clk100"           , 0 , Pins("W5" ), IOStandard("LVCMOS33")),
+    ("cpu_reset"        , 0 , Pins("U18"), IOStandard("LVCMOS33")),
 
     #I2S-JB
-    ("DAC_I2S_WS"               , 0 , Pins("A14"), IOStandard("LVCMOS33")),
-    ("DAC_I2S_DATA"             , 0 , Pins("A16"), IOStandard("LVCMOS33")),
-    ("DAC_I2S_CLK"              , 0 , Pins("B15"), IOStandard("LVCMOS33")),
+    ("DAC_I2S_WS"       , 0 , Pins("A14"), IOStandard("LVCMOS33")),
+    ("DAC_I2S_DATA"     , 0 , Pins("A16"), IOStandard("LVCMOS33")),
+    ("DAC_I2S_CLK"      , 0 , Pins("B15"), IOStandard("LVCMOS33")),
     
     #SPI_TFT-JA
-    ("TFT_SPI_CS"             , 0 , Pins("J1" ), IOStandard("LVCMOS33")),
-    ("TFT_RST"                , 0 , Pins("L2" ), IOStandard("LVCMOS33")),
-    ("TFT_RS"                 , 0 , Pins("J2" ), IOStandard("LVCMOS33")),
-    ("TFT_SPI_MOSI"           , 0 , Pins("G2" ), IOStandard("LVCMOS33")),
-    ("TFT_SPI_CLK"            , 0 , Pins("H1" ), IOStandard("LVCMOS33")),
+    ("TFT_SPI_CS"       , 0 , Pins("J1" ), IOStandard("LVCMOS33")),
+    ("TFT_RST"          , 0 , Pins("L2" ), IOStandard("LVCMOS33")),
+    ("TFT_RS"           , 0 , Pins("J2" ), IOStandard("LVCMOS33")),
+    ("TFT_SPI_MOSI"     , 0 , Pins("G2" ), IOStandard("LVCMOS33")),
+    ("TFT_SPI_CLK"      , 0 , Pins("H1" ), IOStandard("LVCMOS33")),
 
-    #SD_SPI_SPI-JC
-    ("external_buttons"       , 0 , Pins("K17"), IOStandard("LVCMOS33")),
-    ("external_buttons"       , 1 , Pins("M18"), IOStandard("LVCMOS33")),
-    ("external_buttons"       , 2 , Pins("N17"), IOStandard("LVCMOS33")),
-    ("external_buttons"       , 3 , Pins("P18"), IOStandard("LVCMOS33")),
+    #Botones-JC
+    ("external_buttons" , 0 , Pins("K17"), IOStandard("LVCMOS33")),
+    ("external_buttons" , 1 , Pins("M18"), IOStandard("LVCMOS33")),
+    ("external_buttons" , 2 , Pins("N17"), IOStandard("LVCMOS33")),
+    ("external_buttons" , 3 , Pins("P18"), IOStandard("LVCMOS33")),
+    #SD_SPI-JXADC
+    ("SD_SPI_CS"        , 0 , Pins("J3" ), IOStandard("LVCMOS33")),
+    ("SD_SPI_CLK"       , 0 , Pins("L3" ), IOStandard("LVCMOS33")),
+    ("SD_SPI_MOSI"      , 0 , Pins("M2" ), IOStandard("LVCMOS33")),
+    ("SD_SPI_MISO"      , 0 , Pins("N2" ), IOStandard("LVCMOS33")),
     
 
     ("serial", 0,
@@ -109,22 +114,23 @@ def csr_map_update(csr_map, csr_peripherals):
 platform = Platform()
 #Definicion de pines como variables
 
-leds                   = Cat(*[platform.request("user_led",         i) for i in range(16)])
-switches               = Cat(*[platform.request("user_sw" ,         i) for i in range(16)])
-buttons                = Cat(*[platform.request("user_btn",         i) for i in range(4) ])
-external_buttons       = Cat(*[platform.request("external_buttons", i) for i in range(4) ])
-SystemClock            = ClockSignal()
-DAC_I2S_DATA           = platform.request("DAC_I2S_DATA"           , 0)
-DAC_I2S_CLK            = platform.request("DAC_I2S_CLK"            , 0)
-DAC_I2S_WS             = platform.request("DAC_I2S_WS"             , 0)
-TFT_SPI_CLK            = platform.request("TFT_SPI_CLK"            , 0)
-TFT_SPI_MOSI           = platform.request("TFT_SPI_MOSI"           , 0)
-TFT_RS                 = platform.request("TFT_RS"                 , 0)
-TFT_RST                = platform.request("TFT_RST"                , 0)
-TFT_SPI_CS             = platform.request("TFT_SPI_CS"             , 0)
-
-#.......................................................................
-
+leds             = Cat(*[platform.request("user_led",         i) for i in range(16)])
+switches         = Cat(*[platform.request("user_sw" ,         i) for i in range(16)])
+buttons          = Cat(*[platform.request("user_btn",         i) for i in range(4) ])
+external_buttons = Cat(*[platform.request("external_buttons", i) for i in range(4) ])
+SystemClock      = ClockSignal()
+DAC_I2S_DATA     = platform.request("DAC_I2S_DATA", 0)
+DAC_I2S_CLK      = platform.request("DAC_I2S_CLK" , 0)
+DAC_I2S_WS       = platform.request("DAC_I2S_WS"  , 0)
+TFT_SPI_CLK      = platform.request("TFT_SPI_CLK" , 0)
+TFT_SPI_MOSI     = platform.request("TFT_SPI_MOSI", 0)
+TFT_RS           = platform.request("TFT_RS"      , 0)
+TFT_RST          = platform.request("TFT_RST"     , 0)
+TFT_SPI_CS       = platform.request("TFT_SPI_CS"  , 0)
+SD_SPI_CS        = platform.request("SD_SPI_CS"   , 0)
+SD_SPI_CLK       = platform.request("SD_SPI_CLK"  , 0)
+SD_SPI_MOSI      = platform.request("SD_SPI_MOSI" , 0)
+SD_SPI_MISO      = platform.request("SD_SPI_MISO" , 0)
 
 #-----------------------------------------------------------------------
 # DISEÑO
@@ -161,8 +167,6 @@ platform.add_source("Hardware/utilities/ButtonDebouncer.v")
 platform.add_source("Hardware/utilities/StereoSignedAdder.v")
 
 
-
-
 # Modulo Principal
 class SoC(SoCCore):
     csr_peripherals = [         
@@ -192,9 +196,8 @@ class SoC(SoCCore):
 
 
         
-        #self.submodules.Buttons = gpio.GPIOIn(buttons)
+        
         self.submodules.crg         = CRG(platform.request("clk100"),platform.request("cpu_reset"))
-
         self.submodules.Video_WB    = Video()
         self.submodules.Audio_WB    = Audio()
         self.submodules.Buttons_WB  = Buttons()         
