@@ -184,6 +184,7 @@ class SoC(SoCCore):
     def __init__(self, platform):
         interrupt_map= {
             'Buttons_WB': 7,
+            'SD_WB': 8,
         }
         SoCCore.interrupt_map.update(interrupt_map)
 
@@ -204,21 +205,11 @@ class SoC(SoCCore):
         self.submodules.Video_WB    = Video()
         self.submodules.Audio_WB    = Audio()
         self.submodules.Buttons_WB  = Buttons()
-        self.submodules.SD_WB       = SD()         
-
-        self.CLK                    = Signal()
-        self.Reset                  = Signal()        
+        self.submodules.SD_WB       = SD() 
+                
+        self.Reset                  = Signal()         
         
-        self.DAC_I2S_CLK            = Signal()
-        self.DAC_I2S_DATA           = Signal()
-        self.DAC_I2S_WS             = Signal()
-
-        self.TFT_SPI_MOSI           = Signal()
-        self.TFT_SPI_CLK            = Signal()
-        self.TFT_RS                 = Signal()
-        self.TFT_RST                = Signal()
-        self.TFT_SPI_CS             = Signal()
-
+        
         
          
         self.comb += [
@@ -247,6 +238,8 @@ class SoC(SoCCore):
             self.SD_WB.SD_SPI_MISO.eq(SD_SPI_MISO),
             self.SD_WB.CLK.eq(SystemClock),
             self.SD_WB.Reset.eq(self.Reset)
+
+            ##self.Reset.eq(Sys) 
         
   
         ]

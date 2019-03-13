@@ -21,6 +21,9 @@ void isr(void)
 	ButtonInterrupt = Buttons_WB_ev_pending_read();
 	irqs = irq_pending() & irq_getmask();
 
+	if(irqs & (1 << SD_WB_INTERRUPT)){
+		SD_isr();
+	}
 	if(irqs & (1 << UART_INTERRUPT)){
 		uart_isr();
 	}else if(irqs & (1 << BUTTONS_WB_INTERRUPT)){

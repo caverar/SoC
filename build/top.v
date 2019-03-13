@@ -24,21 +24,29 @@ module top(
 	input clk100
 );
 
+wire irq;
+wire DataClock_status;
+reg DataClock_pending = 1'd0;
+wire DataClock_trigger;
+reg DataClock_clear;
+reg DataClock_old_trigger = 1'd0;
 wire CLK;
 wire Reset;
 wire SD_SPI_MISO_1;
 wire SD_SPI_MOSI_1;
 wire SD_SPI_CLK_1;
 wire SD_SPI_CS_1;
-reg EnableDataWriteRegister_storage = 1'd0;
 reg [7:0] OuputDataRegister_storage = 8'd0;
 wire SPI_EnableRegister_storage;
-reg [7:0] InputDataRegisterCSR_status = 8'd0;
-reg EnableDataReadRegisterCSR_status = 1'd0;
-reg BussyDataWriteRegisterCSR_status = 1'd0;
+wire [7:0] InputDataRegisterCSR_status;
+wire DataClockRegisterCSR_status;
 wire [7:0] InputDataRegister;
-wire EnableDataReadRegister;
-wire BussyDataWriteRegister;
+wire DataClockRegister;
+wire xilinxvivadotoolchain_status_w;
+reg xilinxvivadotoolchain_pending_re = 1'd0;
+reg xilinxvivadotoolchain_pending_r = 1'd0;
+wire xilinxvivadotoolchain_pending_w;
+reg xilinxvivadotoolchain_storage = 1'd0;
 wire sys_clk;
 wire sys_rst;
 wire por_clk;
@@ -49,9 +57,9 @@ reg dummy_s;
 initial dummy_s <= 1'd0;
 // synthesis translate_on
 
-assign InputDataRegister = InputDataRegisterCSR_status;
-assign EnableDataReadRegister = EnableDataReadRegisterCSR_status;
-assign BussyDataWriteRegister = BussyDataWriteRegisterCSR_status;
+assign InputDataRegisterCSR_status = InputDataRegister;
+assign DataClockRegisterCSR_status = DataClockRegister;
+assign DataClock_trigger = DataClockRegister;
 assign SD_SPI_CS = SD_SPI_CS_1;
 assign SD_SPI_CLK = SD_SPI_CLK_1;
 assign SD_SPI_MOSI = SD_SPI_MOSI_1;
@@ -59,6 +67,23 @@ assign SD_SPI_MISO_1 = SD_SPI_MISO;
 assign CLK = sys_clk;
 assign Reset = cpu_reset;
 assign SPI_EnableRegister_storage = 1'd1;
+assign xilinxvivadotoolchain_status_w = DataClock_status;
+
+// synthesis translate_off
+reg dummy_d;
+// synthesis translate_on
+always @(*) begin
+	DataClock_clear <= 1'd0;
+	if ((xilinxvivadotoolchain_pending_re & xilinxvivadotoolchain_pending_r)) begin
+		DataClock_clear <= 1'd1;
+	end
+// synthesis translate_off
+	dummy_d <= dummy_s;
+// synthesis translate_on
+end
+assign xilinxvivadotoolchain_pending_w = DataClock_pending;
+assign irq = (xilinxvivadotoolchain_pending_w & xilinxvivadotoolchain_storage);
+assign DataClock_status = DataClock_trigger;
 assign sys_clk = clk100;
 assign por_clk = clk100;
 assign sys_rst = xilinxvivadotoolchain_int_rst;
@@ -67,15 +92,27 @@ always @(posedge por_clk) begin
 	xilinxvivadotoolchain_int_rst <= 1'd0;
 end
 
+always @(posedge sys_clk) begin
+	if (DataClock_clear) begin
+		DataClock_pending <= 1'd0;
+	end
+	DataClock_old_trigger <= DataClock_trigger;
+	if (((~DataClock_trigger) & DataClock_old_trigger)) begin
+		DataClock_pending <= 1'd1;
+	end
+	if (sys_rst) begin
+		DataClock_pending <= 1'd0;
+		DataClock_old_trigger <= 1'd0;
+	end
+end
+
 SD SD(
-	.EnableDataWriteRegister(EnableDataWriteRegister_storage),
 	.MasterCLK(CLK),
 	.OuputDataRegister(OuputDataRegister_storage),
 	.Reset(Reset),
 	.SPI_EnableRegister(SPI_EnableRegister_storage),
 	.SPI_MISO(SD_SPI_MISO_1),
-	.BussyDataWriteRegister(BussyDataWriteRegister),
-	.EnableDataReadRegister(EnableDataReadRegister),
+	.DataClockRegister(DataClockRegister),
 	.InputDataRegister(InputDataRegister),
 	.SPI_CLK(SD_SPI_CLK_1),
 	.SPI_CS(SD_SPI_CS_1),

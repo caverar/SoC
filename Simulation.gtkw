@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed Mar 13 00:21:02 2019
+[*] Wed Mar 13 04:08:33 2019
 [*]
 [dumpfile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/SoC.vcd"
-[dumpfile_mtime] "Tue Mar 12 22:16:11 2019"
-[dumpfile_size] 21108664
+[dumpfile_mtime] "Wed Mar 13 04:06:03 2019"
+[dumpfile_size] 21111194
 [savefile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Simulation.gtkw"
-[timestart] 0
+[timestart] 474600
 [size] 1283 713
 [pos] -1 -1
-*-21.748714 1720000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-14.748714 499000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] SD_SPI_TB.
 [treeopen] SD_SPI_TB.uut.
 [sst_width] 314

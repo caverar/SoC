@@ -1,0 +1,931 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Wed Mar 13 10:05:10 2019
+# Process ID: 9098
+# Current directory: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build
+# Command line: vivado -mode batch -source top.tcl
+# Log file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.log
+# Journal file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/vivado.jou
+#-----------------------------------------------------------
+source top.tcl
+# create_project -force -name top -part xc7a35tcpg236-1
+# set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:]
+# add_files {top.v}
+# set_property library work [get_files {top.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:]
+# read_xdc top.xdc
+# synth_design -top top -part xc7a35tcpg236-1
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9134 
+WARNING: [Synth 8-2611] redeclaration of ansi port I2SCLK is not allowed [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:142]
+WARNING: [Synth 8-992] I2S_CLK is already implicitly declared earlier [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:164]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1261.160 ; gain = 77.262 ; free physical = 491 ; free virtual = 4388
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Audio' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:2]
+INFO: [Synth 8-3876] $readmem data file 'SoundTrack.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:39]
+INFO: [Synth 8-3876] $readmem data file 'Track1.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:40]
+INFO: [Synth 8-3876] $readmem data file 'Track2.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:41]
+INFO: [Synth 8-6157] synthesizing module 'Audio_ClockManager' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:136]
+INFO: [Synth 8-6157] synthesizing module 'CM2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:3]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:51]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:51]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 55.125000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 78.125000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (1#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (3#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+INFO: [Synth 8-6157] synthesizing module 'BUFH' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'BUFH' (4#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'CM2' (5#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_ClockManager' (6#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:136]
+INFO: [Synth 8-6157] synthesizing module 'I2S' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SquareGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SquareGenerator' (7#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'I2S' (8#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:1]
+INFO: [Synth 8-6157] synthesizing module 'StereoSignedAdder' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'StereoSignedAdder' (9#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Synthesizer' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 227273 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 214517 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized0' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized1' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 202477 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized1' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 191113 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized2' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized3' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 180387 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized3' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized4' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 170262 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized4' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized5' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 160706 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized5' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized6' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 151686 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized6' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized7' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 143173 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized7' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized8' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 135137 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized8' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized9' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 127552 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized9' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized10' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 120394 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized10' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized11' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 113636 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized11' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized12' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 107258 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized12' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized13' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 101238 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized13' (10#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Synthesizer' (11#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+	Parameter MasterFrequency bound to: 100000000 - type: integer 
+	Parameter frequency bound to: 5 - type: integer 
+	Parameter bitsNumber bound to: 25 - type: integer 
+	Parameter limit bound to: 20000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator' (12#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Audio' (13#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top' (14#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.v:2]
+WARNING: [Synth 8-3331] design Synthesizer has unconnected port Reset
+WARNING: [Synth 8-3331] design Synthesizer has unconnected port InputDataClock
+WARNING: [Synth 8-3331] design top has unconnected port user_sw
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_1
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_2
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_3
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_4
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_5
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_6
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_7
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_8
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_9
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_10
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_11
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_12
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_13
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_14
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_15
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.410 ; gain = 109.512 ; free physical = 504 ; free virtual = 4403
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.410 ; gain = 109.512 ; free physical = 502 ; free virtual = 4403
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.410 ; gain = 109.512 ; free physical = 502 ; free virtual = 4403
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:67]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:69]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:69]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFGCE => BUFGCTRL: 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1621.754 ; gain = 0.000 ; free physical = 207 ; free virtual = 4148
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:45 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 296 ; free virtual = 4234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:45 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 293 ; free virtual = 4234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:45 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 295 ; free virtual = 4236
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "Track1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Track2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:46 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 285 ; free virtual = 4228
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 30    
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	               1K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 30    
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CM2 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module Audio_ClockManager 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module SquareGenerator 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+Module I2S 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module StereoSignedAdder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+Module Oscillator 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Oscillator__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module Synthesizer 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module FrequencyGenerator 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Audio 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               1K Bit         RAMs := 1     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element squaregenerator/data_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:10]
+WARNING: [Synth 8-3331] design Synthesizer has unconnected port Reset
+WARNING: [Synth 8-3331] design Synthesizer has unconnected port InputDataClock
+WARNING: [Synth 8-3331] design I2S has unconnected port MasterCLK
+WARNING: [Synth 8-3331] design top has unconnected port user_sw
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_1
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_2
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_3
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_4
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_5
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_6
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_7
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_8
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_9
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_10
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_11
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_12
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_13
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_14
+WARNING: [Synth 8-3331] design top has unconnected port user_sw_15
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectEnable_reg' (FD) to 'Audio/SoundEffectSelected_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSelected_reg[1]' (FD) to 'Audio/SoundEffectSelected_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSelected_reg[0] )
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[4]' (FD) to 'Audio/SoundEffectData_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[5]' (FD) to 'Audio/SoundEffectData_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[6]' (FD) to 'Audio/SoundEffectData_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectData_reg[7]' (FD) to 'Audio/SoundEffectData_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/E4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/E4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/D4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/D4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/C4/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/C4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B3/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/B3/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A3/data_reg[15]' (FDRE) to 'Audio/SoundTrackSynthesizer/A3/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/B4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/A4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/G4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/G4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/F4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/F4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/E4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/E4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/D4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/D4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/C4/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[15]' (FDRE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/B4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/ASharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/A4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/GSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/G4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/FSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/F4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/E4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/DSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/D4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/CSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/C4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/B3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/ASharp3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundTrackSynthesizer/A3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/B4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/ASharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/A4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/GSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/G4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/FSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/F4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/E4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/DSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/D4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/CSharp4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/C4/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/B3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/ASharp3/data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/A3/data_reg[14] )
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/E4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/D4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/C4/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B3/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A3/data_reg[13]' (FDSE) to 'Audio/SoundTrackSynthesizer/A3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/B4/data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/G4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/F4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/E4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/D4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[13]' (FDSE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/G4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/F4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/E4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/D4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/C4/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B3/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A3/data_reg[12]' (FDSE) to 'Audio/SoundTrackSynthesizer/A3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/B4/data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/GSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/G4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/G4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/FSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/F4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/F4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/E4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/E4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/DSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/D4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/D4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/CSharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/C4/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/C4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/B3/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/B3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/ASharp3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundEffectSynthesizer/A3/data_reg[12]' (FDSE) to 'Audio/SoundEffectSynthesizer/A3/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/B4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/B4/data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/ASharp4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/A4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/A4/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[11]' (FDSE) to 'Audio/SoundTrackSynthesizer/GSharp4/data_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectData_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/OutputData_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/SoundEffectSynthesizer/OutputData_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/i2s/Data_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Audio/i2s/Data_reg[14] )
+WARNING: [Synth 8-3332] Sequential element (Audio/i2s/Data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/B4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/ASharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/A4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/GSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/G4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/FSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/F4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/E4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/DSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/D4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/CSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/C4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/B3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/ASharp3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundTrackSynthesizer/A3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/GSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/GSharp4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/G4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/G4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/FSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/FSharp4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/F4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/F4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/E4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/E4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/DSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/DSharp4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/D4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/D4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/CSharp4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/CSharp4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/C4/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/C4/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/B3/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/ASharp3/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A3/data_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/A3/data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectCount_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectData_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSelected_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (Audio/SoundEffectSynthesizer/OutputData_reg[1]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:49 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 274 ; free virtual = 4214
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+----------------------+-----------+----------------------+----------------------------+
+|Module Name | RTL Object           | Inference | Size (Depth x Width) | Primitives                 | 
++------------+----------------------+-----------+----------------------+----------------------------+
+|top         | Audio/SoundTrack_reg | Implied   | 2 x 8                | RAM64X1D x 6  RAM64M x 6   | 
++------------+----------------------+-----------+----------------------+----------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:04 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 147 ; free virtual = 4092
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:04 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 142 ; free virtual = 4089
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+----------------------+-----------+----------------------+----------------------------+
+|Module Name | RTL Object           | Inference | Size (Depth x Width) | Primitives                 | 
++------------+----------------------+-----------+----------------------+----------------------------+
+|top         | Audio/SoundTrack_reg | Implied   | 2 x 8                | RAM64X1D x 6  RAM64M x 6   | 
++------------+----------------------+-----------+----------------------+----------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:05 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 153 ; free virtual = 4149
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 157 ; free virtual = 4149
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 157 ; free virtual = 4149
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 167 ; free virtual = 4149
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 167 ; free virtual = 4149
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 168 ; free virtual = 4149
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 168 ; free virtual = 4149
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |BUFGCE     |     2|
+|3     |BUFH       |     1|
+|4     |CARRY4     |    82|
+|5     |LUT1       |    27|
+|6     |LUT2       |    26|
+|7     |LUT3       |    18|
+|8     |LUT4       |    29|
+|9     |LUT5       |    44|
+|10    |LUT6       |    89|
+|11    |MMCME2_ADV |     1|
+|12    |MUXF7      |     4|
+|13    |MUXF8      |     2|
+|14    |RAM64M     |     6|
+|15    |RAM64X1D   |     6|
+|16    |FDRE       |   345|
+|17    |IBUF       |     1|
+|18    |OBUF       |     3|
++------+-----------+------+
+
+Report Instance Areas: 
++------+--------------------------+----------------------------+------+
+|      |Instance                  |Module                      |Cells |
++------+--------------------------+----------------------------+------+
+|1     |top                       |                            |   688|
+|2     |  Audio                   |Audio                       |   682|
+|3     |    SoundTrackSynthesizer |Synthesizer                 |   553|
+|4     |      A3                  |Oscillator                  |    37|
+|5     |      A4                  |Oscillator__parameterized11 |    37|
+|6     |      ASharp3             |Oscillator__parameterized0  |    35|
+|7     |      ASharp4             |Oscillator__parameterized12 |    34|
+|8     |      B3                  |Oscillator__parameterized1  |    42|
+|9     |      B4                  |Oscillator__parameterized13 |    37|
+|10    |      C4                  |Oscillator__parameterized2  |    37|
+|11    |      CSharp4             |Oscillator__parameterized3  |    38|
+|12    |      D4                  |Oscillator__parameterized4  |    39|
+|13    |      DSharp4             |Oscillator__parameterized5  |    41|
+|14    |      E4                  |Oscillator__parameterized6  |    39|
+|15    |      F4                  |Oscillator__parameterized7  |    34|
+|16    |      FSharp4             |Oscillator__parameterized8  |    33|
+|17    |      G4                  |Oscillator__parameterized9  |    33|
+|18    |      GSharp4             |Oscillator__parameterized10 |    35|
+|19    |    audio_clockmanager    |Audio_ClockManager          |    21|
+|20    |      cm2                 |CM2                         |    12|
+|21    |    i2s                   |I2S                         |    15|
+|22    |    spiInitClock          |FrequencyGenerator          |    43|
++------+--------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.754 ; gain = 437.855 ; free physical = 168 ; free virtual = 4149
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 73 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1621.754 ; gain = 109.512 ; free physical = 223 ; free virtual = 4204
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1621.762 ; gain = 437.855 ; free physical = 229 ; free virtual = 4210
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 104 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:67]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:69]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:69]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc:71]
+Finished Parsing XDC File [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  BUFGCE => BUFGCTRL: 2 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 6 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+215 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1621.762 ; gain = 437.977 ; free physical = 214 ; free virtual = 4197
+# report_timing_summary -file top_timing_synth.rpt
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1989.949 ; gain = 368.188 ; free physical = 134 ; free virtual = 3946
+INFO: [Common 17-344] 'report_timing_summary' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 13 10:07:16 2019...

@@ -9,7 +9,6 @@ module SD_SPI_TB ();
         .MasterCLK(clk),    
         .Reset(0),
         .SPI_MISO(0),
-        .EnableDataWriteRegister(0),
         .OuputDataRegister(0)        
     );
     initial begin

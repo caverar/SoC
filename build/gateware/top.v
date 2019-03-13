@@ -361,6 +361,12 @@ wire soc_Buttons_WB_Button1Interrupt;
 wire soc_Buttons_WB_Button2Interrupt;
 wire soc_Buttons_WB_Button3Interrupt;
 wire soc_Buttons_WB_Button4Interrupt;
+wire soc_SD_WB_irq;
+wire soc_SD_WB_DataClock_status;
+reg soc_SD_WB_DataClock_pending = 1'd0;
+wire soc_SD_WB_DataClock_trigger;
+reg soc_SD_WB_DataClock_clear;
+reg soc_SD_WB_DataClock_old_trigger = 1'd0;
 wire soc_SD_WB_CLK;
 wire soc_SD_WB_Reset;
 wire soc_SD_WB_SD_SPI_MISO;
@@ -376,22 +382,29 @@ reg soc_SD_WB_OuputDataRegister_re = 1'd0;
 reg soc_SD_WB_SPI_EnableRegister_storage_full = 1'd0;
 wire soc_SD_WB_SPI_EnableRegister_storage;
 reg soc_SD_WB_SPI_EnableRegister_re = 1'd0;
-reg [7:0] soc_SD_WB_InputDataRegisterCSR_status = 8'd0;
-reg soc_SD_WB_EnableDataReadRegisterCSR_status = 1'd0;
-reg soc_SD_WB_BussyDataWriteRegisterCSR_status = 1'd0;
+wire [7:0] soc_SD_WB_InputDataRegisterCSR_status;
+wire soc_SD_WB_DataClockRegisterCSR_status;
 wire [7:0] soc_SD_WB_InputDataRegister;
-wire soc_SD_WB_EnableDataReadRegister;
-wire soc_SD_WB_BussyDataWriteRegister;
+wire soc_SD_WB_DataClockRegister;
 reg soc_Reset = 1'd0;
-wire status_re;
-wire [3:0] status_r;
-reg [3:0] status_w;
-wire pending_re;
-wire [3:0] pending_r;
-reg [3:0] pending_w;
-reg [3:0] storage_full = 4'd0;
-wire [3:0] storage;
-reg re = 1'd0;
+wire buttons_status_re;
+wire [3:0] buttons_status_r;
+reg [3:0] buttons_status_w;
+wire buttons_pending_re;
+wire [3:0] buttons_pending_r;
+reg [3:0] buttons_pending_w;
+reg [3:0] buttons_storage_full = 4'd0;
+wire [3:0] buttons_storage;
+reg buttons_re = 1'd0;
+wire sd_status_re;
+wire sd_status_r;
+wire sd_status_w;
+wire sd_pending_re;
+wire sd_pending_r;
+wire sd_pending_w;
+reg sd_storage_full = 1'd0;
+wire sd_storage;
+reg sd_re = 1'd0;
 wire [29:0] shared_adr;
 wire [31:0] shared_dat_w;
 reg [31:0] shared_dat_r;
@@ -452,12 +465,12 @@ wire csrbank2_SPI_EnableRegister0_w;
 wire csrbank2_InputDataRegisterCSR_re;
 wire [7:0] csrbank2_InputDataRegisterCSR_r;
 wire [7:0] csrbank2_InputDataRegisterCSR_w;
-wire csrbank2_EnableDataReadRegisterCSR_re;
-wire csrbank2_EnableDataReadRegisterCSR_r;
-wire csrbank2_EnableDataReadRegisterCSR_w;
-wire csrbank2_BussyDataWriteRegisterCSR_re;
-wire csrbank2_BussyDataWriteRegisterCSR_r;
-wire csrbank2_BussyDataWriteRegisterCSR_w;
+wire csrbank2_DataClockRegisterCSR_re;
+wire csrbank2_DataClockRegisterCSR_r;
+wire csrbank2_DataClockRegisterCSR_w;
+wire csrbank2_ev_enable0_re;
+wire csrbank2_ev_enable0_r;
+wire csrbank2_ev_enable0_w;
 wire csrbank2_sel;
 wire [13:0] interface3_bank_bus_adr;
 wire interface3_bank_bus_we;
@@ -575,6 +588,7 @@ always @(*) begin
 	soc_lm32_interrupt[1] <= soc_timer0_irq;
 	soc_lm32_interrupt[2] <= soc_uart_irq;
 	soc_lm32_interrupt[7] <= soc_Buttons_WB_irq;
+	soc_lm32_interrupt[8] <= soc_SD_WB_irq;
 // synthesis translate_off
 	dummy_d <= dummy_s;
 // synthesis translate_on
@@ -797,7 +811,7 @@ reg dummy_d_10;
 // synthesis translate_on
 always @(*) begin
 	soc_Buttons_WB_button1_clear <= 1'd0;
-	if ((pending_re & pending_r[0])) begin
+	if ((buttons_pending_re & buttons_pending_r[0])) begin
 		soc_Buttons_WB_button1_clear <= 1'd1;
 	end
 // synthesis translate_off
@@ -810,7 +824,7 @@ reg dummy_d_11;
 // synthesis translate_on
 always @(*) begin
 	soc_Buttons_WB_button2_clear <= 1'd0;
-	if ((pending_re & pending_r[1])) begin
+	if ((buttons_pending_re & buttons_pending_r[1])) begin
 		soc_Buttons_WB_button2_clear <= 1'd1;
 	end
 // synthesis translate_off
@@ -823,7 +837,7 @@ reg dummy_d_12;
 // synthesis translate_on
 always @(*) begin
 	soc_Buttons_WB_button3_clear <= 1'd0;
-	if ((pending_re & pending_r[2])) begin
+	if ((buttons_pending_re & buttons_pending_r[2])) begin
 		soc_Buttons_WB_button3_clear <= 1'd1;
 	end
 // synthesis translate_off
@@ -835,11 +849,11 @@ end
 reg dummy_d_13;
 // synthesis translate_on
 always @(*) begin
-	status_w <= 4'd0;
-	status_w[0] <= soc_Buttons_WB_button1_status;
-	status_w[1] <= soc_Buttons_WB_button2_status;
-	status_w[2] <= soc_Buttons_WB_button3_status;
-	status_w[3] <= soc_Buttons_WB_button4_status;
+	buttons_status_w <= 4'd0;
+	buttons_status_w[0] <= soc_Buttons_WB_button1_status;
+	buttons_status_w[1] <= soc_Buttons_WB_button2_status;
+	buttons_status_w[2] <= soc_Buttons_WB_button3_status;
+	buttons_status_w[3] <= soc_Buttons_WB_button4_status;
 // synthesis translate_off
 	dummy_d_13 <= dummy_s;
 // synthesis translate_on
@@ -850,7 +864,7 @@ reg dummy_d_14;
 // synthesis translate_on
 always @(*) begin
 	soc_Buttons_WB_button4_clear <= 1'd0;
-	if ((pending_re & pending_r[3])) begin
+	if ((buttons_pending_re & buttons_pending_r[3])) begin
 		soc_Buttons_WB_button4_clear <= 1'd1;
 	end
 // synthesis translate_off
@@ -862,23 +876,40 @@ end
 reg dummy_d_15;
 // synthesis translate_on
 always @(*) begin
-	pending_w <= 4'd0;
-	pending_w[0] <= soc_Buttons_WB_button1_pending;
-	pending_w[1] <= soc_Buttons_WB_button2_pending;
-	pending_w[2] <= soc_Buttons_WB_button3_pending;
-	pending_w[3] <= soc_Buttons_WB_button4_pending;
+	buttons_pending_w <= 4'd0;
+	buttons_pending_w[0] <= soc_Buttons_WB_button1_pending;
+	buttons_pending_w[1] <= soc_Buttons_WB_button2_pending;
+	buttons_pending_w[2] <= soc_Buttons_WB_button3_pending;
+	buttons_pending_w[3] <= soc_Buttons_WB_button4_pending;
 // synthesis translate_off
 	dummy_d_15 <= dummy_s;
 // synthesis translate_on
 end
-assign soc_Buttons_WB_irq = ((((pending_w[0] & storage[0]) | (pending_w[1] & storage[1])) | (pending_w[2] & storage[2])) | (pending_w[3] & storage[3]));
+assign soc_Buttons_WB_irq = ((((buttons_pending_w[0] & buttons_storage[0]) | (buttons_pending_w[1] & buttons_storage[1])) | (buttons_pending_w[2] & buttons_storage[2])) | (buttons_pending_w[3] & buttons_storage[3]));
 assign soc_Buttons_WB_button1_status = 1'd0;
 assign soc_Buttons_WB_button2_status = 1'd0;
 assign soc_Buttons_WB_button3_status = 1'd0;
 assign soc_Buttons_WB_button4_status = 1'd0;
-assign soc_SD_WB_InputDataRegister = soc_SD_WB_InputDataRegisterCSR_status;
-assign soc_SD_WB_EnableDataReadRegister = soc_SD_WB_EnableDataReadRegisterCSR_status;
-assign soc_SD_WB_BussyDataWriteRegister = soc_SD_WB_BussyDataWriteRegisterCSR_status;
+assign soc_SD_WB_InputDataRegisterCSR_status = soc_SD_WB_InputDataRegister;
+assign soc_SD_WB_DataClockRegisterCSR_status = soc_SD_WB_DataClockRegister;
+assign soc_SD_WB_DataClock_trigger = soc_SD_WB_DataClockRegister;
+assign sd_status_w = soc_SD_WB_DataClock_status;
+
+// synthesis translate_off
+reg dummy_d_16;
+// synthesis translate_on
+always @(*) begin
+	soc_SD_WB_DataClock_clear <= 1'd0;
+	if ((sd_pending_re & sd_pending_r)) begin
+		soc_SD_WB_DataClock_clear <= 1'd1;
+	end
+// synthesis translate_off
+	dummy_d_16 <= dummy_s;
+// synthesis translate_on
+end
+assign sd_pending_w = soc_SD_WB_DataClock_pending;
+assign soc_SD_WB_irq = (sd_pending_w & sd_storage);
+assign soc_SD_WB_DataClock_status = soc_SD_WB_DataClock_trigger;
 assign shared_adr = array_muxed0;
 assign shared_dat_w = array_muxed1;
 assign shared_sel = array_muxed2;
@@ -896,7 +927,7 @@ assign soc_lm32_dbus_err = (shared_err & (grant == 1'd1));
 assign request = {soc_lm32_dbus_cyc, soc_lm32_ibus_cyc};
 
 // synthesis translate_off
-reg dummy_d_16;
+reg dummy_d_17;
 // synthesis translate_on
 always @(*) begin
 	slave_sel <= 4'd0;
@@ -905,7 +936,7 @@ always @(*) begin
 	slave_sel[2] <= (shared_adr[28:26] == 3'd4);
 	slave_sel[3] <= (shared_adr[28:26] == 3'd6);
 // synthesis translate_off
-	dummy_d_16 <= dummy_s;
+	dummy_d_17 <= dummy_s;
 // synthesis translate_on
 end
 assign soc_rom_bus_adr = shared_adr;
@@ -944,7 +975,7 @@ assign shared_err = (((soc_rom_bus_err | soc_sram_bus_err) | soc_main_ram_bus_er
 assign wait_1 = ((shared_stb & shared_cyc) & (~shared_ack));
 
 // synthesis translate_off
-reg dummy_d_17;
+reg dummy_d_18;
 // synthesis translate_on
 always @(*) begin
 	shared_dat_r <= 32'd0;
@@ -958,7 +989,7 @@ always @(*) begin
 		error <= 1'd1;
 	end
 // synthesis translate_off
-	dummy_d_17 <= dummy_s;
+	dummy_d_18 <= dummy_s;
 // synthesis translate_on
 end
 assign done = (count == 1'd0);
@@ -978,15 +1009,15 @@ assign csrbank0_InitializationEnableRegister0_w = soc_Audio_WB_InitializationEna
 assign csrbank1_sel = (interface1_bank_bus_adr[13:9] == 4'd10);
 assign csrbank1_DataRegister_r = interface1_bank_bus_dat_w[3:0];
 assign csrbank1_DataRegister_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 1'd0));
-assign status_r = interface1_bank_bus_dat_w[3:0];
-assign status_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 1'd1));
-assign pending_r = interface1_bank_bus_dat_w[3:0];
-assign pending_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 2'd2));
+assign buttons_status_r = interface1_bank_bus_dat_w[3:0];
+assign buttons_status_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 1'd1));
+assign buttons_pending_r = interface1_bank_bus_dat_w[3:0];
+assign buttons_pending_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 2'd2));
 assign csrbank1_ev_enable0_r = interface1_bank_bus_dat_w[3:0];
 assign csrbank1_ev_enable0_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 2'd3));
 assign csrbank1_DataRegister_w = soc_Buttons_WB_DataRegister_status[3:0];
-assign storage = storage_full[3:0];
-assign csrbank1_ev_enable0_w = storage_full[3:0];
+assign buttons_storage = buttons_storage_full[3:0];
+assign csrbank1_ev_enable0_w = buttons_storage_full[3:0];
 assign csrbank2_sel = (interface2_bank_bus_adr[13:9] == 4'd11);
 assign csrbank2_EnableDataWriteRegister0_r = interface2_bank_bus_dat_w[0];
 assign csrbank2_EnableDataWriteRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 1'd0));
@@ -996,10 +1027,14 @@ assign csrbank2_SPI_EnableRegister0_r = interface2_bank_bus_dat_w[0];
 assign csrbank2_SPI_EnableRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 2'd2));
 assign csrbank2_InputDataRegisterCSR_r = interface2_bank_bus_dat_w[7:0];
 assign csrbank2_InputDataRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 2'd3));
-assign csrbank2_EnableDataReadRegisterCSR_r = interface2_bank_bus_dat_w[0];
-assign csrbank2_EnableDataReadRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd4));
-assign csrbank2_BussyDataWriteRegisterCSR_r = interface2_bank_bus_dat_w[0];
-assign csrbank2_BussyDataWriteRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd5));
+assign csrbank2_DataClockRegisterCSR_r = interface2_bank_bus_dat_w[0];
+assign csrbank2_DataClockRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd4));
+assign sd_status_r = interface2_bank_bus_dat_w[0];
+assign sd_status_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd5));
+assign sd_pending_r = interface2_bank_bus_dat_w[0];
+assign sd_pending_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd6));
+assign csrbank2_ev_enable0_r = interface2_bank_bus_dat_w[0];
+assign csrbank2_ev_enable0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd7));
 assign soc_SD_WB_EnableDataWriteRegister_storage = soc_SD_WB_EnableDataWriteRegister_storage_full;
 assign csrbank2_EnableDataWriteRegister0_w = soc_SD_WB_EnableDataWriteRegister_storage_full;
 assign soc_SD_WB_OuputDataRegister_storage = soc_SD_WB_OuputDataRegister_storage_full[7:0];
@@ -1007,8 +1042,9 @@ assign csrbank2_OuputDataRegister0_w = soc_SD_WB_OuputDataRegister_storage_full[
 assign soc_SD_WB_SPI_EnableRegister_storage = soc_SD_WB_SPI_EnableRegister_storage_full;
 assign csrbank2_SPI_EnableRegister0_w = soc_SD_WB_SPI_EnableRegister_storage_full;
 assign csrbank2_InputDataRegisterCSR_w = soc_SD_WB_InputDataRegisterCSR_status[7:0];
-assign csrbank2_EnableDataReadRegisterCSR_w = soc_SD_WB_EnableDataReadRegisterCSR_status;
-assign csrbank2_BussyDataWriteRegisterCSR_w = soc_SD_WB_BussyDataWriteRegisterCSR_status;
+assign csrbank2_DataClockRegisterCSR_w = soc_SD_WB_DataClockRegisterCSR_status;
+assign sd_storage = sd_storage_full;
+assign csrbank2_ev_enable0_w = sd_storage_full;
 assign csrbank3_sel = (interface3_bank_bus_adr[13:9] == 4'd8);
 assign csrbank3_TilesControlRegisterCSR0_r = interface3_bank_bus_dat_w[13:0];
 assign csrbank3_TilesControlRegisterCSR0_re = ((csrbank3_sel & interface3_bank_bus_we) & (interface3_bank_bus_adr[0] == 1'd0));
@@ -1027,7 +1063,7 @@ assign csrbank4_bus_errors_w = soc_ctrl_bus_errors_status[31:0];
 assign sel = (sram_bus_adr[13:9] == 3'd4);
 
 // synthesis translate_off
-reg dummy_d_18;
+reg dummy_d_19;
 // synthesis translate_on
 always @(*) begin
 	sram_bus_dat_r <= 32'd0;
@@ -1035,7 +1071,7 @@ always @(*) begin
 		sram_bus_dat_r <= dat_r;
 	end
 // synthesis translate_off
-	dummy_d_18 <= dummy_s;
+	dummy_d_19 <= dummy_s;
 // synthesis translate_on
 end
 assign adr = sram_bus_adr[5:0];
@@ -1117,7 +1153,7 @@ assign sram_bus_dat_w = soc_interface_dat_w;
 assign soc_interface_dat_r = ((((((((interface0_bank_bus_dat_r | interface1_bank_bus_dat_r) | interface2_bank_bus_dat_r) | interface3_bank_bus_dat_r) | interface4_bank_bus_dat_r) | interface5_bank_bus_dat_r) | interface6_bank_bus_dat_r) | interface7_bank_bus_dat_r) | sram_bus_dat_r);
 
 // synthesis translate_off
-reg dummy_d_19;
+reg dummy_d_20;
 // synthesis translate_on
 always @(*) begin
 	array_muxed0 <= 30'd0;
@@ -1130,12 +1166,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_19 <= dummy_s;
+	dummy_d_20 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_20;
+reg dummy_d_21;
 // synthesis translate_on
 always @(*) begin
 	array_muxed1 <= 32'd0;
@@ -1148,12 +1184,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_20 <= dummy_s;
+	dummy_d_21 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_21;
+reg dummy_d_22;
 // synthesis translate_on
 always @(*) begin
 	array_muxed2 <= 4'd0;
@@ -1166,12 +1202,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_21 <= dummy_s;
+	dummy_d_22 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_22;
+reg dummy_d_23;
 // synthesis translate_on
 always @(*) begin
 	array_muxed3 <= 1'd0;
@@ -1184,12 +1220,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_22 <= dummy_s;
+	dummy_d_23 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_23;
+reg dummy_d_24;
 // synthesis translate_on
 always @(*) begin
 	array_muxed4 <= 1'd0;
@@ -1202,12 +1238,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_23 <= dummy_s;
+	dummy_d_24 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_24;
+reg dummy_d_25;
 // synthesis translate_on
 always @(*) begin
 	array_muxed5 <= 1'd0;
@@ -1220,12 +1256,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_24 <= dummy_s;
+	dummy_d_25 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_25;
+reg dummy_d_26;
 // synthesis translate_on
 always @(*) begin
 	array_muxed6 <= 3'd0;
@@ -1238,12 +1274,12 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_25 <= dummy_s;
+	dummy_d_26 <= dummy_s;
 // synthesis translate_on
 end
 
 // synthesis translate_off
-reg dummy_d_26;
+reg dummy_d_27;
 // synthesis translate_on
 always @(*) begin
 	array_muxed7 <= 2'd0;
@@ -1256,7 +1292,7 @@ always @(*) begin
 		end
 	endcase
 // synthesis translate_off
-	dummy_d_26 <= dummy_s;
+	dummy_d_27 <= dummy_s;
 // synthesis translate_on
 end
 assign soc_uart_phy_rx = regs1;
@@ -1478,6 +1514,13 @@ always @(posedge sys_clk) begin
 	if (soc_Buttons_WB_button4_trigger) begin
 		soc_Buttons_WB_button4_pending <= 1'd1;
 	end
+	if (soc_SD_WB_DataClock_clear) begin
+		soc_SD_WB_DataClock_pending <= 1'd0;
+	end
+	soc_SD_WB_DataClock_old_trigger <= soc_SD_WB_DataClock_trigger;
+	if (((~soc_SD_WB_DataClock_trigger) & soc_SD_WB_DataClock_old_trigger)) begin
+		soc_SD_WB_DataClock_pending <= 1'd1;
+	end
 	case (grant)
 		1'd0: begin
 			if ((~request[0])) begin
@@ -1535,10 +1578,10 @@ always @(posedge sys_clk) begin
 				interface1_bank_bus_dat_r <= csrbank1_DataRegister_w;
 			end
 			1'd1: begin
-				interface1_bank_bus_dat_r <= status_w;
+				interface1_bank_bus_dat_r <= buttons_status_w;
 			end
 			2'd2: begin
-				interface1_bank_bus_dat_r <= pending_w;
+				interface1_bank_bus_dat_r <= buttons_pending_w;
 			end
 			2'd3: begin
 				interface1_bank_bus_dat_r <= csrbank1_ev_enable0_w;
@@ -1546,9 +1589,9 @@ always @(posedge sys_clk) begin
 		endcase
 	end
 	if (csrbank1_ev_enable0_re) begin
-		storage_full[3:0] <= csrbank1_ev_enable0_r;
+		buttons_storage_full[3:0] <= csrbank1_ev_enable0_r;
 	end
-	re <= csrbank1_ev_enable0_re;
+	buttons_re <= csrbank1_ev_enable0_re;
 	interface2_bank_bus_dat_r <= 1'd0;
 	if (csrbank2_sel) begin
 		case (interface2_bank_bus_adr[2:0])
@@ -1565,10 +1608,16 @@ always @(posedge sys_clk) begin
 				interface2_bank_bus_dat_r <= csrbank2_InputDataRegisterCSR_w;
 			end
 			3'd4: begin
-				interface2_bank_bus_dat_r <= csrbank2_EnableDataReadRegisterCSR_w;
+				interface2_bank_bus_dat_r <= csrbank2_DataClockRegisterCSR_w;
 			end
 			3'd5: begin
-				interface2_bank_bus_dat_r <= csrbank2_BussyDataWriteRegisterCSR_w;
+				interface2_bank_bus_dat_r <= sd_status_w;
+			end
+			3'd6: begin
+				interface2_bank_bus_dat_r <= sd_pending_w;
+			end
+			3'd7: begin
+				interface2_bank_bus_dat_r <= csrbank2_ev_enable0_w;
 			end
 		endcase
 	end
@@ -1584,6 +1633,10 @@ always @(posedge sys_clk) begin
 		soc_SD_WB_SPI_EnableRegister_storage_full <= csrbank2_SPI_EnableRegister0_r;
 	end
 	soc_SD_WB_SPI_EnableRegister_re <= csrbank2_SPI_EnableRegister0_re;
+	if (csrbank2_ev_enable0_re) begin
+		sd_storage_full <= csrbank2_ev_enable0_r;
+	end
+	sd_re <= csrbank2_ev_enable0_re;
 	interface3_bank_bus_dat_r <= 1'd0;
 	if (csrbank3_sel) begin
 		case (interface3_bank_bus_adr[0])
@@ -1767,14 +1820,18 @@ always @(posedge sys_clk) begin
 		soc_Buttons_WB_button2_pending <= 1'd0;
 		soc_Buttons_WB_button3_pending <= 1'd0;
 		soc_Buttons_WB_button4_pending <= 1'd0;
+		soc_SD_WB_DataClock_pending <= 1'd0;
+		soc_SD_WB_DataClock_old_trigger <= 1'd0;
 		soc_SD_WB_EnableDataWriteRegister_storage_full <= 1'd0;
 		soc_SD_WB_EnableDataWriteRegister_re <= 1'd0;
 		soc_SD_WB_OuputDataRegister_storage_full <= 8'd0;
 		soc_SD_WB_OuputDataRegister_re <= 1'd0;
 		soc_SD_WB_SPI_EnableRegister_storage_full <= 1'd0;
 		soc_SD_WB_SPI_EnableRegister_re <= 1'd0;
-		storage_full <= 4'd0;
-		re <= 1'd0;
+		buttons_storage_full <= 4'd0;
+		buttons_re <= 1'd0;
+		sd_storage_full <= 1'd0;
+		sd_re <= 1'd0;
 		grant <= 1'd0;
 		slave_sel_r <= 4'd0;
 		count <= 20'd1000000;
@@ -1872,35 +1929,35 @@ initial begin
 	$readmemh("mem_2.init", mem_2);
 end
 
-reg [9:0] storage_1[0:15];
+reg [9:0] storage[0:15];
 reg [9:0] memdat;
 reg [9:0] memdat_1;
 always @(posedge sys_clk) begin
 	if (soc_uart_tx_fifo_wrport_we)
-		storage_1[soc_uart_tx_fifo_wrport_adr] <= soc_uart_tx_fifo_wrport_dat_w;
-	memdat <= storage_1[soc_uart_tx_fifo_wrport_adr];
+		storage[soc_uart_tx_fifo_wrport_adr] <= soc_uart_tx_fifo_wrport_dat_w;
+	memdat <= storage[soc_uart_tx_fifo_wrport_adr];
 end
 
 always @(posedge sys_clk) begin
 	if (soc_uart_tx_fifo_rdport_re)
-		memdat_1 <= storage_1[soc_uart_tx_fifo_rdport_adr];
+		memdat_1 <= storage[soc_uart_tx_fifo_rdport_adr];
 end
 
 assign soc_uart_tx_fifo_wrport_dat_r = memdat;
 assign soc_uart_tx_fifo_rdport_dat_r = memdat_1;
 
-reg [9:0] storage_2[0:15];
+reg [9:0] storage_1[0:15];
 reg [9:0] memdat_2;
 reg [9:0] memdat_3;
 always @(posedge sys_clk) begin
 	if (soc_uart_rx_fifo_wrport_we)
-		storage_2[soc_uart_rx_fifo_wrport_adr] <= soc_uart_rx_fifo_wrport_dat_w;
-	memdat_2 <= storage_2[soc_uart_rx_fifo_wrport_adr];
+		storage_1[soc_uart_rx_fifo_wrport_adr] <= soc_uart_rx_fifo_wrport_dat_w;
+	memdat_2 <= storage_1[soc_uart_rx_fifo_wrport_adr];
 end
 
 always @(posedge sys_clk) begin
 	if (soc_uart_rx_fifo_rdport_re)
-		memdat_3 <= storage_2[soc_uart_rx_fifo_rdport_adr];
+		memdat_3 <= storage_1[soc_uart_rx_fifo_rdport_adr];
 end
 
 assign soc_uart_rx_fifo_wrport_dat_r = memdat_2;
@@ -1951,14 +2008,12 @@ Buttons Buttons(
 );
 
 SD SD(
-	.EnableDataWriteRegister(soc_SD_WB_EnableDataWriteRegister_storage),
 	.MasterCLK(soc_SD_WB_CLK),
 	.OuputDataRegister(soc_SD_WB_OuputDataRegister_storage),
 	.Reset(soc_SD_WB_Reset),
 	.SPI_EnableRegister(soc_SD_WB_SPI_EnableRegister_storage),
 	.SPI_MISO(soc_SD_WB_SD_SPI_MISO),
-	.BussyDataWriteRegister(soc_SD_WB_BussyDataWriteRegister),
-	.EnableDataReadRegister(soc_SD_WB_EnableDataReadRegister),
+	.DataClockRegister(soc_SD_WB_DataClockRegister),
 	.InputDataRegister(soc_SD_WB_InputDataRegister),
 	.SPI_CLK(soc_SD_WB_SD_SPI_CLK),
 	.SPI_CS(soc_SD_WB_SD_SPI_CS),

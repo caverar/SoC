@@ -5,11 +5,9 @@ module SD(
     output wire       SPI_MOSI,
     output wire       SPI_CLK,
     output wire       SPI_CS,
-    output wire       EnableDataReadRegister,
+    output wire       DataClockRegister, 
     output reg  [7:0] InputDataRegister,
-    input  wire       EnableDataWriteRegister,
     input  wire [7:0] OuputDataRegister,
-    output wire       BussyDataWriteRegister,
     input  wire       SPI_EnableRegister 
     );
 
@@ -27,24 +25,21 @@ module SD(
         .SPI_MISO(SPI_MISO),
         .SPI_CLK(SPI_CLK),
         .MasterCLK(MasterCLK),        
-        .DataClk(DataClock),
-        .SPI_Enable(SPI_EnableRegister),
-        .WriteCLK(WriteCLK),
-        .ReadCLK(ReadCLK)
+        .DataClk(DataClockRegister),
+        .SPI_Enable(SPI_EnableRegister)
     );
 
-    assign EnableDataReadRegister = ReadCLK;
-    assign BussyDataWriteRegister = WriteCLK;
     
     assign SPI_CS=(SPI_EnableRegister)? 0:1;
-    always@(posedge MasterCLK) begin
-        //lectura
-        InputDataRegister<=InputData;
 
-        //Escritura
-        if(EnableDataWriteRegister)begin
-            OutputData<=OuputDataRegister;  
-        end
+    always@(posedge MasterCLK) begin
+        if(SPI_EnableRegister)begin 
+            //lectura
+            InputDataRegister<=InputData;
+            //Escritura       
+            OutputData<=OuputDataRegister;
+        end  
+       
 
     end
     

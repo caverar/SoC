@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Tue Mar 12 20:26:42 2019
+| Date         : Wed Mar 13 11:03:06 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_utilization -file top_utilization_synth.rpt
 | Design       : top
@@ -35,10 +35,10 @@ Table of Contents
 |   LUT as Memory            |  104 |     0 |      9600 |  1.08 |
 |     LUT as Distributed RAM |  104 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 2718 |     0 |     41600 |  6.53 |
-|   Register as Flip Flop    | 2718 |     0 |     41600 |  6.53 |
+| Slice Registers            | 2746 |     0 |     41600 |  6.60 |
+|   Register as Flip Flop    | 2746 |     0 |     41600 |  6.60 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                   |   24 |     0 |     16300 |  0.15 |
+| F7 Muxes                   |   23 |     0 |     16300 |  0.14 |
 | F8 Muxes                   |    3 |     0 |      8150 |  0.04 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 4     |          Yes |           - |        Reset |
 | 84    |          Yes |         Set |            - |
-| 2630  |          Yes |       Reset |            - |
+| 2658  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -95,8 +95,8 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   19 |    19 |       106 | 17.92 |
-|   IOB Master Pads           |   11 |       |           |       |
+| Bonded IOB                  |   20 |    20 |       106 | 18.87 |
+|   IOB Master Pads           |   12 |       |           |       |
 |   IOB Slave Pads            |    8 |       |           |       |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
@@ -156,22 +156,22 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 2630 |        Flop & Latch |
-| LUT6       |  975 |                 LUT |
-| LUT5       |  475 |                 LUT |
-| LUT2       |  468 |                 LUT |
-| LUT3       |  431 |                 LUT |
-| LUT4       |  416 |                 LUT |
+| FDRE       | 2658 |        Flop & Latch |
+| LUT6       | 1008 |                 LUT |
+| LUT3       |  471 |                 LUT |
+| LUT2       |  462 |                 LUT |
+| LUT5       |  446 |                 LUT |
+| LUT4       |  392 |                 LUT |
 | CARRY4     |  319 |          CarryLogic |
-| LUT1       |  146 |                 LUT |
+| LUT1       |  147 |                 LUT |
 | RAMD32     |   96 |  Distributed Memory |
 | FDSE       |   84 |        Flop & Latch |
 | RAMD64E    |   40 |  Distributed Memory |
 | RAMS32     |   32 |  Distributed Memory |
-| MUXF7      |   24 |               MuxFx |
+| MUXF7      |   23 |               MuxFx |
 | OBUF       |   12 |                  IO |
 | RAMB36E1   |   11 |        Block Memory |
-| IBUF       |    7 |                  IO |
+| IBUF       |    8 |                  IO |
 | BUFGCTRL   |    5 |               Clock |
 | BUFG       |    5 |               Clock |
 | RAMB18E1   |    4 |        Block Memory |

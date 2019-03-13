@@ -113,17 +113,38 @@ static inline unsigned int SD_WB_InputDataRegisterCSR_read(void) {
 	unsigned int r = csr_readl(0xe000580c);
 	return r;
 }
-#define CSR_SD_WB_ENABLEDATAREADREGISTERCSR_ADDR 0xe0005810
-#define CSR_SD_WB_ENABLEDATAREADREGISTERCSR_SIZE 1
-static inline unsigned int SD_WB_EnableDataReadRegisterCSR_read(void) {
+#define CSR_SD_WB_DATACLOCKREGISTERCSR_ADDR 0xe0005810
+#define CSR_SD_WB_DATACLOCKREGISTERCSR_SIZE 1
+static inline unsigned int SD_WB_DataClockRegisterCSR_read(void) {
 	unsigned int r = csr_readl(0xe0005810);
 	return r;
 }
-#define CSR_SD_WB_BUSSYDATAWRITEREGISTERCSR_ADDR 0xe0005814
-#define CSR_SD_WB_BUSSYDATAWRITEREGISTERCSR_SIZE 1
-static inline unsigned int SD_WB_BussyDataWriteRegisterCSR_read(void) {
+#define CSR_SD_WB_EV_STATUS_ADDR 0xe0005814
+#define CSR_SD_WB_EV_STATUS_SIZE 1
+static inline unsigned int SD_WB_ev_status_read(void) {
 	unsigned int r = csr_readl(0xe0005814);
 	return r;
+}
+static inline void SD_WB_ev_status_write(unsigned int value) {
+	csr_writel(value, 0xe0005814);
+}
+#define CSR_SD_WB_EV_PENDING_ADDR 0xe0005818
+#define CSR_SD_WB_EV_PENDING_SIZE 1
+static inline unsigned int SD_WB_ev_pending_read(void) {
+	unsigned int r = csr_readl(0xe0005818);
+	return r;
+}
+static inline void SD_WB_ev_pending_write(unsigned int value) {
+	csr_writel(value, 0xe0005818);
+}
+#define CSR_SD_WB_EV_ENABLE_ADDR 0xe000581c
+#define CSR_SD_WB_EV_ENABLE_SIZE 1
+static inline unsigned int SD_WB_ev_enable_read(void) {
+	unsigned int r = csr_readl(0xe000581c);
+	return r;
+}
+static inline void SD_WB_ev_enable_write(unsigned int value) {
+	csr_writel(value, 0xe000581c);
 }
 
 /* Video_WB */
@@ -319,6 +340,10 @@ static inline int uart_interrupt_read(void) {
 #define BUTTONS_WB_INTERRUPT 7
 static inline int buttons_wb_interrupt_read(void) {
 	return 7;
+}
+#define SD_WB_INTERRUPT 8
+static inline int sd_wb_interrupt_read(void) {
+	return 8;
 }
 #define CSR_DATA_WIDTH 32
 static inline int csr_data_width_read(void) {
