@@ -14,7 +14,8 @@ from litex.soc.integration.builder import *
 from Hardware.Video import Video
 from Hardware.Audio import Audio
 from Hardware.Buttons import Buttons
-from litex.soc.cores import gpio
+from Hardware.SD import SD
+
 ##from ios import Led
 
 
@@ -157,8 +158,9 @@ platform.add_source("Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator
 platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v")
 platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v")
 platform.add_source("Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v")
-
-
+#   SD
+platform.add_source("Hardware/Peripheral_SD/SD.v")
+platform.add_source("Hardware/Peripheral_SD/FullSPI.v")
 #	utilities
 
 platform.add_source("Hardware/utilities/FrequencyGenerator.v")
@@ -173,6 +175,7 @@ class SoC(SoCCore):
         "Video_WB",
         "Audio_WB",
         "Buttons_WB",
+        "SD_WB"
     ]    
     
     csr_map_update(SoCCore.csr_map, csr_peripherals)
@@ -200,7 +203,8 @@ class SoC(SoCCore):
         self.submodules.crg         = CRG(platform.request("clk100"),platform.request("cpu_reset"))
         self.submodules.Video_WB    = Video()
         self.submodules.Audio_WB    = Audio()
-        self.submodules.Buttons_WB  = Buttons()         
+        self.submodules.Buttons_WB  = Buttons()
+        self.submodules.SD_WB       = SD()         
 
         self.CLK                    = Signal()
         self.Reset                  = Signal()        
@@ -233,12 +237,16 @@ class SoC(SoCCore):
 
             self.Audio_WB.CLK.eq(SystemClock),            
             self.Audio_WB.Reset.eq(self.Reset), 
-            
-            
-
             DAC_I2S_DATA.eq(self.Audio_WB.DAC_I2S_DATA),
             DAC_I2S_WS.eq(self.Audio_WB.DAC_I2S_WS),
-            DAC_I2S_CLK.eq(self.Audio_WB.DAC_I2S_CLK)
+            DAC_I2S_CLK.eq(self.Audio_WB.DAC_I2S_CLK),
+
+            SD_SPI_CS.eq(self.SD_WB.SD_SPI_CS),
+            SD_SPI_CLK.eq(self.SD_WB.SD_SPI_CLK),
+            SD_SPI_MOSI.eq(self.SD_WB.SD_SPI_MOSI),
+            self.SD_WB.SD_SPI_MISO.eq(SD_SPI_MISO),
+            self.SD_WB.CLK.eq(SystemClock),
+            self.SD_WB.Reset.eq(self.Reset)
         
   
         ]

@@ -1,24 +1,36 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Tue Mar 12 16:55:25 2019
+[*] Wed Mar 13 00:21:02 2019
 [*]
 [dumpfile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/SoC.vcd"
-[dumpfile_mtime] "Tue Mar 12 16:54:07 2019"
-[dumpfile_size] 702
+[dumpfile_mtime] "Tue Mar 12 22:16:11 2019"
+[dumpfile_size] 21108664
 [savefile] "/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Simulation.gtkw"
 [timestart] 0
 [size] 1283 713
 [pos] -1 -1
-*-25.748714 42200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-21.748714 1720000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] SD_SPI_TB.
+[treeopen] SD_SPI_TB.uut.
 [sst_width] 314
-[signals_width] 307
+[signals_width] 229
 [sst_expanded] 1
 [sst_vpaned_height] 193
 @28
-SD_SPI_TB.uut.MasterCLK
-SD_SPI_TB.uut.DataCLK
+SD_SPI_TB.uut.spi.MasterCLK
+@24
+SD_SPI_TB.uut.spi.DataCLKCount[11:0]
+@28
+SD_SPI_TB.uut.spi.DataCLK
 @29
-SD_SPI_TB.uut.BussyDataWriteRegister
+SD_SPI_TB.uut.spi.DataClk
+@28
+SD_SPI_TB.uut.spi.ReadCLK
+SD_SPI_TB.uut.spi.WriteCLK
+@24
+SD_SPI_TB.uut.spi.spiCount[7:0]
+@28
+SD_SPI_TB.uut.spi.SPI_InputCLK
+SD_SPI_TB.uut.spi.count[2:0]
 [pattern_trace] 1
 [pattern_trace] 0

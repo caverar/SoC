@@ -11,7 +11,8 @@
                 "-o",
                 "SoC.out",
                 "Hardware/Peripheral_SD/SD_TB.v",
-                "Hardware/Peripheral_SD/SD.v"
+                "Hardware/Peripheral_SD/SD.v",
+                "Hardware/Peripheral_SD/FullSPI.v"
                 
                 
                 // "utilities/ClockManager.v",               

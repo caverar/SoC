@@ -46,15 +46,18 @@ set_property IOSTANDARD LVCMOS33 [get_ports user_sw_14]
  ## user_sw:15
 set_property LOC R2 [get_ports user_sw_15]
 set_property IOSTANDARD LVCMOS33 [get_ports user_sw_15]
- ## I2S_DATA:0
-set_property LOC A16 [get_ports I2S_DATA]
-set_property IOSTANDARD LVCMOS33 [get_ports I2S_DATA]
- ## I2S_CLK:0
-set_property LOC B15 [get_ports I2S_CLK]
-set_property IOSTANDARD LVCMOS33 [get_ports I2S_CLK]
- ## I2S_WS:0
-set_property LOC A14 [get_ports I2S_WS]
-set_property IOSTANDARD LVCMOS33 [get_ports I2S_WS]
+ ## SD_SPI_CS:0
+set_property LOC J3 [get_ports SD_SPI_CS]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CS]
+ ## SD_SPI_CLK:0
+set_property LOC L3 [get_ports SD_SPI_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_CLK]
+ ## SD_SPI_MOSI:0
+set_property LOC M2 [get_ports SD_SPI_MOSI]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MOSI]
+ ## SD_SPI_MISO:0
+set_property LOC N2 [get_ports SD_SPI_MISO]
+set_property IOSTANDARD LVCMOS33 [get_ports SD_SPI_MISO]
  ## cpu_reset:0
 set_property LOC U18 [get_ports cpu_reset]
 set_property IOSTANDARD LVCMOS33 [get_ports cpu_reset]

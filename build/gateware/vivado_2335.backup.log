@@ -1,0 +1,619 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:23:50 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue Mar 12 20:11:51 2019
+# Process ID: 2335
+# Current directory: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware
+# Command line: vivado -mode batch -source top.tcl
+# Log file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/vivado.log
+# Journal file: /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/vivado.jou
+#-----------------------------------------------------------
+source top.tcl
+# create_project -force -name top -part xc7a35tcpg236-1
+# set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/VideoData.mem}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/VideoData.mem}]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/ColorDecoder.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/ColorDecoder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/ColorDecoder.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/InitialPosition.mem}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/InitialPosition.mem}]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:]
+# add_files {top.v}
+# set_property library work [get_files {top.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v:]
+# add_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Buttons/Buttons.v}
+# set_property library work [get_files {/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Buttons/Buttons.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Buttons/Buttons.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:]
+# add_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v}
+# set_property library work [get_files {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v}]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v:]
+# read_xdc top.xdc
+# synth_design -top top -part xc7a35tcpg236-1 -include_dirs {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl /home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config}
+Command: synth_design -top top -part xc7a35tcpg236-1 -include_dirs {/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl /home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config}
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2354 
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:193]
+WARNING: [Synth 8-2611] redeclaration of ansi port I2SCLK is not allowed [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:142]
+WARNING: [Synth 8-992] I2S_CLK is already implicitly declared earlier [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:164]
+WARNING: [Synth 8-1652] attribute target identifier preserve_driver not found in this scope [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:653]
+WARNING: [Synth 8-1652] attribute target identifier preserve_signal not found in this scope [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:652]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1262.156 ; gain = 78.262 ; free physical = 1216 ; free virtual = 5246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:2]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:539]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:539]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:540]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:540]
+INFO: [Synth 8-3876] $readmem data file 'mem.init' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1836]
+INFO: [Synth 8-3876] $readmem data file 'mem_2.init' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1872]
+INFO: [Synth 8-3876] $readmem data file 'mem_3.init' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1918]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1507]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1554]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1589]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1601]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1665]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1692]
+INFO: [Synth 8-6157] synthesizing module 'lm32_cpu' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:99]
+	Parameter eba_reset bound to: 0 - type: integer 
+	Parameter icache_associativity bound to: 1 - type: integer 
+	Parameter icache_sets bound to: 256 - type: integer 
+	Parameter icache_bytes_per_line bound to: 16 - type: integer 
+	Parameter icache_base_address bound to: 0 - type: integer 
+	Parameter icache_limit bound to: 2147483647 - type: integer 
+	Parameter dcache_associativity bound to: 1 - type: integer 
+	Parameter dcache_sets bound to: 256 - type: integer 
+	Parameter dcache_bytes_per_line bound to: 16 - type: integer 
+	Parameter dcache_base_address bound to: 0 - type: integer 
+	Parameter dcache_limit bound to: 2147483647 - type: integer 
+	Parameter watchpoints bound to: 0 - type: integer 
+	Parameter breakpoints bound to: 0 - type: integer 
+	Parameter interrupts bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_instruction_unit' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v:77]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+	Parameter eba_reset bound to: 0 - type: integer 
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_icache' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:86]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_set_width bound to: 8 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+	Parameter addr_set_lsb bound to: 4 - type: integer 
+	Parameter addr_set_msb bound to: 11 - type: integer 
+	Parameter addr_tag_lsb bound to: 12 - type: integer 
+	Parameter addr_tag_msb bound to: 31 - type: integer 
+	Parameter addr_tag_width bound to: 20 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_ram' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+	Parameter data_width bound to: 32 - type: integer 
+	Parameter address_width bound to: 10 - type: integer 
+	Parameter init_file bound to: NONE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'lm32_ram' (1#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+INFO: [Synth 8-6157] synthesizing module 'lm32_ram__parameterized0' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+	Parameter data_width bound to: 21 - type: integer 
+	Parameter address_width bound to: 8 - type: integer 
+	Parameter init_file bound to: NONE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'lm32_ram__parameterized0' (1#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v:61]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:492]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:414]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_icache' (2#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v:86]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:189]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v:191]
+INFO: [Common 17-14] Message 'Synth 8-6104' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'lm32_instruction_unit' (3#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v:77]
+INFO: [Synth 8-6157] synthesizing module 'lm32_decoder' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v:113]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_decoder' (4#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v:113]
+INFO: [Synth 8-6157] synthesizing module 'lm32_load_store_unit' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v:69]
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lm32_dcache' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:80]
+	Parameter associativity bound to: 1 - type: integer 
+	Parameter sets bound to: 256 - type: integer 
+	Parameter bytes_per_line bound to: 16 - type: integer 
+	Parameter base_address bound to: 0 - type: integer 
+	Parameter limit bound to: 2147483647 - type: integer 
+	Parameter addr_offset_width bound to: 2 - type: integer 
+	Parameter addr_set_width bound to: 8 - type: integer 
+	Parameter addr_offset_lsb bound to: 2 - type: integer 
+	Parameter addr_offset_msb bound to: 3 - type: integer 
+	Parameter addr_set_lsb bound to: 4 - type: integer 
+	Parameter addr_set_msb bound to: 11 - type: integer 
+	Parameter addr_tag_lsb bound to: 12 - type: integer 
+	Parameter addr_tag_msb bound to: 31 - type: integer 
+	Parameter addr_tag_width bound to: 20 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:515]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:462]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_dcache' (5#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v:80]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_load_store_unit' (6#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v:69]
+INFO: [Synth 8-6157] synthesizing module 'lm32_adder' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_addsub' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_addsub' (7#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_adder' (8#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_logic_op' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_logic_op' (9#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_shifter' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_shifter' (10#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_multiplier' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_multiplier' (11#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v:56]
+INFO: [Synth 8-6157] synthesizing module 'lm32_mc_arithmetic' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:64]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_mc_arithmetic' (12#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v:64]
+INFO: [Synth 8-6157] synthesizing module 'lm32_interrupt' [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v:56]
+	Parameter interrupts bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lm32_interrupt' (13#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v:56]
+INFO: [Synth 8-226] default block is never used [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:1617]
+WARNING: [Synth 8-151] case item 3'b010 is unreachable [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:2292]
+WARNING: [Synth 8-6014] Unused sequential element x_result_sel_logic_x_reg was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:2699]
+WARNING: [Synth 8-6014] Unused sequential element eret_m_reg was removed.  [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:2932]
+INFO: [Synth 8-6155] done synthesizing module 'lm32_cpu' (14#1) [/home/camilo/Programas/Litex/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v:99]
+WARNING: [Synth 8-350] instance 'lm32_cpu' of module 'lm32_cpu' requires 29 connections, but only 27 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1797]
+INFO: [Synth 8-6157] synthesizing module 'Video' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v:2]
+INFO: [Synth 8-3876] $readmem data file 'VideoData.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v:44]
+INFO: [Synth 8-3876] $readmem data file 'InitialPosition.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v:45]
+INFO: [Synth 8-6157] synthesizing module 'Video_ClockManager' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:182]
+INFO: [Synth 8-6157] synthesizing module 'CM1' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:1]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:49]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:49]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:52]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:52]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:55]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:55]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 8.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 8.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 64 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 128 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (15#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (16#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (17#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:619]
+INFO: [Synth 8-6157] synthesizing module 'BUFH' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'BUFH' (18#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:808]
+INFO: [Synth 8-6155] done synthesizing module 'CM1' (19#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Video_ClockManager' (20#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video_ClockManager.v:182]
+INFO: [Synth 8-6157] synthesizing module 'ColorDecoder' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/ColorDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ColorDecoder' (21#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/ColorDecoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'TFT_SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
+	Parameter InitDataSize bound to: 104 - type: integer 
+	Parameter WorkFrequency bound to: 6250000 - type: integer 
+	Parameter WorkFrequencyBits bound to: 24 - type: integer 
+	Parameter delayUnit bound to: 6250 - type: integer 
+	Parameter delayTime bound to: 1000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BUF' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:569]
+INFO: [Synth 8-6155] done synthesizing module 'BUF' (22#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:569]
+INFO: [Synth 8-6157] synthesizing module 'InitializationRegister' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
+	Parameter InitFrequency bound to: 6250000 - type: integer 
+	Parameter delayUnit bound to: 6250 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'InitializationRegister' (23#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/InitializationRegister.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Counter' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:2]
+	Parameter Begin bound to: 0 - type: integer 
+	Parameter bitsNumber bound to: 25 - type: integer 
+	Parameter End bound to: 1000104 - type: integer 
+	Parameter mode bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (24#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/Counter.v:2]
+WARNING: [Synth 8-350] instance 'counter' of module 'Counter' requires 3 connections, but only 2 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v:60]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (25#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/SPI.v:1]
+WARNING: [Synth 8-350] instance 'spi' of module 'SPI' requires 5 connections, but only 4 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'TFT_SPI' (26#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/SubPeripheral_TFT_SPI/TFT_SPI.v:1]
+WARNING: [Synth 8-350] instance 'tft_spi' of module 'TFT_SPI' requires 10 connections, but only 9 given [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v:86]
+WARNING: [Synth 8-6014] Unused sequential element TilesWrite_YPosition_reg was removed.  [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v:113]
+INFO: [Synth 8-6155] done synthesizing module 'Video' (27#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Video/Video.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Audio' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:2]
+INFO: [Synth 8-3876] $readmem data file 'SoundTrack.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:39]
+INFO: [Synth 8-3876] $readmem data file 'Track1.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:40]
+INFO: [Synth 8-3876] $readmem data file 'Track2.mem' is read successfully [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:41]
+INFO: [Synth 8-6157] synthesizing module 'Audio_ClockManager' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:136]
+INFO: [Synth 8-6157] synthesizing module 'CM2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:3]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:51]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:51]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV__parameterized0' [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 55.125000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 78.125000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV__parameterized0' (27#1) [/home/camilo/Programas/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6155] done synthesizing module 'CM2' (28#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_ClockManager' (29#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio_ClockManager.v:136]
+INFO: [Synth 8-6157] synthesizing module 'I2S' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SquareGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SquareGenerator' (30#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/SquareGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'I2S' (31#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/SubPeripheral_I2S/I2S.v:1]
+INFO: [Synth 8-6157] synthesizing module 'StereoSignedAdder' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'StereoSignedAdder' (32#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/StereoSignedAdder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Synthesizer' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 227273 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 214517 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized0' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized1' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 202477 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized1' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized2' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 191113 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized2' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized3' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 180387 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized3' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized4' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 170262 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized4' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized5' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 160706 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized5' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized6' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 151686 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized6' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized7' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 143173 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized7' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized8' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 135137 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized8' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized9' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 127552 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized9' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized10' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 120394 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized10' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized11' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 113636 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized11' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized12' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 107258 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized12' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Oscillator__parameterized13' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+	Parameter limit bound to: 101238 - type: integer 
+	Parameter bits bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Oscillator__parameterized13' (33#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Oscillator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Synthesizer' (34#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Synthesizer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+	Parameter MasterFrequency bound to: 100000000 - type: integer 
+	Parameter frequency bound to: 5 - type: integer 
+	Parameter bitsNumber bound to: 25 - type: integer 
+	Parameter limit bound to: 20000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator' (35#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Audio' (36#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Audio/Audio.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Buttons' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Buttons/Buttons.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ButtonDebouncer' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v:2]
+INFO: [Synth 8-6157] synthesizing module 'FrequencyGenerator__parameterized0' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+	Parameter MasterFrequency bound to: 100000000 - type: integer 
+	Parameter frequency bound to: 5 - type: integer 
+	Parameter bitsNumber bound to: 30 - type: integer 
+	Parameter limit bound to: 20000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FrequencyGenerator__parameterized0' (36#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/FrequencyGenerator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ButtonDebouncer' (37#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/utilities/ButtonDebouncer.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Buttons' (38#1) [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/Hardware/Peripheral_Buttons/Buttons.v:1]
+ERROR: [Synth 8-439] module 'SD' not found [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:1953]
+ERROR: [Synth 8-6156] failed synthesizing module 'top' [/home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/gateware/top.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1314.406 ; gain = 130.512 ; free physical = 1220 ; free virtual = 5255
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+146 Infos, 113 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 12 20:12:08 2019...

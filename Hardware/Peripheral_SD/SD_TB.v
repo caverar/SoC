@@ -5,7 +5,7 @@
 module SD_SPI_TB ();
   
     reg clk;
-    SD_SPI uut(
+    SD uut(
         .MasterCLK(clk),    
         .Reset(0),
         .SPI_MISO(0),

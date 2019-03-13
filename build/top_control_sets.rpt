@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date         : Tue Mar 12 12:35:21 2019
+| Date         : Tue Mar 12 20:20:20 2019
 | Host         : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_control_sets -verbose -file top_control_sets.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    23 |
-| Unused register locations in slices containing registers |    86 |
+| Number of unique control sets                            |     2 |
+| Unused register locations in slices containing registers |     6 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      8 |            2 |
-|     12 |            1 |
-|    16+ |           20 |
+|      2 |            1 |
+|    16+ |            1 |
 +--------+--------------+
 
 
@@ -46,44 +45,23 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              78 |           22 |
+| No           | No                    | No                     |               0 |            0 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             596 |           85 |
+| No           | Yes                   | No                     |              18 |            2 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              16 |            3 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------------------------------+------------------------+----------------------------------------------------------+------------------+----------------+
-|                           Clock Signal                          |      Enable Signal     |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count |
-+-----------------------------------------------------------------+------------------------+----------------------------------------------------------+------------------+----------------+
-|  Audio/audio_clockmanager/cm2/CLK                               |                        |                                                          |                1 |              8 |
-| ~Audio/i2s/Data_reg[16]_0                                       |                        |                                                          |                3 |              8 |
-| ~Audio/audio_clockmanager/CLK                                   |                        |                                                          |                2 |             12 |
-| ~Audio/i2s/Data_reg[16]_0                                       | Audio/SoundTrackEnable | Audio/SoundTrackData[7]_i_1_n_0                          |                3 |             16 |
-|  Audio/spiInitClock/Tempo_CLK                                   |                        | Audio/SoundTrackCount[5]_i_1_n_0                         |                3 |             16 |
-|  Audio/audio_clockmanager/cm2/I2S_CLK_reloj2_clk_wiz_0_0_en_clk |                        |                                                          |                1 |             16 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/ASharp4/count[0]_i_1__1_n_0  |                5 |             34 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/B4/clear                     |                5 |             34 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/A4/count[0]_i_1__2_n_0       |                5 |             34 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/GSharp4/count[0]_i_1__3_n_0  |                5 |             34 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/G4/count[0]_i_1__4_n_0       |                5 |             34 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/ASharp3/count[0]_i_1__11_n_0 |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/CSharp4/count[0]_i_1__8_n_0  |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/B3/count[0]_i_1__10_n_0      |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/D4/count[0]_i_1__7_n_0       |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/F4/count[0]_i_1__13_n_0      |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/E4/count[0]_i_1__6_n_0       |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/DSharp4/count[0]_i_1__14_n_0 |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/FSharp4/count[0]_i_1__5_n_0  |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/A3/count[0]_i_1__12_n_0      |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/SoundTrackSynthesizer/C4/count[0]_i_1__9_n_0       |                5 |             36 |
-|  clk100_IBUF_BUFG                                               |                        | Audio/spiInitClock/clear                                 |                7 |             50 |
-|  clk100_IBUF_BUFG                                               |                        |                                                          |               24 |            106 |
-+-----------------------------------------------------------------+------------------------+----------------------------------------------------------+------------------+----------------+
++-------------------+---------------+------------------+------------------+----------------+
+|    Clock Signal   | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------+---------------+------------------+------------------+----------------+
+|  clk100_IBUF_BUFG |               | SD/spi/p_0_in    |                1 |              2 |
+|  clk100_IBUF_BUFG |               | SD/spi/clear     |                1 |             16 |
++-------------------+---------------+------------------+------------------+----------------+
 
 

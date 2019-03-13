@@ -78,6 +78,54 @@ static inline void Buttons_WB_ev_enable_write(unsigned int value) {
 	csr_writel(value, 0xe000500c);
 }
 
+/* SD_WB */
+#define CSR_SD_WB_BASE 0xe0005800
+#define CSR_SD_WB_ENABLEDATAWRITEREGISTER_ADDR 0xe0005800
+#define CSR_SD_WB_ENABLEDATAWRITEREGISTER_SIZE 1
+static inline unsigned int SD_WB_EnableDataWriteRegister_read(void) {
+	unsigned int r = csr_readl(0xe0005800);
+	return r;
+}
+static inline void SD_WB_EnableDataWriteRegister_write(unsigned int value) {
+	csr_writel(value, 0xe0005800);
+}
+#define CSR_SD_WB_OUPUTDATAREGISTER_ADDR 0xe0005804
+#define CSR_SD_WB_OUPUTDATAREGISTER_SIZE 1
+static inline unsigned int SD_WB_OuputDataRegister_read(void) {
+	unsigned int r = csr_readl(0xe0005804);
+	return r;
+}
+static inline void SD_WB_OuputDataRegister_write(unsigned int value) {
+	csr_writel(value, 0xe0005804);
+}
+#define CSR_SD_WB_SPI_ENABLEREGISTER_ADDR 0xe0005808
+#define CSR_SD_WB_SPI_ENABLEREGISTER_SIZE 1
+static inline unsigned int SD_WB_SPI_EnableRegister_read(void) {
+	unsigned int r = csr_readl(0xe0005808);
+	return r;
+}
+static inline void SD_WB_SPI_EnableRegister_write(unsigned int value) {
+	csr_writel(value, 0xe0005808);
+}
+#define CSR_SD_WB_INPUTDATAREGISTERCSR_ADDR 0xe000580c
+#define CSR_SD_WB_INPUTDATAREGISTERCSR_SIZE 1
+static inline unsigned int SD_WB_InputDataRegisterCSR_read(void) {
+	unsigned int r = csr_readl(0xe000580c);
+	return r;
+}
+#define CSR_SD_WB_ENABLEDATAREADREGISTERCSR_ADDR 0xe0005810
+#define CSR_SD_WB_ENABLEDATAREADREGISTERCSR_SIZE 1
+static inline unsigned int SD_WB_EnableDataReadRegisterCSR_read(void) {
+	unsigned int r = csr_readl(0xe0005810);
+	return r;
+}
+#define CSR_SD_WB_BUSSYDATAWRITEREGISTERCSR_ADDR 0xe0005814
+#define CSR_SD_WB_BUSSYDATAWRITEREGISTERCSR_SIZE 1
+static inline unsigned int SD_WB_BussyDataWriteRegisterCSR_read(void) {
+	unsigned int r = csr_readl(0xe0005814);
+	return r;
+}
+
 /* Video_WB */
 #define CSR_VIDEO_WB_BASE 0xe0004000
 #define CSR_VIDEO_WB_TILESCONTROLREGISTERCSR_ADDR 0xe0004000
