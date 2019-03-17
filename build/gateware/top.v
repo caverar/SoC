@@ -382,6 +382,9 @@ reg soc_SD_WB_OuputDataRegister_re = 1'd0;
 reg soc_SD_WB_SPI_EnableRegister_storage_full = 1'd0;
 wire soc_SD_WB_SPI_EnableRegister_storage;
 reg soc_SD_WB_SPI_EnableRegister_re = 1'd0;
+reg soc_SD_WB_SPI_EnableCSRegister_storage_full = 1'd0;
+wire soc_SD_WB_SPI_EnableCSRegister_storage;
+reg soc_SD_WB_SPI_EnableCSRegister_re = 1'd0;
 wire [7:0] soc_SD_WB_InputDataRegisterCSR_status;
 wire soc_SD_WB_DataClockRegisterCSR_status;
 wire [7:0] soc_SD_WB_InputDataRegister;
@@ -462,6 +465,9 @@ wire [7:0] csrbank2_OuputDataRegister0_w;
 wire csrbank2_SPI_EnableRegister0_re;
 wire csrbank2_SPI_EnableRegister0_r;
 wire csrbank2_SPI_EnableRegister0_w;
+wire csrbank2_SPI_EnableCSRegister0_re;
+wire csrbank2_SPI_EnableCSRegister0_r;
+wire csrbank2_SPI_EnableCSRegister0_w;
 wire csrbank2_InputDataRegisterCSR_re;
 wire [7:0] csrbank2_InputDataRegisterCSR_r;
 wire [7:0] csrbank2_InputDataRegisterCSR_w;
@@ -892,7 +898,7 @@ assign soc_Buttons_WB_button3_status = 1'd0;
 assign soc_Buttons_WB_button4_status = 1'd0;
 assign soc_SD_WB_InputDataRegisterCSR_status = soc_SD_WB_InputDataRegister;
 assign soc_SD_WB_DataClockRegisterCSR_status = soc_SD_WB_DataClockRegister;
-assign soc_SD_WB_DataClock_trigger = soc_SD_WB_DataClockRegister;
+assign soc_SD_WB_DataClock_trigger = (soc_SD_WB_DataClockRegister == 1'd1);
 assign sd_status_w = soc_SD_WB_DataClock_status;
 
 // synthesis translate_off
@@ -1020,27 +1026,31 @@ assign buttons_storage = buttons_storage_full[3:0];
 assign csrbank1_ev_enable0_w = buttons_storage_full[3:0];
 assign csrbank2_sel = (interface2_bank_bus_adr[13:9] == 4'd11);
 assign csrbank2_EnableDataWriteRegister0_r = interface2_bank_bus_dat_w[0];
-assign csrbank2_EnableDataWriteRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 1'd0));
+assign csrbank2_EnableDataWriteRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 1'd0));
 assign csrbank2_OuputDataRegister0_r = interface2_bank_bus_dat_w[7:0];
-assign csrbank2_OuputDataRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 1'd1));
+assign csrbank2_OuputDataRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 1'd1));
 assign csrbank2_SPI_EnableRegister0_r = interface2_bank_bus_dat_w[0];
-assign csrbank2_SPI_EnableRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 2'd2));
+assign csrbank2_SPI_EnableRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 2'd2));
+assign csrbank2_SPI_EnableCSRegister0_r = interface2_bank_bus_dat_w[0];
+assign csrbank2_SPI_EnableCSRegister0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 2'd3));
 assign csrbank2_InputDataRegisterCSR_r = interface2_bank_bus_dat_w[7:0];
-assign csrbank2_InputDataRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 2'd3));
+assign csrbank2_InputDataRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 3'd4));
 assign csrbank2_DataClockRegisterCSR_r = interface2_bank_bus_dat_w[0];
-assign csrbank2_DataClockRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd4));
+assign csrbank2_DataClockRegisterCSR_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 3'd5));
 assign sd_status_r = interface2_bank_bus_dat_w[0];
-assign sd_status_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd5));
+assign sd_status_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 3'd6));
 assign sd_pending_r = interface2_bank_bus_dat_w[0];
-assign sd_pending_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd6));
+assign sd_pending_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 3'd7));
 assign csrbank2_ev_enable0_r = interface2_bank_bus_dat_w[0];
-assign csrbank2_ev_enable0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 3'd7));
+assign csrbank2_ev_enable0_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[3:0] == 4'd8));
 assign soc_SD_WB_EnableDataWriteRegister_storage = soc_SD_WB_EnableDataWriteRegister_storage_full;
 assign csrbank2_EnableDataWriteRegister0_w = soc_SD_WB_EnableDataWriteRegister_storage_full;
 assign soc_SD_WB_OuputDataRegister_storage = soc_SD_WB_OuputDataRegister_storage_full[7:0];
 assign csrbank2_OuputDataRegister0_w = soc_SD_WB_OuputDataRegister_storage_full[7:0];
 assign soc_SD_WB_SPI_EnableRegister_storage = soc_SD_WB_SPI_EnableRegister_storage_full;
 assign csrbank2_SPI_EnableRegister0_w = soc_SD_WB_SPI_EnableRegister_storage_full;
+assign soc_SD_WB_SPI_EnableCSRegister_storage = soc_SD_WB_SPI_EnableCSRegister_storage_full;
+assign csrbank2_SPI_EnableCSRegister0_w = soc_SD_WB_SPI_EnableCSRegister_storage_full;
 assign csrbank2_InputDataRegisterCSR_w = soc_SD_WB_InputDataRegisterCSR_status[7:0];
 assign csrbank2_DataClockRegisterCSR_w = soc_SD_WB_DataClockRegisterCSR_status;
 assign sd_storage = sd_storage_full;
@@ -1594,7 +1604,7 @@ always @(posedge sys_clk) begin
 	buttons_re <= csrbank1_ev_enable0_re;
 	interface2_bank_bus_dat_r <= 1'd0;
 	if (csrbank2_sel) begin
-		case (interface2_bank_bus_adr[2:0])
+		case (interface2_bank_bus_adr[3:0])
 			1'd0: begin
 				interface2_bank_bus_dat_r <= csrbank2_EnableDataWriteRegister0_w;
 			end
@@ -1605,18 +1615,21 @@ always @(posedge sys_clk) begin
 				interface2_bank_bus_dat_r <= csrbank2_SPI_EnableRegister0_w;
 			end
 			2'd3: begin
-				interface2_bank_bus_dat_r <= csrbank2_InputDataRegisterCSR_w;
+				interface2_bank_bus_dat_r <= csrbank2_SPI_EnableCSRegister0_w;
 			end
 			3'd4: begin
-				interface2_bank_bus_dat_r <= csrbank2_DataClockRegisterCSR_w;
+				interface2_bank_bus_dat_r <= csrbank2_InputDataRegisterCSR_w;
 			end
 			3'd5: begin
-				interface2_bank_bus_dat_r <= sd_status_w;
+				interface2_bank_bus_dat_r <= csrbank2_DataClockRegisterCSR_w;
 			end
 			3'd6: begin
-				interface2_bank_bus_dat_r <= sd_pending_w;
+				interface2_bank_bus_dat_r <= sd_status_w;
 			end
 			3'd7: begin
+				interface2_bank_bus_dat_r <= sd_pending_w;
+			end
+			4'd8: begin
 				interface2_bank_bus_dat_r <= csrbank2_ev_enable0_w;
 			end
 		endcase
@@ -1633,6 +1646,10 @@ always @(posedge sys_clk) begin
 		soc_SD_WB_SPI_EnableRegister_storage_full <= csrbank2_SPI_EnableRegister0_r;
 	end
 	soc_SD_WB_SPI_EnableRegister_re <= csrbank2_SPI_EnableRegister0_re;
+	if (csrbank2_SPI_EnableCSRegister0_re) begin
+		soc_SD_WB_SPI_EnableCSRegister_storage_full <= csrbank2_SPI_EnableCSRegister0_r;
+	end
+	soc_SD_WB_SPI_EnableCSRegister_re <= csrbank2_SPI_EnableCSRegister0_re;
 	if (csrbank2_ev_enable0_re) begin
 		sd_storage_full <= csrbank2_ev_enable0_r;
 	end
@@ -1828,6 +1845,8 @@ always @(posedge sys_clk) begin
 		soc_SD_WB_OuputDataRegister_re <= 1'd0;
 		soc_SD_WB_SPI_EnableRegister_storage_full <= 1'd0;
 		soc_SD_WB_SPI_EnableRegister_re <= 1'd0;
+		soc_SD_WB_SPI_EnableCSRegister_storage_full <= 1'd0;
+		soc_SD_WB_SPI_EnableCSRegister_re <= 1'd0;
 		buttons_storage_full <= 4'd0;
 		buttons_re <= 1'd0;
 		sd_storage_full <= 1'd0;
@@ -2011,6 +2030,7 @@ SD SD(
 	.MasterCLK(soc_SD_WB_CLK),
 	.OuputDataRegister(soc_SD_WB_OuputDataRegister_storage),
 	.Reset(soc_SD_WB_Reset),
+	.SPI_EnableCSRegister(soc_SD_WB_SPI_EnableCSRegister_storage),
 	.SPI_EnableRegister(soc_SD_WB_SPI_EnableRegister_storage),
 	.SPI_MISO(soc_SD_WB_SD_SPI_MISO),
 	.DataClockRegister(soc_SD_WB_DataClockRegister),

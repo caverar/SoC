@@ -1,12 +1,11 @@
 #include <generated/csr.h>
 #include <irq.h>
 #include <uart.h>
+#include "variables.h"
+#include <stdio.h>
 
 
 extern void periodic_isr(void);
-
-
-#include "variables.h"
 
 unsigned int localState=0;
 
@@ -15,13 +14,12 @@ void isr(void)
 {
 		
 	unsigned int irqs;
-	unsigned int ButtonInterrupt;
-	
-	
+	unsigned int ButtonInterrupt;	
 	ButtonInterrupt = Buttons_WB_ev_pending_read();
 	irqs = irq_pending() & irq_getmask();
 
-	if(irqs & (1 << SD_WB_INTERRUPT)){
+
+	if(irqs & (1 << SD_WB_INTERRUPT)){		
 		SD_isr();
 	}
 	if(irqs & (1 << UART_INTERRUPT)){

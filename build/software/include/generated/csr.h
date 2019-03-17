@@ -107,44 +107,53 @@ static inline unsigned int SD_WB_SPI_EnableRegister_read(void) {
 static inline void SD_WB_SPI_EnableRegister_write(unsigned int value) {
 	csr_writel(value, 0xe0005808);
 }
-#define CSR_SD_WB_INPUTDATAREGISTERCSR_ADDR 0xe000580c
-#define CSR_SD_WB_INPUTDATAREGISTERCSR_SIZE 1
-static inline unsigned int SD_WB_InputDataRegisterCSR_read(void) {
+#define CSR_SD_WB_SPI_ENABLECSREGISTER_ADDR 0xe000580c
+#define CSR_SD_WB_SPI_ENABLECSREGISTER_SIZE 1
+static inline unsigned int SD_WB_SPI_EnableCSRegister_read(void) {
 	unsigned int r = csr_readl(0xe000580c);
 	return r;
 }
-#define CSR_SD_WB_DATACLOCKREGISTERCSR_ADDR 0xe0005810
-#define CSR_SD_WB_DATACLOCKREGISTERCSR_SIZE 1
-static inline unsigned int SD_WB_DataClockRegisterCSR_read(void) {
+static inline void SD_WB_SPI_EnableCSRegister_write(unsigned int value) {
+	csr_writel(value, 0xe000580c);
+}
+#define CSR_SD_WB_INPUTDATAREGISTERCSR_ADDR 0xe0005810
+#define CSR_SD_WB_INPUTDATAREGISTERCSR_SIZE 1
+static inline unsigned int SD_WB_InputDataRegisterCSR_read(void) {
 	unsigned int r = csr_readl(0xe0005810);
 	return r;
 }
-#define CSR_SD_WB_EV_STATUS_ADDR 0xe0005814
-#define CSR_SD_WB_EV_STATUS_SIZE 1
-static inline unsigned int SD_WB_ev_status_read(void) {
+#define CSR_SD_WB_DATACLOCKREGISTERCSR_ADDR 0xe0005814
+#define CSR_SD_WB_DATACLOCKREGISTERCSR_SIZE 1
+static inline unsigned int SD_WB_DataClockRegisterCSR_read(void) {
 	unsigned int r = csr_readl(0xe0005814);
 	return r;
 }
-static inline void SD_WB_ev_status_write(unsigned int value) {
-	csr_writel(value, 0xe0005814);
-}
-#define CSR_SD_WB_EV_PENDING_ADDR 0xe0005818
-#define CSR_SD_WB_EV_PENDING_SIZE 1
-static inline unsigned int SD_WB_ev_pending_read(void) {
+#define CSR_SD_WB_EV_STATUS_ADDR 0xe0005818
+#define CSR_SD_WB_EV_STATUS_SIZE 1
+static inline unsigned int SD_WB_ev_status_read(void) {
 	unsigned int r = csr_readl(0xe0005818);
 	return r;
 }
-static inline void SD_WB_ev_pending_write(unsigned int value) {
+static inline void SD_WB_ev_status_write(unsigned int value) {
 	csr_writel(value, 0xe0005818);
 }
-#define CSR_SD_WB_EV_ENABLE_ADDR 0xe000581c
-#define CSR_SD_WB_EV_ENABLE_SIZE 1
-static inline unsigned int SD_WB_ev_enable_read(void) {
+#define CSR_SD_WB_EV_PENDING_ADDR 0xe000581c
+#define CSR_SD_WB_EV_PENDING_SIZE 1
+static inline unsigned int SD_WB_ev_pending_read(void) {
 	unsigned int r = csr_readl(0xe000581c);
 	return r;
 }
-static inline void SD_WB_ev_enable_write(unsigned int value) {
+static inline void SD_WB_ev_pending_write(unsigned int value) {
 	csr_writel(value, 0xe000581c);
+}
+#define CSR_SD_WB_EV_ENABLE_ADDR 0xe0005820
+#define CSR_SD_WB_EV_ENABLE_SIZE 1
+static inline unsigned int SD_WB_ev_enable_read(void) {
+	unsigned int r = csr_readl(0xe0005820);
+	return r;
+}
+static inline void SD_WB_ev_enable_write(unsigned int value) {
+	csr_writel(value, 0xe0005820);
 }
 
 /* Video_WB */

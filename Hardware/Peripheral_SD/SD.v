@@ -8,7 +8,8 @@ module SD(
     output wire       DataClockRegister, 
     output reg  [7:0] InputDataRegister,
     input  wire [7:0] OuputDataRegister,
-    input  wire       SPI_EnableRegister 
+    input  wire       SPI_EnableRegister,
+    input  wire       SPI_EnableCSRegister 
     );
 
     reg [7:0] OutputData;
@@ -26,11 +27,13 @@ module SD(
         .SPI_CLK(SPI_CLK),
         .MasterCLK(MasterCLK),        
         .DataClk(DataClockRegister),
-        .SPI_Enable(SPI_EnableRegister)
+        .SPI_Enable(SPI_EnableRegister),
+        .SPI_CS(SPI_CS),
+        .SPI_EnableCS(SPI_EnableCSRegister)
     );
 
     
-    assign SPI_CS=(SPI_EnableRegister)? 0:1;
+    
 
     always@(posedge MasterCLK) begin
         if(SPI_EnableRegister)begin 

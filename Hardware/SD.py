@@ -12,7 +12,7 @@ class SD(Module,AutoCSR):
 
         self.submodules.ev = EventManager()
         self.ev.DataClock  = EventSourceProcess() 
-        EventSourcePulse()
+        #EventSourcePulse()
     ##Entradas        
         self.CLK                        = Signal()
         self.Reset                      = Signal()
@@ -26,6 +26,7 @@ class SD(Module,AutoCSR):
         self.EnableDataWriteRegister    = CSRStorage()
         self.OuputDataRegister          = CSRStorage(8)
         self.SPI_EnableRegister         = CSRStorage()
+        self.SPI_EnableCSRegister       = CSRStorage()
 
 
         self.InputDataRegisterCSR       = CSRStatus(8)
@@ -45,13 +46,14 @@ class SD(Module,AutoCSR):
             o_DataClockRegister         = self.DataClockRegister,
             o_InputDataRegister         = self.InputDataRegister,    
             i_OuputDataRegister         = self.OuputDataRegister.storage, 
-            i_SPI_EnableRegister        = self.SPI_EnableRegister.storage 
+            i_SPI_EnableRegister        = self.SPI_EnableRegister.storage,
+            i_SPI_EnableCSRegister      = self.SPI_EnableCSRegister.storage 
 
         )
         self.comb +=[
             self.InputDataRegisterCSR.status.eq(self.InputDataRegister),
             self.DataClockRegisterCSR.status.eq(self.DataClockRegister),
-            self.ev.DataClock.trigger.eq( self.DataClockRegister)            
+            self.ev.DataClock.trigger.eq( self.DataClockRegister==1)            
         ]
         
 

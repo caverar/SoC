@@ -5,7 +5,9 @@ isr.o: isr.c \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/irq.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/system.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/uart.h \
- variables.h
+ variables.h \
+ /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdio.h \
+ /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stddef.h
 
 /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/software/include/generated/csr.h:
 
@@ -20,3 +22,7 @@ isr.o: isr.c \
 /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/uart.h:
 
 variables.h:
+
+/home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdio.h:
+
+/home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stddef.h:
