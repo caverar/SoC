@@ -36,7 +36,7 @@ module Audio(
     reg [3:0] SoundEffectCount;
 
     initial begin      
-        $readmemh("SoundTrack.mem",SoundTrack);
+        //$readmemh("SoundTrack.mem",SoundTrack);
         $readmemh("Track1.mem",Track1);
         $readmemh("Track2.mem",Track2);
         Track3=8'h11;

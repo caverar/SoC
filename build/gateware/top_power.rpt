@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
-| Date             : Sat Mar 16 19:53:32 2019
+| Date             : Sat Mar 16 23:44:30 2019
 | Host             : camilo-X455LAB running 64-bit Ubuntu 18.04.2 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -54,14 +54,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |        8 |       --- |             --- |
 | Slice Logic              |     0.010 |     6305 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     2555 |     20800 |           12.28 |
+|   LUT as Logic           |     0.009 |     2567 |     20800 |           12.34 |
 |   CARRY4                 |    <0.001 |      319 |      8150 |            3.91 |
 |   Register               |    <0.001 |     2748 |     41600 |            6.61 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      9600 |            1.08 |
 |   F7/F8 Muxes            |    <0.001 |       26 |     32600 |            0.08 |
 |   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
 |   Others                 |     0.000 |      139 |       --- |             --- |
-| Signals                  |     0.014 |     5329 |       --- |             --- |
+| Signals                  |     0.014 |     5330 |       --- |             --- |
 | Block RAM                |     0.028 |       13 |        50 |           26.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | DSPs                     |    <0.001 |        3 |        90 |            3.33 |
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.075 |       0.065 |      0.010 |
+| Vccint    |       1.000 |     0.075 |       0.064 |      0.010 |
 | Vccaux    |       1.800 |     0.137 |       0.124 |      0.013 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -223,7 +223,7 @@ Table of Contents
 |       spi                                        |    <0.001 |
 |     video_clockmanager                           |     0.096 |
 |       cm1                                        |     0.096 |
-|   lm32_cpu                                       |     0.026 |
+|   lm32_cpu                                       |     0.027 |
 |     adder                                        |    <0.001 |
 |       addsub                                     |    <0.001 |
 |     instruction_unit                             |     0.010 |

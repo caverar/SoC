@@ -51,6 +51,7 @@ void disableSD_CS(void){
 }
 
 
+
 //Timer
 
 void wait_ms(unsigned int time){
@@ -103,3 +104,6 @@ void putState(unsigned int value){
 unsigned int getState(void){
 	return state;
 } 
+
+
+

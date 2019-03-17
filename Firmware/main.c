@@ -8,7 +8,10 @@
 #include <generated/csr.h>
 #include "variables.h"
 
-
+unsigned int swSD(unsigned int outValue);
+void initSD(void);
+void loadSoundTrackDataFromSD(void);
+void stopSD(void);
 unsigned int swSD(unsigned int outValue){
 	while(getSD_alreadySend()==0);
 	setSD_OutputData(outValue);
@@ -17,7 +20,7 @@ unsigned int swSD(unsigned int outValue){
 	
 }
 
-void initSD(){
+void initSD(void){
 	unsigned int InputData;
 	wait_ms(1);
 	enableSD();	
@@ -74,7 +77,8 @@ void initSD(){
 	
 }
 
-void loadSoundTrackDataFromSD(){
+void loadSoundTrackDataFromSD(void){
+	unsigned int InputData;
 	//CMD17
 	InputData=swSD(81);		//CMD   : 01010001
 	InputData=swSD(0);		//DATA0 : 00000000
@@ -84,9 +88,19 @@ void loadSoundTrackDataFromSD(){
 	InputData=swSD(1);		//CRC   : 00000001	
 	while(swSD(255)!=0);	//Response
 
+	while(swSD(255)==255);
+	Audio_WB_InitializationEnableRegister_write(1);
+	for(unsigned int i=0;i<=188;i++){
+		InputData=swSD(255);
+		Audio_WB_SoundTrackInitializationRegister_write(((i & 255)<<8)+InputData);
+	}
+
+	Audio_WB_InitializationEnableRegister_write(0);
+	wait_ms(8);
+
 }
 
-void stopSD(){
+void stopSD(void){
 	disableSD();
 	disableSD_CS();
 }
