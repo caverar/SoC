@@ -1,5 +1,5 @@
-#ifndef VARIABLES_H
-#define VARIABLES_H
+#ifndef VARIABLE_H
+#define VARIABLE_H
 
 
 //SD

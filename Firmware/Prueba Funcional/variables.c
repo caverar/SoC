@@ -1,7 +1,6 @@
 #include <generated/csr.h>
 #include "variables.h"
 #include <stdio.h>
-#include <stdbool.h>
 
 //SD
 

@@ -3,7 +3,6 @@
 #include <uart.h>
 #include "variables.h"
 #include <stdio.h>
-#include <stdbool.h>
 
 
 extern void periodic_isr(void);

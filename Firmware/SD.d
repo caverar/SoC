@@ -1,7 +1,6 @@
-main.o: main.c \
- /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdio.h \
- /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stddef.h \
+SD.o: SD.c SD.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdlib.h \
+ /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stddef.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/string.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdbool.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/irq.h \
@@ -11,13 +10,13 @@ main.o: main.c \
  /home/camilo/MEGA/Universidad/2018-2/Digital2/Proyecto/SoC/build/software/include/generated/csr.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdint.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/hw/common.h \
- variables.h game.h SD.h
+ variables.h game.h
 
-/home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdio.h:
-
-/home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stddef.h:
+SD.h:
 
 /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdlib.h:
+
+/home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stddef.h:
 
 /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/string.h:
 
@@ -40,5 +39,3 @@ main.o: main.c \
 variables.h:
 
 game.h:
-
-SD.h:
