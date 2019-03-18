@@ -1,5 +1,6 @@
 #include <generated/csr.h>
 #include <irq.h>
+#include "game.h"
 #include <uart.h>
 #include "variables.h"
 #include <stdio.h>
@@ -27,30 +28,55 @@ void isr(void)
 		uart_isr();
 	}else if(irqs & (1 << BUTTONS_WB_INTERRUPT)){
 		
-		if((ButtonInterrupt & 1)==1){
-			putState(0);
-			if(localState==0){
-				playSoundTrack();
-				localState=1;
-			}else{
-				stopSoundTrack();
-				localState=0;
-			}
-						
-		}else if((ButtonInterrupt & (1<<1))==1<<1){
-			putState(1);
-			playSoundEffect(1);
+		if((ButtonInterrupt & 1)==1){ //derecha
+			Buttons_WB_ev_enable_write(0);	
+			wait_ms(200);
+			playSoundEffect(3);
+			moveRightFicha();
+			putFicha();
+			printTablero();
+			removeFicha();
+			Buttons_WB_ev_pending_write((1<<3)+(1<<2)+(1<<1)+1);
+			Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);
 			
 						
-		}else if((ButtonInterrupt & (1<<2))==1<<2){
-			putState(2);
-			playSoundEffect(2);			
+		}else if((ButtonInterrupt & (1<<1))==1<<1){ //Rotar
+			Buttons_WB_ev_enable_write(0);
+			wait_ms(200);
 			
-		}else if((ButtonInterrupt & (1<<3))==1<<3){
-			putState(3);
-			playSoundEffect(3);			
+			playSoundEffect(3);
+			rotarFicha();		
+			putFicha();
+			printTablero();
+			removeFicha();
+			Buttons_WB_ev_pending_write((1<<3)+(1<<2)+(1<<1)+1);
+			Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);
+			
+						
+		}else if((ButtonInterrupt & (1<<2))==1<<2){ //izquierda
+			Buttons_WB_ev_enable_write(0);
+			wait_ms(200);
+			playSoundEffect(3);
+			moveLeftFicha();
+			putFicha();
+			printTablero();
+			removeFicha();
+			Buttons_WB_ev_pending_write((1<<3)+(1<<2)+(1<<1)+1);
+			Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);
+						
+			
+		}else if((ButtonInterrupt & (1<<3))==1<<3){ //Aceleron
+			Buttons_WB_ev_enable_write(0);
+			wait_ms(200);
+			while(moveDownFicha()==1);			
+				
+			playSoundEffect(3);
+			Buttons_WB_ev_pending_write((1<<3)+(1<<2)+(1<<1)+1);
+			Buttons_WB_ev_enable_write((1<<3)+(1<<2)+(1<<1)+1);	
+				
 		}
-		Buttons_WB_ev_pending_write((1<<3)+(1<<2)+(1<<1)+1);
+			
+		
 		
 	}
 

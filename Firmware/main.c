@@ -37,10 +37,12 @@ int main(void){
 	playSoundTrack();
 	
 	//inicializacion Variables de juego
+	
 	puntaje1=0;
 	puntaje2=0;
 	puntaje3=0;
-    ficha=0;	
+    ficha=0;
+	color=0;	
 	PosX=3;
 	PosY=-4;
 
@@ -49,6 +51,7 @@ int main(void){
 	while(1){
 
 		getFicha();
+		getColor();
 		
 		cambiarFormaFicha();
 		wait_ms(500);
@@ -60,20 +63,61 @@ int main(void){
 			wait_ms(500);
 			
 		}
+		
 		putFicha();
 		printTablero();
+		printPuntaje();
+		//Revision Perder
+		bool perder =0;
+		for(int i=0;i<10;i++){
+			if(Tablero[i][0]!=3){
+				perder=1;
+			}
+		}
+		if(perder){
+			stopSoundTrack();
+			playSoundEffect(2);
+			wait_ms(1000);
+			playSoundTrack();
+			for(int i = 0; i < 10; i++)	{
+				for(int j = 0; j < 18; j++){
+					Tablero[i][j] = 3; 
+				}
+			}
+			puntaje1=0;
+			puntaje2=0;
+			puntaje3=0;
+		}
+		int puntosNuevos=0;
+		
+		//Revision Punto
+		
+
+		for(int j = 0; j < 14; j++)	{
+			bool filaCompletada=1;
+			for(int i = 0; i < 10; i++){
+				if(Tablero[i][j] == 3 ){
+					filaCompletada=0;
+				}					
+			}
+			if(filaCompletada){
+				removeFila(j);
+				puntosNuevos=puntosNuevos+1;
+			}
+		}
+		
+		if(puntosNuevos!=0){
+			sumarPuntaje(puntosNuevos);
+			playSoundEffect(1);
+		}
+
+		
+		printTablero();
+		printPuntaje();
 		PosY=-4;
-		printf("Hola");	
+		PosX=3;
 		
 	}
-
-	//rotarFicha();		
-	//putFicha();
-	//printTablero();
-	sumarPuntaje(1);
-	printPuntaje();
-	
-	wait_ms(100);
 	
 	
 	

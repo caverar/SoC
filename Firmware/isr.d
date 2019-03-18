@@ -4,6 +4,7 @@ isr.o: isr.c \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/hw/common.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/irq.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/system.h \
+ game.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/uart.h \
  variables.h \
  /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/stdio.h \
@@ -19,6 +20,8 @@ isr.o: isr.c \
 /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/irq.h:
 
 /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/system.h:
+
+game.h:
 
 /home/camilo/Programas/Litex/litex/litex/soc/software/include/base/uart.h:
 

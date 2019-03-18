@@ -31,51 +31,51 @@ void cambiarFormaFicha(void){
 	}
 	switch (ficha){
 		case 0: //cuadro
-			for(int i = 1; i < 3; i++){
-				for(int j = 1; j < 3; j++){
-					formaFicha[i][j]=1;
+			for(int i = 2; i < 4; i++){
+				for(int j = 2; j < 4; j++){
+					formaFicha[i][j]=color;
 				}				
 			}			
 			break;		
 		
 		case 1:	//Linea |
 			for(int i = 0; i < 4; i++){
-				formaFicha[i][0]=2;
+				formaFicha[i][0]=color;
 			}
 			break;
 		case 2:	//L
 			for(int i = 0; i < 3; i++){
-				formaFicha[i][0] = 3;
+				formaFicha[i][0] = color;
 			}
-			formaFicha[2][1] = 3;
+			formaFicha[2][1] = color;
 			break;
 		case 3:	//L inversa
 			for(int i = 0; i < 3; i++){
-				formaFicha[i][1] = 4;
+				formaFicha[i][1] = color;
 			}
-			formaFicha[2][0] = 4;
+			formaFicha[2][0] = color;
 			break;
 		case 4:	//Z
 			for(int i = 0; i < 2; i++){
-				formaFicha[i][0] = 5;
+				formaFicha[i][0] = color;
 			}
 			for(int j = 1; j < 3; j++){
-				formaFicha[j][1] = 5;
+				formaFicha[j][1] = color;
 			}
 			break;
 		case 5:	//Z inversa
 			for(int i = 0; i < 2; i++){
-				formaFicha[i][1] = 6;
+				formaFicha[i][1] = color;
 			}
 			for(int j = 1; j < 3; j++){
-				formaFicha[j][0] = 6;
+				formaFicha[j][0] = color;
 			}
 			break;
 		case 6:	//T
 			for(int i = 0; i < 3; i++){
-				formaFicha[i][0] = 1;
+				formaFicha[i][0] = color;
 			}
-			formaFicha[1][1]=1;
+			formaFicha[1][1]=color;
 			break;		
 	}
 }
@@ -127,13 +127,44 @@ void rotarFicha(void){
 	
 	}
 
-	if(estaFuera){
+	
+
+    //Restriccion vertical
+
+    //Hallar las posiciones mas bajas
+    int lowerPositions[4];
+    lowerPositions[0]=80;   //80 significa que no la columna esta vacia
+    lowerPositions[1]=80;
+    lowerPositions[2]=80;
+    lowerPositions[3]=80;
+
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            if(formaFicha[i][j]!=0){
+                lowerPositions[i]=j;
+            }
+        }
+    }
+
+    //Revisar los cuadros bajo la pieza y revisar si no se llego al piso
+    for(int i=0;i<4;i++){
+        if(lowerPositions[i]!=80 ){
+            if((PosY+lowerPositions[i]+1)>=14){
+                estaFuera=0;
+            }else if(Tablero[PosX+i][PosY+(lowerPositions[i])+1] != 3){
+                estaFuera=0;
+            }
+        }
+    }
+
+    if(estaFuera){
 		for(int i = 0; i < 4; i++){
 			for(int j = 0; j < 4; j++){
 				formaFicha[i][j]=formaFichaAuxiliar[i][j];
 			}	
 		}	
-	}	
+	}
+
 }
 
 void corrimiento(void){
@@ -183,10 +214,15 @@ void getFicha(void){
         ficha=ficha+1;
     }else{
         ficha=0;
-    }
-    
+    }    
 }
-
+void getColor(void){
+    if(color<6){
+        color=color+1;
+    }else{
+        color=1;
+    }    
+}
 void putFicha(void){
 	for(int i = 0; i < 4; i++)	{
 		for(int j = 0; j < 4; j++){
@@ -201,6 +237,75 @@ void removeFicha(void){
 			Tablero[i+PosX][j+PosY] =Tablero[i+PosX][j+PosY]-formaFicha[i][j]; 
 		}
 	}
+}
+void moveLeftFicha(void){
+    
+    _Bool moverFicha=1; // Define si se continua con esa ficha o se pasa a la siguiente
+    
+    //Hallar las posiciones mas a la izquierda
+    int lowerPositions[4];
+    lowerPositions[0]=80;   //80 significa que no la columna esta vacia
+    lowerPositions[1]=80;
+    lowerPositions[2]=80;
+    lowerPositions[3]=80;
+
+    for(int j=0;j<4;j++){
+        for(int i=3;i>=0;i--){
+            if(formaFicha[i][j]!=0){
+                lowerPositions[j]=i;
+            }
+        }
+    }
+
+    //Revisar los cuadros a la izquierda de la pieza y revisar si no se llego al limite
+    for(int i=0;i<4;i++){
+        if(lowerPositions[i]!=80 ){
+            if((PosX+lowerPositions[i]-1)<0){
+                moverFicha=0;
+            }else if(Tablero[PosX+lowerPositions[i]-1][PosY+i] != 3){
+                moverFicha=0;
+            }
+        }
+    }
+
+    if(moverFicha){
+        PosX=PosX-1;
+    } 
+}
+
+void moveRightFicha(void){
+    
+    _Bool moverFicha=1; // Define si se continua con esa ficha o se pasa a la siguiente
+    
+    //Hallar las posiciones mas a la izquierda
+    int lowerPositions[4];
+    lowerPositions[0]=80;   //80 significa que no la columna esta vacia
+    lowerPositions[1]=80;
+    lowerPositions[2]=80;
+    lowerPositions[3]=80;
+
+    for(int j=0;j<4;j++){
+        for(int i=0;i<4;i++){
+            if(formaFicha[i][j]!=0){
+                lowerPositions[j]=i;
+            }
+        }
+    }
+
+    //Revisar los cuadros a la izquierda de la pieza y revisar si no se llego al limite
+    for(int i=0;i<4;i++){
+        if(lowerPositions[i]!=80 ){
+            if((PosX+lowerPositions[i]+1)>9){
+                moverFicha=0;
+            }else if(Tablero[PosX+lowerPositions[i]+1][PosY+i] != 3){
+                moverFicha=0;
+            }
+        }
+    }
+
+    if(moverFicha){
+        PosX=PosX+1;
+    } 
 }
 
 _Bool moveDownFicha(void){
@@ -222,11 +327,11 @@ _Bool moveDownFicha(void){
     }
 
     //Revisar los cuadros bajo la pieza y revisar si no se llego al piso
-    for(int i=0;i<3;i++){
-        if((PosY+lowerPositions[i]+1)>=14){
-            moverFicha=0;
-        }else if(lowerPositions[i]!=80 ){
-            if(Tablero[PosX+i][PosY+(lowerPositions[i])+1] != 3){
+    for(int i=0;i<4;i++){
+        if(lowerPositions[i]!=80 ){
+            if((PosY+lowerPositions[i]+1)>=14){
+                moverFicha=0;
+            }else if(Tablero[PosX+i][PosY+(lowerPositions[i])+1] != 3){
                 moverFicha=0;
             }
         }
@@ -237,4 +342,19 @@ _Bool moveDownFicha(void){
     }
     return moverFicha;
     
+}
+
+void removeFila(int fila){
+    int copiaTablero[10][18];
+    for(int i = 0; i < 10; i++)	{
+		for(int j = 0; j < 18; j++){
+			copiaTablero[i][j]=Tablero[i][j]; 
+		}
+	}
+
+    for(int j = fila; j >= 1; j--){
+        for(int i = 0; i < 10; i++){
+			Tablero[i][j]=Tablero[i][j-1]; 
+		}
+    }
 }

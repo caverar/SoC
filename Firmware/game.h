@@ -6,11 +6,13 @@ int Tablero[10][18];
 unsigned int puntaje1;
 unsigned int puntaje2;
 unsigned int puntaje3;
-unsigned int ficha;
+int ficha;
+int color;
 unsigned int MatrizTab[10][14];
 unsigned int formaFicha[4][4];
 int PosX;
 int PosY;
+_Bool pausa;
 
 //inicializa la MatrizTab
 
@@ -31,10 +33,14 @@ void printPuntaje(void);
 void sumarPuntaje(unsigned int value);  //menor a 10
 	
 void getFicha(void);
+void getColor(void);
 
 void putFicha(void);
 
 void removeFicha(void);
-
+void moveLeftFicha(void);
+void moveRightFicha(void);
 _Bool moveDownFicha(void);
+
+void removeFila(int fila);
 #endif
